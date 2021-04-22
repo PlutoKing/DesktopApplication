@@ -5,8 +5,102 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LF.SerialCommunication.Project"
         mc:Ignorable="d"
-        Title="串口通信工具" Height="450" Width="800">
+        Title="串口通信工具" Height="700" Width="1000" WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BackColor}">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Menu BorderThickness="0 0 0 1" BorderBrush="{StaticResource LineColor}" Background="White">
+            <MenuItem Header="文件"></MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="250" />
+            </Grid.ColumnDefinitions>
+            <Grid Margin="2 2 0 2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <RichTextBox Margin="2 2 0 0"></RichTextBox>
+                <GridSplitter Grid.Row="1" Height="6" VerticalAlignment="Center" HorizontalAlignment="Stretch" ></GridSplitter>
+
+            </Grid>
+            <GridSplitter Grid.Column="1" Width="6" VerticalAlignment="Stretch" HorizontalAlignment="Center" ></GridSplitter>
+            <StackPanel Grid.Column="2" Margin="0 2 2 2">
+                <GroupBox Header="串口设置" Margin="0 2 2 2">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="串口选择" VerticalAlignment="Center"></TextBlock>
+                        <ComboBox  Grid.Row="0" Grid.Column="1" IsEditable="True" VerticalAlignment="Center"></ComboBox>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="波特率" VerticalAlignment="Center"></TextBlock>
+                        <ComboBox  Grid.Row="1" Grid.Column="1" IsEditable="True" VerticalAlignment="Center"></ComboBox>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="数据位" VerticalAlignment="Center"></TextBlock>
+                        <ComboBox  Grid.Row="2" Grid.Column="1" IsEditable="True" VerticalAlignment="Center"></ComboBox>
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="停止位" VerticalAlignment="Center"></TextBlock>
+                        <ComboBox  Grid.Row="3" Grid.Column="1" IsEditable="True" VerticalAlignment="Center"></ComboBox>
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="校验位" VerticalAlignment="Center"></TextBlock>
+                        <ComboBox  Grid.Row="4" Grid.Column="1" IsEditable="True" VerticalAlignment="Center"></ComboBox>
+                        <Button Grid.Row="5" Grid.Column="0" Content="扫描串口" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80"></Button>
+                        <Button  Grid.Row="5" Grid.Column="1" Content="打开串口" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80"></Button>
+
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="接收设置" Margin="0 2 2 2">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <RadioButton Grid.Row="0" Grid.Column="0" Content="文本" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Grid.Row="0" Grid.Column="1" Content="十六进制" VerticalAlignment="Center"></RadioButton>
+                        <CheckBox Grid.Row="1" Grid.Column="0" Content="显示发送" VerticalAlignment="Center"></CheckBox>
+                        <CheckBox Grid.Row="1" Grid.Column="1" Content="显示时间" VerticalAlignment="Center"></CheckBox>
+                        <CheckBox Grid.Row="2" Grid.Column="0" Content="自动换行" VerticalAlignment="Center"></CheckBox>
+                        <Button  Grid.Row="2" Grid.Column="1" Content="清屏" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80"></Button>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="发送设置" Margin="0 2 2 2">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <RadioButton Grid.Row="0" Grid.Column="0" Content="文本" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Grid.Row="0" Grid.Column="1" Content="十六进制" VerticalAlignment="Center"></RadioButton>
+                        <CheckBox Grid.Row="1" Grid.Column="0" Content="自动发送" VerticalAlignment="Center"></CheckBox>
+                        <CheckBox Grid.Row="1" Grid.Column="1" Content="显示时间" VerticalAlignment="Center"></CheckBox>
+                    </Grid>
+                </GroupBox>
+
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
