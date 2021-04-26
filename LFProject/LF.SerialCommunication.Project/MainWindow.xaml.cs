@@ -2,7 +2,7 @@
  * FileName     : MainWindow.cs
  * Created      : 2021-04-21 22:30:05
  * Author       : Xu Zhe
- * Description  : 
+ * Description  : 主屏幕
  * ──────────────────────────────────────────────────────────────*/
 
 using System;
@@ -27,13 +27,17 @@ namespace LF.SerialCommunication.Project
     public partial class MainWindow : Window
     {
         #region Fields
-
+        private LFSerialPort serialPort = new LFSerialPort();
+        
         #endregion
 
         #region Constructors
         public MainWindow()
         {
             InitializeComponent();
+
+            this.DataContext = serialPort;
+            //CmbPorts.ItemsSource = serialPort.PortNames;
         }
         #endregion
 
@@ -43,5 +47,15 @@ namespace LF.SerialCommunication.Project
 
         #region Events
         #endregion
+
+
+        private void BtnScan_Click(object sender, RoutedEventArgs e)
+        {
+            serialPort.Scan();
+            if (serialPort.PortNames.Count == 0)
+            {
+                MessageBox.Show("当前无可用串口，请检查串口设备！", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
     }
 }

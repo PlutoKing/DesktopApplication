@@ -17,3 +17,7 @@ I:\DesktopApplication\LFProject\LF.SerialCommunication.Project\obj\Debug\LF.Seri
 I:\DesktopApplication\LFProject\LF.SerialCommunication.Project\obj\Debug\LF.SerialCommunication.Project.csproj.CopyComplete
 I:\DesktopApplication\LFProject\LF.SerialCommunication.Project\obj\Debug\LF.SerialCommunication.Project.exe
 I:\DesktopApplication\LFProject\LF.SerialCommunication.Project\obj\Debug\LF.SerialCommunication.Project.pdb
+I:\DesktopApplication\LFProject\LF.SerialCommunication.Project\bin\Debug\LF.SerialCommunication.dll
+I:\DesktopApplication\LFProject\LF.SerialCommunication.Project\bin\Debug\LF.SerialCommunication.pdb
+I:\DesktopApplication\LFProject\LF.SerialCommunication.Project\obj\Debug\PortConfigControl.g.cs
+I:\DesktopApplication\LFProject\LF.SerialCommunication.Project\obj\Debug\PortConfigControl.baml

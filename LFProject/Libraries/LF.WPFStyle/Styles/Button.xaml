@@ -2,16 +2,16 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style TargetType="Button">
         <Setter Property="Width" Value="auto"/>
-        <Setter Property="MinHeight" Value="24"/>
+        <Setter Property="MinHeight" Value="22"/>
         <Setter Property="Cursor" Value="Hand"></Setter>
         <Setter Property="VerticalAlignment" Value="Center"></Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Border x:Name="border" BorderThickness="1" BorderBrush="{StaticResource MainColor}" CornerRadius="1" Background="{StaticResource MainColor}">
+                        <Border x:Name="border" BorderThickness="0" BorderBrush="{StaticResource MainColor}" Background="{StaticResource MainColor}">
                             <TextBlock x:Name="text" Text="{TemplateBinding Content}"
-                                       VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center" Margin="3"
                                        Foreground="White" FontSize="12"></TextBlock>
                         </Border>
                     </Grid>

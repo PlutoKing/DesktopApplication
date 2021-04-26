@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="Algebra\LFVector.cs" />
     <Compile Include="Basic\LFArray.cs" />
+    <Compile Include="IOA\GA\LFChromosome.cs" />
+    <Compile Include="IOA\GA\LFGa.cs" />
+    <Compile Include="IOA\GA\LFPopulation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

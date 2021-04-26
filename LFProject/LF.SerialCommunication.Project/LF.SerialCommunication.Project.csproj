@@ -64,6 +64,9 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PortConfigControl.xaml.cs">
+      <DependentUpon>PortConfigControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -95,8 +98,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PortConfigControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Libraries\LF.SerialCommunication\LF.SerialCommunication.csproj">
+      <Project>{6663a343-ab8e-49ec-ae93-756fd54c0b10}</Project>
+      <Name>LF.SerialCommunication</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Libraries\LF.WPFStyle\LF.WPFStyle.csproj">
       <Project>{423e5044-d286-4a72-9b66-aad972385638}</Project>
       <Name>LF.WPFStyle</Name>

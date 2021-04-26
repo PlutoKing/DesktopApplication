@@ -7,7 +7,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/LF.WPFStyle;component/Styles/Color.xaml" />
-                <ResourceDictionary Source="/LF.WPFStyle;component/Styles/Button.xaml" />
+                <!--<ResourceDictionary Source="/LF.WPFStyle;component/Styles/Button.xaml" />-->
                 <ResourceDictionary Source="/LF.WPFStyle;component/Styles/GroupBox.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
