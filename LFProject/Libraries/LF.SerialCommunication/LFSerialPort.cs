@@ -98,15 +98,7 @@ namespace LF.SerialCommunication
             _port.DataReceived += Port_DataReceived;
         }
 
-        /// <summary>
-        /// 接收消息
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Port_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-
-        }
+        
         #endregion
 
         #region Methods
@@ -154,6 +146,9 @@ namespace LF.SerialCommunication
             _keepReading = true;
             _readThread = new Thread(ReceiveMessage);
             _readThread.Start();
+            // 接收、发送计数清零
+            _receCount = 0;
+            _sendCound = 0;
         }
 
         /// <summary>
@@ -211,6 +206,16 @@ namespace LF.SerialCommunication
         #endregion
 
         #region Events
+
+        /// <summary>
+        /// 接收消息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Port_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+
+        }
 
         /// <summary>
         /// 属性改变事件

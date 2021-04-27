@@ -11,13 +11,14 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="32" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height="32" />
+            <RowDefinition Height="24" />
         </Grid.RowDefinitions>
         <Border Background="White" BorderBrush="{StaticResource LineColor}" BorderThickness="0 0 0 1">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Text="串口" VerticalAlignment="Center" Margin="10 0 5 0"></TextBlock>
                 <ComboBox Name="CmbName" IsEditable="True" Width="80" Margin="0 0 5 0" SelectionChanged="CmbName_SelectionChanged"></ComboBox>
-                <Button x:Name="BtnRefresh" Content="刷新" VerticalAlignment="Center" Margin="0 0 5 0" Click="BtnRefresh_Click"></Button>
+                <Button x:Name="BtnRefresh" Content="刷新" VerticalAlignment="Center" Margin="0 0 5 0" Style="{StaticResource FlatButton}"
+                        Click="BtnRefresh_Click"></Button>
                 <TextBlock Text="波特率" VerticalAlignment="Center" Margin="5 0 5 0"></TextBlock>
                 <ComboBox Name="CmbBaudrate" IsEditable="True" Width="80" Margin="0 0 5 0" SelectionChanged="CmbBaudrate_SelectionChanged">
                     
@@ -51,7 +52,9 @@
                 <RowDefinition Height="125" />
                 <RowDefinition Height="32" />
             </Grid.RowDefinitions>
-            <RichTextBox x:Name="RtbRece" BorderBrush="{StaticResource LineColor}" IsReadOnly="True"></RichTextBox>
+            <RichTextBox x:Name="RtbRece" BorderBrush="{StaticResource LineColor}" IsReadOnly="True"
+                         Padding="3">
+            </RichTextBox>
             <Border Grid.Row="1" Margin="0" BorderBrush="{StaticResource LineColor}" BorderThickness="1 0 1 1" Background="White">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -71,7 +74,7 @@
 
                 </Grid>
             </Border>
-            <RichTextBox Grid.Row="2" Margin="0 5 0 0" BorderBrush="{StaticResource LineColor}"></RichTextBox>
+            <RichTextBox Grid.Row="2" Margin="0 5 0 0" BorderBrush="{StaticResource LineColor}" Padding="3"></RichTextBox>
             <Border Grid.Row="3" BorderBrush="{StaticResource LineColor}" BorderThickness="1 0 1 1" Background="White">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -100,6 +103,7 @@
                 <TextBlock Text="已接收" VerticalAlignment="Center" Margin="8 0 3 0"></TextBlock>
                 <TextBlock Text="{Binding ReceCount}" VerticalAlignment="Center" Margin="0 0 3 0" Foreground="{StaticResource MainColor}"></TextBlock>
                 <TextBlock Text="bits" VerticalAlignment="Center" Margin="0 0 3 0"></TextBlock>
+                <Rectangle Width="1" Fill="{StaticResource LineColor}" Margin="3 0 3 0"></Rectangle>
                 <TextBlock Text="串口时间" VerticalAlignment="Center" Margin="8 0 3 0"></TextBlock>
                 <TextBlock Text="0" VerticalAlignment="Center" Margin="0 0 3 0" Foreground="{StaticResource MainColor}"></TextBlock>
                 <TextBlock Text="s" VerticalAlignment="Center" Margin="0 0 3 0"></TextBlock>
