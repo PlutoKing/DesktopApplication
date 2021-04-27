@@ -10,4 +10,6 @@ I:\DesktopApplication\LFProject\Libraries\LF.WPFStyle\obj\Debug\LF.WPFStyle.cspr
 I:\DesktopApplication\LFProject\Libraries\LF.WPFStyle\obj\Debug\LF.WPFStyle.csproj.CoreCompileInputs.cache
 I:\DesktopApplication\LFProject\Libraries\LF.WPFStyle\obj\Debug\LF.WPFStyle.dll
 I:\DesktopApplication\LFProject\Libraries\LF.WPFStyle\obj\Debug\LF.WPFStyle.pdb
+I:\DesktopApplication\LFProject\Libraries\LF.WPFStyle\obj\Debug\Styles\ComboBox.baml
+I:\DesktopApplication\LFProject\Libraries\LF.WPFStyle\obj\Debug\Styles\TextBox.baml
 I:\DesktopApplication\LFProject\Libraries\LF.WPFStyle\obj\Debug\LF.WPFStyle.csprojAssemblyReference.cache

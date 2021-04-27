@@ -9,28 +9,50 @@
         Background="{StaticResource BackColor}">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
+            <RowDefinition Height="32" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height="30" />
+            <RowDefinition Height="32" />
         </Grid.RowDefinitions>
         <Border Background="White" BorderBrush="{StaticResource LineColor}" BorderThickness="0 0 0 1">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Text="串口" VerticalAlignment="Center" Margin="10 0 5 0"></TextBlock>
-                <ComboBox IsEditable="True" Width="80" VerticalAlignment="Center" Margin="0 0 5 0"></ComboBox>
+                <ComboBox Name="CmbName" IsEditable="True" Width="80" Margin="0 0 5 0" SelectionChanged="CmbName_SelectionChanged"></ComboBox>
+                <Button x:Name="BtnRefresh" Content="刷新" VerticalAlignment="Center" Margin="0 0 5 0" Click="BtnRefresh_Click"></Button>
                 <TextBlock Text="波特率" VerticalAlignment="Center" Margin="5 0 5 0"></TextBlock>
-                <ComboBox IsEditable="True" Width="80" VerticalAlignment="Center" Margin="0 0 5 0"></ComboBox>
-                <Button Content="打开串口" VerticalAlignment="Center" Margin="0 0 5 0"></Button>
+                <ComboBox Name="CmbBaudrate" IsEditable="True" Width="80" Margin="0 0 5 0" SelectionChanged="CmbBaudrate_SelectionChanged">
+                    
+                </ComboBox>
+                <TextBlock Text="数据位" VerticalAlignment="Center" Margin="5 0 5 0"></TextBlock>
+                <ComboBox Name="CmbDatabits" IsEditable="True" Width="80" Margin="0 0 5 0" SelectedIndex="0" SelectionChanged="CmbDatabits_SelectionChanged">
+                    <ComboBoxItem Content="8"/>
+                    <ComboBoxItem Content="7"/>
+                    <ComboBoxItem Content="6"/>
+                    <ComboBoxItem Content="5"/>
+                </ComboBox>
+                <TextBlock Text="停止位" VerticalAlignment="Center" Margin="5 0 5 0"></TextBlock>
+                <ComboBox Name="CmbStopbits" IsEditable="True" Width="80" Margin="0 0 5 0" SelectedIndex="0" SelectionChanged="CmbStopbits_SelectionChanged">
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="1.5"/>
+                    <ComboBoxItem Content="2"/>
+                </ComboBox>
+                <TextBlock Text="校验位" VerticalAlignment="Center" Margin="5 0 5 0"></TextBlock>
+                <ComboBox Name="CmbParity" IsEditable="True" Width="80" Margin="0 0 5 0" SelectedIndex="0" SelectionChanged="CmbParity_SelectionChanged">
+                    <ComboBoxItem Content="无"/>
+                    <ComboBoxItem Content="奇校验"/>
+                    <ComboBoxItem Content="偶校验"/>
+                </ComboBox>
+                <Button x:Name="BtnOpenClose" Content="打开串口"  Margin="3 0 8 0" Click="BtnOpenClose_Click" Width="60"></Button>
             </StackPanel>
         </Border>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="120" />
-                <RowDefinition Height="30" />
+                <RowDefinition Height="32" />
+                <RowDefinition Height="125" />
+                <RowDefinition Height="32" />
             </Grid.RowDefinitions>
-            <RichTextBox Margin="5 5 5 0" BorderBrush="{StaticResource LineColor}" IsReadOnly="True"></RichTextBox>
-            <Border Grid.Row="1" Margin="5 0 5 0" BorderBrush="{StaticResource LineColor}" BorderThickness="1 0 1 1" Background="White">
+            <RichTextBox x:Name="RtbRece" BorderBrush="{StaticResource LineColor}" IsReadOnly="True"></RichTextBox>
+            <Border Grid.Row="1" Margin="0" BorderBrush="{StaticResource LineColor}" BorderThickness="1 0 1 1" Background="White">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*" />
@@ -45,12 +67,12 @@
                         <CheckBox Content="自动换行" VerticalAlignment="Center" Margin="0 0 3 0"></CheckBox>
                         <Rectangle Width="1" Fill="{StaticResource LineColor}"></Rectangle>
                     </StackPanel>
-                    <Button Content="清屏" Grid.Column="1" VerticalAlignment="Center" Margin="3 0 3 0" Width="60" HorizontalAlignment="Right"></Button>
+                    <Button x:Name="BtnClear" Content="清屏" Grid.Column="1" Margin="3 0 3 0" Width="60" HorizontalAlignment="Right" Click="BtnClear_Click"></Button>
 
                 </Grid>
             </Border>
-            <RichTextBox Grid.Row="2" Margin="5 5 5 0" BorderBrush="{StaticResource LineColor}"></RichTextBox>
-            <Border Grid.Row="3" Margin="5 0 5 5" BorderBrush="{StaticResource LineColor}" BorderThickness="1 0 1 1" Background="White">
+            <RichTextBox Grid.Row="2" Margin="0 5 0 0" BorderBrush="{StaticResource LineColor}"></RichTextBox>
+            <Border Grid.Row="3" BorderBrush="{StaticResource LineColor}" BorderThickness="1 0 1 1" Background="White">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*" />
@@ -60,12 +82,12 @@
                         <RadioButton Content="HEX" VerticalAlignment="Center" Margin="3 0 3 0" IsChecked="True"></RadioButton>
                         <RadioButton Content="TEXT" VerticalAlignment="Center" Margin="0 0 3 0"></RadioButton>
                         <Rectangle Width="1" Fill="{StaticResource LineColor}"></Rectangle>
-                        <CheckBox Content="自动发送" VerticalAlignment="Center" Margin="3 0 3 0"></CheckBox>
-                        <TextBox VerticalAlignment="Center" Width="50" Margin="0 0 3 0"></TextBox>
+                        <CheckBox x:Name="CkbAutoSend" Content="自动发送" VerticalAlignment="Center" Margin="3 0 3 0"></CheckBox>
+                        <TextBox Text="100" VerticalAlignment="Center" Width="50" Margin="0 0 3 0" IsEnabled="{Binding ElementName=CkbAutoSend, Path=IsChecked}"></TextBox>
                         <TextBlock Text="ms" VerticalAlignment="Center" Margin="0 0 3 0"></TextBlock>
                         <Rectangle Width="1" Fill="{StaticResource LineColor}"></Rectangle>
                     </StackPanel>
-                    <Button Content="发送" Grid.Column="1" VerticalAlignment="Center" Margin="3 0 3 0" Width="60" HorizontalAlignment="Right"></Button>
+                    <Button Content="发送" Grid.Column="1" Margin="3 0 3 0" Width="60" HorizontalAlignment="Right"></Button>
 
                 </Grid>
             </Border>

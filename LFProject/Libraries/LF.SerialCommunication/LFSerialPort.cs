@@ -126,13 +126,21 @@ namespace LF.SerialCommunication
         /// <summary>
         /// 配置串口
         /// </summary>
-        public void Config()
+        public bool Config()
         {
-            _port.PortName = _name;
-            _port.BaudRate = _baudrate;
-            _port.DataBits = _databits;
-            _port.Parity = _parity;
-            _port.StopBits = _stopbits;
+            if(_name == null)
+            {
+                return false;
+            }
+            else
+            {
+                _port.PortName = _name;
+                _port.BaudRate = _baudrate;
+                _port.DataBits = _databits;
+                _port.Parity = _parity;
+                _port.StopBits = _stopbits;
+                return true;
+            }
         }
 
         /// <summary>
