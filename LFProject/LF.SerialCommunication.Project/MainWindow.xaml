@@ -71,7 +71,6 @@
                         <Rectangle Width="1" Fill="{StaticResource LineColor}"></Rectangle>
                     </StackPanel>
                     <Button x:Name="BtnClear" Content="清屏" Grid.Column="1" Margin="3 0 3 0" Width="60" HorizontalAlignment="Right" Click="BtnClear_Click"></Button>
-
                 </Grid>
             </Border>
             <RichTextBox Grid.Row="2" Margin="0 5 0 0" BorderBrush="{StaticResource LineColor}" Padding="3"></RichTextBox>

@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
+
 namespace LF.SerialCommunication
 {
     /// <summary>
@@ -24,7 +25,9 @@ namespace LF.SerialCommunication
         #region Fields
 
         public event PropertyChangedEventHandler PropertyChanged;
+        public delegate void ReceiveMessageHandler();
 
+        public event ReceiveMessageHandler OnReceiveMessage;
 
         private SerialPort _port;   // 串口
 
@@ -38,8 +41,8 @@ namespace LF.SerialCommunication
         private int _receCount;     // 接收量
         private int _sendCound;     // 发送量
 
-        Thread _readThread;     // 读取线程
-        bool _keepReading;      // 是否保持读取
+        private string _receContent;    //
+
         #endregion
 
         #region Properties
@@ -88,6 +91,7 @@ namespace LF.SerialCommunication
         /// 发送量
         /// </summary>
         public int SendCound { get => _sendCound; set => _sendCound = value; }
+        public string ReceContent { get => _receContent; set => _receContent = value; }
 
         #endregion
 
@@ -142,11 +146,7 @@ namespace LF.SerialCommunication
         {
             // 打开串口
             _port.Open();
-            // 启动读取线程
-            _keepReading = true;
-            _readThread = new Thread(ReceiveMessage);
-            _readThread.Start();
-            // 接收、发送计数清零
+           
             _receCount = 0;
             _sendCound = 0;
         }
@@ -154,7 +154,7 @@ namespace LF.SerialCommunication
         /// <summary>
         /// 关闭串口
         /// </summary>
-        public void Clone()
+        public void Close()
         {
             _port.Close();
         }
@@ -178,27 +178,30 @@ namespace LF.SerialCommunication
         /// </summary>
         public void ReceiveMessage()
         {
-            while (_keepReading)
-            {
-                if (_port.IsOpen)
-                {
-                    byte[] readBuffer = new byte[_port.ReadBufferSize + 1];
-                    try
-                    {
-                        int count = _port.Read(readBuffer, 0, _port.ReadBufferSize);
-                        string SerialIn = System.Text.Encoding.ASCII.GetString(readBuffer, 0, count);
-                        if (count != 0)
-                        {
-                        }
-                    }
-                    catch { }
-                }
-                else
-                {
-                    TimeSpan waitTime = new TimeSpan(0, 0, 0, 0, 50);
-                    Thread.Sleep(waitTime);
-                }
-            }
+            if (OnReceiveMessage != null)
+                OnReceiveMessage();
+            //while (_keepReading)
+            //{
+            //    if (_port.IsOpen)
+            //    {
+            //        byte[] readBuffer = new byte[_port.ReadBufferSize + 1];
+            //        try
+            //        {
+            //            int count = _port.Read(readBuffer, 0, _port.ReadBufferSize);
+            //            string SerialIn = System.Text.Encoding.ASCII.GetString(readBuffer, 0, count);
+            //            if (count != 0)
+            //            {
+            //                _receContent = readBuffer.ToString();
+            //            }
+            //        }
+            //        catch { }
+            //    }
+            //    else
+            //    {
+            //        TimeSpan waitTime = new TimeSpan(0, 0, 0, 0, 50);
+            //        Thread.Sleep(waitTime);
+            //    }
+            //}
         }
 
         #endregion

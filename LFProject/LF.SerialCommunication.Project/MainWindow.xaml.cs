@@ -11,6 +11,7 @@ using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -32,6 +33,8 @@ namespace LF.SerialCommunication.Project
         private LFSerialPort serialPort = new LFSerialPort();
 
         private List<int> baudrates = new List<int>() { 4800, 9600, 19200, 38400, 57600, 115200 };
+
+        private Timer Timer = new Timer();
         #endregion
 
         #region Constructors
@@ -43,10 +46,63 @@ namespace LF.SerialCommunication.Project
             CmbName.ItemsSource = serialPort.PortNames;
             CmbBaudrate.ItemsSource = baudrates;
             CmbBaudrate.SelectedIndex = 1;
+
+            serialPort.OnReceiveMessage += SerialPort_OnReceiveMessage;
+
+            Timer.Elapsed += Timer_Elapsed;
+            Timer.Interval = 100;
+            
+        }
+
+        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            if (serialPort.Port.IsOpen)
+            {
+                byte[] readBuffer = new byte[serialPort.Port.ReadBufferSize + 1];
+                try
+                {
+                    int count = serialPort.Port.Read(readBuffer, 0, serialPort.Port.ReadBufferSize);
+                    string SerialIn = System.Text.Encoding.ASCII.GetString(readBuffer, 0, count);
+                    if (count != 0)
+                    {
+                        serialPort.ReceContent = readBuffer.ToString();
+                        Paragraph p = new Paragraph();
+                        Run run = new Run() { Text = serialPort.ReceContent };
+                        p.Inlines.Add(run);
+                        RtbRece.Document.Blocks.Add(p);
+                        serialPort.ReceCount += count;
+                    }
+                }
+                catch { }
+            }
+        }
+
+        private void SerialPort_OnReceiveMessage()
+        {
+            if (serialPort.Port.IsOpen)
+            {
+                byte[] readBuffer = new byte[serialPort.Port.ReadBufferSize + 1];
+                try
+                {
+                    int count = serialPort.Port.Read(readBuffer, 0, serialPort.Port.ReadBufferSize);
+                    string SerialIn = System.Text.Encoding.ASCII.GetString(readBuffer, 0, count);
+                    if (count != 0)
+                    {
+                        serialPort.ReceContent = readBuffer.ToString();
+                        Paragraph p = new Paragraph();
+                        Run run = new Run() { Text = serialPort.ReceContent };
+                        p.Inlines.Add(run);
+                        RtbRece.Document.Blocks.Add(p);
+                        serialPort.ReceCount += count;
+                    }
+                }
+                catch { }
+            }
         }
         #endregion
 
         #region Methods
+
 
         /// <summary>
         /// 设置串口打开后控件样式
@@ -59,6 +115,7 @@ namespace LF.SerialCommunication.Project
             CmbParity.IsEnabled = false;
             CmbStopbits.IsEnabled = false;
             BtnOpenClose.Content = "关闭串口";
+            Timer.Start();
         }
 
         /// <summary>
@@ -72,6 +129,7 @@ namespace LF.SerialCommunication.Project
             CmbParity.IsEnabled = true;
             CmbStopbits.IsEnabled = true;
             BtnOpenClose.Content = "打开串口";
+            Timer.Stop();
         }
 
         #endregion
@@ -87,6 +145,7 @@ namespace LF.SerialCommunication.Project
         {
             if (serialPort.Port.IsOpen)
             {
+                serialPort.Close();
                 SetPortClose();
             }
             else
@@ -131,8 +190,8 @@ namespace LF.SerialCommunication.Project
         /// <param name="e"></param>
         private void CmbDatabits_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (CmbDatabits.Text != "")
-                serialPort.Databits = Convert.ToInt32(CmbDatabits.Text);
+
+            serialPort.Databits = 8 - CmbDatabits.SelectedIndex;
         }
 
         /// <summary>
@@ -200,6 +259,8 @@ namespace LF.SerialCommunication.Project
         private void BtnRefresh_Click(object sender, RoutedEventArgs e)
         {
             serialPort.Scan();
+            CmbName.ItemsSource = serialPort.PortNames;
+
             if (serialPort.PortNames.Count == 0)
             {
                 MessageBox.Show("当前无可用串口，请检查串口设备！", "提示", MessageBoxButton.OK, MessageBoxImage.Information);

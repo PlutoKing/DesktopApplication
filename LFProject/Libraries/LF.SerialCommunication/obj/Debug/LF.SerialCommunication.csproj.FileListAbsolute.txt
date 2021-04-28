@@ -3,3 +3,9 @@ I:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\bin\Debug\LF.Se
 I:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\obj\Debug\LF.SerialCommunication.csproj.CoreCompileInputs.cache
 I:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\obj\Debug\LF.SerialCommunication.dll
 I:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\obj\Debug\LF.SerialCommunication.pdb
+E:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\bin\Debug\LF.SerialCommunication.dll
+E:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\bin\Debug\LF.SerialCommunication.pdb
+E:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\obj\Debug\LF.SerialCommunication.csprojAssemblyReference.cache
+E:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\obj\Debug\LF.SerialCommunication.csproj.CoreCompileInputs.cache
+E:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\obj\Debug\LF.SerialCommunication.dll
+E:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\obj\Debug\LF.SerialCommunication.pdb
