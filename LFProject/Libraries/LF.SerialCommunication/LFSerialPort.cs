@@ -5,14 +5,11 @@
  * Description  : 管理串口的基本操作和通信方法
  * ──────────────────────────────────────────────────────────────*/
 
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO.Ports;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 
 namespace LF.SerialCommunication
@@ -23,8 +20,11 @@ namespace LF.SerialCommunication
     public class LFSerialPort : INotifyPropertyChanged
     {
         #region Fields
-
+        /// <summary>
+        /// 属性改变事件
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
+
         public delegate void ReceiveMessageHandler();
 
         public event ReceiveMessageHandler OnReceiveMessage;
@@ -33,15 +33,22 @@ namespace LF.SerialCommunication
 
         private List<string> _portNames;
         private string _name;       // 串口名
-        private int _baudrate;      // 波特率
+        private int _baudrate = 115200;      // 波特率
         private int _databits;      // 数据位
         private Parity _parity;     // 校验位
         private StopBits _stopbits; // 停止位
 
-        private int _receCount;     // 接收量
-        private int _sendCound;     // 发送量
+        private int _receCount = 0;     // 接收量
+        private int _sendCount = 0;     // 发送量
 
-        private string _receContent;    //
+        private string _receContent;    // 接收内容
+        private string _sendContent;    // 发送内容
+
+        private bool _isSendHex = true;
+        private bool _isReceHex = true;
+
+        private bool _isShowTime = false;
+        private bool _isShowSend = true;
 
         #endregion
 
@@ -90,12 +97,57 @@ namespace LF.SerialCommunication
         /// <summary>
         /// 发送量
         /// </summary>
-        public int SendCound { get => _sendCound; set => _sendCound = value; }
+        public int SendCount
+        {
+            get { return _sendCount; }
+            set
+            {
+                _sendCount = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged.Invoke(this, new PropertyChangedEventArgs("SendCount"));
+                }
+            }
+        }
+
+        /// <summary>
+        /// 接收内容
+        /// </summary>
         public string ReceContent { get => _receContent; set => _receContent = value; }
+
+        /// <summary>
+        /// 发送内容
+        /// </summary>
+        public string SendContent { get => _sendContent; set => _sendContent = value; }
+
+
+        /// <summary>
+        /// 是否显示时间
+        /// </summary>
+        public bool IsShowTime { get => _isShowTime; set => _isShowTime = value; }
+
+        /// <summary>
+        /// 是否按照16进制发送
+        /// </summary>
+        public bool IsSendHex { get => _isSendHex; set => _isSendHex = value; }
+
+        /// <summary>
+        /// 是否按照16进制接收
+        /// </summary>
+        public bool IsReceHex { get => _isReceHex; set => _isReceHex = value; }
+
+        /// <summary>
+        /// 是否显示发送
+        /// </summary>
+        public bool IsShowSend { get => _isShowSend; set => _isShowSend = value; }
 
         #endregion
 
         #region Constructors
+
+        /// <summary>
+        /// 默认构造函数
+        /// </summary>
         public LFSerialPort()
         {
             _port = new SerialPort();
@@ -126,10 +178,12 @@ namespace LF.SerialCommunication
         {
             if(_name == null)
             {
+                // 如果没有串口名，则范围false，表示配置失败
                 return false;
             }
             else
             {
+                // 配置串口
                 _port.PortName = _name;
                 _port.BaudRate = _baudrate;
                 _port.DataBits = _databits;
@@ -146,9 +200,9 @@ namespace LF.SerialCommunication
         {
             // 打开串口
             _port.Open();
-           
+            // 计数器清零
             _receCount = 0;
-            _sendCound = 0;
+            _sendCount = 0;
         }
 
         /// <summary>
@@ -161,48 +215,55 @@ namespace LF.SerialCommunication
         #endregion
 
         #region 通信
+  
+        #region 发送消息
+        /// <summary>
+        /// 发送消息
+        /// </summary>
+        public void SendMessage()
+        {
+            if (_isSendHex)
+            {
+                /* 十六进制 */
+                MatchCollection mc = Regex.Matches(_sendContent, @"(?i)[\dA-F]{2}");    // 正则表达式，检测0-9，A-F，两位
+                List<byte> buf = new List<byte>();
+                foreach (Match m in mc)
+                {
+                    buf.Add(byte.Parse(m.Value, System.Globalization.NumberStyles.HexNumber));
+                }
+                SendMessage(buf.ToArray());
+                SendCount += buf.Count;     // 使用Sendcount而不是_sendCount，是为了监测属性变化
+            }
+            else
+            {
+                /* 字符串 */
+                char[] buf = _sendContent.ToCharArray();
+                SendMessage(buf);
+                SendCount += buf.Length;
+            }
+        }
 
         /// <summary>
         /// 发送消息
         /// </summary>
-        /// <param name="buffer"></param>
-        /// <param name="offset"></param>
-        /// <param name="count"></param>
-        public void SendMessage(byte[] buffer)
+        /// <param name="buffer">byte型数据</param>
+        private void SendMessage(byte[] buffer)
         {
-            _port.Read(buffer, 0, buffer.Length);
+            if (_port.IsOpen)
+                _port.Read(buffer, 0, buffer.Length);
         }
 
         /// <summary>
-        /// 接收消息
+        /// 发送消息
         /// </summary>
-        public void ReceiveMessage()
+        /// <param name="buffer">char型数据</param>
+        private void SendMessage(char[] buffer)
         {
-            if (OnReceiveMessage != null)
-                OnReceiveMessage();
-            //while (_keepReading)
-            //{
-            //    if (_port.IsOpen)
-            //    {
-            //        byte[] readBuffer = new byte[_port.ReadBufferSize + 1];
-            //        try
-            //        {
-            //            int count = _port.Read(readBuffer, 0, _port.ReadBufferSize);
-            //            string SerialIn = System.Text.Encoding.ASCII.GetString(readBuffer, 0, count);
-            //            if (count != 0)
-            //            {
-            //                _receContent = readBuffer.ToString();
-            //            }
-            //        }
-            //        catch { }
-            //    }
-            //    else
-            //    {
-            //        TimeSpan waitTime = new TimeSpan(0, 0, 0, 0, 50);
-            //        Thread.Sleep(waitTime);
-            //    }
-            //}
+            if (_port.IsOpen)
+                _port.Read(buffer, 0, buffer.Length);
         }
+
+        #endregion
 
         #endregion
 
@@ -211,13 +272,13 @@ namespace LF.SerialCommunication
         #region Events
 
         /// <summary>
-        /// 接收消息
+        /// 接收消息事件
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Port_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-
+            OnReceiveMessage?.Invoke();
         }
 
         /// <summary>

@@ -9,3 +9,4 @@ E:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\obj\Debug\LF.Se
 E:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\obj\Debug\LF.SerialCommunication.csproj.CoreCompileInputs.cache
 E:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\obj\Debug\LF.SerialCommunication.dll
 E:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\obj\Debug\LF.SerialCommunication.pdb
+I:\DesktopApplication\LFProject\Libraries\LF.SerialCommunication\obj\Debug\LF.SerialCommunication.csprojAssemblyReference.cache

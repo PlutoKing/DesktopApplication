@@ -3,3 +3,4 @@ I:\DesktopApplication\LFProject\Libraries\LF.Mathematics\bin\Debug\LF.Mathematic
 I:\DesktopApplication\LFProject\Libraries\LF.Mathematics\obj\Debug\LF.Mathematics.csproj.CoreCompileInputs.cache
 I:\DesktopApplication\LFProject\Libraries\LF.Mathematics\obj\Debug\LF.Mathematics.dll
 I:\DesktopApplication\LFProject\Libraries\LF.Mathematics\obj\Debug\LF.Mathematics.pdb
+I:\DesktopApplication\LFProject\Libraries\LF.Mathematics\obj\Debug\LF.Mathematics.csprojAssemblyReference.cache

@@ -1,0 +1,15 @@
+I:\DesktopApplication\EX01DataContext\EX01DataContext\bin\Debug\EX01DataContext.exe.config
+I:\DesktopApplication\EX01DataContext\EX01DataContext\bin\Debug\EX01DataContext.exe
+I:\DesktopApplication\EX01DataContext\EX01DataContext\bin\Debug\EX01DataContext.pdb
+I:\DesktopApplication\EX01DataContext\EX01DataContext\obj\Debug\EX01DataContext.csprojAssemblyReference.cache
+I:\DesktopApplication\EX01DataContext\EX01DataContext\obj\Debug\MainWindow.g.cs
+I:\DesktopApplication\EX01DataContext\EX01DataContext\obj\Debug\App.g.cs
+I:\DesktopApplication\EX01DataContext\EX01DataContext\obj\Debug\EX01DataContext_MarkupCompile.cache
+I:\DesktopApplication\EX01DataContext\EX01DataContext\obj\Debug\EX01DataContext_MarkupCompile.lref
+I:\DesktopApplication\EX01DataContext\EX01DataContext\obj\Debug\MainWindow.baml
+I:\DesktopApplication\EX01DataContext\EX01DataContext\obj\Debug\EX01DataContext.g.resources
+I:\DesktopApplication\EX01DataContext\EX01DataContext\obj\Debug\EX01DataContext.Properties.Resources.resources
+I:\DesktopApplication\EX01DataContext\EX01DataContext\obj\Debug\EX01DataContext.csproj.GenerateResource.cache
+I:\DesktopApplication\EX01DataContext\EX01DataContext\obj\Debug\EX01DataContext.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\EX01DataContext\EX01DataContext\obj\Debug\EX01DataContext.exe
+I:\DesktopApplication\EX01DataContext\EX01DataContext\obj\Debug\EX01DataContext.pdb
