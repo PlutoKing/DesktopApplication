@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -48,10 +49,12 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChartFigure.xaml.cs">
-      <DependentUpon>ChartFigure.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Chart\Axis.cs" />
+    <Compile Include="Chart.cs" />
+    <Compile Include="ChartFigure.cs" />
+    <Compile Include="ChartFigure\Axis.cs" />
+    <Compile Include="ChartFigure\XAxis.cs" />
+    <Compile Include="ChartFigure\YAxis.cs" />
+    <Compile Include="Pane.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -65,7 +68,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Chart\Scale.cs" />
+    <Compile Include="ChartFigure\Scale.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,12 +78,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="ChartFigure.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

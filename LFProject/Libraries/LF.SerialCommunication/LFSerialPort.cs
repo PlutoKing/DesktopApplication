@@ -232,14 +232,12 @@ namespace LF.SerialCommunication
                     buf.Add(byte.Parse(m.Value, System.Globalization.NumberStyles.HexNumber));
                 }
                 SendMessage(buf.ToArray());
-                SendCount += buf.Count;     // 使用Sendcount而不是_sendCount，是为了监测属性变化
             }
             else
             {
                 /* 字符串 */
                 char[] buf = _sendContent.ToCharArray();
                 SendMessage(buf);
-                SendCount += buf.Length;
             }
         }
 
@@ -250,7 +248,10 @@ namespace LF.SerialCommunication
         private void SendMessage(byte[] buffer)
         {
             if (_port.IsOpen)
+            {
                 _port.Read(buffer, 0, buffer.Length);
+                SendCount += buffer.Length;     // 使用Sendcount而不是_sendCount，是为了监测属性变化
+            }
         }
 
         /// <summary>
@@ -260,7 +261,10 @@ namespace LF.SerialCommunication
         private void SendMessage(char[] buffer)
         {
             if (_port.IsOpen)
+            {
                 _port.Read(buffer, 0, buffer.Length);
+                SendCount += buffer.Length;     // 使用Sendcount而不是_sendCount，是为了监测属性变化
+            }
         }
 
         #endregion

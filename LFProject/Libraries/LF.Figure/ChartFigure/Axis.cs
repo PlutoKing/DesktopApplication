@@ -21,16 +21,22 @@ namespace LF.Figure
     /// <summary>
     /// 轴的抽象类
     /// </summary>
-    public class Axis:UserControl
+    public abstract class Axis:UserControl
     {
         #region Fields
-        Canvas root;
+        /// <summary>
+        /// 绘图
+        /// </summary>
+        protected Canvas root;
         #endregion
 
         #region Properties
 
 
 
+        /// <summary>
+        /// 刻度
+        /// </summary>
         [Category("LF"), Description("刻度")]
         public Scale Scale
         {
@@ -44,7 +50,9 @@ namespace LF.Figure
 
 
 
-
+        /// <summary>
+        /// 是否显示轴线段
+        /// </summary>
         [Category("LF"), Description("是否显示轴线段")]
         public bool IsAxisSegmentVisible
         {
@@ -77,33 +85,13 @@ namespace LF.Figure
 
         #region Methods
 
-        public double Normalize(double v) => (v - Scale.Min) / (Scale.Max - Scale.Min) * RenderSize.Width;
+        public abstract double Normalize(double v);
 
         /// <summary>
         /// 刷新重绘
         /// </summary>
-        public void Refresh()
-        {
-            root.Children.Clear();
-            if (RenderSize.Width <= 0) return;
-
-            double v = Scale.Min;
-            double x;
-            do
-            {
-                x = Normalize(v);
-                root.Children.Add(new Line
-                {
-                    X1 = x,
-                    X2 = x,
-                    Y1 = 0,
-                    Y2 = -10,
-                    Stroke = Brushes.Chocolate,
-                    StrokeThickness = 2,
-                });
-                v += Scale.MajorStep;
-            } while (v <= Scale.Max);
-        }
+        public abstract void Refresh();
+       
 
         #endregion
 

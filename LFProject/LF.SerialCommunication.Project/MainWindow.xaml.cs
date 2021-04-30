@@ -332,6 +332,15 @@ namespace LF.SerialCommunication.Project
             {
                 AddMessage(tr.Text);
             }
+            //if (serialPort.Port.IsOpen)
+            //{
+                
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show("串口未打开，无法发送！", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+            //}
         }
 
     }
