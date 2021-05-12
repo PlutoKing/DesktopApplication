@@ -1,0 +1,12 @@
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\bin\Debug\LF.CatiaDrawing.dll
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\bin\Debug\LF.CatiaDrawing.pdb
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\LF.CatiaDrawing.csprojAssemblyReference.cache
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\Interop.HybridShapeTypeLib.dll
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\Interop.INFITF.dll
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\Interop.KnowledgewareTypeLib.dll
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\Interop.MECMOD.dll
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\Interop.ProductStructureTypeLib.dll
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\LF.CatiaDrawing.csproj.ResolveComReference.cache
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\LF.CatiaDrawing.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\LF.CatiaDrawing.dll
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\LF.CatiaDrawing.pdb

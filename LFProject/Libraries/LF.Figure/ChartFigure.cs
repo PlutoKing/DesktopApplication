@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Shapes;
+using System.Windows;
 
 namespace LF.Figure
 {
@@ -31,6 +33,8 @@ namespace LF.Figure
         public ChartFigure()
         {
             this.Content = root;
+            // 边缘
+            this.Padding = new System.Windows.Thickness(10);
 
             this.Loaded += ChartFigure_Loaded;
             this.SizeChanged += ChartFigure_SizeChanged;
@@ -54,9 +58,10 @@ namespace LF.Figure
             Canvas.SetLeft(xAxis, 10);
             Canvas.SetTop(xAxis, 10);
             root.Children.Add(yAxis);
-
         }
 
+        
+        
         #endregion
 
         private void ChartFigure_SizeChanged(object sender, System.Windows.SizeChangedEventArgs e)

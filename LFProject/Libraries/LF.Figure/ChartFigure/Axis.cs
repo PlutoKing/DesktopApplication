@@ -28,6 +28,8 @@ namespace LF.Figure
         /// 绘图
         /// </summary>
         protected Canvas root;
+
+        public TextBlock font;
         #endregion
 
         #region Properties
@@ -47,6 +49,66 @@ namespace LF.Figure
         // Using a DependencyProperty as the backing store for Scale.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ScaleProperty =
             DependencyProperty.Register("Scale", typeof(Scale), typeof(Axis), new PropertyMetadata(default(Scale), OnPropertyChanged));
+
+
+
+        /// <summary>
+        /// 副刻度线样式
+        /// </summary>
+        public MinorTick MinorTick
+        {
+            get { return (MinorTick)GetValue(MinorTickProperty); }
+            set { SetValue(MinorTickProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for MinorTick.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty MinorTickProperty =
+            DependencyProperty.Register("MinorTick", typeof(MinorTick), typeof(Axis), new PropertyMetadata(default(MinorTick), OnPropertyChanged));
+
+
+        /// <summary>
+        /// 主刻度线样式
+        /// </summary>
+        public MajorTick MajorTick
+        {
+            get { return (MajorTick)GetValue(MajorTickProperty); }
+            set { SetValue(MajorTickProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for MajorTick.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty MajorTickProperty =
+            DependencyProperty.Register("MajorTick", typeof(MajorTick), typeof(Axis), new PropertyMetadata(default(MajorTick), OnPropertyChanged));
+
+
+        /// <summary>
+        /// 副网格线样式
+        /// </summary>
+        public MinorGrid MinorGrid
+        {
+            get { return (MinorGrid)GetValue(MinorGridProperty); }
+            set { SetValue(MinorGridProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for MinorGrid.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty MinorGridProperty =
+            DependencyProperty.Register("MinorGrid", typeof(MinorGrid), typeof(Axis), new PropertyMetadata(default(MinorGrid), OnPropertyChanged));
+
+
+
+        /// <summary>
+        /// 主网格线样式
+        /// </summary>
+        public MajorGrid MajorGrid
+        {
+            get { return (MajorGrid)GetValue(MajorGridProperty); }
+            set { SetValue(MajorGridProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for MajorGrid.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty MajorGridProperty =
+            DependencyProperty.Register("MajorGrid", typeof(MajorGrid), typeof(Axis), new PropertyMetadata(default(MajorGrid), OnPropertyChanged));
+
+
 
 
 
@@ -91,7 +153,108 @@ namespace LF.Figure
         /// 刷新重绘
         /// </summary>
         public abstract void Refresh();
-       
+
+        public void Draw()
+        {
+            
+        }
+
+
+        /// <summary>
+        /// 绘制副刻度线
+        /// </summary>
+        /// <param name="pixVal"></param>
+        /// <param name="topPix"></param>
+        /// <param name="shift"></param>
+        /// <param name="scaledTic"></param>
+        public void DrawMinorTick(float pixVal, float topPix,
+                    float shift, float scaledTic)
+        {
+            if (MinorTick.IsOutside)
+            {
+                root.Children.Add(new Line
+                {
+                    X1 = pixVal,
+                    Y1 = 0.0d,
+                    X2 = pixVal,
+                    Y2 = shift + scaledTic,
+                    Stroke = Brushes.Black,
+                    StrokeThickness = 1,
+                });
+            }
+            if (MinorTick.IsCrossOutside)
+            {
+                root.Children.Add(new Line
+                {
+                    X1 = pixVal,
+                    Y1 = shift,
+                    X2 = pixVal,
+                    Y2 = -scaledTic,
+                    Stroke = Brushes.Black,
+                    StrokeThickness = 1,
+                });
+            }
+            if (MinorTick.IsInside)
+            {
+                root.Children.Add(new Line
+                {
+                    X1 = pixVal,
+                    Y1 = shift,
+                    X2 = pixVal,
+                    Y2 = shift + scaledTic,
+                    Stroke = Brushes.Black,
+                    StrokeThickness = 1,
+                });
+            }
+            if(MinorTick.IsCrossInside)
+            {
+                root.Children.Add(new Line
+                {
+                    X1 = pixVal,
+                    Y1 = 0.0d,
+                    X2 = pixVal,
+                    Y2 = -scaledTic,
+                    Stroke = Brushes.Black,
+                    StrokeThickness = 1,
+                });
+            }
+            if (MinorTick.IsOpposite)
+            {
+                root.Children.Add(new Line
+                {
+                    X1 = pixVal,
+                    Y1 = topPix,
+                    X2 = pixVal,
+                    Y2 = topPix + scaledTic,
+                    Stroke = Brushes.Black,
+                    StrokeThickness = 1,
+                });
+            }
+        }
+
+        /// <summary>
+        /// 绘制副网格线
+        /// </summary>
+        /// <param name="pixVal"></param>
+        /// <param name="topPix"></param>
+        public void DrawMinorGrid(float pixVal, float topPix)
+        {
+            root.Children.Add(new Line
+            {
+                X1 = pixVal,
+                Y1 = 0.0d,
+                X2 = pixVal,
+                Y2 = topPix,
+                Stroke = Brushes.Gray,
+                StrokeThickness = 1,
+                StrokeDashArray = new DoubleCollection() { 2, 3 },
+        });
+        }
+        #region Drawing Methods 绘图计算方法
+
+        
+
+        #endregion
 
         #endregion
 

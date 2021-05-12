@@ -26,6 +26,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style x:Key="FlatButton" TargetType="Button">
         <Setter Property="Width" Value="auto"/>
         <Setter Property="MinHeight" Value="24"/>

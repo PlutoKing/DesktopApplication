@@ -54,6 +54,10 @@
     <Compile Include="ChartFigure\Axis.cs" />
     <Compile Include="ChartFigure\XAxis.cs" />
     <Compile Include="ChartFigure\YAxis.cs" />
+    <Compile Include="TickAndGrid\MajorGrid.cs" />
+    <Compile Include="TickAndGrid\MajorTick.cs" />
+    <Compile Include="TickAndGrid\MinorGrid.cs" />
+    <Compile Include="TickAndGrid\MinorTick.cs" />
     <Compile Include="Pane.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

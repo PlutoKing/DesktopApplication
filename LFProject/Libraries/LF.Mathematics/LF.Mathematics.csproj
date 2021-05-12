@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AD95C400-D749-4295-B09F-F1C228C959AA}</ProjectGuid>
+    <ProjectGuid>{CCC23ED3-BF2A-4D13-B82C-503D704C9EB6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LF.Mathematics</RootNamespace>
@@ -41,11 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algebra\LFVector.cs" />
-    <Compile Include="Basic\LFArray.cs" />
-    <Compile Include="IOA\GA\LFChromosome.cs" />
-    <Compile Include="IOA\GA\LFGa.cs" />
-    <Compile Include="IOA\GA\LFPopulation.cs" />
+    <Compile Include="LFMatrix.cs" />
+    <Compile Include="LFRectangle.cs" />
+    <Compile Include="LFVector.cs" />
+    <Compile Include="LFVector3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

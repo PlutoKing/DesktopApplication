@@ -60,22 +60,22 @@
         <!--工具栏-->
         <Border Grid.Row="1" BorderThickness="0 0 0 1" BorderBrush="{StaticResource LineColor}" Background="White" Padding="3 0 3 0">
             <StackPanel Orientation="Horizontal">
-                <Button Content="新建" Style="{StaticResource FlatButton}"></Button>
-                <Button Content="打开" Style="{StaticResource FlatButton}"></Button>
-                <Button Content="保存" Style="{StaticResource FlatButton}"></Button>
+                <Button Content="&#xefc0;" FontFamily="Fonts/#iconfont" Style="{StaticResource FlatButton}"></Button>
+                <Button Content="&#xefdc;" FontFamily="Fonts/#iconfont" Style="{StaticResource FlatButton}"></Button>
+                <Button Content="&#xf0a6;" FontFamily="Fonts/#iconfont" Style="{StaticResource FlatButton}"></Button>
                 <Rectangle Width="1" Fill="{StaticResource LineColor}" Margin="3 5 3 5"></Rectangle>
-                <Button Content="撤销" Style="{StaticResource FlatButton}"></Button>
-                <Button Content="重做" Style="{StaticResource FlatButton}"></Button>
+                <Button Content="&#xf124;" FontFamily="Fonts/#iconfont" Style="{StaticResource FlatButton}"></Button>
+                <Button Content="&#xf094;" FontFamily="Fonts/#iconfont" Style="{StaticResource FlatButton}"></Button>
                 <Rectangle Width="1" Fill="{StaticResource LineColor}" Margin="3 5 3 5"></Rectangle>
-                <Button Content="复制" Style="{StaticResource FlatButton}"></Button>
-                <Button Content="剪切" Style="{StaticResource FlatButton}"></Button>
-                <Button Content="粘贴" Style="{StaticResource FlatButton}"></Button>
+                <Button Content="&#xef86;" FontFamily="Fonts/#iconfont" Style="{StaticResource FlatButton}"></Button>
+                <Button Content="&#xef90;" FontFamily="Fonts/#iconfont" Style="{StaticResource FlatButton}"></Button>
+                <Button Content="&#xf068;" FontFamily="Fonts/#iconfont" Style="{StaticResource FlatButton}"></Button>
                 <Rectangle Width="1" Fill="{StaticResource LineColor}" Margin="3 5 3 5"></Rectangle>
                 <ComboBox Width="60" Margin="0 0 4 0"></ComboBox>
                 <ComboBox Width="120" Margin="0 0 4 0"></ComboBox>
-                <CheckBox Content="B"></CheckBox>
-                <CheckBox Content="I"></CheckBox>
-                <CheckBox Content="U"></CheckBox>
+                <CheckBox Content="&#xef41;" FontFamily="Fonts/#iconfont"></CheckBox>
+                <CheckBox Content="&#xf02c;" FontFamily="Fonts/#iconfont"></CheckBox>
+                <CheckBox Content="&#xf123;" FontFamily="Fonts/#iconfont"></CheckBox>
                 <Rectangle Width="1" Fill="{StaticResource LineColor}" Margin="3 5 3 5"></Rectangle>
             </StackPanel>
         </Border>

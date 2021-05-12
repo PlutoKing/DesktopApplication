@@ -1,0 +1,14 @@
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\bin\Debug\LF.AcademicTool.Project.exe.config
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\bin\Debug\LF.AcademicTool.Project.exe
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\bin\Debug\LF.AcademicTool.Project.pdb
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\obj\Debug\MainWindow.g.cs
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\obj\Debug\App.g.cs
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\obj\Debug\LF.AcademicTool.Project_MarkupCompile.cache
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\obj\Debug\LF.AcademicTool.Project_MarkupCompile.lref
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\obj\Debug\MainWindow.baml
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\obj\Debug\LF.AcademicTool.Project.g.resources
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\obj\Debug\LF.AcademicTool.Project.Properties.Resources.resources
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\obj\Debug\LF.AcademicTool.Project.csproj.GenerateResource.cache
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\obj\Debug\LF.AcademicTool.Project.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\obj\Debug\LF.AcademicTool.Project.exe
+I:\DesktopApplication\LFProject\LF.AcademicTool.Project\obj\Debug\LF.AcademicTool.Project.pdb
