@@ -4,7 +4,7 @@
 library
 C#
 .cs
-I:\DesktopApplication\LFProject\Libraries\LF.WPFStyle\obj\Debug\
+E:\DesktopApplication\LFProject\Libraries\LF.WPFStyle\obj\Debug\
 LF.WPFStyle
 none
 false
@@ -12,8 +12,8 @@ DEBUG;TRACE
 
 9-1156740623
 
-4-1472386529
-16-1152087372
+3-630027162
+13-1505183044
 Styles\Button.xaml;Styles\Calendar.xaml;Styles\CheckBox.xaml;Styles\Color.xaml;Styles\ComboBox.xaml;Styles\DataGrid.xaml;Styles\GroupBox.xaml;Styles\TabControl.xaml;Styles\TextBox.xaml;
 
 False
