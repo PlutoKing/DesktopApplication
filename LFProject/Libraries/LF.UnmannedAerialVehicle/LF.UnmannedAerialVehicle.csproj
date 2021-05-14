@@ -41,14 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Guidance\LFRoute2D.cs" />
+    <Compile Include="Guidance\Map2DFile.cs" />
+    <Compile Include="LFAutoPilot.cs" />
     <Compile Include="LFDrone.cs" />
+    <Compile Include="Guidance\LFMap2D.cs" />
+    <Compile Include="Guidance\LFObstacle2D.cs" />
     <Compile Include="LFPidController.cs" />
+    <Compile Include="Task\LFWaypoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LF.Algorithm\LF.Algorithm.csproj">
+      <Project>{d707fc05-8e91-4a55-ae2b-9b71bfef88d6}</Project>
+      <Name>LF.Algorithm</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LF.Mathematics\LF.Mathematics.csproj">
       <Project>{ccc23ed3-bf2a-4d13-b82c-503d704c9eb6}</Project>
       <Name>LF.Mathematics</Name>
@@ -58,5 +68,6 @@
       <Name>LF.Mechanics</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

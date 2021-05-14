@@ -4,6 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LF.Swarm.Project.Pages"
+                     xmlns:figure="clr-namespace:LF.Figure;assembly=LF.Figure"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:wfi ="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Margin="2">
@@ -15,7 +19,7 @@
             <GroupBox Header="地图尺寸">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="auto" />
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="40" />
                     </Grid.ColumnDefinitions>
@@ -25,29 +29,38 @@
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                     </Grid.RowDefinitions>
-                    <TextBlock Text="Xmin" VerticalAlignment="Center"></TextBlock>
-                    <TextBox Grid.Column="1"></TextBox>
+                    <TextBlock Text="Xmin = " VerticalAlignment="Center"></TextBlock>
+                    <TextBox Text="{Binding Xmin,Mode=TwoWay}" Grid.Column="1"></TextBox>
                     <TextBlock Text="m" Grid.Column="2" VerticalAlignment="Center" Margin="3 0 0 0"></TextBlock>
-                    <TextBlock Text="Xmax" Grid.Row="1" VerticalAlignment="Center"></TextBlock>
-                    <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                    <TextBlock Text="Xmax = " Grid.Row="1" VerticalAlignment="Center"></TextBlock>
+                    <TextBox Text="{Binding Xmax,Mode=TwoWay}" Grid.Row="1" Grid.Column="1"
+                             TextChanged="TextBox_TextChanged"></TextBox>
                     <TextBlock Grid.Row="1" Text="m" Grid.Column="2" VerticalAlignment="Center" Margin="3 0 0 0"></TextBlock>
-                    <TextBlock Text="Ymin" Grid.Row="2" VerticalAlignment="Center"></TextBlock>
-                    <TextBox Grid.Row="2" Grid.Column="1"></TextBox>
+                    <TextBlock Text="Ymin = " Grid.Row="2" VerticalAlignment="Center"></TextBlock>
+                    <TextBox Text="{Binding Ymin,Mode=TwoWay}" Grid.Row="2" Grid.Column="1"></TextBox>
                     <TextBlock Grid.Row="2" Text="m" Grid.Column="2" VerticalAlignment="Center" Margin="3 0 0 0"></TextBlock>
-                    <TextBlock Text="Ymax" Grid.Row="3" VerticalAlignment="Center"></TextBlock>
-                    <TextBox Grid.Row="3" Grid.Column="1"></TextBox>
+                    <TextBlock Text="Ymax = " Grid.Row="3" VerticalAlignment="Center"></TextBlock>
+                    <TextBox Text="{Binding Ymax,Mode=TwoWay}" Grid.Row="3" Grid.Column="1"></TextBox>
                     <TextBlock Grid.Row="3" Text="m" Grid.Column="2" VerticalAlignment="Center" Margin="3 0 0 0"></TextBlock>
                 </Grid>
             </GroupBox>
+            <GroupBox Header="起始位置" Margin="0 4 0 0">
+                
+            </GroupBox>
             <GroupBox Header="障碍物" Margin="0 4 0 0" Height="400">
-                <DataGrid>
+                <DataGrid x:Name="DtgObs" IsReadOnly="True"
+                                          AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column" SelectionUnit="FullRow">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="序号" Width="60"></DataGridTextColumn>
-                        <DataGridTextColumn Header="控制点" Width="1*"></DataGridTextColumn>
+                        <DataGridTextColumn Header="序号" Width="40" Binding="{Binding Index}" ></DataGridTextColumn>
+                        <DataGridTextColumn Header="边数" Width="40" Binding="{Binding Count}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="控制点" Width="1*" Binding="{Binding Name}"></DataGridTextColumn>
                     </DataGrid.Columns>
                 </DataGrid>
             </GroupBox>
         </StackPanel>
+        <wfi:WindowsFormsHost Grid.Column="1" Margin="2">
+            <figure:FigureControl x:Name="map"/>
+        </wfi:WindowsFormsHost>
 
     </Grid>
 </UserControl>

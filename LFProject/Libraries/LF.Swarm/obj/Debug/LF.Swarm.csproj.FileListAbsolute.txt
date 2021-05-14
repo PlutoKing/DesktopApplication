@@ -1,0 +1,15 @@
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\bin\Debug\LF.Swarm.dll
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\bin\Debug\LF.Swarm.pdb
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\bin\Debug\LF.UnmannedAerialVehicle.dll
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\bin\Debug\LF.Mathematics.dll
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\bin\Debug\LF.Mechanics.dll
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\bin\Debug\LF.Algorithm.dll
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\bin\Debug\LF.UnmannedAerialVehicle.pdb
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\bin\Debug\LF.Mathematics.pdb
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\bin\Debug\LF.Mechanics.pdb
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\bin\Debug\LF.Algorithm.pdb
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\obj\Debug\LF.Swarm.csprojAssemblyReference.cache
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\obj\Debug\LF.Swarm.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\obj\Debug\LF.Swarm.csproj.CopyComplete
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\obj\Debug\LF.Swarm.dll
+I:\DesktopApplication\LFProject\Libraries\LF.Swarm\obj\Debug\LF.Swarm.pdb

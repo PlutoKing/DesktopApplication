@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LF.Figure.Project", "LF.Figure.Project\LF.Figure.Project.csproj", "{ECEAA811-C6FA-4944-AD36-562259A03FFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LF.Figure", "LF.Figure\LF.Figure.csproj", "{393AD8EE-204B-4710-83EB-123FB24A641F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECEAA811-C6FA-4944-AD36-562259A03FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECEAA811-C6FA-4944-AD36-562259A03FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECEAA811-C6FA-4944-AD36-562259A03FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECEAA811-C6FA-4944-AD36-562259A03FFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{393AD8EE-204B-4710-83EB-123FB24A641F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393AD8EE-204B-4710-83EB-123FB24A641F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393AD8EE-204B-4710-83EB-123FB24A641F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393AD8EE-204B-4710-83EB-123FB24A641F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCBF7ACD-E726-4F3B-BF1A-F59BE5E00257}
+	EndGlobalSection
+EndGlobal

@@ -10,6 +10,7 @@
                 <ResourceDictionary Source="/LF.WPFStyle;component/Styles/Calendar.xaml" />
                 <ResourceDictionary Source="/LF.WPFStyle;component/Styles/Button.xaml" />
                 <ResourceDictionary Source="/LF.WPFStyle;component/Styles/ComboBox.xaml" />
+                <ResourceDictionary Source="/LF.WPFStyle;component/Styles/DataGrid.xaml" />
                 <ResourceDictionary Source="/LF.WPFStyle;component/Styles/GroupBox.xaml" />
                 <ResourceDictionary Source="/LF.WPFStyle;component/Styles/TabControl.xaml" />
                 <ResourceDictionary Source="/LF.WPFStyle;component/Styles/TextBox.xaml" />

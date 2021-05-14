@@ -1,0 +1,13 @@
+I:\DesktopApplication\Lib01Figure\LF.Figure.Project\LF.Figure\bin\Debug\LF.Figure.dll
+I:\DesktopApplication\Lib01Figure\LF.Figure.Project\LF.Figure\bin\Debug\LF.Figure.pdb
+I:\DesktopApplication\Lib01Figure\LF.Figure.Project\LF.Figure\obj\Debug\GeneratedInternalTypeHelper.g.cs
+I:\DesktopApplication\Lib01Figure\LF.Figure.Project\LF.Figure\obj\Debug\LF.Figure_MarkupCompile.cache
+I:\DesktopApplication\Lib01Figure\LF.Figure.Project\LF.Figure\obj\Debug\LF.Figure_MarkupCompile.lref
+I:\DesktopApplication\Lib01Figure\LF.Figure.Project\LF.Figure\obj\Debug\Themes\Generic.baml
+I:\DesktopApplication\Lib01Figure\LF.Figure.Project\LF.Figure\obj\Debug\LF.Figure.g.resources
+I:\DesktopApplication\Lib01Figure\LF.Figure.Project\LF.Figure\obj\Debug\LF.Figure.Properties.Resources.resources
+I:\DesktopApplication\Lib01Figure\LF.Figure.Project\LF.Figure\obj\Debug\LF.Figure.csproj.GenerateResource.cache
+I:\DesktopApplication\Lib01Figure\LF.Figure.Project\LF.Figure\obj\Debug\LF.Figure.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\Lib01Figure\LF.Figure.Project\LF.Figure\obj\Debug\LF.Figure.dll
+I:\DesktopApplication\Lib01Figure\LF.Figure.Project\LF.Figure\obj\Debug\LF.Figure.pdb
+I:\DesktopApplication\Lib01Figure\LF.Figure.Project\LF.Figure\obj\Debug\LF.Figure.csprojAssemblyReference.cache

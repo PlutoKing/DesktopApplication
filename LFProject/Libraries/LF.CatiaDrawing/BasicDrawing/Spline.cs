@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using INFITF;
 using MECMOD;
 using HybridShapeTypeLib;
+using LF.Mathematics;
 
 namespace LF.CatiaDrawing
 {
@@ -107,5 +108,6 @@ namespace LF.CatiaDrawing
 
             return Part.CreateReferenceFromObject(shape);
         }
+
     }
 }

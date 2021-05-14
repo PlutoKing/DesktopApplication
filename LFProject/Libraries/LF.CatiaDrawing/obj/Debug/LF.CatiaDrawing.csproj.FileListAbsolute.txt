@@ -10,3 +10,6 @@ I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\LF.CatiaDraw
 I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\LF.CatiaDrawing.csproj.CoreCompileInputs.cache
 I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\LF.CatiaDrawing.dll
 I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\LF.CatiaDrawing.pdb
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\bin\Debug\LF.Mathematics.dll
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\bin\Debug\LF.Mathematics.pdb
+I:\DesktopApplication\LFProject\Libraries\LF.CatiaDrawing\obj\Debug\LF.CatiaDrawing.csproj.CopyComplete

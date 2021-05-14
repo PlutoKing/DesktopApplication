@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using INFITF;
 using MECMOD;
 using HybridShapeTypeLib;
+using LF.Mathematics;
 
 namespace LF.CatiaDrawing
 {
@@ -26,6 +27,12 @@ namespace LF.CatiaDrawing
         /// Catia相关
         /// </summary>
         public LFCatia Catia = new LFCatia();
+
+        /// <summary>
+        /// 参考面ZX
+        /// </summary>
+        private Reference refZX;
+
 
         #region 几何参数
         /// <summary>
@@ -67,6 +74,36 @@ namespace LF.CatiaDrawing
         /// 机翼各段偏航角
         /// </summary>
         public double[] PsiW;
+
+        /// <summary>
+        /// 机身长度
+        /// </summary>
+        public double Lf;
+
+        /// <summary>
+        /// 机身高度
+        /// </summary>
+        public double Hf;
+
+        /// <summary>
+        /// 机身宽度
+        /// </summary>
+        public double Wf;
+
+        /// <summary>
+        /// 机鼻长度
+        /// </summary>
+        public double Lnose;
+
+        /// <summary>
+        /// 机尾长度
+        /// </summary>
+        public double Lrear;
+
+        /// <summary>
+        /// 机鼻控制点
+        /// </summary>
+        public LFPoint2D[] PointsNose;
         #endregion
 
         #region 控制点定位参数
@@ -89,6 +126,16 @@ namespace LF.CatiaDrawing
         public int[] LinePointX = new int[] { 18, 25, 31, 49 };
 
         public int Ns = 3;
+
+        public double[] Xfu;
+        public double[] Yfu;
+        public double[] Zfu;
+        public double[] Xfd;
+        public double[] Yfd;
+        public double[] Zfd;
+        public double[] XFn;
+        public double[] YFn;
+        public double[] ZFn;
         #endregion
 
         #region 控制点
@@ -111,7 +158,9 @@ namespace LF.CatiaDrawing
         Reference[][] PointWUL = new Reference[2][];
         Reference[][] PointWDL = new Reference[2][];
 
-
+        Reference[] PointFU = new Reference[2];
+        Reference[] PointFD = new Reference[2];
+        Reference[] PointFn = new Reference[5];
         #endregion
 
         #region 控制线
@@ -148,12 +197,20 @@ namespace LF.CatiaDrawing
 
         Reference[] GuideW;
 
+        Reference LineFU;
+        Reference LineFD;
+        Reference LineFn;
+        Reference LineFrU;
+        Reference LineFrD;
         #endregion
 
         #region 面
         Reference SurfaceWR;
-
         Reference BlendWR;
+        Reference FillWR;
+        Reference WingR;
+        Reference WingL;
+        Reference Wing;
         #endregion
 
 
@@ -174,11 +231,16 @@ namespace LF.CatiaDrawing
         public void Draw()
         {
             Init();
+            refZX = Catia.SetPlaneZX();
 
-            DrawWing();
+            //DrawWing();
+
+            DrawFuselage();
         }
 
-
+        /// <summary>
+        /// 绘制机翼
+        /// </summary>
         public void DrawWing()
         {
             // 绘制机翼截面
@@ -209,10 +271,47 @@ namespace LF.CatiaDrawing
             SurfaceWR = Catia.DrawLoft(SectionW, GuideW);
 
             HybridShapeBlend BlendWRtmp = Catia.GetBlend(SurfaceWR, SectionWU[Ns - 1], -1, SurfaceWR, SectionWD[Ns - 1], 2);
-
+            BlendWR = Catia.Part.CreateReferenceFromObject(BlendWRtmp);
 
             Reference tmp = Catia.Doc.Part.CreateReferenceFromBRepName("BorderREdge:(BEdge:(Brp:(GSMBlend.1;(Brp:(GSMCurve.6;2);Brp:(GSMCurve.5;2)));None:(Limits1:();Limits2:();+1);Cf11:());WithPermanentBody;WithoutBuildError;WithSelectingFeatureSupport;MFBRepVersion_CXR15)", BlendWRtmp);
-            Catia.Fill(new Reference[] { tmp, SectionWTe[Ns-1] });
+            FillWR = Catia.Fill(new Reference[] { tmp, SectionWTe[Ns-1] });
+
+            // 缝合右侧机翼
+            WingR = Catia.Join(new Reference[] { SurfaceWR, BlendWR, FillWR });
+            // 对称处左侧机翼
+            WingL = Catia.GetSymmetry(WingR, refZX);
+
+            // 缝合机翼
+            Wing = Catia.Join(new Reference[] { WingR, WingL });
+        }
+
+        /// <summary>
+        /// 绘制机身
+        /// </summary>
+        public void DrawFuselage()
+        {
+            
+
+            for (int i = 0; i < 5; i++)
+            {
+                PointFn[i] = Catia.DrawPoint(XFn[i], YFn[i], ZFn[i]);
+            }
+
+            for (int i = 0; i < 2; i++)
+            {
+                PointFU[i] = Catia.DrawPoint(Xfu[i], Yfu[i], Zfu[i]);
+                PointFD[i] = Catia.DrawPoint(Xfd[i], Yfd[i], Zfd[i]);
+
+            }
+
+            LineFU = Catia.DrawLine(PointFn[4], PointFU[0]);
+            LineFD = Catia.DrawLine(PointFn[0], PointFD[0]);
+            LineFrU = Catia.DrawLine(PointFU[0], PointFU[1]);
+            LineFrD = Catia.DrawLine( PointFD[0], PointFD[1]);
+
+            LineFn = Catia.DrawSpline(PointFn,LineFU,-1,LineFD,0);
+
+            Catia.Join(new Reference[] { LineFU, LineFD, LineFrU, LineFrD, LineFn });
         }
         #endregion
 
@@ -223,9 +322,20 @@ namespace LF.CatiaDrawing
         /// </summary>
         public void Init()
         {
+            WingInit();
+
+            FuselageInit();
+        }
+        /// <summary>
+        /// 机翼参数初始化
+        /// </summary>
+        public void WingInit()
+        {
+            // 配置翼型
             AirfoilW = new LFAirfoil("S3010");
             AirfoilW.Zt = 0.1;
             
+            // 配置机翼形状
             BW = new double[2] { 219.5, 425.7};
             CW = new double[3] { 225.5,225.5,168.6};
             AsW = new double[2] { 0, 0 };
@@ -262,6 +372,29 @@ namespace LF.CatiaDrawing
 
             LineW = new Reference[3][];
             GuideW = new Reference[3];
+        }
+
+        public void FuselageInit()
+        {
+            // 侧视图轮廓线控制参数
+            Lf = 600;
+            Hf = 200;
+            Wf = 200;
+            Lnose = 200;
+            Lrear = 150;
+
+            Xfu = new double[] {  Lf - Lrear,Lf };
+            Yfu = new double[] { 0, 0 };
+            Zfu = new double[] { Hf, Hf-20 };
+
+            Xfd = new double[] { Lf - Lrear, Lf };
+            Yfd = new double[] { 0, 0 };
+            Zfd = new double[] { 0, 0 };
+
+            XFn = new double[] { Lnose, 120, 0,120, Lnose };
+            YFn = new double[] { 0,0,0, 0,0 };
+            ZFn = new double[] {0, 20,100, 180,Hf };
+
         }
         #endregion
 

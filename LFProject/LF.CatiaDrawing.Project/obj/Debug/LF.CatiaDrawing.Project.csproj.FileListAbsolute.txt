@@ -18,3 +18,5 @@ I:\DesktopApplication\LFProject\LF.CatiaDrawing.Project\bin\Debug\LF.WPFStyle.dl
 I:\DesktopApplication\LFProject\LF.CatiaDrawing.Project\bin\Debug\LF.CatiaDrawing.pdb
 I:\DesktopApplication\LFProject\LF.CatiaDrawing.Project\bin\Debug\LF.WPFStyle.pdb
 I:\DesktopApplication\LFProject\LF.CatiaDrawing.Project\obj\Debug\LF.CatiaDrawing.Project.csproj.CopyComplete
+I:\DesktopApplication\LFProject\LF.CatiaDrawing.Project\bin\Debug\LF.Mathematics.dll
+I:\DesktopApplication\LFProject\LF.CatiaDrawing.Project\bin\Debug\LF.Mathematics.pdb

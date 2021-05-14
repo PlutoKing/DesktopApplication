@@ -58,3 +58,11 @@ E:\DesktopApplication\LFProject\LF.Swarm.Project\obj\Debug\LF.Swarm.Project.cspr
 E:\DesktopApplication\LFProject\LF.Swarm.Project\obj\Debug\LF.Swarm.Project.csproj.CopyComplete
 E:\DesktopApplication\LFProject\LF.Swarm.Project\obj\Debug\LF.Swarm.Project.exe
 E:\DesktopApplication\LFProject\LF.Swarm.Project\obj\Debug\LF.Swarm.Project.pdb
+I:\DesktopApplication\LFProject\LF.Swarm.Project\bin\Debug\LF.Mathematics.dll
+I:\DesktopApplication\LFProject\LF.Swarm.Project\bin\Debug\LF.Mathematics.pdb
+I:\DesktopApplication\LFProject\LF.Swarm.Project\bin\Debug\LF.UnmannedAerialVehicle.dll
+I:\DesktopApplication\LFProject\LF.Swarm.Project\bin\Debug\LF.Mechanics.dll
+I:\DesktopApplication\LFProject\LF.Swarm.Project\bin\Debug\LF.Algorithm.dll
+I:\DesktopApplication\LFProject\LF.Swarm.Project\bin\Debug\LF.UnmannedAerialVehicle.pdb
+I:\DesktopApplication\LFProject\LF.Swarm.Project\bin\Debug\LF.Mechanics.pdb
+I:\DesktopApplication\LFProject\LF.Swarm.Project\bin\Debug\LF.Algorithm.pdb

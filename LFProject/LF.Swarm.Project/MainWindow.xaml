@@ -7,7 +7,8 @@
         xmlns:pages="clr-namespace:LF.Swarm.Project.Pages"
         mc:Ignorable="d"
         Title="集群仿真工具" Height="450" Width="800"
-        Background="{StaticResource BackColor}" WindowState="Maximized">
+        Background="{StaticResource BackColor}" WindowState="Maximized"
+        Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="24" />
@@ -25,10 +26,10 @@
         </Border>
         <TabControl Grid.Row="2" Margin="4" Style="{StaticResource LeftTabControl}" ItemContainerStyle="{StaticResource LeftTabItem}">
             <TabItem Header="首　页">
-                <pages:HomePage/>
+                <pages:HomePage x:Name="homePage"/>
             </TabItem>
             <TabItem Header="环　境">
-                <pages:SpacePage/>
+                <pages:SpacePage x:Name="spacePage"/>
             </TabItem>
             <TabItem Header="无人机">
                 <pages:DronePage/>
@@ -36,9 +37,6 @@
             <TabItem Header="任　务">
                 <pages:TaskPage/>
             </TabItem>
-            <TabItem Header="任　务">
-            </TabItem>
-
         </TabControl>
 
         <Border Grid.Row="3"  Background="White" BorderBrush="{StaticResource LineColor}" BorderThickness="0 1 0 0">

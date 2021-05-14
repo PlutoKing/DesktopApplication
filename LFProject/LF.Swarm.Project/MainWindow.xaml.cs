@@ -18,6 +18,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LF.UnmannedAerialVehicle;
 
 namespace LF.Swarm.Project
 {
@@ -28,12 +29,18 @@ namespace LF.Swarm.Project
     {
         #region Fields
 
+        public static LFMap2D map;
+        Map2DFile file;
+
         #endregion
 
         #region Constructors
         public MainWindow()
         {
             InitializeComponent();
+
+            file = new Map2DFile(AppDomain.CurrentDomain.BaseDirectory);
+            map = file.ReadFile();
         }
         #endregion
 
@@ -43,5 +50,11 @@ namespace LF.Swarm.Project
 
         #region Events
         #endregion
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            homePage.LoadMap(map);
+            spacePage.LoadMap(map);
+        }
     }
 }

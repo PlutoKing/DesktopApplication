@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basic\LFMath.cs" />
+    <Compile Include="Geometry\LFLine2D.cs" />
     <Compile Include="LFMatrix.cs" />
-    <Compile Include="LFRectangle.cs" />
+    <Compile Include="Geometry\LFPoint2D.cs" />
+    <Compile Include="Geometry\LFPolygon.cs" />
+    <Compile Include="Geometry\LFRectangle.cs" />
     <Compile Include="LFVector.cs" />
     <Compile Include="LFVector3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

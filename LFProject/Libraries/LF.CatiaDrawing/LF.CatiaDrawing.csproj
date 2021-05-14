@@ -51,6 +51,7 @@
     <Compile Include="BasicDrawing\Point.cs" />
     <Compile Include="LFFixedWing_11.cs" />
     <Compile Include="LFFlyingwing_01.cs" />
+    <Compile Include="LFWing_02.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BasicDrawing\Loft.cs" />
   </ItemGroup>
@@ -100,6 +101,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LF.Mathematics\LF.Mathematics.csproj">
+      <Project>{ccc23ed3-bf2a-4d13-b82c-503d704c9eb6}</Project>
+      <Name>LF.Mathematics</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
