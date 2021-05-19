@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Role Index="28917090914202311" Name="炎天焚">
+  <Ranks>
+    <Rank Date="289270909" Index="1" />
+    <Rank Date="289290809" Index="2" />
+    <Rank Date="289330827" Index="3" />
+    <Rank Date="289410927" Index="4" />
+    <Rank Date="289580529" Index="5" />
+    <Rank Date="289950313" Index="6" />
+    <Rank Date="290830715" Index="7" />
+    <Rank Date="293160807" Index="8" />
+    <Rank Date="299960414" Index="9" />
+    <Rank Date="308780613" Index="-1" />
+  </Ranks>
+  <Experiences>
+    <Experience Date="289170909" Index="3000109091450101" />
+  </Experiences>
+</Role>

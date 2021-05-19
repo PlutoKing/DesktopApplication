@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Sect Index="3023408191830101" Name="圣道院">
+  <Struct>
+    <Department ID="1" Title="圣道院" Level="1">
+      <Leader ID="1" Title="院长" Level="1" />
+      <Members />
+      <Departments>
+        <Department ID="1" Title="圣阵院" Level="1">
+          <Leader ID="1" Title="院长" Level="1">
+            <Assistant ID="1" Title="副院长" Level="4" />
+            <Assistant ID="2" Title="副院长" Level="4" />
+          </Leader>
+          <Members />
+          <Departments />
+        </Department>
+        <Department ID="2" Title="圣丹院" Level="1">
+          <Leader ID="1" Title="院长" Level="1">
+            <Assistant ID="1" Title="副院长" Level="4" />
+            <Assistant ID="2" Title="副院长" Level="4" />
+          </Leader>
+          <Members />
+          <Departments />
+        </Department>
+        <Department ID="3" Title="圣器院" Level="1">
+          <Leader ID="1" Title="院长" Level="1">
+            <Assistant ID="1" Title="副院长" Level="4" />
+            <Assistant ID="2" Title="副院长" Level="4" />
+          </Leader>
+          <Members />
+          <Departments />
+        </Department>
+        <Department ID="4" Title="圣音院" Level="1">
+          <Leader ID="1" Title="院长" Level="1">
+            <Assistant ID="1" Title="副院长" Level="4" />
+            <Assistant ID="2" Title="副院长" Level="4" />
+          </Leader>
+          <Members />
+          <Departments />
+        </Department>
+      </Departments>
+    </Department>
+  </Struct>
+</Sect>

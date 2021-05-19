@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Role Index="32351010811201311" Name="冥宗">
+  <Ranks>
+    <Rank Date="323610108" Index="1" />
+    <Rank Date="323630423" Index="2" />
+    <Rank Date="323680509" Index="3" />
+    <Rank Date="323790129" Index="4" />
+    <Rank Date="324030219" Index="5" />
+    <Rank Date="324620201" Index="6" />
+    <Rank Date="326220813" Index="7" />
+    <Rank Date="326251228" Index="-1" />
+  </Ranks>
+  <Experiences />
+</Role>

@@ -1,0 +1,12 @@
+I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Chart\obj\Debug\LF.Chart_MarkupCompile.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Chart\bin\Debug\LF.Chart.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Chart\bin\Debug\LF.Chart.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Chart\obj\Debug\GeneratedInternalTypeHelper.g.cs
+I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Chart\obj\Debug\LF.Chart_MarkupCompile.lref
+I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Chart\obj\Debug\Themes\Generic.baml
+I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Chart\obj\Debug\LF.Chart.g.resources
+I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Chart\obj\Debug\LF.Chart.Properties.Resources.resources
+I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Chart\obj\Debug\LF.Chart.csproj.GenerateResource.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Chart\obj\Debug\LF.Chart.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Chart\obj\Debug\LF.Chart.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Chart\obj\Debug\LF.Chart.pdb

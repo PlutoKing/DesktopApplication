@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Type>
+  <Node Index="1" Value="功法" Brief="" />
+  <Node Index="2" Value="武技" Brief="" />
+  <Node Index="3" Value="秘术" Brief="" />
+  <Node Index="4" Value="天赋" Brief="" />
+  <Node Index="5" Value="武王" Brief="" />
+  <Node Index="6" Value="武宗" Brief="" />
+  <Node Index="7" Value="武尊" Brief="" />
+  <Node Index="8" Value="武圣" Brief="" />
+  <Node Index="9" Value="武帝" Brief="" />
+  <Node Index="10" Value="武神" Brief="" />
+</Type>

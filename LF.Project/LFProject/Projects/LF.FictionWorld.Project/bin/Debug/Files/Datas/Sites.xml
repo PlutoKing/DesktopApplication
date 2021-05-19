@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Locations>
+  <Location Index="11101" Name="封魔山" Brief="封魔山是封印窥天魔尊的地方。">
+    <SubLocation ID="1" Name="窥天峰" Brief="窥天峰，位于封魔山中北部，高约1800米，是封印窥天魔尊的地方。" />
+    <SubLocation ID="2" Name="齐北河" Brief="齐北河，发源于封魔山，自西南向东北，流经北海原，汇入泫江。" />
+  </Location>
+  <Location Index="11102" Name="齐云山" Brief="齐云山位于天齐山脉中北部，封魔山以南，盛产金属矿石。">
+    <SubLocation ID="1" Name="济江" Brief="济江，发源于齐云山，自东向西，流入东海，是北海原与星海原的分界线。" />
+  </Location>
+  <Location Index="11103" Name="药王山" Brief="药王山位于天齐山脉南部，盛产草药，生活多种灵兽。">
+    <SubLocation ID="1" Name="药河" Brief="药河，发源于药王山，汇入济江。" />
+  </Location>
+  <Location Index="11201" Name="幽冥山" Brief="幽冥山位于天星山脉北部，有幽冥峰、暗影峰，盛产幽冥石和幽冥青金，是幽冥宗的宗门所在。">
+    <SubLocation ID="1" Name="幽冥峰" Brief="幽冥峰，幽冥山主峰，高约1900米。" />
+    <SubLocation ID="2" Name="暗影峰" Brief="暗影峰，幽冥山北侧山峰，高约1750米。" />
+  </Location>
+  <Location Index="11202" Name="暗星山" Brief="暗星山位于天星山脉南部，现为暗星禁地。">
+    <SubLocation ID="1" Name="暗星峰" Brief=" 暗星峰，暗星山主峰，高约 1900 米。" />
+  </Location>
+  <Location Index="11203" Name="九辰山" Brief="金蜂谷位于万花园北部，是金刺毒锋的领地。">
+    <SubLocation ID="1" Name="荒尘峰" Brief="暗星峰，暗星山主峰，高约1900米。" />
+    <SubLocation ID="2" Name="拜星峰" Brief="拜星峰，九辰山中部山峰。" />
+    <SubLocation ID="3" Name="蓝泉谷" Brief="蓝泉谷，九辰山东部山谷。" />
+    <SubLocation ID="4" Name="星光峰" Brief="星光峰，九辰山南部山峰。" />
+    <SubLocation ID="5" Name="湦江" Brief="湦江，发源于天星山脉，自东向西，流入东海。" />
+  </Location>
+  <Location Index="11204" Name="天星山" Brief="天星山位于天星山脉南部。" />
+  <Location Index="11301" Name="龙魔域" Brief="龙魔域位于北海原最北部。" />
+  <Location Index="11302" Name="北海龙墓" Brief="北海龙墓位于北海原中部，太古龙族的埋葬之地，也是最大的一处龙墓。" />
+  <Location Index="11303" Name="真龙城" Brief="真龙城位于北海原中部，沧江河畔，建立于真龙部落的遗址之上。">
+    <SubLocation ID="1" Name="龙江港" Brief="龙江港，真龙城外的港口。" />
+    <SubLocation ID="2" Name="龙墓镇" Brief="龙墓镇，真龙城下辖城镇，位于真龙城东北，毗邻龙墓，多冒险者。" />
+  </Location>
+  <Location Index="11304" Name="林东城" Brief="林东城位于北海原西部，天齐山脉北麓，毗邻琼林，是苍海帝国西北部重要商业城市。林东城以南北中轴线分为城东和城西两个区域。城西毗邻森林，是林东城的核心；城东是后来扩建的，疏于管理，较为混乱。下属城镇有：关山镇。">
+    <SubLocation ID="1" Name="关山镇" Brief="关山镇，林东城下属城镇，毗邻天池山雷云峰。" />
+  </Location>
+  <Location Index="11401" Name="心魔域" Brief="心魔域位于忘谷，分布情况不明，散布各地。" />
+  <Location Index="11402" Name="忘天城" Brief="忘天城位于忘谷北部，是一座规划城，布局有序。" />
+  <Location Index="11501" Name="海神城" Brief="苍海帝国帝都。">
+    <SubLocation ID="1" Name="海神殿" Brief="海神殿，是供奉海灵族的庙宇。" />
+    <SubLocation ID="2" Name="东海港" Brief="东海港，海神城主要港口。" />
+    <SubLocation ID="3" Name="木船镇" Brief="木船镇，海神城下属城镇，位于海边，出产船只。" />
+  </Location>
+  <Location Index="11502" Name="东海城" Brief="星海原东北部港口城市。">
+    <SubLocation ID="1" Name="东海港" Brief="东海港，东海城主要港口" />
+  </Location>
+  <Location Index="11503" Name="华亭城" Brief="华亭城位于星海原北部，天齐山脉南麓。" />
+  <Location Index="11504" Name="江北城" Brief="江北城位于星海原中部，湦江北岸。" />
+  <Location Index="11505" Name="山影城" Brief="山影城位于星海原中南部，玄龙山北麓。" />
+  <Location Index="11506" Name="江北城" Brief="江北城位于星海原中部，湦江北岸。" />
+  <Location Index="11507" Name="北关城" Brief="北关城位于星海原西北部，镇守天齐山脉与天星山脉关口，是抵御忘谷魔族的要塞">
+    <SubLocation ID="1" Name="永胜关" Brief="永胜关，北关城下属关隘之一。" />
+    <SubLocation ID="2" Name="承平关" Brief="承平关，北关城下属关隘之一。" />
+    <SubLocation ID="3" Name="万祥关" Brief="万祥关，北关城下属关隘之一。" />
+  </Location>
+  <Location Index="11508" Name="天星城" Brief="天星城位于星海原西部。" />
+  <Location Index="11509" Name="南云城" Brief="南云城位于临海原西南，扼守天星山脉和天封山脉山口。盛产残破的上古法宝，及其仿制品，多炼器师。" />
+  <Location Index="11510" Name="九龙岛" Brief="九龙岛位于临海原东方，济江入海口处。" />
+  <Location Index="12101" Name="紫极山" Brief="紫极山位于天凤山脉北部。">
+    <SubLocation ID="1" Name="紫极峰" Brief="紫极峰，紫极山主峰，高度约2400米。" />
+    <SubLocation ID="2" Name="雷鸠峰" Brief="雷鸠峰，紫极山南部山峰，高度约1600米。" />
+    <SubLocation ID="3" Name="北羽河" Brief="北羽河，自西向东，汇入沧江。" />
+  </Location>
+  <Location Index="12102" Name="炎天山" Brief="炎天山位于天凤山脉中北部，多火属性羽族，是炎天朱雀的领地。">
+    <SubLocation ID="1" Name="赤凤峰" Brief="炎天山主峰，高约2100米，是炎天朱雀的领地。" />
+  </Location>
+  <Location Index="12103" Name="金羽山" Brief="金羽山位于天凤山脉中部，多金、火、光属性羽族。">
+    <SubLocation ID="1" Name="金羽峰" Brief="金羽峰，金羽山主峰，高约2500米，是黄金鹓鶵的领地。" />
+    <SubLocation ID="2" Name="金炎峰" Brief="金炎峰，金羽山山峰，高约2200米，是圣炎金乌的领地。" />
+  </Location>
+  <Location Index="12104" Name="风煞山" Brief="风煞山位于" />
+  <Location Index="12201" Name="青湖山" Brief="青湖山位于天青山脉北部。">
+    <SubLocation ID="1" Name="青云峰" Brief="青云峰，清湖山主峰，高约2300米。" />
+    <SubLocation ID="2" Name="天青湖" Brief="天青湖，青湖峰顶一片大湖。" />
+  </Location>
+  <Location Index="12202" Name="铁背山" Brief="铁背山位于天青山脉北部，青湖山以南。盛产金属矿石，多虫族。">
+    <SubLocation ID="1" Name="沐江" Brief="沐江，发源于铁背山，流经清北林，汇入东海。" />
+  </Location>
+  <Location Index="12203" Name="阴阳山" Brief="阴阳山位于天青山脉中部，铁背山以南。">
+    <SubLocation ID="1" Name="清江" Brief="清江，自北向南，流经青北林、百花林，汇入南海。" />
+  </Location>
+  <Location Index="12204" Name="瑞木山" Brief="瑞木山位于天青山脉南部。">
+    <SubLocation ID="1" Name="沣江" Brief="沣江，自北向南，流经神羽谷、千鹭湖，汇入南海" />
+  </Location>
+  <Location Index="12205" Name="藤蔓山" Brief="藤蔓山位于天青山脉南部。">
+    <SubLocation ID="1" Name="牵牛河" Brief="牵牛河，自西北向东南，汇入清江。" />
+  </Location>
+  <Location Index="12206" Name="紫蝶谷" Brief="紫蝶谷位于天青山脉南部。">
+    <SubLocation ID="1" Name="香河" Brief="香河，西北向南，汇入清江。" />
+  </Location>
+  <Location Index="12301" Name="飞天魔域" Brief="天魔域位于神羽谷北部，是天魔族的领地。" />
+  <Location Index="12302" Name="千鹭湖" Brief="千鹭湖位于神羽谷南部。千鹭湖畔多白鹭，生长云叶树。" />
+  <Location Index="12401" Name="万木城" Brief="万木城位于青北林中部，沐江北岸。万木城是木家的领地，是万木帝国的都城，建立于帝国时代。" />
+  <Location Index="12402" Name="仙藤城" Brief="仙藤城位于青北林东部，沐江入海口处。原是一处小渔村，幽朝初年建城。" />
+  <Location Index="12501" Name="英雄林" Brief="英雄林位于百花林北部，横跨清江。" />
+  <Location Index="12502" Name="兰皇林" Brief="兰皇林位于百花林中部，清江与香河之间。" />
+  <Location Index="12503" Name="剑蒲山" Brief="剑蒲山位于百花林南部。" />
+  <Location Index="12504" Name="火鹤山" Brief="火鹤山位于百花林西部。" />
+  <Location Index="12505" Name="风雨林" Brief="风雨林位于百花林西南。" />
+  <Location Index="13101" Name="暗黑山" Brief="暗黑山位于天林山脉北部，是暗黑玄鸦的领地。">
+    <SubLocation ID="1" Name="玄鸦峰" Brief="玄鸦峰，暗黑山主峰，高约 2500 米。" />
+  </Location>
+  <Location Index="13102" Name="紫灵山" Brief="紫灵山位于天林山脉北部，暗黑山以南。" />
+  <Location Index="13103" Name="不死山" Brief="不死山位于天林山脉中部，紫灵山以南。" />
+  <Location Index="13104" Name="万窟山" Brief="万窟山位于天林山脉南部。">
+    <SubLocation ID="1" Name="天林河" Brief="天林河，自西向东" />
+  </Location>
+  <Location Index="13105" Name="天池山" Brief="天池山位于天林山脉南部，主峰为天鹏峰，东部有雷云峰。">
+    <SubLocation ID="1" Name="天鹏峰" Brief="天鹏峰，天池山主峰，高约3000米。" />
+    <SubLocation ID="2" Name="雷云峰" Brief="雷云峰，天池山东部山峰，高约1800米。" />
+    <SubLocation ID="3" Name="天池湖" Brief="天池湖，天池山上的湖泊。" />
+  </Location>
+  <Location Index="13201" Name="玄灵城" Brief="玄灵城位于青玄林中部，是风灵族的领地。" />
+  <Location Index="13202" Name="青灵城" Brief="青灵城位于青玄林中部。" />
+  <Location Index="13203" Name="青玄山" Brief="青玄山盛产各类草药，又多种灵兽" />
+  <Location Index="13204" Name="暗灵城" Brief="暗灵城位于青玄林东北部。" />
+  <Location Index="13301" Name="血之部落" Brief="血之部落位于血雾林中部，是血灵族的领地。" />
+  <Location Index="13302" Name="血槐林" Brief="血槐林位于血雾林东北。" />
+  <Location Index="13303" Name="血草原" Brief="血草原位于血雾林西北。" />
+  <Location Index="13401" Name="无双林" Brief="无双林位于妖谷中部。" />
+  <Location Index="13402" Name="独步林" Brief="独步林位于妖谷西北。" />
+  <Location Index="14101" Name="天机山" Brief="天机山位于天武山脉东部。">
+    <SubLocation ID="1" Name="天语峰" Brief="天语峰，天机山主峰，高约2600米。" />
+    <SubLocation ID="2" Name="天谴峰" Brief="天谴峰，天机山山峰，高约 2100 米，为天机阁陵园所在地。" />
+    <SubLocation ID="3" Name="灵龟湖" Brief="灵龟湖，天机山上的湖泊。" />
+  </Location>
+  <Location Index="14102" Name="圣武山" Brief="圣武山位于天武山脉中部，是圣物宗宗门所在。">
+    <SubLocation ID="1" Name="武帝峰" Brief="武帝峰，圣武山主峰，高约2100米。" />
+  </Location>
+  <Location Index="14103" Name="西武山" Brief="西武山位于圣武山脉西部。">
+    <SubLocation ID="1" Name="狂拳峰" Brief="狂拳峰，西武山山峰，高约2800米。" />
+    <SubLocation ID="2" Name="怒掌峰" Brief="怒掌峰，西武山山峰，高约2600米。" />
+  </Location>
+  <Location Index="14201" Name="赤阳山" Brief="赤阳山位于天阳山脉东端。">
+    <SubLocation ID="1" Name="淡河" Brief="淡河，发源于赤阳山，自北向南，汇入沧江。" />
+  </Location>
+  <Location Index="14202" Name="祭坛山" Brief="祭坛山位于天阳山脉中部，是上古炎阳部落祭祀太阳神的地方。">
+    <SubLocation ID="1" Name="太阳庙" Brief="太阳庙，炎阳部落祭祀太阳神的庙宇。" />
+    <SubLocation ID="2" Name="赤水河" Brief="赤水河，自西向东，汇入泫江。" />
+  </Location>
+  <Location Index="14301" Name="天乾山" Brief="天乾山位于天断山脉北部，主峰为天乾峰，其余山峰为语道峰、通法峰、阳宏峰、归泉峰、松恒峰和末云峰。">
+    <SubLocation ID="1" Name="天乾峰" Brief="天乾峰，天乾山主峰，高约 2300 米。" />
+    <SubLocation ID="2" Name="语道峰" Brief="语道峰，天乾山山峰，高约 2100 米。天乾宗外门。" />
+    <SubLocation ID="3" Name="通法峰" Brief="通法峰，天乾山山峰，高约 2000 米。天乾宗外门。" />
+    <SubLocation ID="4" Name="阳宏峰" Brief="阳宏峰，天乾山山峰，高约 2200 米。天乾宗外门。" />
+    <SubLocation ID="5" Name="归泉峰" Brief="归泉峰，天乾山山峰，高约 1800 米。天乾宗外门。" />
+    <SubLocation ID="6" Name="松恒峰" Brief="松恒峰，天乾山山峰，高约 1900 米。天乾宗外门。" />
+    <SubLocation ID="7" Name="末云峰" Brief="末云峰，天乾山山峰，高约 2000 米。天乾宗外门。" />
+    <SubLocation ID="8" Name="无名谷" Brief="无名谷，天乾峰南侧山谷，是天乾宗主体建筑所在地，常以相关建筑相称呼，无名。" />
+    <SubLocation ID="9" Name="万兽谷" Brief="天乾峰北侧山谷，多灵兽。" />
+    <SubLocation ID="10" Name="汶河" Brief="汶河，发源于天断山脉，自西向东，汇入沧江。" />
+  </Location>
+  <Location Index="14302" Name="断云山" Brief="断云山位于天断山脉中部，是断云河的发源地。">
+    <SubLocation ID="1" Name="断云河" Brief="断云河，自西向东，汇入汶河。" />
+    <SubLocation ID="2" Name="九幽峡谷" Brief="九幽峡谷，断云山峡谷，是沟通圣原与辽原的通道，多风。" />
+  </Location>
+  <Location Index="14401" Name="幽冥城" Brief="幽冥城位于辽北原东部，泫江北岸，扼守天武山脉和天星山脉山口。" />
+  <Location Index="14402" Name="魔族遗址" Brief="魔族遗址位于辽北原中部，原始魔族领地，在第二次魔族战争中化为废墟。" />
+  <Location Index="14501" Name="炎阳城" Brief="炎阳城位于辽南原中北部，是炎家的领地。" />
+  <Location Index="14502" Name="朱扇城" Brief="朱扇城位于辽原东南部，汶沧交汇处南岸。" />
+  <Location Index="14503" Name="万金城" Brief="万金城位于辽原西部，沧江南岸。" />
+  <Location Index="15101" Name="紫雷山" Brief="紫雷山位于天断山脉中部，天南原西北。">
+    <SubLocation ID="1" Name="澜江" Brief="澜江，发源于紫雷山，流经火灵谷，汇入南海。" />
+  </Location>
+  <Location Index="15102" Name="火灵山" Brief="火灵山位于天断山脉南部。">
+    <SubLocation ID="1" Name="海风峡谷" Brief="海风峡谷，火灵山南部峡谷，是山西原通往火灵谷的通道，被火灵族把控。" />
+    <SubLocation ID="2" Name="赤河" Brief="赤河，发源于火灵山，自西北向东南，汇入澜江。" />
+  </Location>
+  <Location Index="15201" Name="祖剑山" Brief="祖剑山位于天南山脉中部。">
+    <SubLocation ID="1" Name="千钧峰" Brief="千钧峰，祖剑山主峰，高约2700米，是供奉山河千钧剑的地方。" />
+    <SubLocation ID="2" Name="渝江" Brief="渝江，发源于祖剑山，流经剑原，汇入南海。" />
+  </Location>
+  <Location Index="15202" Name="剑石山" Brief="剑石山位于天南山脉南部。" />
+  <Location Index="15301" Name="灵玉山" Brief="灵玉山位于天月山脉北部。">
+    <SubLocation ID="1" Name=" 玉河" Brief=" 玉河，发源于灵玉山，汇入澜江。" />
+  </Location>
+  <Location Index="15302" Name="落月山" Brief="落月山位于天月山脉中部。" />
+  <Location Index="15401" Name="圣剑城" Brief="圣剑城位于剑原西部，天南山脉东麓，是最大的剑类兵器贸易城市。" />
+  <Location Index="15402" Name="南海城" Brief="南海城位于剑原南部，临海，是天南原重要的港口城市。">
+    <SubLocation ID="1" Name="南海港" Brief="南海港，南海城的港口。" />
+  </Location>
+  <Location Index="15501" Name="火灵城" Brief="火灵城位于火灵谷南部。" />
+  <Location Index="15601" Name="龙凤城" Brief="龙凤城位于山西原北部，紫雷山西麓。 紫仙建立于荒朝中期，主要用于沟通毒魔域、迷雾湾以及东部平原。">
+    <SubLocation ID="1" Name="雷神庙" Brief="雷神庙，供奉雷神的庙宇。" />
+  </Location>
+  <Location Index="15602" Name="山海城" Brief="山海城位于山西原中西部，泯江入海口处。">
+    <SubLocation ID="1" Name="清平港" Brief="清平港，山海城港口。因位于迷雾湾迷雾以外，天空清澈平和，故名清平港。" />
+  </Location>
+  <Location Index="15701" Name="灵玉城" Brief="灵玉城位于天月半岛北部，灵玉山下" />
+  <Location Index="15702" Name="河下城" Brief="河下城位于澜江西岸。" />
+  <Location Index="16101" Name="黄岩山" Brief="黄岩山位于天沙山脉东部。">
+    <SubLocation ID="1" Name="沙河" Brief="沙河，发源于黄岩山，自西北向东南，汇入沧江。" />
+  </Location>
+  <Location Index="16102" Name="万骨山" Brief="万骨山位于天沙山脉西部">
+    <SubLocation ID="1" Name="血骨峰" Brief="血骨峰，万骨山主峰，高约 3400 米。" />
+    <SubLocation ID="2" Name="白骨峰" Brief="白骨峰，万骨山山峰，高约 3100 米。" />
+  </Location>
+  <Location Index="16201" Name="岩沙城" Brief="岩沙城位于东漠西部，黑水河与泫江的交汇处的绿洲里。" />
+  <Location Index="16202" Name="土龙墓" Brief="土龙墓位于东漠中南部，是太古龙族的埋葬之地，是一处单独的龙墓。" />
+  <Location Index="16203" Name="地魔域" Brief="地魔域位于东漠东北部。" />
+  <Location Index="16301" Name="大西山" Brief="大西山位于天横兽域东部，毗邻辽北原。" />
+  <Location Index="16302" Name="虎啸城" Brief="虎啸城位于天横兽域中西部。" />
+  <Location Index="16303" Name="蛮熊城" Brief="蛮熊城位于天横兽域西北部。" />
+  <Location Index="16401" Name="大荒城" Brief="大荒城是古家的领地。" />
+  <Location Index="16402" Name="大蛮城" Brief="大蛮城位于流沙河谷西北部。" />
+  <Location Index="16501" Name="风沙山" Brief="" />
+  <Location Index="16502" Name="大漠城" Brief="大漠城位于西漠中部。" />
+  <Location Index="16503" Name="北漠城" Brief="北漠城位于西漠北部，毗邻大荒古漠。" />
+  <Location Index="17101" Name="镇玄山" Brief="镇玄山位于天横山脉北部，淦江的发源地。">
+    <SubLocation ID="1" Name="淦江" Brief="淦江，发源于镇玄山，流经铁树林、水神湖、迷雾湖，汇入南海。" />
+  </Location>
+  <Location Index="17102" Name="扶摇山" Brief="扶摇山位于天横山脉北部，镇玄山以南。" />
+  <Location Index="17103" Name="灰背山" Brief="灰背山位于天横山脉中部。" />
+  <Location Index="17104" Name="铁树林" Brief="铁树林位于天横山脉西部。" />
+  <Location Index="17105" Name="向阳谷" Brief="向阳谷位于天横山脉和天妖山脉之间。" />
+  <Location Index="17201" Name="龙溪涧" Brief="龙溪涧位于天妖山脉北部，沧江穿过天妖山脉形成，地势险要。" />
+  <Location Index="17202" Name="凌空山" Brief="凌空山位于天妖山脉北部。" />
+  <Location Index="17203" Name="天云山" Brief="天云山位于天妖山脉中北部。" />
+  <Location Index="17204" Name="天妖山" Brief="天妖山位于天妖山脉南部。" />
+  <Location Index="17205" Name="迷魂湖" Brief="迷魂湖位于天云山西南侧。" />
+  <Location Index="17206" Name="云裳谷" Brief="云裳谷位于迷魂湖以南。" />
+  <Location Index="17301" Name="玄蛛山" Brief="玄蛛山位于天封山脉西部。" />
+  <Location Index="17302" Name="金蝉山" Brief="金蝉山位于天封山脉中部" />
+  <Location Index="17303" Name="灵虫山" Brief="灵虫山位于天封山脉中部。" />
+  <Location Index="17304" Name="迷蝶山" Brief="迷蝶山位于天封山脉西部。" />
+  <Location Index="17401" Name="魔猿山" Brief="魔猿山位于天玄山脉西部">
+    <SubLocation ID="1" Name="黑水河" Brief="黑水河，发源于魔猿山，流经黑水湖，汇入泫江。" />
+  </Location>
+  <Location Index="17402" Name="黑水湖" Brief="黑水湖位于天玄山脉北方。" />
+  <Location Index="17403" Name="仙魔域" Brief="仙魔域位于天玄山脉东北。" />
+  <Location Index="17404" Name="寒泉潭" Brief="寒泉潭位于天玄山脉南方。" />
+  <Location Index="17501" Name="指天山" Brief="指天山位于天麟山脉中部。">
+    <SubLocation ID="1" Name="指天峰" Brief="指天峰，指天山主峰，高约 5400 米，是东洲第一高峰。" />
+    <SubLocation ID="2" Name="沧江" Brief="沧江，发源于天麟山脉，自西向东，流经高天原、荒原、辽原，天南原，是" />
+  </Location>
+  <Location Index="17502" Name="仙麟谷" Brief="仙麟谷位于天麟山脉和天辉山脉之间。" />
+  <Location Index="17503" Name="钻石谷" Brief="钻石谷位于天麟山脉和天辉山脉之间，仙麟谷东南。" />
+  <Location Index="17601" Name="罪恶谷" Brief="罪恶谷位于天辉山脉中部东麓，天麟山脉南麓，天妖山脉西麓，钻石谷以南。" />
+  <Location Index="17602" Name="墨木山" Brief="墨木山位于天辉山脉西部。">
+    <SubLocation ID="1" Name="潶江" Brief="潶江，发源于墨木山，流经高天原、圣原，汇入风暴海。在西圣原境内有支" />
+  </Location>
+  <Location Index="17701" Name="东陵龙墓" Brief="东陵龙墓位于东陵原中部，太古龙族的埋葬之地，是第三大龙墓。" />
+  <Location Index="17702" Name="枯松林" Brief="枯松林位于西陵原东部，天辉山脉西麓。" />
+  <Location Index="17801" Name="西陵龙墓" Brief="西陵龙墓位于西陵原中部，太古龙族的埋葬之地。" />
+  <Location Index="18101" Name="玄岩山" Brief="玄岩山位于天辉山脉南部。" />
+  <Location Index="18102" Name="黄金山" Brief="黄金山位于天辉山脉最南端。" />
+  <Location Index="18201" Name="百毒山" Brief="百毒山位于天横山脉南部。">
+    <SubLocation ID="1" Name="百毒河" Brief="百毒河，发源于百毒山，流经毒雾沼泽，汇入迷雾湖。" />
+  </Location>
+  <Location Index="18301" Name="圣道山" Brief="圣道山位于天寂山脉北部，原名玄铁山。">
+    <SubLocation ID="1" Name="圣兵峰" Brief="圣兵峰，圣道山主峰，高约 2900 米" />
+    <SubLocation ID="2" Name="圣阵峰" Brief="圣阵峰，圣道山山峰，高约 2500 米。" />
+  </Location>
+  <Location Index="18302" Name="银虚山" Brief="银虚山位于天寂山脉中部。" />
+  <Location Index="18401" Name="百草山" Brief="百草山位于百草谷北部。" />
+  <Location Index="18402" Name="丹谷" Brief="丹谷位于百草谷西部。" />
+  <Location Index="18501" Name="毒魔域" Brief="毒魔域位于毒雾沼泽东部" />
+  <Location Index="18502" Name="碧泽" Brief="碧泽位于毒雾沼泽的北部，百毒河畔">
+    <SubLocation ID="1" Name="碧玉岛" Brief="碧玉岛，碧泽中部。" />
+  </Location>
+  <Location Index="18503" Name="剑泽" Brief="剑泽位于毒雾沼泽的西北部，淦江河畔。" />
+  <Location Index="18504" Name="黑泽" Brief="黑泽位于毒雾沼泽的中部。" />
+  <Location Index="18505" Name="雷泽" Brief="雷泽位于毒雾沼泽东南部。" />
+  <Location Index="18506" Name="金泽" Brief="金泽位于毒雾沼泽西南部。" />
+  <Location Index="18601" Name="迷雾城" Brief="迷雾城位于虚空半岛东北部，毗邻毒雾沼泽，淦江入海口。">
+    <SubLocation ID="1" Name="迷雾港" Brief="迷雾港，迷雾城港口。" />
+  </Location>
+  <Location Index="18602" Name="寂灭城" Brief="寂灭城位于虚空半岛东北部。" />
+  <Location Index="18603" Name="混沌城" Brief="混沌城位于虚空半岛东北部。" />
+  <Location Index="18604" Name="太湮城" Brief="太湮城位于虚空半岛中东部。" />
+  <Location Index="18605" Name="万象城" Brief="万象城位于虚空半岛东南部。" />
+  <Location Index="18606" Name="虚无城" Brief="虚无城位于虚空半岛东南部。" />
+  <Location Index="18607" Name="仙麟岛" Brief="仙麟岛位于虚空半岛南侧。" />
+  <Location Index="18701" Name="水神湖" Brief="水神湖位于圣北谷中部。" />
+  <Location Index="18702" Name="古皇陵寝" Brief="古皇陵寝位于圣北谷，具体位置不详。" />
+  <Location Index="18801" Name="圣光城" Brief="圣光城位于圣南原中东部。" />
+  <Location Index="18802" Name="圣道城" Brief="圣道城位于圣南原东北部，圣道山西侧。" />
+  <Location Index="18803" Name="黄金城" Brief="黄金城位于圣南原西北部，天辉山脉南麓。" />
+  <Location Index="18901" Name="海平城" Brief="海平城位于圣西原西部，沿海，是圣光帝国最大的港口城市，渔业发达。">
+    <SubLocation ID="1" Name="海平港" Brief="海平港，圣光帝国最大的港口，是一个商贸港口。" />
+  </Location>
+  <Location Index="18902" Name="西海城" Brief="西海城位于圣西原西部，是圣光帝国第二大港口城市，拥有皇室港口圣海港。">
+    <SubLocation ID="1" Name="圣海港" Brief="圣海港，是圣光帝国皇室港口，是一个军商两用港口。" />
+  </Location>
+  <Location Index="18903" Name="黑山城" Brief="黑山城位于圣西原东北部，以玄岩石筑城。" />
+  <Location Index="25201" Name="金蜂谷" Brief="金蜂谷位于万花园北部，是金刺毒锋的领地。" />
+  <Location Index="25202" Name="迷蝶谷" Brief="" />
+</Locations>

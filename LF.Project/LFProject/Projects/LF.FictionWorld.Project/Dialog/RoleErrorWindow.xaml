@@ -1,0 +1,27 @@
+﻿<Window x:Class="LF.FictionWorld.Project.Dialog.RoleErrorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LF.FictionWorld.Project.Dialog"
+        mc:Ignorable="d"
+        Title="角色错误列表" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid x:Name="DtgRoles"   IsReadOnly="True" Grid.Row="1"
+                      AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column" SelectionUnit="FullRow">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="序号" Width="140" Binding="{Binding Index}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="姓名" Width="80" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="种族" Width="60" Binding="{Binding Race.Value}"></DataGridTextColumn>
+                <DataGridTextColumn Header="性别" Width="60" Binding="{Binding Gender.Value}"></DataGridTextColumn>
+                <DataGridTextColumn Header="籍贯" Width="80" Binding="{Binding Home.Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="年龄" Width="60" Binding="{Binding Age,StringFormat={}{0:F0}}"></DataGridTextColumn>
+                <DataGridTextColumn Header="天赋" Width="60" Binding="{Binding Talent}"></DataGridTextColumn>
+                <DataGridTextColumn Header="等级" Width="60" Binding="{Binding Ranks.Value}"></DataGridTextColumn>
+                <DataGridTextColumn Header="属性" Width="*" Binding="{Binding Attribute}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

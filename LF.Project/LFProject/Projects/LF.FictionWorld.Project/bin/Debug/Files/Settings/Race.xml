@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Type>
+  <Node Index="1" Value="龙族" Brief="">
+    <Node Index="1" Value="雄" Brief="" />
+    <Node Index="2" Value="雌" Brief="" />
+  </Node>
+  <Node Index="2" Value="魔族" Brief="">
+    <Node Index="1" Value="男" Brief="" />
+    <Node Index="2" Value="女" Brief="" />
+  </Node>
+  <Node Index="3" Value="人族" Brief="">
+    <Node Index="1" Value="男" Brief="" />
+    <Node Index="2" Value="女" Brief="" />
+  </Node>
+  <Node Index="4" Value="兽族" Brief="">
+    <Node Index="1" Value="雄" Brief="" />
+    <Node Index="2" Value="雌" Brief="" />
+  </Node>
+  <Node Index="5" Value="羽族" Brief="">
+    <Node Index="1" Value="雄" Brief="" />
+    <Node Index="2" Value="雌" Brief="" />
+  </Node>
+  <Node Index="6" Value="虫族" Brief="">
+    <Node Index="1" Value="王" Brief="" />
+    <Node Index="2" Value="雄" Brief="" />
+    <Node Index="3" Value="工" Brief="" />
+  </Node>
+  <Node Index="7" Value="妖族" Brief="">
+    <Node Index="1" Value="阳" Brief="" />
+    <Node Index="2" Value="阴" Brief="" />
+  </Node>
+  <Node Index="8" Value="灵族" Brief="">
+    <Node Index="1" Value="无" Brief="" />
+  </Node>
+  <Node Index="9" Value="海族" Brief="">
+    <Node Index="1" Value="雄" Brief="" />
+    <Node Index="2" Value="雌" Brief="" />
+  </Node>
+</Type>

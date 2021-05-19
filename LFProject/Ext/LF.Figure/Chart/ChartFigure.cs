@@ -529,7 +529,7 @@ namespace LF.Figure
 
             //_legend.GetRect(g, this, scaleFactor, ref tmpRect);
 
-            // 设置坐标轴比例一直
+            // 设置坐标轴比例一致
             if (_isAxisEqual)
             {
                 double xLen = _xAxis.Scale.Max - _xAxis.Scale.Min;

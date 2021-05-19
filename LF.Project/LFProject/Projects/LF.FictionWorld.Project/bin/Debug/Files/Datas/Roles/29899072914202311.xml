@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Role Index="29899072914202311" Name="炎大灿">
+  <Ranks>
+    <Rank Date="299090729" Index="1" />
+    <Rank Date="299110822" Index="2" />
+    <Rank Date="299160128" Index="3" />
+    <Rank Date="299250223" Index="4" />
+    <Rank Date="299440626" Index="5" />
+    <Rank Date="299881222" Index="6" />
+    <Rank Date="301020406" Index="7" />
+    <Rank Date="304160409" Index="8" />
+    <Rank Date="309011007" Index="-1" />
+  </Ranks>
+  <Experiences>
+    <Experience Date="298990729" Index="3000109091450101" />
+  </Experiences>
+</Role>

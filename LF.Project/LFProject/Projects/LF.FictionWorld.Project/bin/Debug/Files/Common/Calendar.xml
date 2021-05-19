@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Calendar DaysInYear="360" MonthsInYear="12">
+  <Periods>
+    <Period ID="1" Name="太古纪" Count="9999"></Period>
+    <Period ID="2" Name="上古纪" Count="9999"></Period>
+    <Period ID="3" Name="远古纪" Count="9999"></Period>
+    <Period ID="4" Name="近古纪" Count="9999"></Period>
+    <Period ID="5" Name="新古纪" Count="9999"></Period>
+  </Periods>
+  <Months>
+    <Month ID="1" Name="一月" Count="30"></Month>
+    <Month ID="2" Name="二月" Count="30"></Month>
+    <Month ID="3" Name="三月" Count="30"></Month>
+    <Month ID="4" Name="四月" Count="30"></Month>
+    <Month ID="5" Name="五月" Count="30"></Month>
+    <Month ID="6" Name="六月" Count="30"></Month>
+    <Month ID="7" Name="七月" Count="30"></Month>
+    <Month ID="8" Name="八月" Count="30"></Month>
+    <Month ID="9" Name="九月" Count="30"></Month>
+    <Month ID="10" Name="十月" Count="30"></Month>
+    <Month ID="11" Name="十一月" Count="30"></Month>
+    <Month ID="12" Name="十二月" Count="30"></Month>
+  </Months>
+</Calendar>

@@ -33,8 +33,6 @@ namespace LF.Figure
             root = new Canvas();
             this.Content = root;
             SizeChanged += OnSizeChanged;
-
-            
         }
 
         #endregion

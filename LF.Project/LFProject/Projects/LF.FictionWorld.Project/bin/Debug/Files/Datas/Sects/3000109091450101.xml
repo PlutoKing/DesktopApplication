@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Sect Index="3000109091450101" Name="炎阳帝国">
+  <Struct>
+    <Department ID="1" Title="炎阳帝国" Level="1">
+      <Leader ID="1" Title="圣皇" Level="1" />
+      <Members>
+        <Member ID="2" Title="皇子" Level="2" Count="1" />
+        <Member ID="3" Title="王公" Level="2" Count="1" />
+      </Members>
+      <Departments>
+        <Department ID="1" Title="旭日殿" Level="2">
+          <Leader ID="11" Title="大相" Level="3">
+            <Assistant ID="1" Title="左相" Level="4" />
+            <Assistant ID="2" Title="右相" Level="4" />
+          </Leader>
+          <Members />
+          <Departments />
+        </Department>
+        <Department ID="2" Title="赤阳殿" Level="2">
+          <Leader ID="1" Title="大元帅" Level="3">
+            <Assistant ID="1" Title="元帅" Level="4" />
+            <Assistant ID="1" Title="元帅" Level="4" />
+          </Leader>
+          <Members />
+          <Departments />
+        </Department>
+      </Departments>
+    </Department>
+  </Struct>
+</Sect>

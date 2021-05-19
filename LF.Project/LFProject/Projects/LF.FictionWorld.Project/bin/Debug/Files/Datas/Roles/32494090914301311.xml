@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Role Index="32494090914301311" Name="乾阳">
+  <Ranks>
+    <Rank Date="325040909" Index="1" />
+    <Rank Date="325060830" Index="2" />
+    <Rank Date="325101112" Index="3" />
+    <Rank Date="325190429" Index="4" />
+    <Rank Date="325370106" Index="5" />
+    <Rank Date="325760908" Index="6" />
+    <Rank Date="326731103" Index="7" />
+    <Rank Date="329360209" Index="8" />
+    <Rank Date="334951117" Index="-1" />
+  </Ranks>
+  <Experiences>
+    <Experience Date="324940909" Index="3000703241430101" />
+  </Experiences>
+</Role>

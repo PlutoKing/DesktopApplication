@@ -1,0 +1,59 @@
+﻿<Window x:Class="LF.FictionWorld.Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LF.FictionWorld.Project"
+        xmlns:pages="clr-namespace:LF.FictionWorld.Project.Pages"
+        mc:Ignorable="d"
+        Title="架空世界设定" Height="750" Width="1200" Background="{StaticResource BackColor}"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Border BorderBrush="{StaticResource LineColor}" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <Grid Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="架空世界设定" Margin="10 0 0 0" VerticalAlignment="Center"
+                           FontSize="13" FontWeight="Bold" Foreground="{StaticResource MainColor}"></TextBlock>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button x:Name="BtnMenu" Content="菜单" Margin="10 0 10 0" Click="BtnMenu_Click" Style="{StaticResource FlatButton}"></Button>
+                </StackPanel>
+            </Grid>
+            <TabControl Grid.Row="1" BorderThickness="0 1 0 1" Style="{StaticResource LeftTabControl}" ItemContainerStyle="{StaticResource LeftTabItem}">
+                <TabItem Header="首　页">
+                    <pages:HomePage/>
+                </TabItem>
+                <TabItem Header="世　界">
+                    <pages:WorldPage/>
+                </TabItem>
+                <TabItem Header="历　史"></TabItem>
+                <TabItem Header="地　理">
+                    <pages:SitePage/>
+                </TabItem>
+                <TabItem Header="物　品">
+                    <pages:ItemPage/>
+                </TabItem>
+                <TabItem Header="秘　籍">
+                    <pages:BookPage/>
+                </TabItem>
+                <TabItem Header="势　力">
+                    <pages:SectPage/>
+                </TabItem>
+                <TabItem Header="角　色">
+                    <pages:RolePage/>
+                </TabItem>
+                <TabItem Header="情　节">
+                    <pages:PlotPage/>
+                </TabItem>
+            </TabControl>
+            <Grid Grid.Row="2" Background="White"></Grid>
+        </Grid>
+    </Border>
+</Window>

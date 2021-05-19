@@ -1,0 +1,15 @@
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\bin\Debug\LF.Tetris.exe.config
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\bin\Debug\LF.Tetris.exe
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\bin\Debug\LF.Tetris.pdb
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\obj\Debug\LF.Tetris.csprojAssemblyReference.cache
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\obj\Debug\MainWindow.g.cs
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\obj\Debug\App.g.cs
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\obj\Debug\LF.Tetris_MarkupCompile.cache
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\obj\Debug\LF.Tetris_MarkupCompile.lref
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\obj\Debug\MainWindow.baml
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\obj\Debug\LF.Tetris.g.resources
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\obj\Debug\LF.Tetris.Properties.Resources.resources
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\obj\Debug\LF.Tetris.csproj.GenerateResource.cache
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\obj\Debug\LF.Tetris.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\obj\Debug\LF.Tetris.exe
+I:\DesktopApplication\LF.Project\LF.Game\LF.Tetris\obj\Debug\LF.Tetris.pdb

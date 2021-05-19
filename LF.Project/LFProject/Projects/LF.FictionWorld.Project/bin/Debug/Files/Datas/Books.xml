@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Books>
+  <Book Index="10008001" Name="紫焰灭魂诀" Brief="紫焰道体先天功法。" />
+  <Book Index="20000001" Name="天机神算术" Brief="天机阁传承功法，能占卜天机，预言未来。" />
+  <Book Index="20002001" Name="枯荣轮回诀" Brief="枯荣山庄传承功法。" />
+  <Book Index="20004001" Name="海神诀" Brief="海灵族功法。" />
+  <Book Index="20004002" Name="海灵经" Brief="海灵族传承功法。" />
+  <Book Index="20008001" Name="朱雀诀" Brief="朱扇城朱家传承功法，来自炎天朱雀一族。" />
+  <Book Index="20008002" Name="圣炎诀" Brief="圣光城白家传承功法。" />
+  <Book Index="20016001" Name="圣武经" Brief="圣物宗传承功法。" />
+  <Book Index="20049001" Name="帝剑诀" Brief="剑宗传承功法。" />
+  <Book Index="20073001" Name="天乾造化诀" Brief="天乾宗传承功法。" />
+  <Book Index="20128001" Name="圣光经" Brief="圣光城白家传承功法。" />
+  <Book Index="20256001" Name="幽冥杀诀" Brief="幽冥宗传承功法。" />
+  <Book Index="20256002" Name="血灵典" Brief="血灵族传承功法。" />
+  <Book Index="30001001" Name="金刀诀" Brief="金刀门传承功法。" />
+  <Book Index="30016001" Name="岩甲诀" Brief="岩盾佣兵团功法。" />
+  <Book Index="30256001" Name="骨经" Brief="万骨门传承功法。" />
+</Books>

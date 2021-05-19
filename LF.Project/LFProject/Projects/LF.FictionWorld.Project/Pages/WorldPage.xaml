@@ -1,0 +1,137 @@
+﻿<UserControl x:Class="LF.FictionWorld.Project.Pages.WorldPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LF.FictionWorld.Project.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="8 8 8 0"
+                BorderBrush="{StaticResource LineColor}" BorderThickness="1" Background="White">
+            <StackPanel Orientation="Horizontal" Margin="3" VerticalAlignment="Center">
+                <Button Content="历法" Margin="0 0 5 0" Style="{StaticResource FlatButton}"></Button>
+                <Button Content="设定" Margin="0 0 5 0" Style="{StaticResource FlatButton}"></Button>
+            </StackPanel>
+        </Border>
+        <Grid Grid.Row="1" Margin="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <GroupBox Header="历法信息" Margin="4">
+                <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="一年天数" VerticalAlignment="Center" Foreground="Gray"></TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Calendar.DaysInYear}" VerticalAlignment="Center"></TextBlock>
+                </Grid>
+
+            </GroupBox>
+            <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="4"
+                    BorderBrush="{StaticResource LineColor}" BorderThickness="1"></Border>
+            <TabControl Grid.Column="3" Grid.RowSpan="3" Margin="4"
+                        Style="{StaticResource LeftTabControl}" ItemContainerStyle="{StaticResource LeftTabItem}">
+                <TabItem Header="区域">
+                    <TreeView x:Name="TrvArea" BorderThickness="0">
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Childs}" >
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Value}" VerticalAlignment="Center"></TextBlock>
+                                </StackPanel>
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+
+                    </TreeView>
+                </TabItem>
+                <TabItem Header="等级">
+                    <TreeView x:Name="TrvLevel" BorderThickness="0">
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Childs}" >
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Value}" VerticalAlignment="Center"></TextBlock>
+                                </StackPanel>
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+
+                    </TreeView>
+
+                </TabItem>
+                <TabItem Header="物品">
+                    <TreeView x:Name="TrvItem" BorderThickness="0">
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Childs}" >
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Value}" VerticalAlignment="Center"></TextBlock>
+                                </StackPanel>
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+
+                    </TreeView>
+
+                </TabItem>
+                <TabItem Header="属性">
+                    <TreeView x:Name="TrvAttribute" BorderThickness="0">
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Childs}" >
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Value}" VerticalAlignment="Center"></TextBlock>
+                                </StackPanel>
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+
+                    </TreeView>
+
+                </TabItem>
+                <TabItem Header="种族">
+                    <TreeView x:Name="TrvRace" BorderThickness="0">
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Childs}" >
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Value}" VerticalAlignment="Center"></TextBlock>
+                                </StackPanel>
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+
+                    </TreeView>
+
+                </TabItem>
+                <TabItem Header="修炼">
+                    <TreeView x:Name="TrvRank" BorderThickness="0">
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Childs}" >
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Value}" VerticalAlignment="Center"></TextBlock>
+                                </StackPanel>
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+
+                    </TreeView>
+
+                </TabItem>
+
+            </TabControl>
+        </Grid>
+    </Grid>
+ 
+</UserControl>

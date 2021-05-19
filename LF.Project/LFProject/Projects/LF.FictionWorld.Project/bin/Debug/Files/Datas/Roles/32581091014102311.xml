@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Role Index="32581091014102311" Name="武晨">
+  <Ranks>
+    <Rank Date="325910910" Index="1" />
+    <Rank Date="325930928" Index="2" />
+    <Rank Date="325980221" Index="3" />
+    <Rank Date="326070213" Index="4" />
+    <Rank Date="326260313" Index="5" />
+    <Rank Date="326691205" Index="6" />
+    <Rank Date="327791017" Index="7" />
+    <Rank Date="330850522" Index="8" />
+    <Rank Date="335821118" Index="-1" />
+  </Ranks>
+  <Experiences>
+    <Experience Date="325810910" Index="3001004011410201" />
+  </Experiences>
+</Role>

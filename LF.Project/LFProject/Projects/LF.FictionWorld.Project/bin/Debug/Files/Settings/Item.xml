@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Type>
+  <Node Index="1" Value="玉石金属" Brief="">
+    <Node Index="1" Value="灵玉" Brief="" />
+    <Node Index="2" Value="矿石" Brief="" />
+    <Node Index="3" Value="金属" Brief="" />
+    <Node Index="4" Value="水晶" Brief="" />
+  </Node>
+  <Node Index="2" Value="植物草药" Brief="">
+    <Node Index="1" Value="树木" Brief="" />
+    <Node Index="2" Value="果实" Brief="" />
+    <Node Index="3" Value="花卉" Brief="" />
+    <Node Index="4" Value="草药" Brief="" />
+    <Node Index="5" Value="作物" Brief="" />
+  </Node>
+  <Node Index="3" Value="食物饮料" Brief="">
+    <Node Index="1" Value="主食" Brief="" />
+    <Node Index="2" Value="肉类" Brief="" />
+    <Node Index="3" Value="菜肴" Brief="" />
+    <Node Index="4" Value="果汁" Brief="" />
+    <Node Index="5" Value="饮料" Brief="" />
+    <Node Index="6" Value="佐料" Brief="" />
+  </Node>
+  <Node Index="4" Value="丹药方剂" Brief="">
+    <Node Index="1" Value="恢复" Brief="" />
+    <Node Index="2" Value="疗伤" Brief="" />
+    <Node Index="3" Value="修炼" Brief="" />
+    <Node Index="4" Value="特殊" Brief="" />
+  </Node>
+  <Node Index="5" Value="兵器法宝" Brief="">
+    <Node Index="1" Value="兵器" Brief="" />
+    <Node Index="2" Value="法宝" Brief="" />
+    <Node Index="3" Value="暗器" Brief="" />
+  </Node>
+  <Node Index="6" Value="灵兽灵物" Brief="">
+    <Node Index="1" Value="灵兽" Brief="" />
+    <Node Index="2" Value="灵羽" Brief="" />
+    <Node Index="3" Value="灵虫" Brief="" />
+    <Node Index="4" Value="灵物" Brief="" />
+  </Node>
+</Type>

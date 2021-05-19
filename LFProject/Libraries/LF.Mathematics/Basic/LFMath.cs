@@ -5,12 +5,6 @@
  * Description  : 
  * ──────────────────────────────────────────────────────────────*/
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace LF.Mathematics.Basic
 {
     public class LFMath
@@ -38,6 +32,7 @@ namespace LF.Mathematics.Basic
         /// <returns></returns>
         public static int Factorial(int n)
         {
+            
             int r = 1;
             for (int i = 1; i <= n; i++)
             {
@@ -52,7 +47,7 @@ namespace LF.Mathematics.Basic
         /// <param name="n"></param>
         /// <param name="r"></param>
         /// <returns></returns>
-        public static int BinomialCoefficient(int n,int r)
+        public static int BinomialCoefficient(int n, int r)
         {
             return Factorial(n) / (Factorial(r) * Factorial(n - r));
         }

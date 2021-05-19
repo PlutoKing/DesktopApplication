@@ -1,0 +1,23 @@
+F:\Documents\GitHub\WPF\LFFictionWorldProject_V1\LF.FictionWorld\bin\Debug\LF.FictionWorld.dll
+F:\Documents\GitHub\WPF\LFFictionWorldProject_V1\LF.FictionWorld\bin\Debug\LF.FictionWorld.pdb
+F:\Documents\GitHub\WPF\LFFictionWorldProject_V1\LF.FictionWorld\obj\Debug\LF.FictionWorld.dll
+F:\Documents\GitHub\WPF\LFFictionWorldProject_V1\LF.FictionWorld\obj\Debug\LF.FictionWorld.pdb
+F:\Documents\GitHub\WPF\LFFictionWorldProject_V1\LF.FictionWorld\obj\Debug\LF.FictionWorld.csprojAssemblyReference.cache
+F:\Documents\GitHub\WPF\LFFictionWorldProject_V1\LF.FictionWorld\obj\Debug\LF.FictionWorld.csproj.CoreCompileInputs.cache
+F:\Documents\GitHub\WPF\LAN FENG\LF.Library\LF.FictionWorld\bin\Debug\LF.FictionWorld.dll
+F:\Documents\GitHub\WPF\LAN FENG\LF.Library\LF.FictionWorld\bin\Debug\LF.FictionWorld.pdb
+F:\Documents\GitHub\WPF\LAN FENG\LF.Library\LF.FictionWorld\obj\Debug\LF.FictionWorld.csprojAssemblyReference.cache
+F:\Documents\GitHub\WPF\LAN FENG\LF.Library\LF.FictionWorld\obj\Debug\LF.FictionWorld.csproj.CoreCompileInputs.cache
+F:\Documents\GitHub\WPF\LAN FENG\LF.Library\LF.FictionWorld\obj\Debug\LF.FictionWorld.dll
+F:\Documents\GitHub\WPF\LAN FENG\LF.Library\LF.FictionWorld\obj\Debug\LF.FictionWorld.pdb
+E:\02 Programs\WPF\LAN FENG\LF.Library\LF.FictionWorld\bin\Debug\LF.FictionWorld.dll
+E:\02 Programs\WPF\LAN FENG\LF.Library\LF.FictionWorld\bin\Debug\LF.FictionWorld.pdb
+E:\02 Programs\WPF\LAN FENG\LF.Library\LF.FictionWorld\obj\Debug\LF.FictionWorld.csprojAssemblyReference.cache
+E:\02 Programs\WPF\LAN FENG\LF.Library\LF.FictionWorld\obj\Debug\LF.FictionWorld.dll
+E:\02 Programs\WPF\LAN FENG\LF.Library\LF.FictionWorld\obj\Debug\LF.FictionWorld.pdb
+E:\02 Programs\WPF\LAN FENG\LF.Library\LF.FictionWorld\obj\Debug\LF.FictionWorld.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\bin\Debug\LF.FictionWorld.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\bin\Debug\LF.FictionWorld.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.pdb

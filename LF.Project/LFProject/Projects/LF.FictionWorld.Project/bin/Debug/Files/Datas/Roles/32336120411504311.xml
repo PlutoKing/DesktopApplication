@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Role Index="32336120411504311" Name="追风">
+  <Ranks>
+    <Rank Date="323461204" Index="1" />
+    <Rank Date="323490404" Index="2" />
+    <Rank Date="323540605" Index="3" />
+    <Rank Date="323650627" Index="4" />
+    <Rank Date="323900718" Index="5" />
+    <Rank Date="324520916" Index="6" />
+    <Rank Date="326240625" Index="7" />
+    <Rank Date="328540716" Index="-1" />
+  </Ranks>
+  <Experiences>
+    <Experience Date="323361204" Index="0" />
+  </Experiences>
+</Role>

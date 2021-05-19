@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Items>
+  <Item Index="1130004001" Name="深海蓝金" Brief="深海蓝金，高级金属，位于大海深处，由海水高压锻造而成。" />
+  <Item Index="1130256001" Name="幽冥青金" Brief="暗属性金属，能够容纳灵魂力量。" />
+  <Item Index="1520008001" Name="太阳神火壶" Brief="炎阳城炎家法宝。" />
+  <Item Index="1520016001" Name="大荒镇魔塔" Brief="荒古大帝炼制法宝，镇压魔族。" />
+  <Item Index="1520128001" Name="九天星灵珠" Brief="九辰大帝炼制的神器，共9颗星灵珠，每一颗都是圣器，合在一起，便是神器。" />
+  <Item Index="1520128002" Name="圣光龙纹鼎" Brief="圣光城白家传承神器。" />
+  <Item Index="2120002001" Name="真龙石【木】" Brief="龙族化石，木属性。" />
+  <Item Index="2120256001" Name="真龙石【暗】" Brief="龙族化石，暗属性。" />
+  <Item Index="2240002001" Name="阴阳草" Brief="阴阳草，可以改善人的体质。" />
+  <Item Index="2240002002" Name="还魂草" Brief="还魂草，可以救活意外死亡的生物，也是青玄复生丹的主要药材。" />
+  <Item Index="2420004001" Name="青玄复生丹" Brief="能让人起死回生。" />
+  <Item Index="2510004001" Name="幽海枪" Brief="海灵族圣器，后为海神城海家所有，后被野海所夺。" />
+  <Item Index="2510004002" Name="幽海枪" Brief="" />
+  <Item Index="2510128001" Name="点星笔" Brief="以天外陨铁炼制而成的短兵器。" />
+  <Item Index="2640001001" Name="紫金道骨" Brief="紫金道体遗骸。" />
+  <Item Index="2640008001" Name="炎阳圣火" Brief="火属性圣物。" />
+  <Item Index="2640008002" Name="涅槃圣炎" Brief="炎天朱雀一族圣物，具有重生之能。" />
+  <Item Index="2640256001" Name="血灵珠" Brief="血灵族圣物。" />
+  <Item Index="2640256002" Name="暗星珠" Brief="暗星珠，圣物。" />
+  <Item Index="2640288001" Name="九幽阴风" Brief="风、暗属性灵物。" />
+  <Item Index="3110002001" Name="破障灵玉" Brief="破障灵玉，可破除幻术。" />
+  <Item Index="3120008001" Name="赤阳石" Brief="火属性矿石。" />
+  <Item Index="3120128001" Name="天星石" Brief="天星石，可以吸收与存储星光之力的玉石。" />
+  <Item Index="3120256001" Name="幽冥石" Brief="暗属性矿石。" />
+  <Item Index="3140064001" Name="紫雷晶" Brief="紫雷晶，紫色水晶，蕴含雷电之力。" />
+  <Item Index="3210002001" Name="云叶树" Brief="云叶树，其叶有云纹，其果实为云叶果。" />
+  <Item Index="3220002001" Name="云叶果" Brief="云叶果，固本培元，可解除幻术。" />
+  <Item Index="3240128001" Name="天星藤" Brief="光属性草药，能够开拓经脉、强化经脉，有助于修炼。" />
+  <Item Index="3510001001" Name="紫金龙纹棍" Brief="以紫金道骨炼制而成。" />
+  <Item Index="3520004001" Name="平江宝船" Brief="平江宝船，一种在江河航行的宝船，数层楼高。" />
+  <Item Index="3520036001" Name="镇海宝船" Brief="镇海宝船，一种能够在大海上航行，而无惧风浪的宝船。" />
+  <Item Index="3610002001" Name="松貂" Brief="松貂，貂类动物。" />
+  <Item Index="3620002001" Name="白鹭" Brief="千鹭湖灵羽。" />
+  <Item Index="3640008001" Name="赤火熊皮" Brief="赤火熊的熊皮，具有很好的保暖效果。" />
+</Items>
