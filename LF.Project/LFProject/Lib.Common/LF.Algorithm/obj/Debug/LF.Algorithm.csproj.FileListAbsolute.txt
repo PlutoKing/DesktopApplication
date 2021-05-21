@@ -1,0 +1,11 @@
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Algorithm\obj\Debug\LF.Algorithm.csprojAssemblyReference.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Algorithm\obj\Debug\LF.Algorithm.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Algorithm\bin\Debug\LF.Algorithm.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Algorithm\bin\Debug\LF.Algorithm.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Algorithm\bin\Debug\LF.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Algorithm\bin\Debug\LF.Mathematics.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Algorithm\bin\Debug\LF.Mathematics.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Algorithm\bin\Debug\LF.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Algorithm\obj\Debug\LF.Algorithm.csproj.CopyComplete
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Algorithm\obj\Debug\LF.Algorithm.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Algorithm\obj\Debug\LF.Algorithm.pdb

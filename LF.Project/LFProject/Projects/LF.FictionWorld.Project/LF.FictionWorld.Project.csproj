@@ -72,6 +72,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Dialog\DepartmentDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dialog\ItemDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -142,6 +146,9 @@
     </Compile>
     <Compile Include="Dialog\BookDialog.xaml.cs">
       <DependentUpon>BookDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\DepartmentDialog.xaml.cs">
+      <DependentUpon>DepartmentDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Dialog\ItemDialog.xaml.cs">
       <DependentUpon>ItemDialog.xaml</DependentUpon>

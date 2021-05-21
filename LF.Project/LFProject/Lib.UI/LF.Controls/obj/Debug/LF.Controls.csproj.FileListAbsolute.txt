@@ -20,3 +20,4 @@ I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Controls\obj\Debug\LF.Contr
 I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Controls\obj\Debug\LF.Controls.csproj.CoreCompileInputs.cache
 I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Controls\obj\Debug\LF.Controls.dll
 I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Controls\obj\Debug\LF.Controls.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Controls\obj\Debug\LF.Controls.csprojAssemblyReference.cache

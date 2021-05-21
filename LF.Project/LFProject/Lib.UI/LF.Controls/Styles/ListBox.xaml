@@ -80,11 +80,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Grid x:Name="grid" Height="30" Cursor="Hand" Margin="0">
+                    <Grid x:Name="grid" Height="24" Cursor="Hand" Margin="0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="24"/>
                             <ColumnDefinition/>
-                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="24"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock x:Name="text1" Text="{Binding Level}" VerticalAlignment="Center" HorizontalAlignment="Left"
                                    FontSize="12" FontWeight="Normal" Foreground="Black" Margin="5 0 0 0"></TextBlock>
@@ -112,11 +112,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Grid x:Name="grid" Height="30" Cursor="Hand" Margin="0">
+                    <Grid x:Name="grid" Height="24" Cursor="Hand" Margin="0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="24"/>
                             <ColumnDefinition/>
-                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="24"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock x:Name="text1" Text="{Binding Level}" VerticalAlignment="Center" HorizontalAlignment="Left"
                                    FontSize="12" FontWeight="Normal" Foreground="Black" Margin="5 0 0 0"></TextBlock>

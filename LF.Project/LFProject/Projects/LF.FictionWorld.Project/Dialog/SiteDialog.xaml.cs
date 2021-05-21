@@ -56,10 +56,7 @@ namespace LF.FictionWorld.Project.Dialog
 
             CmbAdd1.ItemsSource = World.Setting.Areas;
 
-            foreach (LFItem item in Site.Items)
-            {
-                items.Remove(item);
-            }
+            items = items.Minus(Site.Items).Clone();
             ListAllItems.ItemsSource = items;
             ListItems.ItemsSource = Site.Items;
 

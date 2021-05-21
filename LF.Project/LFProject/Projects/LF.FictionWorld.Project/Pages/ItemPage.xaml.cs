@@ -43,29 +43,36 @@ namespace LF.FictionWorld.Project.Pages
 
         #region Methods
 
-        #endregion
-
-        #region Events
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// 刷新对象
+        /// </summary>
+        public void LoadObj()
         {
             DtgItems.ItemsSource = World.Data.ItemList;
             DtgItems.SelectedIndex = 0;
 
             this.DataContext = World.Data;
-            //TxbCount.Text = World.Data.ItemList.Count.ToString();
+
         }
 
-        private void DtgItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        /// <summary>
+        /// 刷新对象
+        /// </summary>
+        public void RefreshObj()
         {
             World.Data.Item = (LFItem)DtgItems.SelectedItem;
             if (World.Data.Item != null)
             {
                 ID = World.Data.ItemList.IndexOf(World.Data.Item);
                 DataGridIndex = DtgItems.SelectedIndex;
+                DtgSites.ItemsSource = World.Data.Item.Locations;
             }
         }
 
-        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// 添加对象
+        /// </summary>
+        public void AddObj()
         {
             ItemDialog dialog = new ItemDialog();
             dialog.Title = "新建物品 - " + (World.Data.ItemList.Count + 1).ToString();
@@ -75,16 +82,19 @@ namespace LF.FictionWorld.Project.Pages
                 World.Data.ItemList.Add(dialog.Item.Clone());
                 World.Data.Item = dialog.Item.Clone();
                 DtgItems.SelectedIndex = World.Data.ItemList.Count - 1;
-               
-
             }
         }
 
-        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// 编辑对象
+        /// </summary>
+        public void EditObj()
         {
-            ItemDialog dialog = new ItemDialog();
-            dialog.Item = World.Data.Item.Clone();
-            dialog.Title = "编辑物品 - " + World.Data.Item.Name;
+            ItemDialog dialog = new ItemDialog
+            {
+                Item = World.Data.Item.Clone(),
+                Title = "编辑物品 - " + World.Data.Item.Name
+            };
             dialog.ShowDialog();
             if (dialog.DialogResult == true)
             {
@@ -94,7 +104,10 @@ namespace LF.FictionWorld.Project.Pages
             }
         }
 
-        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// 删除对象
+        /// </summary>
+        public void DeleteObj()
         {
             if (MessageBox.Show("是否删除【物品：" + World.Data.Item.Name + "】", "删除提示", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
             {
@@ -102,6 +115,59 @@ namespace LF.FictionWorld.Project.Pages
                 World.Data.Item = World.Data.ItemList.Last();
                 DtgItems.SelectedIndex = World.Data.ItemList.Count - 1;
             }
+        }
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// 控件加载时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadObj();
+        }
+
+        /// <summary>
+        /// 列表选择项变化是发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DtgItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RefreshObj();
+        }
+
+        /// <summary>
+        /// 添加Button单击时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            AddObj();
+        }
+
+        /// <summary>
+        /// 编辑按钮单击时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            EditObj();
+        }
+
+        /// <summary>
+        /// 删除按钮单击时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteObj();
         }
 
         #endregion

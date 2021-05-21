@@ -21,10 +21,10 @@ namespace LF.FictionWorld
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private long _index;        // 索引
-        private string _name;       // 名称
-        private int _id;            // ID
-        private string _brief;      // 简介
+        private long _index;            // 索引
+        private int _id;                // ID
+        private string _name = "NaN";   // 名称
+        private string _brief = "NaN";  // 简介
 
         private LFType _level = new LFType();      // 等级
 
@@ -34,6 +34,8 @@ namespace LF.FictionWorld
         private LFAttribute _attributes = new LFAttribute();    // 属性
 
         private LFItemList _recipe = new LFItemList();          // 配方
+
+        private LFSiteList _locations = new LFSiteList();       // 产地
         #endregion
 
         #region Properties
@@ -101,6 +103,7 @@ namespace LF.FictionWorld
         /// 配方
         /// </summary>
         public LFItemList Recipe { get => _recipe; set => _recipe = value; }
+        public LFSiteList Locations { get => _locations; set => _locations = value; }
 
         #endregion
 
@@ -133,6 +136,8 @@ namespace LF.FictionWorld
             this._type2 = rhs._type2;
 
             this._attributes = rhs._attributes.Clone();
+
+            _locations = rhs.Locations;
         }
 
         /// <summary>
@@ -165,6 +170,7 @@ namespace LF.FictionWorld
             index += _type2.Index * 10000;
             index += _attributes.Code;
 
+            /* ID 重复性检测 */
             if (_id == 0)
             {
                 _id = 1;

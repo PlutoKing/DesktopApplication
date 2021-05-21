@@ -17,6 +17,9 @@ using System.ComponentModel;
 
 namespace LF.FictionWorld
 {
+    /// <summary>
+    /// 成员
+    /// </summary>
     public class LFMember : INotifyPropertyChanged, ICloneable
     {
         #region Fields
@@ -25,21 +28,38 @@ namespace LF.FictionWorld
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private int _id;
-        private string _title;
-        private string _brief;
-        private int _level;
-        private int _count;
-        private LFMemberList _assistants = new LFMemberList();
-
+        private int _id;        // ID
+        private string _title;  // 头衔
+        private string _brief;  // 简介
+        private int _level;     // 等级
+        private int _count;     // 数量
+        private LFMemberList _assistants = new LFMemberList();  // 副手
         #endregion
 
         #region Properties
+        /// <summary>
+        /// ID
+        /// </summary>
         public int ID { get => _id; set => _id = value; }
+        /// <summary>
+        /// 头衔
+        /// </summary>
         public string Title { get => _title; set => _title = value; }
+        /// <summary>
+        /// 简介
+        /// </summary>
         public string Brief { get => _brief; set => _brief = value; }
+        /// <summary>
+        /// 等级
+        /// </summary>
         public int Level { get => _level; set => _level = value; }
+        /// <summary>
+        /// 数量
+        /// </summary>
         public int Count { get => _count; set => _count = value; }
+        /// <summary>
+        /// 副手
+        /// </summary>
         public LFMemberList Assistants { get => _assistants; set => _assistants = value; }
         #endregion
 

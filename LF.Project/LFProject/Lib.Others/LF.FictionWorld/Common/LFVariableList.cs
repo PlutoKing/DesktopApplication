@@ -69,6 +69,7 @@ namespace LF.FictionWorld
 
         #region Methods
 
+        #region Basic Methods
         /// <summary>
         /// 计算当前值
         /// </summary>
@@ -99,12 +100,13 @@ namespace LF.FictionWorld
                 }
             }
             return null;
-        }
+        } 
+        #endregion
 
         #region Sort
 
         /// <summary>
-        /// 按照ID排序
+        /// 按照日期排序
         /// </summary>
         public void Sort()
         {
@@ -125,11 +127,24 @@ namespace LF.FictionWorld
 
         #region Add
 
+        /// <summary>
+        /// 添加变量
+        /// </summary>
+        public void AddVariable(LFVariable var)
+        {
+            /* 重复性检测 */
+            foreach(LFVariable v in this)
+            {
+                if (v.Equals(var))
+                    return;
+            }
 
+            /* 添加新变量 */
+            Add(var);
+            Sort();
+        }
 
         #endregion
-
-
 
         #endregion
 

@@ -22,10 +22,10 @@ namespace LF.FictionWorld
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private int _index = 0; // 索引号
-        private string _value;  // 值
-        private string _brief;  // 简介
-        private LFTypeList _childs; // 子分类
+        private int _index = 0;         // 索引号
+        private string _value = "NaN";  // 值
+        private string _brief = "NaN";  // 简介
+        private LFTypeList _childs;     // 子分类
         
         #endregion
 

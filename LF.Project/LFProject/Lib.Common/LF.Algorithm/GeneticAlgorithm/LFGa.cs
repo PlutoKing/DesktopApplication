@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LF;
 
 namespace LF.Algorithm.GeneticAlgorithm
 {
@@ -108,7 +109,7 @@ namespace LF.Algorithm.GeneticAlgorithm
                     fitnessArray[p] = _population[p].GetFitness(FitnessFunction);
                 }
                 // 获取最优个体的index和适应度
-                LF.GetMax(fitnessArray, out index, out max);
+                LF<double>.GetMax(fitnessArray, out max, out index);
 
                 chromosome = _population[index].Clone();
                 history.Add(max);
@@ -127,7 +128,7 @@ namespace LF.Algorithm.GeneticAlgorithm
                     break;
 
                 // 进化
-                int[] randomOrder = LF.RandArray(popSize);
+                int[] randomOrder = LF<int>.RandArray(popSize);
                 LFPopulation newPop = _population.Clone();    // 复制一份
 
                 for (int p = 3; p < popSize; p += 4)
@@ -145,7 +146,7 @@ namespace LF.Algorithm.GeneticAlgorithm
                         fitnessArray[randomOrder[p - 1]],
                         fitnessArray[randomOrder[p]],};
 
-                    LF.GetMax(subFitness, out index, out max);
+                    LF<double>.GetMax(subFitness, out max, out index);
 
                     LFChromosome best = sunPop[index]; // 4个当中最好的
 
@@ -154,9 +155,9 @@ namespace LF.Algorithm.GeneticAlgorithm
                     int index1 = random.Next(0, best.Codes.Length);
                     int index2 = random.Next(0, best.Codes.Length);
 
-                    newPop[p - 2].Codes = LF.ArrayFlip(best.Codes, index1, index2);    // 翻转
-                    newPop[p - 1].Codes = LF.ArraySwap(best.Codes, index1, index2);    // 交换
-                    newPop[p].Codes = LF.ArraySlide(best.Codes, index1, index2);       // 滑移
+                    newPop[p - 2].Codes = LF<int>.ArrayFlip(best.Codes, index1, index2);    // 翻转
+                    newPop[p - 1].Codes = LF<int>.ArraySwap(best.Codes, index1, index2);    // 交换
+                    newPop[p].Codes = LF<int>.ArraySlide(best.Codes, index1, index2);       // 滑移
                 }
 
                 _population = newPop.Clone();
@@ -203,7 +204,7 @@ namespace LF.Algorithm.GeneticAlgorithm
                     fitnessArray[p] = _population[p].GetFitness(FitnessFunction);
                 }
 
-                LF.GetMax(fitnessArray, out index, out max);
+                LF<double>.GetMax(fitnessArray, out max, out index);
                 chromosome = _population[index].Clone();
 
                 record.Add(max);
@@ -221,7 +222,7 @@ namespace LF.Algorithm.GeneticAlgorithm
                     break;
 
                 // 变异
-                int[] randomOrder = LF.RandArray(_popSize);
+                int[] randomOrder = LF<int>.RandArray(_popSize);
                 LFPopulation newPop = _population.Clone();    // 复制一份
                 for (int p = 3; p < _popSize; p += 4)
                 {
@@ -237,7 +238,7 @@ namespace LF.Algorithm.GeneticAlgorithm
                         fitnessArray[randomOrder[p - 1]],
                         fitnessArray[randomOrder[p]],};
 
-                    LF.GetMax(subFitness, out index, out max);
+                    LF<double>.GetMax(subFitness, out max, out index);
 
                     LFChromosome best = sunPop[index]; // 4个当中最好的
 
@@ -246,9 +247,9 @@ namespace LF.Algorithm.GeneticAlgorithm
                     int index1 = random.Next(0, best.Codes.Length);
                     int index2 = random.Next(0, best.Codes.Length);
 
-                    newPop[p - 2].Codes = LF.ArrayFlip(best.Codes, index1, index2);
-                    newPop[p - 1].Codes = LF.ArraySwap(best.Codes, index1, index2);
-                    newPop[p].Codes = LF.ArraySlide(best.Codes, index1, index2);
+                    newPop[p - 2].Codes = LF<int>.ArrayFlip(best.Codes, index1, index2);
+                    newPop[p - 1].Codes = LF<int>.ArraySwap(best.Codes, index1, index2);
+                    newPop[p].Codes = LF<int>.ArraySlide(best.Codes, index1, index2);
                 }
                 _population = newPop.Clone();
             }
@@ -300,7 +301,7 @@ namespace LF.Algorithm.GeneticAlgorithm
                     fitnessArray[p] = _population[p].GetFitness(FitnessFunction);
                 }
 
-                LF.GetMax(fitnessArray, out index, out max);
+                LF<double>.GetMax(fitnessArray, out max, out index);
                 chromosome = _population[index];
                 record.Add(max);
 
@@ -318,7 +319,7 @@ namespace LF.Algorithm.GeneticAlgorithm
                     break;
 
                 /* 变异 */
-                int[] randomOrder = LF.RandArray(popSize);
+                int[] randomOrder = LF<int>.RandArray(popSize);
                 LFPopulation newPop = _population.Clone();    // 复制一份
 
                 for (int p = 7; p < popSize; p += 8)
@@ -343,7 +344,7 @@ namespace LF.Algorithm.GeneticAlgorithm
                         fitnessArray[randomOrder[p - 1]],
                         fitnessArray[randomOrder[p]],};
 
-                    LF.GetMax(subFitness, out index, out max);
+                    LF<double>.GetMax(subFitness, out max, out index);
 
                     LFChromosome best = sunPop[index]; // 8个当中最好的
 
@@ -352,16 +353,16 @@ namespace LF.Algorithm.GeneticAlgorithm
                     int index1 = random.Next(0, best.Codes.Length);
                     int index2 = random.Next(0, best.Codes.Length);
 
-                    newPop[p - 6].Codes = LF.ArrayFlip(best.Codes, index1, index2);
-                    newPop[p - 5].Codes = LF.ArraySwap(best.Codes, index1, index2);
-                    newPop[p - 4].Codes = LF.ArraySlide(best.Codes, index1, index2);
+                    newPop[p - 6].Codes = LF<int>.ArrayFlip(best.Codes, index1, index2);
+                    newPop[p - 5].Codes = LF<int>.ArraySwap(best.Codes, index1, index2);
+                    newPop[p - 4].Codes = LF<int>.ArraySlide(best.Codes, index1, index2);
 
                     newPop[p - 3].SecondaryCodes = RandBreaks(N, M);
-                    newPop[p - 2].Codes = LF.ArrayFlip(best.Codes, index1, index2);
+                    newPop[p - 2].Codes = LF<int>.ArrayFlip(best.Codes, index1, index2);
                     newPop[p - 2].SecondaryCodes = RandBreaks(N, M);
-                    newPop[p - 1].Codes = LF.ArraySwap(best.Codes, index1, index2);
+                    newPop[p - 1].Codes = LF<int>.ArraySwap(best.Codes, index1, index2);
                     newPop[p - 1].SecondaryCodes = RandBreaks(N, M);
-                    newPop[p].Codes = LF.ArraySlide(best.Codes, index1, index2);
+                    newPop[p].Codes = LF<int>.ArraySlide(best.Codes, index1, index2);
                     newPop[p].SecondaryCodes = RandBreaks(N, M);
                 }
                 _population = newPop.Clone();
@@ -434,7 +435,7 @@ namespace LF.Algorithm.GeneticAlgorithm
             _population.Clear();
             for (int i = 0; i < _popSize; i++)
             {
-                int[] codes = LF.RandArray(city);
+                int[] codes = LF<int>.RandArray(city);
                 LFChromosome ch = new LFChromosome(codes);  // 主编码
                 if (salesmen != 1)
                     ch.SecondaryCodes = RandBreaks(city, salesmen - 1);    // 副编码

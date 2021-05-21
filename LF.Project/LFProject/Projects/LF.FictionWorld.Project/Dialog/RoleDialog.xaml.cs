@@ -102,13 +102,20 @@ namespace LF.FictionWorld.Project.Dialog
 
         #endregion
 
+
         private void CmbRace_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             CmbGender.ItemsSource = ((LFType)CmbRace.SelectedItem).Childs;
         }
 
+        /// <summary>
+        /// 一级区域更新时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CmbAdd1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            // 二级区域数据绑定
             CmbAdd2.ItemsSource = ((LFType)CmbAdd1.SelectedItem).Childs;
         }
 

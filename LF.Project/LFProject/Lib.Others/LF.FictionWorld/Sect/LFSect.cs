@@ -15,73 +15,71 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Xml;
+using System.Collections.ObjectModel;
 
 namespace LF.FictionWorld
 {
     public class LFSect : INotifyPropertyChanged, ICloneable
     {
         #region Fields
-        public event PropertyChangedEventHandler PropertyChanged;       // 定义属性改变事件
+        /// <summary>
+        /// 实现接口：属性改变事件
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        private long _index;
-        private string _name;
-        private int _id;
-        private string _brief;
+        private long _index;            // 索引号
+        private int _id;                // ID
+        private string _name = "NaN";   // 名称
+        private string _brief = "NaN";  // 简介
 
-        private LFDate _createdDate = new LFDate();
-        private float _age;
+        private LFDate _createdDate = new LFDate();     // 创建日期
+        private string _createdRole = "未知";            // 创建者
+        private LFSite _location = new LFSite();        // 地点
+        private float _age;                             // 传承年数
 
-        private LFSite _location = new LFSite();
-
-        private LFDepartmentList _struct = new LFDepartmentList();
-
+        private LFDepartmentList _struct = new LFDepartmentList();  // 组织结构
+        private LFVariableList _roles = new LFVariableList();       // 角色
         #endregion
 
         #region Properties
-
-
         /// <summary>
         /// 索引号
         /// </summary>
-
         public long Index { get => _index; set => _index = value; }
-
         /// <summary>
         /// 名称
         /// </summary>
         public string Name { get => _name; set => _name = value; }
-
         /// <summary>
         /// ID
         /// </summary>
         public int ID { get => _id; set => _id = value; }
-
         /// <summary>
         /// 简介
         /// </summary>
         public string Brief { get => _brief; set => _brief = value; }
-
         /// <summary>
         /// 创建日期
         /// </summary>
         public LFDate CreatedDate { get => _createdDate; set => _createdDate = value; }
-
         /// <summary>
         /// 地点
         /// </summary>
         public LFSite Location { get => _location; set => _location = value; }
-
         /// <summary>
         /// 传承时间
         /// </summary>
         public float Age { get => _age; set => _age = value; }
-
         /// <summary>
         /// 组织结构
         /// </summary>
         public LFDepartmentList Struct { get => _struct; set => _struct = value; }
+        public LFVariableList Roles { get => _roles; set => _roles = value; }
+        public string CreatedRole { get => _createdRole; set => _createdRole = value; }
 
-
+        /// <summary>
+        /// 角色
+        /// </summary>
         #endregion
 
         #region Constructors
@@ -174,6 +172,23 @@ namespace LF.FictionWorld
 
             _index = index * 100 + _id;
         }
+        
+        /// <summary>
+        /// 地点检测
+        /// </summary>
+        public void CheckSite()
+        {
+            if(_location != null)
+            {
+                // 将势力添加到地点中
+                foreach (LFSect sect in _location.Sects)
+                {
+                    if (sect.Name == this.Name)
+                        return;
+                }
+                _location.Sects.Add(this);
+            }
+        }
         #endregion
 
         #region File
@@ -206,7 +221,6 @@ namespace LF.FictionWorld
             }
 
             xmlDoc.Save(path + @"\Sects\" + _index.ToString() + ".xml");                   // 加载文件
-
         }
 
         /// <summary>
@@ -231,6 +245,7 @@ namespace LF.FictionWorld
                 this._struct.Add(d);
             }
 
+            CheckSite();
         }
 
         #region Sect Struct
@@ -406,7 +421,6 @@ namespace LF.FictionWorld
                     department.Departments = ReadDepartments(departmentsEle);
                 }
             }
-
 
             return department;
         } 

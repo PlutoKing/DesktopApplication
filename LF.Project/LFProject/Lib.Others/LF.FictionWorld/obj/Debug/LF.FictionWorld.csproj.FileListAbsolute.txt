@@ -21,3 +21,11 @@ I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\bin\Debug\
 I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.csproj.CoreCompileInputs.cache
 I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.dll
 I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.csprojAssemblyReference.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\bin\Debug\LF.Algorithm.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\bin\Debug\LF.Mathematics.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\bin\Debug\LF.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\bin\Debug\LF.Algorithm.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\bin\Debug\LF.Mathematics.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\bin\Debug\LF.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.csproj.CopyComplete

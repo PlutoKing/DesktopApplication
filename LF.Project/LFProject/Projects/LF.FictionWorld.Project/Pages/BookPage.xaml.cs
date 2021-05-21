@@ -43,30 +43,21 @@ namespace LF.FictionWorld.Project.Pages
 
         #region Methods
 
-        #endregion
-
-        #region Events
-
         /// <summary>
-        /// 控件加载时发生
+        /// 加载对象
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        private void LoadObj()
         {
             DtgBooks.ItemsSource = World.Data.BookList;
             this.DataContext = World.Data;
 
             DtgBooks.SelectedIndex = 0;
-
         }
 
         /// <summary>
-        /// 列表选择项变化时发生
+        /// 刷新对象
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void DtgBooks_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void RefreshObj()
         {
             World.Data.Book = (LFBook)DtgBooks.SelectedItem;
             if (World.Data.Book != null)
@@ -77,11 +68,9 @@ namespace LF.FictionWorld.Project.Pages
         }
 
         /// <summary>
-        /// 添加按钮单击时发生
+        /// 添加对象
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        public void AddObj()
         {
             BookDialog dialog = new BookDialog
             {
@@ -97,11 +86,9 @@ namespace LF.FictionWorld.Project.Pages
         }
 
         /// <summary>
-        /// 编辑按钮单击时发生
+        /// 编辑对象
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        public void EditObj()
         {
             BookDialog dialog = new BookDialog
             {
@@ -118,11 +105,9 @@ namespace LF.FictionWorld.Project.Pages
         }
 
         /// <summary>
-        /// 删除按钮单击时发生
+        /// 删除对象
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        private void DeleteObj()
         {
             if (MessageBox.Show("是否删除【功法：" + World.Data.Book.Name + "】", "删除提示",
                 MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
@@ -132,6 +117,69 @@ namespace LF.FictionWorld.Project.Pages
                 DtgBooks.SelectedIndex = World.Data.BookList.Count - 1;
                 TxbCount.Text = World.Data.BookList.Count.ToString();
             }
+        }
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// 控件加载时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadObj();
+        }
+
+        /// <summary>
+        /// 列表选择项变化时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DtgBooks_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RefreshObj();
+        }
+
+        /// <summary>
+        /// 添加按钮单击时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            AddObj();
+        }
+
+        /// <summary>
+        /// 编辑按钮单击时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            EditObj();   
+        }
+
+        /// <summary>
+        /// 删除按钮单击时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteObj();
+        }
+
+        /// <summary>
+        /// 双击列表时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DtgBooks_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            EditObj();
         }
         #endregion
 

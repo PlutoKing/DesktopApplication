@@ -62,7 +62,10 @@ namespace LF.FictionWorld
         /// </summary>
         private LFTypeList actions = new LFTypeList();
 
-
+        /// <summary>
+        /// 关系
+        /// </summary>
+        private LFTypeList relations = new LFTypeList();
         #endregion
 
         #region Properties
@@ -96,6 +99,11 @@ namespace LF.FictionWorld
         /// 动作
         /// </summary>
         public LFTypeList Actions { get => actions; set => actions = value; }
+
+        /// <summary>
+        /// 关系
+        /// </summary>
+        public LFTypeList Relations { get => relations; set => relations = value; }
 
 
         #endregion

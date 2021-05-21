@@ -18,6 +18,9 @@ using System.Xml;
 
 namespace LF.FictionWorld
 {
+    /// <summary>
+    /// 部门：组织结构的单元
+    /// </summary>
     public class LFDepartment : INotifyPropertyChanged, ICloneable
     {
         #region Fields
@@ -26,15 +29,16 @@ namespace LF.FictionWorld
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private int _id;            // ID
+        private string _title;      // 名称
+        private string _brief;      // 简介
+        private int _level;         // 等级
 
-        private int _id;
-        private string _title;
-        private string _brief;
-        private int _level;
-
-        private LFMember _leader;
-
+        // 长官
+        private LFMember _leader = new LFMember();
+        // 副长官
         private LFMemberList _members = new LFMemberList();
+        // 成员
         private LFDepartmentList _departments = new LFDepartmentList();
 
         #endregion
@@ -57,17 +61,17 @@ namespace LF.FictionWorld
         /// <summary>
         /// 拷贝构造函数
         /// </summary>
-        /// <param name="rhs"></param>
-        public LFDepartment(LFDepartment rhs)
+        /// <param name="obj"></param>
+        public LFDepartment(LFDepartment obj)
         {
-            this._id = rhs._id;
-            this._title = rhs._title;
-            this._brief = rhs._brief;
-            this._level = rhs._level;
+            _id = obj._id;
+            _title = obj._title;
+            _brief = obj._brief;
+            _level = obj._level;
 
-            this._leader = rhs._leader;
-            this._members = rhs._members.Clone();
-            this._departments = rhs._departments.Clone();
+            _leader = obj._leader;
+            _members = obj._members.Clone();
+            _departments = obj._departments.Clone();
         }
 
         /// <summary>
@@ -90,12 +94,9 @@ namespace LF.FictionWorld
 
         #region Methods
 
-
-
         #endregion
 
         #region Events
-
         /// <summary>
         /// 属性改变事件
         /// </summary>
@@ -104,7 +105,6 @@ namespace LF.FictionWorld
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(info));
         }
-
         #endregion
     }
 }

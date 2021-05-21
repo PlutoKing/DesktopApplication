@@ -9,13 +9,13 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Xml;
+using LF.Algorithm;
 
 namespace LF.FictionWorld
 {
     public class LFRoleList : ObservableCollection<LFRole>, ICloneable
     {
         #region Fields
-
         #endregion
 
         #region Properties
@@ -58,7 +58,7 @@ namespace LF.FictionWorld
 
         #region Methods
 
-        #region Sort
+        #region Sort and Add
 
         /// <summary>
         /// 按照ID排序
@@ -71,12 +71,13 @@ namespace LF.FictionWorld
                 list.Add(obj);
             }
             list.Sort(delegate (LFRole O1, LFRole O2) { return O1.Index.CompareTo(O2.Index); });
-            this.Clear();
+            Clear();
             foreach (LFRole obj in list)
             {
-                this.Add(obj);
+                Add(obj);
             }
         }
+
         #endregion
 
         #region SubList

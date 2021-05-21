@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LF.FictionWorld.Project.Dialog"
         mc:Ignorable="d"
         Title="ActionDialog" Height="300" Width="500" x:Name="dialog" Background="{StaticResource BackColor}"
-         WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize"
         Loaded="Dialog_Loaded">
     <Border BorderBrush="Gray" BorderThickness="0.5">
         <Grid>

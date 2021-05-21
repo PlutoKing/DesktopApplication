@@ -35,10 +35,10 @@ namespace LF.FictionWorld.Project
         public MainWindow()
         {
             InitializeComponent();
-            /* 加载数据 */
-            World.Open();
+            ///* 加载数据 */
+            //World.Open();
 
-            this.DataContext = World.Info;
+            //this.DataContext = World.Info;
 
             
         }
@@ -58,7 +58,7 @@ namespace LF.FictionWorld.Project
         private void BtnMenu_Click(object sender, RoutedEventArgs e)
         {
             /* 保存数据 */
-            World.Save();
+            //World.Save();
             /* 关闭应用 */
             this.Close();
         }

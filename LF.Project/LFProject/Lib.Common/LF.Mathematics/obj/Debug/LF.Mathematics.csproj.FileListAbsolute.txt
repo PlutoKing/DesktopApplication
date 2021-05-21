@@ -1,0 +1,6 @@
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mathematics\bin\Debug\LF.Mathematics.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mathematics\bin\Debug\LF.Mathematics.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mathematics\obj\Debug\LF.Mathematics.csprojAssemblyReference.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mathematics\obj\Debug\LF.Mathematics.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mathematics\obj\Debug\LF.Mathematics.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mathematics\obj\Debug\LF.Mathematics.pdb

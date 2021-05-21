@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Site Index="15202" Name="剑石山">
-  <Items />
+  <Items>
+    <Item Index="3130001001" />
+  </Items>
   <Sects />
 </Site>

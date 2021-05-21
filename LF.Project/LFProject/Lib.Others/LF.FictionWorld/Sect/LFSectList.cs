@@ -219,6 +219,7 @@ namespace LF.FictionWorld
 
         #endregion
 
+        #region 筛选
         /// <summary>
         /// 按照地点选择
         /// </summary>
@@ -228,7 +229,7 @@ namespace LF.FictionWorld
         {
             LFSectList list = new LFSectList();
 
-            foreach(LFSect sect in this)
+            foreach (LFSect sect in this)
             {
                 if (sect.Location == site)
                 {
@@ -237,7 +238,8 @@ namespace LF.FictionWorld
             }
 
             return list;
-        }
+        } 
+        #endregion
 
         #endregion
 

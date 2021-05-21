@@ -16,13 +16,15 @@ namespace LF.FictionWorld
     public class LFVariable : INotifyPropertyChanged, ICloneable
     {
         #region Fields
-
-        public event PropertyChangedEventHandler PropertyChanged;       // 定义属性改变事件
+        /// <summary>
+        /// 实现接口：属性改变事件
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
 
         private LFDate _date = new LFDate();    // 日期
+        private LFDate _endDate = new LFDate(); // 结束日期
         private long _index;                    // 索引
         private string _value;                  // 值
-
         private float _age;                     // 年龄
 
         #endregion
@@ -46,6 +48,11 @@ namespace LF.FictionWorld
         /// </summary>
         public float Age { get => _age; set => _age = value; }
 
+        /// <summary>
+        /// 结束时间
+        /// </summary>
+        public LFDate EndDate { get => _endDate; set => _endDate = value; }
+
         #endregion
 
         #region Constructors
@@ -57,13 +64,14 @@ namespace LF.FictionWorld
         /// <summary>
         /// 拷贝构造函数
         /// </summary>
-        /// <param name="rhs"></param>
-        public LFVariable(LFVariable rhs)
+        /// <param name="obj">源对象</param>
+        public LFVariable(LFVariable obj)
         {
-            this._date = rhs._date;
-            this._index = rhs._index;
-            this._value = rhs._value;
-            this._age = rhs._age;
+            _date = obj._date;
+            _index = obj._index;
+            _value = obj._value;
+            _age = obj._age;
+            _endDate = obj._endDate;
         }
 
         /// <summary>
@@ -85,6 +93,17 @@ namespace LF.FictionWorld
         #endregion
 
         #region Methods
+
+        /// <summary>
+        /// 相等性检测
+        /// </summary>
+        /// <param name="v"></param>
+        /// <returns></returns>
+        public bool Equals(LFVariable v)
+        {
+            return (_date.Equals(v._date) && _index== v._index);
+        }
+
         #endregion
 
         #region Events
@@ -95,10 +114,7 @@ namespace LF.FictionWorld
         /// <param name="info"></param>
         private void NotifyPropertyChanged(string info)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(info));
         }
         #endregion
     }

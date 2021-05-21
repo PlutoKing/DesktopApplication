@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Site Index="17302" Name="金蝉山">
+<Site Index="17302" Name="大荒城">
   <Items />
-  <Sects />
+  <Sects>
+    <Sect Index="3000412081730201" />
+  </Sects>
 </Site>

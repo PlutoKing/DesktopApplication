@@ -14,26 +14,25 @@ namespace LF.FictionWorld
     public class LFSite : INotifyPropertyChanged, ICloneable
     {
         #region Fields
-
-
         /// <summary>
         /// 实现接口：属性改变事件
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private int _index;
-        private int _id;
-        private string _name;
-        private string _brief;
+        private int _index;             // 索引号
+        private int _id;                // ID
+        private string _name = "NaN";   // 名称
+        private string _brief = "NaN";  // 简介
 
-        private LFType _area1 = new LFType();
-        private LFType _area2 = new LFType();
-        private LFType _area3 = new LFType();
+        private LFType _area1 = new LFType();   // 所属一级区域
+        private LFType _area2 = new LFType();   // 所属二级区域
+        private LFType _area3 = new LFType();   // 所属三级区域
 
-        private LFSubSiteList _subSites = new LFSubSiteList();
+        private LFSubSiteList _subSites = new LFSubSiteList();  // 子地点
 
-        private LFItemList _items = new LFItemList();
-        private LFSectList _sects = new LFSectList();
+        private LFItemList _items = new LFItemList();               // 物品列表
+        private LFSectList _sects = new LFSectList();               // 势力列表
+        private LFVariableList _masterSect = new LFVariableList();  // 所属势力（随时间变化）
         #endregion
 
         #region Properties
@@ -106,9 +105,14 @@ namespace LF.FictionWorld
         /// 物品
         /// </summary>
         public LFItemList Items { get => _items; set => _items = value; }
+        /// <summary>
+        /// 势力
+        /// </summary>
         public LFSectList Sects { get => _sects; set => _sects = value; }
-
-
+        /// <summary>
+        /// 所属势力（随时间变化）
+        /// </summary>
+        public LFVariableList MasterSect { get => _masterSect; set => _masterSect = value; }
         #endregion
 
         #region Constructors
@@ -193,23 +197,46 @@ namespace LF.FictionWorld
             index += _area2.Index * 10;
             index += _area3.Index;
 
-            if (_id == 0)
+            _id = 1;
+            foreach (LFSite site in World.Data.SiteList.GetAreaSub(index))
             {
-                _id = 1;
-                foreach (LFSite site in World.Data.SiteList.GetAreaSub(index))
+                if (site.Index / 100 == index)
                 {
-                    if (site.Index / 100 == index)
-                    {
+                    if (site.Name != Name)
                         _id++;
-                    }
                     else
-                    {
                         break;
-                    }
                 }
             }
 
             _index = index * 100 + _id;
+        }
+
+        /// <summary>
+        /// 检测物品
+        /// </summary>
+        public void CheckItems()
+        {
+            foreach(LFItem item in this.Items)
+            {
+                if(item != null)
+                {
+                    bool tmp = false;
+                    foreach (LFSite site in item.Locations)
+                    {
+                        if (site.Name == _name)
+                        {
+                            tmp = true;
+                            break;
+                        }
+                    }
+                    if (!tmp)
+                    {
+                        item.Locations.Add(this);
+                    }
+
+                }
+            }
         }
         #endregion
 
@@ -243,9 +270,12 @@ namespace LF.FictionWorld
             XmlElement eleSects = xmlDoc.CreateElement("Sects");
             foreach (LFSect obj in _sects)
             {
-                XmlElement ele = xmlDoc.CreateElement("Sect");
-                ele.SetAttribute("Index", obj.Index.ToString());
-                eleSects.AppendChild(ele);
+                if(obj != null)
+                {
+                    XmlElement ele = xmlDoc.CreateElement("Sect");
+                    ele.SetAttribute("Index", obj.Index.ToString());
+                    eleSects.AppendChild(ele);
+                }
             }
             root.AppendChild(eleSects);
 
@@ -265,14 +295,17 @@ namespace LF.FictionWorld
             xmlDoc.Load(path + @"\Sites\" + _index.ToString() + ".xml");                   // 加载文件
             XmlElement root = xmlDoc.DocumentElement;                   // 读取根节点
 
-            XmlElement eleRanks = (XmlElement)root.GetElementsByTagName("Items")[0];
-            foreach (XmlNode node in eleRanks.ChildNodes)
+            XmlElement eleItmes = (XmlElement)root.GetElementsByTagName("Items")[0];
+            foreach (XmlNode node in eleItmes.ChildNodes)
             {
                 XmlElement ele = (XmlElement)node;
                 long index = Convert.ToInt64(ele.GetAttribute("Index"));
+                
                 LFItem item = World.Data.ItemList.GetItem(index);
-                _items.Add(item);
+                if (item != null)
+                    _items.Add(item);
             }
+            CheckItems();
 
             XmlElement eleSects = (XmlElement)root.GetElementsByTagName("Sects")[0];
             foreach (XmlNode node in eleSects.ChildNodes)
@@ -282,6 +315,8 @@ namespace LF.FictionWorld
                 LFSect obj = World.Data.SectList.GetSect(index);
                 _sects.Add(obj);
             }
+
+            
         }
 
         #endregion

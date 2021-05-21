@@ -54,3 +54,5 @@ I:\DesktopApplication\LF.Project\LFProject\Projects\LF.FictionWorld.Project\obj\
 I:\DesktopApplication\LF.Project\LFProject\Projects\LF.FictionWorld.Project\obj\Debug\LF.FictionWorld.Project.csproj.CopyComplete
 I:\DesktopApplication\LF.Project\LFProject\Projects\LF.FictionWorld.Project\obj\Debug\LF.FictionWorld.Project.exe
 I:\DesktopApplication\LF.Project\LFProject\Projects\LF.FictionWorld.Project\obj\Debug\LF.FictionWorld.Project.pdb
+I:\DesktopApplication\LF.Project\LFProject\Projects\LF.FictionWorld.Project\obj\Debug\Dialog\DepartmentDialog.g.cs
+I:\DesktopApplication\LF.Project\LFProject\Projects\LF.FictionWorld.Project\obj\Debug\Dialog\DepartmentDialog.baml

@@ -198,7 +198,11 @@ namespace LF.FictionWorld
 
             foreach (LFSect sect in SectList)
             {
-                sect.Open(World.Info.Path + @"\Datas");
+                try
+                {
+                    sect.Open(World.Info.Path + @"\Datas");
+                }
+                catch { }
             }
 
             /* 解析角色 */
@@ -209,6 +213,7 @@ namespace LF.FictionWorld
                     role.Open(World.Info.Path + @"\Datas");
                     role.Ranks.GetValue(World.Info.NowDate);
                     role.Experiences.GetValue(World.Info.NowDate);
+                    role.ExpToSect();
                 }
                 catch { }
             }

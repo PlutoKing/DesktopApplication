@@ -25,10 +25,10 @@ namespace LF.FictionWorld
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private long _index;        // 索引
-        private int _id;            // ID，用于区别双胞胎
-        private string _name;       // 姓名
-        private string _brief;      // 简介
+        private long _index;            // 索引号
+        private int _id;                // ID
+        private string _name = "NaN";   // 名称
+        private string _brief = "NaN";  // 简介
 
         private LFDate _birthday = new LFDate();    // 生日
         private LFSite _home = new LFSite();        // 籍贯
@@ -42,6 +42,7 @@ namespace LF.FictionWorld
         private LFAttribute _attributes = new LFAttribute();    // 属性
         private LFVariableList _ranks = new LFVariableList();           // 修炼等级
         private LFVariableList _experiences = new LFVariableList();     // 经历
+        private LFRelationList _relations = new LFRelationList();       // 角色关系
         #endregion
 
         #region Properties
@@ -108,8 +109,15 @@ namespace LF.FictionWorld
                 return _attributes.ToString();
             }
         }
-
+        /// <summary>
+        /// 经历
+        /// </summary>
         public LFVariableList Experiences { get => _experiences; set => _experiences = value; }
+
+        /// <summary>
+        /// 关系
+        /// </summary>
+        public LFRelationList Relations { get => _relations; set => _relations = value; }
         #endregion
 
         #region Constructors
@@ -127,27 +135,28 @@ namespace LF.FictionWorld
         /// <summary>
         /// 拷贝构造函数
         /// </summary>
-        /// <param name="rhs"></param>
-        public LFRole(LFRole rhs)
+        /// <param name="obj">源对象</param>
+        public LFRole(LFRole obj)
         {
 
-            _index = rhs._index;
-            _name = rhs._name;
-            _id = rhs._id;
-            _brief = rhs._brief;
+            _index = obj._index;
+            _name = obj._name;
+            _id = obj._id;
+            _brief = obj._brief;
 
-            _birthday = rhs._birthday;
-            _home = rhs._home;
-            _age = rhs._age;
+            _birthday = obj._birthday;
+            _home = obj._home;
+            _age = obj._age;
 
-            _race = rhs._race;
-            _gender = rhs._gender;
+            _race = obj._race;
+            _gender = obj._gender;
 
-            _talent = rhs._talent;
-            _attributes = rhs._attributes.Clone();
+            _talent = obj._talent;
+            _attributes = obj._attributes.Clone();
 
-            _ranks = rhs._ranks.Clone();
-            _experiences = rhs._experiences.Clone();
+            _ranks = obj._ranks.Clone();
+            _experiences = obj._experiences.Clone();
+            _relations = obj._relations.Clone();
         }
 
         /// <summary>
@@ -306,6 +315,46 @@ namespace LF.FictionWorld
                 v.Index = World.Data.SectList.GetIndex(v.Value);
             }
             _experiences.GetValue(World.Info.NowDate);
+            ExpToSect();
+        }
+
+        /// <summary>
+        /// 将经历添加到势力中
+        /// </summary>
+        public void ExpToSect()
+        {
+            int n = _experiences.Count;
+            LFSect sect;
+            LFVariable tmp;
+            for (int i = 0; i < n - 1; i++)
+            {
+                sect = World.Data.SectList.GetSect(_experiences[i].Index);
+                if (sect != null)
+                {
+                    tmp = new LFVariable
+                    {
+                        Index = _index,
+                        Date = _experiences[i].Date,
+                        EndDate = _experiences[i + 1].Date,
+                        Value = _name,
+                    };
+                    sect.Roles.AddVariable(tmp);
+                }
+            }
+
+            sect = World.Data.SectList.GetSect(_experiences[n - 1].Index);
+            if (sect != null)
+            {
+                tmp = new LFVariable
+                {
+                    Index = _index,
+                    Date = _experiences[n - 1].Date,
+                    EndDate = _ranks[_ranks.Count - 1].Date,
+                    Value = _name,
+
+                };
+                sect.Roles.AddVariable(tmp);
+            }
         }
 
         #endregion
@@ -418,7 +467,11 @@ namespace LF.FictionWorld
                 }
                 else
                 {
-                    v.Value = World.Data.SectList.GetSect(v.Index).Name;
+                    LFSect tmp = World.Data.SectList.GetSect(v.Index);
+                    if(tmp !=null)
+                    {
+                        v.Value = tmp.Name;
+                    }
                 }
                 v.Age = v.Date.GetAge(_birthday);
                 _experiences.Add(v);

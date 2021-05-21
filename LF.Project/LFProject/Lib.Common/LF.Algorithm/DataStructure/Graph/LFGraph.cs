@@ -94,6 +94,12 @@ namespace LF.Algorithm
                 return false;
         }
 
+        /// <summary>
+        /// 判断第m个顶点与第n个顶点之间是否有边
+        /// </summary>
+        /// <param name="m"></param>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public bool IsEdge(int m, int n)
         {
 
@@ -125,7 +131,7 @@ namespace LF.Algorithm
         }
 
         /// <summary>
-        /// 设置边
+        /// 在第m个顶点和第n个顶点之间设置边
         /// </summary>
         /// <param name="m"></param>
         /// <param name="n"></param>
@@ -161,7 +167,7 @@ namespace LF.Algorithm
         }
 
         /// <summary>
-        /// 删除边
+        /// 删除第m个顶点和第n个顶点之间的边
         /// </summary>
         /// <param name="m"></param>
         /// <param name="n"></param>
@@ -241,8 +247,7 @@ namespace LF.Algorithm
         /// <returns></returns>
         public int GetIndex(LFNode<T> v)
         {
-            int i = -1;
-
+            int i;
             for (i = 0; i < _nodes.Length; i++)
             {
                 if (_nodes[i].Equals(v))

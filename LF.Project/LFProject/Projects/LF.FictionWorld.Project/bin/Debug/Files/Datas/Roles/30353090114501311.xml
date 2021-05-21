@@ -10,5 +10,7 @@
     <Rank Date="305831123" Index="7" />
     <Rank Date="308710413" Index="-1" />
   </Ranks>
-  <Experiences />
+  <Experiences>
+    <Experience Date="303530901" Index="3000109091450101" />
+  </Experiences>
 </Role>

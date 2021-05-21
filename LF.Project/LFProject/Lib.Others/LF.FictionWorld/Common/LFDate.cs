@@ -70,6 +70,14 @@ namespace LF.FictionWorld
         }
 
         /// <summary>
+        /// 短字符
+        /// </summary>
+        public string ShortString
+        {
+            get { return ToShortString(); }
+        }
+
+        /// <summary>
         /// 编码
         /// </summary>
         public long Code
@@ -389,8 +397,17 @@ namespace LF.FictionWorld
             int days = Minus(date);
             return days < 0;
         }
-        #endregion
 
+        /// <summary>
+        /// 相等判断
+        /// </summary>
+        /// <param name="d"></param>
+        /// <returns></returns>
+        public bool Equals(LFDate d)
+        {
+            return (_period == d.Period && _year == d.Year && _month == d.Month && _day == d.Day);
+        }
+        #endregion
 
         #region Override
 
@@ -400,7 +417,19 @@ namespace LF.FictionWorld
         /// <returns></returns>
         public override string ToString()
         {
-            return World.Info.Calendar.Periods[_period].Name + _year.ToString("0000") + "年" + _month.ToString("00") + "月" + _day.ToString("00") + "日";
+            string str = "NaN";
+            try
+            {
+                str = World.Info.Calendar.Periods[_period].Name + _year.ToString("0000") + "年" + _month.ToString("00") + "月" + _day.ToString("00") + "日";
+            }
+            catch { }
+            return str;
+        }
+
+        public string ToShortString()
+        {
+            return _actualYear.ToString("00000") + "-" + _month.ToString("00") + "-" + _day.ToString("00");
+
         }
 
         #endregion

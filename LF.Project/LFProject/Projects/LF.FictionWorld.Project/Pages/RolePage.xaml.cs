@@ -40,7 +40,13 @@ namespace LF.FictionWorld.Project.Pages
             InitializeComponent();
 
             /* 绑定数据 */
-            this.DataContext = World.Data;
+            DataContext = World.Data;
+            /* 绑定角色列表数据源 */
+            DtgRoles.ItemsSource = World.Data.RoleList;
+            /* 设置默认选择项 */
+            DtgRoles.SelectedIndex = 0;
+
+            TxbNowCount.Text = "";
         }
         #endregion
 
@@ -53,6 +59,7 @@ namespace LF.FictionWorld.Project.Pages
         {
             /* 绑定角色列表数据源 */
             DtgRoles.ItemsSource = World.Data.RoleList;
+
             /* 设置默认选择项 */
             DtgRoles.SelectedIndex = 0;
 
@@ -153,7 +160,7 @@ namespace LF.FictionWorld.Project.Pages
         /// <param name="e"></param>
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            LoadObj();
+            //LoadObj();
         }
 
         /// <summary>

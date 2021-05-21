@@ -33,50 +33,47 @@ namespace LF.FictionWorld.Project.Pages
         int DataGridIndex = 0;
         int ID = 0;
 
+        LFDepartment CurrentDepartment = new LFDepartment();
         #endregion
 
         #region Constructors
         public SectPage()
         {
             InitializeComponent();
+
+            /* 绑定数据 */
+            DataContext = World.Data;
+            DtgSects.ItemsSource = World.Data.SectList;
+            DtgSects.SelectedIndex = 0;
+            TxbCount.Text = World.Data.SectList.Count.ToString();
+            TrvSectStruct.ItemsSource = World.Data.Sect.Struct;
         }
         #endregion
 
         #region Methods
 
-        #endregion
-
-        #region Events
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            this.DataContext = World.Data;
-            DtgSects.ItemsSource = World.Data.SectList;
-            DtgSects.SelectedIndex = 0;
-
-            TxbCount.Text = World.Data.SectList.Count.ToString();
-
-            TrvSectStruct.ItemsSource = World.Data.Sect.Struct;
-        }
-
         /// <summary>
-        /// 选择势力
+        /// 刷新对象
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void DtgSects_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        public void RefreshObj()
         {
             World.Data.Sect = (LFSect)DtgSects.SelectedItem;
             if (World.Data.Sect != null)
             {
                 ID = World.Data.SectList.IndexOf(World.Data.Sect);
                 DataGridIndex = DtgSects.SelectedIndex;
-
+                // 角色列表数据绑定
+                DtgRoles.ItemsSource = World.Data.Sect.Roles;
+                // 组织结构数据绑定
                 TrvSectStruct.ItemsSource = World.Data.Sect.Struct;
             }
         }
-        #endregion
 
-        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+
+        /// <summary>
+        /// 添加对象
+        /// </summary>
+        public void AddObj()
         {
             SectDialog form = new SectDialog
             {
@@ -92,7 +89,10 @@ namespace LF.FictionWorld.Project.Pages
             }
         }
 
-        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// 编辑对象
+        /// </summary>
+        private void EditObj()
         {
             SectDialog form = new SectDialog
             {
@@ -108,9 +108,129 @@ namespace LF.FictionWorld.Project.Pages
             }
         }
 
+        /// <summary>
+        /// 刷新部门
+        /// </summary>
+        public void RefreshDep()
+        {
+            CurrentDepartment = (LFDepartment)TrvSectStruct.SelectedItem;
+        }
+
+        /// <summary>
+        /// 新建部门
+        /// </summary>
+        public void AddDep()
+        {
+            DepartmentDialog form = new DepartmentDialog
+            {
+                Title = "新建部门"
+            };
+            form.ShowDialog();
+            if (form.DialogResult == true)
+            {
+            }
+        }
+
+        /// <summary>
+        /// 编辑部门
+        /// </summary>
+        public void EditDep()
+        {
+            DepartmentDialog form = new DepartmentDialog
+            {
+                Department = CurrentDepartment,
+                Title = "编辑部门 - " + CurrentDepartment.Title
+            };
+            form.ShowDialog();
+            if (form.DialogResult == true)
+            {
+
+            }
+        }
+        #endregion
+
+        #region Events
+        /// <summary>
+        /// 列表选择项变化是发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DtgSects_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RefreshObj();  // 加载对象
+        }
+
+        /// <summary>
+        /// 添加Button单击时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            AddObj();   // 添加对象
+        }
+
+        /// <summary>
+        /// 编辑Button单击时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            EditObj();  // 编辑对象
+        }
+
+        /// <summary>
+        /// 删除Button单击时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            // 删除对象
         }
+
+        /// <summary>
+        /// 添加部门Button单击时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAddDep_Click(object sender, RoutedEventArgs e)
+        {
+            AddDep();   // 添加部门
+        }
+
+        /// <summary>
+        /// 编辑部门Button单击时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnEditDep_Click(object sender, RoutedEventArgs e)
+        {
+            EditDep();  // 编辑部门
+        }
+
+        /// <summary>
+        /// 删除部门Button单击时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnDeleteDep_Click(object sender, RoutedEventArgs e)
+        {
+            // 删除部门
+        }
+
+        /// <summary>
+        /// 组织结构TreeView选择项变化时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TrvSectStruct_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            RefreshDep();  // 重新加载部门
+        }
+        #endregion
+
+
     }
 }

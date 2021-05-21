@@ -174,7 +174,6 @@ namespace LF.FictionWorld
         /// 字符串
         /// </summary>
         /// <returns></returns>
-
         public override string ToString()
         {
             string str = "";

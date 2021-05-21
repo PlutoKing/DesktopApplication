@@ -150,7 +150,7 @@
                                           AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column" SelectionUnit="FullRow"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="日期" Width="2*" Binding="{Binding Date.String}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="日期" Width="2*" Binding="{Binding Date.ShortString}"></DataGridTextColumn>
                         <DataGridTextColumn Header="年龄" Width="1*" Binding="{Binding Age,StringFormat={}{0:F0}}"></DataGridTextColumn>
                         <DataGridTextColumn Header="等级" Width="1*" Binding="{Binding Value}"></DataGridTextColumn>
                     </DataGrid.Columns>

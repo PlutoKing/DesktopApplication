@@ -57,7 +57,7 @@ namespace LF.FictionWorld
 
         #region Methods
 
-        #region Sort
+        #region Basic Methods
 
         /// <summary>
         /// 按照ID排序
@@ -75,6 +75,34 @@ namespace LF.FictionWorld
             {
                 this.Add(obj);
             }
+        }
+
+        /// <summary>
+        /// 减去部分
+        /// </summary>
+        /// <param name="items"></param>
+        /// <returns></returns>
+        public LFItemList Minus(LFItemList items)
+        {
+            LFItemList res = new LFItemList();
+
+            foreach(LFItem item in this)
+            {
+                bool tmp = false;   // 是否在items中
+                foreach(LFItem obj in items)
+                {
+                    if (item.Name == obj.Name)
+                    {
+                        tmp = true;
+                    }
+                }
+                if (!tmp)
+                {
+                    res.Add(item);
+                }
+            }
+
+            return res;
         }
         #endregion
 

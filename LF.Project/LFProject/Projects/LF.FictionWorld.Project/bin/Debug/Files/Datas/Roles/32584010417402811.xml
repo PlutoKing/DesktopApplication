@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Role Index="32584010417402811" Name="玄沙">
+  <Ranks>
+    <Rank Date="325940104" Index="1" />
+    <Rank Date="325960109" Index="2" />
+    <Rank Date="326000426" Index="3" />
+    <Rank Date="326090114" Index="4" />
+    <Rank Date="326270527" Index="5" />
+    <Rank Date="326690121" Index="6" />
+    <Rank Date="327720511" Index="7" />
+    <Rank Date="330550604" Index="8" />
+    <Rank Date="335850312" Index="-1" />
+  </Ranks>
+  <Experiences>
+    <Experience Date="325840104" Index="0" />
+  </Experiences>
+</Role>

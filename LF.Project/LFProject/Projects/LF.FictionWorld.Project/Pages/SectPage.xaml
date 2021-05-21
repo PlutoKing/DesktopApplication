@@ -5,8 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LF.FictionWorld.Project.Pages"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             Loaded="UserControl_Loaded">
+             d:DesignHeight="450" d:DesignWidth="800">
     <Grid Margin="4">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -51,7 +50,7 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" Text="创建者" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
-                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Sect.Level}" VerticalAlignment="Center" FontSize="12" Margin="0 0 0 0"></TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Sect.CreatedRole}" VerticalAlignment="Center" FontSize="12" Margin="0 0 0 0"></TextBlock>
                     <TextBlock Grid.Row="1" Grid.Column="0" Text="创建时间" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
                     <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Sect.CreatedDate.String}" VerticalAlignment="Center" FontSize="12" ></TextBlock>
                     <TextBlock Grid.Row="2" Grid.Column="0" Text="传承年数" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
@@ -98,18 +97,49 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="序号" Width="140" Binding="{Binding Index}" ></DataGridTextColumn>
                     <DataGridTextColumn Header="名称" Width="100" Binding="{Binding Name}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="创建者" Width="80" Binding="{Binding Value}" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="创建者" Width="80" Binding="{Binding CreatedRole}" ></DataGridTextColumn>
                     <DataGridTextColumn Header="创建时间" Width="150" Binding="{Binding CreatedDate.String}"></DataGridTextColumn>
                     <DataGridTextColumn Header="总部位置" Width="*" Binding="{Binding Location.Name}" ></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
+        <DataGrid x:Name="DtgRoles" Grid.Row="1" Grid.Column="0" IsReadOnly="True" Margin="4"
+                                      AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column" SelectionUnit="FullRow">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="姓名" Width="*" Binding="{Binding Value}"></DataGridTextColumn>
+                <DataGridTextColumn Header="开始" Width="2*" Binding="{Binding Date.ShortString}"></DataGridTextColumn>
+                <DataGridTextColumn Header="结束" Width="2*" Binding="{Binding EndDate.ShortString}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
 
-        <TreeView Margin="4" x:Name="TrvSectStruct" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
-                  ItemContainerStyle="{StaticResource SectStructTreeItem}" BorderThickness="1" BorderBrush="{StaticResource LineColor}" Padding="8">
-            <TreeView.ItemTemplate>
-                <HierarchicalDataTemplate ItemsSource="{Binding Departments}"></HierarchicalDataTemplate>
-            </TreeView.ItemTemplate>
-        </TreeView>
+        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"  Margin="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" BorderBrush="{StaticResource LineColor}" BorderThickness="1 1 1 0" Background="White">
+                <StackPanel Orientation="Horizontal" Margin="3" VerticalAlignment="Center">
+                    <TextBlock Text="组织结构" VerticalAlignment="Center" Foreground="{StaticResource MainColor}" Margin="5 0 10 0"></TextBlock>
+                    <Button x:Name="BtnAddDep" Content="&#xf081;" FontFamily="../Fonts/#iconfont" Margin="0 0 5 0"
+                                Click="BtnAddDep_Click"></Button>
+                    <Button x:Name="BtnEditDep" Content="&#xefaa;" FontFamily="../Fonts/#iconfont" Margin="0 0 5 0"
+                                Click="BtnEditDep_Click"></Button>
+                    <Button x:Name="BtnDeleteDep" Content="&#xf117;" FontFamily="../Fonts/#iconfont" Margin="0 0 5 0"
+                                Click="BtnDeleteDep_Click"></Button>
+                    <TextBox Width="100" Margin="0 0 2 0" VerticalContentAlignment="Center"></TextBox>
+                    <Button Content="&#xf0a8;" FontFamily="../Fonts/#iconfont" Margin="0 0 0 0" Style="{StaticResource FlatButton}"></Button>
+                </StackPanel>
+            </Border>
+
+            <TreeView  x:Name="TrvSectStruct" Grid.Row="1" BorderThickness="1" BorderBrush="{StaticResource LineColor}" Padding="8"
+                  ItemContainerStyle="{StaticResource SectStructTreeItem}" SelectedItemChanged="TrvSectStruct_SelectedItemChanged">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Departments}"></HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+        </Grid>
+
+      
+        
     </Grid>
 </UserControl>
