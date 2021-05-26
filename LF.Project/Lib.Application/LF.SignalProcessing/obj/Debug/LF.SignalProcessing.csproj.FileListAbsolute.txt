@@ -1,0 +1,9 @@
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.SignalProcessing\bin\Debug\LF.SignalProcessing.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.SignalProcessing\bin\Debug\LF.SignalProcessing.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.SignalProcessing\bin\Debug\LF.Mathematics.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.SignalProcessing\bin\Debug\LF.Mathematics.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.SignalProcessing\obj\Debug\LF.SignalProcessing.csprojAssemblyReference.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.SignalProcessing\obj\Debug\LF.SignalProcessing.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.SignalProcessing\obj\Debug\LF.SignalProcessing.csproj.CopyComplete
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.SignalProcessing\obj\Debug\LF.SignalProcessing.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.SignalProcessing\obj\Debug\LF.SignalProcessing.pdb

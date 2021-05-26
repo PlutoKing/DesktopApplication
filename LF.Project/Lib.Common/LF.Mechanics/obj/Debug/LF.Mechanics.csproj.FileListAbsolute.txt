@@ -1,0 +1,9 @@
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mechanics\bin\Debug\LF.Mechanics.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mechanics\bin\Debug\LF.Mechanics.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mechanics\bin\Debug\LF.Mathematics.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mechanics\bin\Debug\LF.Mathematics.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mechanics\obj\Debug\LF.Mechanics.csprojAssemblyReference.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mechanics\obj\Debug\LF.Mechanics.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mechanics\obj\Debug\LF.Mechanics.csproj.CopyComplete
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mechanics\obj\Debug\LF.Mechanics.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Common\LF.Mechanics\obj\Debug\LF.Mechanics.pdb

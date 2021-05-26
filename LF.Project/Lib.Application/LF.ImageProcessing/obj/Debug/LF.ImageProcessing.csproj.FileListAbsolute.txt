@@ -1,0 +1,6 @@
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.ImageProcessing\bin\Debug\LF.ImageProcessing.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.ImageProcessing\bin\Debug\LF.ImageProcessing.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.ImageProcessing\obj\Debug\LF.ImageProcessing.csprojAssemblyReference.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.ImageProcessing\obj\Debug\LF.ImageProcessing.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.ImageProcessing\obj\Debug\LF.ImageProcessing.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.ImageProcessing\obj\Debug\LF.ImageProcessing.pdb

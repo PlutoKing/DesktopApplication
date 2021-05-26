@@ -1,0 +1,9 @@
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.Simulation\bin\Debug\LF.Simulation.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.Simulation\bin\Debug\LF.Simulation.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.Simulation\bin\Debug\LF.Mathematics.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.Simulation\bin\Debug\LF.Mathematics.pdb
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.Simulation\obj\Debug\LF.Simulation.csprojAssemblyReference.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.Simulation\obj\Debug\LF.Simulation.csproj.CoreCompileInputs.cache
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.Simulation\obj\Debug\LF.Simulation.csproj.CopyComplete
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.Simulation\obj\Debug\LF.Simulation.dll
+I:\DesktopApplication\LF.Project\LFProject\Lib.Application\LF.Simulation\obj\Debug\LF.Simulation.pdb

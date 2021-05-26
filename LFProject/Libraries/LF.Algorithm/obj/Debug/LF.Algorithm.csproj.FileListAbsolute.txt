@@ -1,6 +1,0 @@
-I:\DesktopApplication\LFProject\Libraries\LF.Algorithm\bin\Debug\LF.Algorithm.dll
-I:\DesktopApplication\LFProject\Libraries\LF.Algorithm\bin\Debug\LF.Algorithm.pdb
-I:\DesktopApplication\LFProject\Libraries\LF.Algorithm\obj\Debug\LF.Algorithm.csprojAssemblyReference.cache
-I:\DesktopApplication\LFProject\Libraries\LF.Algorithm\obj\Debug\LF.Algorithm.csproj.CoreCompileInputs.cache
-I:\DesktopApplication\LFProject\Libraries\LF.Algorithm\obj\Debug\LF.Algorithm.dll
-I:\DesktopApplication\LFProject\Libraries\LF.Algorithm\obj\Debug\LF.Algorithm.pdb

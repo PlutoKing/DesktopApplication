@@ -1,0 +1,87 @@
+﻿<Window x:Class="LF.FictionWorld.Project.Dialog.ItemDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LF.FictionWorld.Project.Dialog"
+        xmlns:controls="clr-namespace:LF.FictionWorld.Project.Controls"
+        mc:Ignorable="d"
+        Title="ItemDialog" Height="440" Width="500" Name="dialog" Background="{StaticResource BackColor}"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize"
+        Loaded="Dialog_Loaded">
+    <Border BorderBrush="Gray" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Border BorderBrush="{StaticResource LineColor}" BorderThickness="0 0 0 1">
+                <Grid x:Name="TopGrid" Background="White" MouseDown="TopGrid_MouseDown">
+                    <TextBlock Text="{Binding ElementName=dialog,Path=Title}" VerticalAlignment="Center" Margin="8 0 8 0"
+                            Foreground="{StaticResource MainColor}" FontSize="12" ></TextBlock>
+                </Grid>
+            </Border>
+            <Border Grid.Row="1">
+                <TabControl Margin="8">
+                    <TabItem Header="信息">
+                        <Grid Margin="4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Margin="4">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="名称" VerticalAlignment="Center" Margin="0 0 10 0"></TextBlock>
+                                    <TextBox Grid.Column="1" Text="{Binding Name}" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="28"></TextBox>
+                                    <TextBlock Grid.Column="3" Text="等级" VerticalAlignment="Center" Margin="0 0 10 0"></TextBlock>
+                                    <ComboBox Name="CmbLevel" Grid.Column="4" SelectedItem="{Binding Level}" DisplayMemberPath="Value" VerticalAlignment="Center" VerticalContentAlignment="Center" IsEditable="True" Height="28"></ComboBox>
+                                </Grid>
+                                <Grid Grid.Row="1" Margin="4">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="10"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="类别" VerticalAlignment="Center" Margin="0 0 10 0"></TextBlock>
+                                    <ComboBox Name="CmbType1" Grid.Column="1" SelectedItem="{Binding Type1}" DisplayMemberPath="Value" VerticalAlignment="Center" VerticalContentAlignment="Center" IsEditable="True" Height="28" SelectionChanged="CmbType1_SelectionChanged"></ComboBox>
+                                    <ComboBox Name="CmbType2" Grid.Column="3" SelectedItem="{Binding Type2}" DisplayMemberPath="Value" VerticalAlignment="Center" VerticalContentAlignment="Center" IsEditable="True" Height="28"></ComboBox>
+                                </Grid>
+                                <Grid Grid.Row="3" Margin="4">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="简介" VerticalAlignment="Top" Margin="0 6.4 10 0"></TextBlock>
+                                    <TextBox Grid.Column="1" Text="{Binding Brief}" Padding="0 5.4 0 5.4" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto"></TextBox>
+                                </Grid>
+                            </Grid>
+                            <controls:AttributeSelector x:Name="roelas" Grid.Column="1" Margin="4" Attributes="{Binding Attributes,Mode=TwoWay}"></controls:AttributeSelector>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="配方"></TabItem>
+                </TabControl>
+
+            </Border>
+            <Border Grid.Row="2" BorderBrush="{StaticResource LineColor}" BorderThickness="0 1 0 0" Background="White">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="取消" Width="60" Margin="0 0 8 0" Click="BtnClose_Click"></Button>
+                    <Button Content="确定" Width="60" Margin="0 0 8 0" x:Name="BtnOK" Click="BtnOK_Click"></Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
