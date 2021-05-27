@@ -46,3 +46,7 @@ I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Page
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\SitePage.baml
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\MessageDialog.g.cs
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\MessageDialog.baml
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\BookDialog.g.cs
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\BookDialog.baml
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Controls\SkillTree.g.cs
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Controls\SkillTree.baml

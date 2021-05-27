@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\App.xaml
-13324210396
+15-255022284
 
-18237048789
+20-1786035208
 15-1749767227
-Controls\AttributeSelector.xaml;Dialog\ItemDialog.xaml;Dialog\MessageDialog.xaml;MainWindow.xaml;Pages\BookPage.xaml;Pages\CustomPage.xaml;Pages\HomePage.xaml;Pages\ItemPage.xaml;Pages\PlotPage.xaml;Pages\RolePage.xaml;Pages\SectPage.xaml;Pages\SitePage.xaml;Pages\WorldPage.xaml;
+Controls\AttributeSelector.xaml;Controls\SkillTree.xaml;Dialog\BookDialog.xaml;Dialog\ItemDialog.xaml;Dialog\MessageDialog.xaml;MainWindow.xaml;Pages\BookPage.xaml;Pages\CustomPage.xaml;Pages\HomePage.xaml;Pages\ItemPage.xaml;Pages\PlotPage.xaml;Pages\RolePage.xaml;Pages\SectPage.xaml;Pages\SitePage.xaml;Pages\WorldPage.xaml;
 
 True
 

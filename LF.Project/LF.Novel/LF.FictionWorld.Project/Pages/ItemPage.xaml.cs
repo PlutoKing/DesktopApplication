@@ -116,7 +116,7 @@ namespace LF.FictionWorld.Project.Pages
             if (msg.DialogResult == true)
             {
                 //调用删除物品函数
-                    World.Data.ItemList.DeleteItem(World.Data.Item);
+                World.Data.ItemList.DeleteItem(World.Data.Item);
 
                 // 刷新列表
                 if (ID < World.Data.ItemList.Count)

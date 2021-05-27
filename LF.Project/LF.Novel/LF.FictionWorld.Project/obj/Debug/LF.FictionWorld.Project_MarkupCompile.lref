@@ -1,7 +1,10 @@
 ﻿
 FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\App.xaml;;
 FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\Controls\AttributeSelector.xaml;;
+FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\Controls\SkillTree.xaml;;
+FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\Dialog\BookDialog.xaml;;
 FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\Dialog\ItemDialog.xaml;;
+FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\Dialog\MessageDialog.xaml;;
 FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\MainWindow.xaml;;
 FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\Pages\BookPage.xaml;;
 FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\Pages\CustomPage.xaml;;
@@ -12,5 +15,4 @@ FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\Pages\RolePag
 FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\Pages\SectPage.xaml;;
 FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\Pages\SitePage.xaml;;
 FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\Pages\WorldPage.xaml;;
-FI:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\Dialog\MessageDialog.xaml;;
 

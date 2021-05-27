@@ -12,6 +12,9 @@ using System.Xml;
 
 namespace LF.FictionWorld
 {
+    /// <summary>
+    /// 物品列表，表示<see cref="LFItem"/>的列表。
+    /// </summary>
     public class LFItemList : ObservableCollection<LFItem>, ICloneable
     {
         #region Fields
@@ -28,9 +31,9 @@ namespace LF.FictionWorld
         }
 
         /// <summary>
-        /// 拷贝构造函数
+        /// 拷贝构造函数。
         /// </summary>
-        /// <param name="rhs"></param>
+        /// <param name="rhs">源对象。</param>
         public LFItemList(LFItemList rhs)
         {
             foreach (LFItem obj in rhs)
@@ -40,17 +43,17 @@ namespace LF.FictionWorld
         }
 
         /// <summary>
-        /// 拷贝函数
+        /// 拷贝函数。
         /// </summary>
-        /// <returns></returns>
+        /// <returns>与该物品列表相同的新实例。</returns>
         public LFItemList Clone()
         {
             return new LFItemList(this);
         }
         /// <summary>
-        /// 拷贝函数
+        /// 拷贝函数。
         /// </summary>
-        /// <returns></returns>
+        /// <returns>与该物品列表相同的新实例。</returns>
         object ICloneable.Clone()
         {
             return Clone();
@@ -284,6 +287,8 @@ namespace LF.FictionWorld
                     ele.SetAttribute("Code", obj.Code.ToString());
                     ele.SetAttribute("Name", obj.Name);
                     ele.SetAttribute("Brief", obj.Brief);
+                    ele.SetAttribute("Price", obj.Price.ToString());
+                    ele.SetAttribute("Count", obj.Count.ToString());
                     root.AppendChild(ele);
                 }
             }
@@ -315,7 +320,9 @@ namespace LF.FictionWorld
                 string name = ele.GetAttribute("Name");
                 LFItem obj = new LFItem(idx, name)
                 {
-                    Brief = ele.GetAttribute("Brief")
+                    Brief = ele.GetAttribute("Brief"),
+                    Price = Convert.ToSingle(ele.GetAttribute("Price")),
+                    Count = Convert.ToInt32(ele.GetAttribute("Count"))
                 };
                 Add(obj);
             }

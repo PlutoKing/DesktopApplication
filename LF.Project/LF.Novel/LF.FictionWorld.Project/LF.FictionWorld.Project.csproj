@@ -64,6 +64,12 @@
     <Compile Include="Controls\AttributeSelector.xaml.cs">
       <DependentUpon>AttributeSelector.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SkillTree.xaml.cs">
+      <DependentUpon>SkillTree.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\BookDialog.xaml.cs">
+      <DependentUpon>BookDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialog\ItemDialog.xaml.cs">
       <DependentUpon>ItemDialog.xaml</DependentUpon>
     </Compile>
@@ -127,6 +133,14 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\AttributeSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SkillTree.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog\BookDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

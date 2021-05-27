@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Type>
+  <Node Index="1" Value="秘术" Brief="以特殊的方法调动能量，达到一定的目的。">
+    <Node Index="1" Value="攻击" Brief="攻击类秘术，一般以能量冲击为主。" />
+    <Node Index="2" Value="防御" Brief="防御类秘术，一般以能量凝聚成屏障。" />
+    <Node Index="3" Value="幻术" Brief="迷幻类秘术，构造幻境使目标失去方向。" />
+    <Node Index="4" Value="锻体" Brief="锻体类秘术，调动能量淬炼肉体。" />
+  </Node>
+  <Node Index="2" Value="武技" Brief="以武学招式进行攻击，直接造成伤害。">
+    <Node Index="1" Value="体术" Brief="拳法、掌法、腿法、指法、步法等。" />
+    <Node Index="2" Value="兵术" Brief="剑法、刀法、棍法、枪法、斧法等。" />
+  </Node>
+</Type>

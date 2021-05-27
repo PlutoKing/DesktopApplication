@@ -11,6 +11,9 @@ using System.Xml;
 
 namespace LF.FictionWorld
 {
+    /// <summary>
+    /// 分类列表
+    /// </summary>
     public class LFTypeList : ObservableCollection<LFType>, ICloneable
     {
         #region Fields
@@ -280,7 +283,5 @@ namespace LF.FictionWorld
         #endregion
 
         #endregion
-
-
     }
 }

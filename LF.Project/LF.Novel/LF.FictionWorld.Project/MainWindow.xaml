@@ -7,7 +7,7 @@
         xmlns:pages="clr-namespace:LF.FictionWorld.Project.Pages"
         mc:Ignorable="d"
         Title="架空世界设定" Height="750" Width="1200" Background="{StaticResource BackColor}"
-        WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" UseLayoutRounding="True"
         Loaded="Window_Loaded">
     <Border BorderBrush="{StaticResource LineColor}" BorderThickness="1">
         <Grid>

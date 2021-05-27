@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LF.FictionWorld.Project.Pages"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
+             d:DesignHeight="650" d:DesignWidth="800"
              Loaded="UserControl_Loaded">
     <Grid Margin="4">
         <Grid.RowDefinitions>
@@ -43,6 +43,8 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="40"/>
                         <ColumnDefinition/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>
@@ -52,10 +54,14 @@
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" Text="等级" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
                     <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Item.Level.Value}" VerticalAlignment="Center" FontSize="12" Margin="0 0 30 0"></TextBlock>
-                    <TextBlock Grid.Row="1" Grid.Column="0" Text="类别" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
-                    <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Item.Type}" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Grid.Row="2" Grid.Column="0" Text="属性" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
-                    <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Item.Attribute}" VerticalAlignment="Center" FontSize="12"></TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="类别" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="3" Text="{Binding Item.Type}" VerticalAlignment="Center" FontSize="12"></TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="属性" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Item.Attribute}" VerticalAlignment="Center" FontSize="12"></TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="价格" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Item.Price}" VerticalAlignment="Center" FontSize="12"></TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="2" Text="数量" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="3" Text="{Binding Item.Count}" VerticalAlignment="Center" FontSize="12"></TextBlock>
                     <TextBlock Grid.Row="3" Grid.Column="0" Text="简介" VerticalAlignment="top" FontSize="12" Foreground="Gray" Margin="0 6.8 0 0"></TextBlock>
                     <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Item.Brief}" VerticalAlignment="Stretch" FontSize="12"  Margin="0 6.8 0 6.8"  TextWrapping='Wrap'></TextBlock>
                 </Grid>
@@ -96,10 +102,12 @@
                       SelectionChanged="DtgItems_SelectionChanged" MouseDoubleClick="DtgItems_MouseDoubleClick">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="序号" Width="100" Binding="{Binding Code}" ></DataGridTextColumn>
-                    <DataGridTextColumn Header="名称" Width="120" Binding="{Binding Name}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="等级" Width="80" Binding="{Binding Level.Value}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="类别" Width="*" Binding="{Binding Type}" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="名称" Width="90" Binding="{Binding Name}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="等级" Width="60" Binding="{Binding Level.Value}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="类别" Width="100" Binding="{Binding Type}" ></DataGridTextColumn>
                     <DataGridTextColumn Header="属性" Width="*" Binding="{Binding Attribute}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="价格" Width="60" Binding="{Binding Price}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="数量" Width="60" Binding="{Binding Count}"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

@@ -33,6 +33,8 @@ namespace LF.FictionWorld
 
         private LFAttribute _attributes = new LFAttribute();    // 属性
 
+        private float _price;   // 价格
+        private int _count;     // 数量
         #endregion
 
         #region Properties
@@ -160,7 +162,31 @@ namespace LF.FictionWorld
         public string Attribute
         {
             get { return _attributes.ToString(); }
-        } 
+        }
+
+        /// <summary>
+        /// 价格
+        /// </summary>
+        public float Price { get => _price;
+            set
+            {
+                _price = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
+        /// <summary>
+        /// 数量
+        /// </summary>
+        public int Count {
+            get => _count;
+            set
+            {
+                _count = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Count"));
+            }
+        }
+
         #endregion
 
         #endregion
@@ -171,13 +197,13 @@ namespace LF.FictionWorld
         }
 
         /// <summary>
-        /// 基于<paramref name="index"/>和<paramref name="name"/>的构造函数
+        /// 构造编码为<paramref name="code"/>名称为<paramref name="name"/>的秘籍实例。
         /// </summary>
-        /// <param name="index">索引号</param>
-        /// <param name="name">名称</param>
-        public LFItem(long index, string name)
+        /// <param name="code">编码。</param>
+        /// <param name="name">名称。</param>
+        public LFItem(long code, string name)
         {
-            _code = index;
+            _code = code;
             _name = name;
             Decode();       // 解码
         }
@@ -198,7 +224,8 @@ namespace LF.FictionWorld
             _type2 = rhs._type2;
 
             _attributes = rhs._attributes.Clone();
-
+            _price = rhs._price;
+            _count = rhs._count;
         }
 
         /// <summary>
@@ -227,14 +254,14 @@ namespace LF.FictionWorld
         /// </summary>
         public void Encode()
         {
-            long index = _level.Index * 1000000;
-            index += _type1.Index * 100000;
-            index += _type2.Index * 10000;
-            index += _attributes.Code;
+            long code = _level.Index * 1000000;
+            code += _type1.Index * 100000;
+            code += _type2.Index * 10000;
+            code += _attributes.Code;
 
-            _id = GetID(index);
+            _id = GetID(code);
 
-            _code = index * 1000 + _id;
+            _code = code * 1000 + _id;
         }
 
         /// <summary>
@@ -282,7 +309,7 @@ namespace LF.FictionWorld
         /// <summary>
         /// 计算ID
         /// </summary>
-        /// <param name="idx">尾声为0的Index</param>
+        /// <param name="idx">尾声为0的code</param>
         /// <returns></returns>
         public int GetID(long idx)
         {
@@ -314,12 +341,6 @@ namespace LF.FictionWorld
 
         #endregion
 
-        #endregion
-
-        #region Serializations
-        #endregion
-
-        #region Defaults
         #endregion
     }
 }

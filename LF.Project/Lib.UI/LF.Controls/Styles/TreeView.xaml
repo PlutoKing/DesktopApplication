@@ -306,6 +306,26 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style x:Key="SkillTreeItem" TargetType="TreeViewItem">
+        <Setter Property="IsExpanded" Value="True"></Setter>
+        <Setter Property="Height" Value="50"></Setter>
+        <Setter Property="BorderThickness" Value="0"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TreeViewItem">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Content="{Binding Name}" Height="40" ToolTip="{Binding Brief}" Style="{StaticResource SkillButton}"></Button>
+                        <ItemsPresenter x:Name="ItemsHost" Grid.Column="1" Margin="8 0 0 0"></ItemsPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
 
     </Style>
 

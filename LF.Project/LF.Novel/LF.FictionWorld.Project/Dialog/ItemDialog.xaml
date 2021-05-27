@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:LF.FictionWorld.Project.Dialog"
         xmlns:controls="clr-namespace:LF.FictionWorld.Project.Controls"
         mc:Ignorable="d"
-        Title="ItemDialog" Height="440" Width="500" Name="dialog" Background="{StaticResource BackColor}"
-        WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize"
+        Title="ItemDialog" Height="440" Width="600" Name="dialog" Background="{StaticResource BackColor}"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" UseLayoutRounding="True"
         Loaded="Dialog_Loaded">
     <Border BorderBrush="Gray" BorderThickness="1">
         <Grid>
@@ -23,7 +23,7 @@
                 </Grid>
             </Border>
             <Border Grid.Row="1">
-                <TabControl Margin="8">
+                <TabControl Margin="8"  Style="{StaticResource LeftTabControl}" ItemContainerStyle="{StaticResource LeftTabItem}">
                     <TabItem Header="信息">
                         <Grid Margin="4">
                             <Grid.ColumnDefinitions>
@@ -32,6 +32,7 @@
                             </Grid.ColumnDefinitions>
                             <Grid>
                                 <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition/>
@@ -60,6 +61,19 @@
                                     <ComboBox Name="CmbType1" Grid.Column="1" SelectedItem="{Binding Type1}" DisplayMemberPath="Value" VerticalAlignment="Center" VerticalContentAlignment="Center" IsEditable="True" Height="28" SelectionChanged="CmbType1_SelectionChanged"></ComboBox>
                                     <ComboBox Name="CmbType2" Grid.Column="3" SelectedItem="{Binding Type2}" DisplayMemberPath="Value" VerticalAlignment="Center" VerticalContentAlignment="Center" IsEditable="True" Height="28"></ComboBox>
                                 </Grid>
+                                <Grid Grid.Row="2" Margin="4">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="价格" VerticalAlignment="Center" Margin="0 0 10 0"></TextBlock>
+                                    <TextBox Grid.Column="1" Text="{Binding Price}" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="28"></TextBox>
+                                    <TextBlock Grid.Column="3" Text="数量" VerticalAlignment="Center" Margin="0 0 10 0"></TextBlock>
+                                    <TextBox Grid.Column="4" Text="{Binding Count}" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="28"></TextBox>
+                                </Grid>
                                 <Grid Grid.Row="3" Margin="4">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="auto"/>
@@ -72,9 +86,26 @@
                             <controls:AttributeSelector x:Name="roelas" Grid.Column="1" Margin="4" Attributes="{Binding Attributes,Mode=TwoWay}"></controls:AttributeSelector>
                         </Grid>
                     </TabItem>
-                    <TabItem Header="配方"></TabItem>
+                    <TabItem Header="制作">
+                        <Grid Margin="4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <GroupBox Header="材料清单" Margin="4">
+                                <DataGrid x:Name="DtgItems" Grid.Row="1" IsReadOnly="True" BorderThickness="0">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="名称" Width="80" Binding="{Binding Name}"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="属性" Width="*" Binding="{Binding Attribute}"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="价格" Width="60" Binding="{Binding Price}"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="数量" Width="60" Binding="{Binding Count}"></DataGridTextColumn>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </GroupBox>
+                            
+                        </Grid>
+                    </TabItem>
                 </TabControl>
-
             </Border>
             <Border Grid.Row="2" BorderBrush="{StaticResource LineColor}" BorderThickness="0 1 0 0" Background="White">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">

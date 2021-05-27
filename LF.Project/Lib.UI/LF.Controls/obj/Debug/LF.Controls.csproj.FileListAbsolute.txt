@@ -23,7 +23,6 @@ I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Controls\obj\Debug\LF.Contr
 I:\DesktopApplication\LF.Project\LFProject\Lib.UI\LF.Controls\obj\Debug\LF.Controls.csprojAssemblyReference.cache
 I:\DesktopApplication\LF.Project\Lib.UI\LF.Controls\bin\Debug\LF.Controls.dll
 I:\DesktopApplication\LF.Project\Lib.UI\LF.Controls\bin\Debug\LF.Controls.pdb
-I:\DesktopApplication\LF.Project\Lib.UI\LF.Controls\obj\Debug\LF.Controls.csprojAssemblyReference.cache
 I:\DesktopApplication\LF.Project\Lib.UI\LF.Controls\obj\Debug\Styles\Button.baml
 I:\DesktopApplication\LF.Project\Lib.UI\LF.Controls\obj\Debug\Styles\CheckBox.baml
 I:\DesktopApplication\LF.Project\Lib.UI\LF.Controls\obj\Debug\Styles\Color.baml

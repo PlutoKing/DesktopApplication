@@ -1,6 +1,6 @@
 ﻿/*──────────────────────────────────────────────────────────────
- * FileName     : LFMatrix.cs
- * Created      : 2021-05-26 21:25:11
+ * FileName     : LFConstants.cs
+ * Created      : 2021-05-27 10:10:47
  * Author       : Xu Zhe
  * Description  : 
  * ──────────────────────────────────────────────────────────────*/
@@ -10,38 +10,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LF.Mathematics.LinearAlgebra.Storage;
 
-namespace LF.Mathematics.LinearAlgebra
+namespace LF.Mathematics
 {
     /// <summary>
-    /// 矩阵类。
+    /// 常数
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class LFMatrix<T>
+    public class LFConstants
     {
-        #region Fields
-        
-        #endregion
 
-        #region Properties
 
-        #endregion
+        /// <summary>
+        /// 单位弧度，表示1°所对应的弧度。
+        /// </summary>
+        public const double UnitRadian = 0.017453292519943295769236907684886127134428718885417d;
 
-        #region Constructors
-        public LFMatrix()
-        {
-        }
-        #endregion
-
-        #region Methods
-
-        #endregion
-
-        #region Serializations
-        #endregion
-
-        #region Defaults
-        #endregion
     }
 }

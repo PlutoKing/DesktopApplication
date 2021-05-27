@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Role Index="30000001" Name="天乾造化诀">
+  <Content>
+    <Level ID="1" Name="淬体" Brief="感应天地之灵，淬炼肉体。" />
+    <Level ID="2" Name="锻骨" Brief="吸收天地之灵，锻炼骨骼。" />
+    <Level ID="3" Name="洗髓" Brief="运转天地之灵，洗涤骨髓，并转化为真灵。" />
+    <Level ID="4" Name="神塔" Brief="真灵运转，开辟神塔。" />
+    <Level ID="5" Name="结丹" Brief="凝聚真灵，凝结成丹。" />
+    <Level ID="6" Name="造物" Brief="灵丹化物，结成道果。" />
+    <Level ID="7" Name="铭道" Brief="在道果上铭刻道纹。" />
+    <Level ID="8" Name="融道" Brief="将三魂七魄融入道果。" />
+  </Content>
+  <Skills>
+    <Level ID="1" Name="游龙刺" Brief="宛若游龙出海。" Level="1" Precondition="0" />
+    <Level ID="2" Name="双龙绞杀" Brief="两枪刺出，犹如两条水龙出击，绞杀敌人。" Level="2" Precondition="1" />
+    <Level ID="3" Name="游龙身法" Brief="身法灵动，速度极快，宛若游龙。" Level="3" Precondition="2" />
+    <Level ID="4" Name="水龙漫天" Brief="" Level="4" Precondition="3" />
+    <Level ID="5" Name="陨炎劈" Brief="劈枪式，犹如陨石降落，当头一劈" Level="1" Precondition="0" />
+    <Level ID="6" Name="烈炎杀" Brief="数道火焰围杀敌人。" Level="2" Precondition="5" />
+    <Level ID="7" Name="破炎闪" Brief="火遁身法，凭空出现一团火焰，遁入其中，在远处出现。" Level="3" Precondition="6" />
+    <Level ID="8" Name="烈焰焚城" Brief="召唤出火焰巨枪，焚烧万物。" Level="4" Precondition="7" />
+  </Skills>
+</Role>

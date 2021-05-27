@@ -57,6 +57,10 @@ namespace LF.FictionWorld
         /// 关系
         /// </summary>
         private LFTypeList _relations = new LFTypeList();
+        /// <summary>
+        /// 技能
+        /// </summary>
+        private LFTypeList _skills = new LFTypeList();
         #endregion
 
         #region Properties
@@ -160,6 +164,18 @@ namespace LF.FictionWorld
             }
         }
 
+        /// <summary>
+        /// 技能类别
+        /// </summary>
+        public LFTypeList Skills
+        {
+            get => _skills;
+            set
+            {
+                _skills = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Skills"));
+            }
+        }
         #endregion
 
         #region Constructors
@@ -181,6 +197,7 @@ namespace LF.FictionWorld
             Levels.Open(World.Info.Path + @"\Setting", "Level");
             Ranks.Open(World.Info.Path + @"\Setting", "Rank");
             Actions.Open(World.Info.Path + @"\Setting", "Action");
+            Skills.Open(World.Info.Path + @"\Setting", "Skill");
         }
 
         /// <summary>
@@ -195,6 +212,8 @@ namespace LF.FictionWorld
             Levels.Save(World.Info.Path + @"\Setting", "Level");
             Ranks.Save(World.Info.Path + @"\Setting", "Rank");
             Actions.Save(World.Info.Path + @"\Setting", "Action");
+            Skills.Save(World.Info.Path + @"\Setting", "Skill");
+
         }
         #endregion
 

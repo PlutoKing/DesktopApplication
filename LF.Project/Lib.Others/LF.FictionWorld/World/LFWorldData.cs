@@ -8,6 +8,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,9 +26,11 @@ namespace LF.FictionWorld
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private LFItemList _itemList = new LFItemList();    // 物品
+        private LFItemList _itemList = new LFItemList();    // 物品列表
+        private LFBookList _bookList = new LFBookList();    // 秘籍列表
 
         private LFItem _item = new LFItem();                // 当前物品
+        private LFBook _book = new LFBook();                // 当前秘籍
 
         #endregion
 
@@ -46,6 +49,19 @@ namespace LF.FictionWorld
         }
 
         /// <summary>
+        /// 秘籍列表
+        /// </summary>
+        public LFBookList BookList
+        {
+            get => _bookList;
+            set
+            {
+                _bookList = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BookList"));
+            }
+        }
+
+        /// <summary>
         /// 当前物品
         /// </summary>
         public LFItem Item
@@ -58,6 +74,19 @@ namespace LF.FictionWorld
             }
         }
 
+
+        /// <summary>
+        /// 当前秘籍
+        /// </summary>
+        public LFBook Book
+        {
+            get => _book;
+            set
+            {
+                _book = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Book"));
+            }
+        }
         #endregion
 
         #region Constructors
@@ -74,7 +103,13 @@ namespace LF.FictionWorld
         public void Open()
         {
             ItemList.Open(World.Info.Path + @"\Data", "Items");
+            BookList.Open(World.Info.Path + @"\Data", "Books");
 
+
+            foreach (LFBook obj in BookList)
+            {
+                obj.Open(World.Info.Path + @"\Data");
+            }
         }
 
         /// <summary>
@@ -83,8 +118,41 @@ namespace LF.FictionWorld
         public void Save()
         {
             ItemList.Save(World.Info.Path + @"\Data", "Items");
+            BookList.Save(World.Info.Path + @"\Data", "Books");
 
+            DeleteFiles(World.Info.Path + @"\Data\Books");
+            foreach (LFBook obj in BookList)
+            {
+                obj.Save(World.Info.Path + @"\Data");
+            }
         }
+
+        /// <summary>
+        /// 删除文件
+        /// </summary>
+        /// <param name="file"></param>
+        public static void DeleteFiles(string path)
+        {
+            try
+            {
+                DirectoryInfo dir = new DirectoryInfo(path);
+                FileSystemInfo[] fileinfo = dir.GetFileSystemInfos();  //返回目录中所有文件和子目录
+                foreach (FileSystemInfo i in fileinfo)
+                {
+                    if (i is DirectoryInfo)            //判断是否文件夹
+                    {
+                        DirectoryInfo subdir = new DirectoryInfo(i.FullName);
+                        subdir.Delete(true);          //删除子目录和文件
+                    }
+                    else
+                    {
+                        File.Delete(i.FullName);      //删除指定文件
+                    }
+                }
+            }
+            catch { }
+        }
+
         #endregion
 
         #region Serializations

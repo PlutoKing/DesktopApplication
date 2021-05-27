@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Role Index="30256001" Name="幽冥杀诀">
+  <Content>
+    <Level ID="1" Name="明穴" Brief="感应天地之灵，明确穴位。" />
+    <Level ID="2" Name="通经" Brief="吸收天地之灵，开通经脉。" />
+    <Level ID="3" Name="炼气" Brief="运转天地之灵，净化真气，并转化为真灵。" />
+    <Level ID="4" Name="气府" Brief="真灵运转，开辟气府。" />
+    <Level ID="5" Name="结丹" Brief="凝聚真灵，凝结成丹。" />
+    <Level ID="6" Name="造物" Brief="灵丹化物，结成道果。" />
+    <Level ID="7" Name="铭道" Brief="在道果上铭刻道纹。" />22:21 2021-05-27
+  </Content>
+  <Skills>
+    <Level ID="1" Name="融影术" Brief="入门级身法，融入暗影中，隐匿行踪。" Level="2" Precondition="0" />
+    <Level ID="2" Name="幽隐身法" Brief="身影可以融入暗影（以融影术为基础）；催动真气运转，能够在暗影中高速通行。" Level="4" Precondition="1" />
+    <Level ID="3" Name="剑出幽冥" Brief="出剑式，出其不意。" Level="2" Precondition="0" />
+    <Level ID="4" Name="剑破东方" Brief="刺剑式，配合幽隐身法，速度极快。" Level="3" Precondition="3" />
+    <Level ID="5" Name="剑气纵横" Brief="剑气式，将暗杀真气融入剑中，形成暗杀剑气，剑气具有噬灵效果；数道剑气纵横，威力极大。" Level="4" Precondition="4" />
+    <Level ID="6" Name="噬灵术" Brief="发射球形真气，命中敌人后会吞噬其灵气。" Level="3" Precondition="0" />
+    <Level ID="7" Name="暗影笼" Brief="个体控制术，调用天地间的暗灵气，在近距离的敌人附近形成暗幕，使敌人无法看清外界情况。" Level="4" Precondition="6" />
+    <Level ID="8" Name="幽冥降临" Brief="可将真气外放，使得战斗范围内被暗杀真气覆盖，犹如黑夜降临，充满杀机。" Level="5" Precondition="7" />
+    <Level ID="9" Name="幽冥骷髅" Brief="召唤幽冥骷髅，造成恐惧。" Level="6" Precondition="8" />
+  </Skills>
+</Role>

@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Complex32.cs" />
-    <Compile Include="LinearAlgebra\LFMatrix.cs" />
+    <Compile Include="Common\LFConstants.cs" />
+    <Compile Include="Common\LFTrigonometry.cs" />
+    <Compile Include="Common\Sorting.cs" />
+    <Compile Include="LinearAlgebra\LFMatrixBase.cs" />
+    <Compile Include="LinearAlgebra\LFBuilder.cs" />
     <Compile Include="LinearAlgebra\Storage\LFDenseMatrixStorage.cs" />
     <Compile Include="LinearAlgebra\Storage\LFDiagonalMatrixStorage.cs" />
     <Compile Include="LinearAlgebra\Storage\LFMatrixStorage.cs" />
@@ -53,10 +56,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="Docs\README.md" />
+    <None Include=".Docs\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Docs\01LinearAlgebra.md" />
+    <None Include=".Docs\01LinearAlgebra.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

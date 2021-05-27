@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Items>
-  <Item Code="3420006001" Name="青玄复生丹" Brief="青玄府炼制的弹药，能让人起死回生。主要材料为还魂草。" />
-  <Item Code="3440258001" Name="百毒融魂丹" Brief="毒宗炼制极品毒丹，可以消融灵魂。" />
+  <Item Code="3420006001" Name="青玄复生丹" Brief="青玄府炼制的丹药，能让人起死回生。主要材料为还魂草。" Price="10000" Count="10" />
+  <Item Code="3440258001" Name="百毒融魂丹" Brief="毒宗炼制极品毒丹，可以消融灵魂。" Price="8000" Count="56" />
+  <Item Code="3510001001" Name="紫金龙纹棍" Brief="使用紫金道骨炼制的棍类兵器，攻击力强。" Price="100000" Count="0" />
+  <Item Code="3640001001" Name="紫金道骨" Brief="紫金道体的脊椎骨，是一种极为坚硬的材料，可以用来炼器。" Price="10000" Count="1" />
+  <Item Code="4240002001" Name="还魂草" Brief="可以救活意外死亡的生物，也是青玄复生丹的主要药材。" Price="100" Count="9999" />
 </Items>
