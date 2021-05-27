@@ -310,7 +310,7 @@ namespace LF.FictionWorld
             XmlDocument xmlDoc = new XmlDocument();                                 // 定义文件
             XmlDeclaration dec = xmlDoc.CreateXmlDeclaration("1.0", "UTF-8", null); // 定义声明
             xmlDoc.AppendChild(dec);                                                // 插入声明
-            XmlElement root = xmlDoc.CreateElement("Role");                         // 定义根节点
+            XmlElement root = xmlDoc.CreateElement("Book");                         // 定义根节点
             xmlDoc.AppendChild(root);                                               // 插入根节点
 
             root.SetAttribute("Index", _code.ToString());
@@ -331,7 +331,7 @@ namespace LF.FictionWorld
             XmlElement eleSkills = xmlDoc.CreateElement("Skills");
             foreach (LFSkill skill in _skills)
             {
-                XmlElement ele = xmlDoc.CreateElement("Level");
+                XmlElement ele = xmlDoc.CreateElement("Skill");
                 ele.SetAttribute("ID", skill.ID.ToString());
                 ele.SetAttribute("Name", skill.Name);
                 ele.SetAttribute("Brief", skill.Brief);

@@ -7,3 +7,12 @@ I:\DesktopApplication\LF.Project\Lib.Others\LF.FictionWorld\obj\Debug\LF.Fiction
 I:\DesktopApplication\LF.Project\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.csproj.CopyComplete
 I:\DesktopApplication\LF.Project\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.dll
 I:\DesktopApplication\LF.Project\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.pdb
+E:\DesktopApplication\LF.Project\Lib.Others\LF.FictionWorld\bin\Debug\LF.FictionWorld.dll
+E:\DesktopApplication\LF.Project\Lib.Others\LF.FictionWorld\bin\Debug\LF.FictionWorld.pdb
+E:\DesktopApplication\LF.Project\Lib.Others\LF.FictionWorld\bin\Debug\LF.Mathematics.dll
+E:\DesktopApplication\LF.Project\Lib.Others\LF.FictionWorld\bin\Debug\LF.Mathematics.pdb
+E:\DesktopApplication\LF.Project\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.csprojAssemblyReference.cache
+E:\DesktopApplication\LF.Project\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.csproj.CoreCompileInputs.cache
+E:\DesktopApplication\LF.Project\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.csproj.CopyComplete
+E:\DesktopApplication\LF.Project\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.dll
+E:\DesktopApplication\LF.Project\Lib.Others\LF.FictionWorld\obj\Debug\LF.FictionWorld.pdb

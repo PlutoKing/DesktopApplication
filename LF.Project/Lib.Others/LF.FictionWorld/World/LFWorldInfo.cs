@@ -95,7 +95,7 @@ namespace LF.FictionWorld
         #region Constructors
         public LFWorldInfo()
         {
-            _path = @"I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\bin\Debug\File";
+            _path = @"E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\bin\Debug\File";
             _calendar = new LFCalendar();
         }
 

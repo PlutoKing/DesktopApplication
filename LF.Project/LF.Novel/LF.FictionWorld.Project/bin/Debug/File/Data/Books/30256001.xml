@@ -7,7 +7,7 @@
     <Level ID="4" Name="气府" Brief="真灵运转，开辟气府。" />
     <Level ID="5" Name="结丹" Brief="凝聚真灵，凝结成丹。" />
     <Level ID="6" Name="造物" Brief="灵丹化物，结成道果。" />
-    <Level ID="7" Name="铭道" Brief="在道果上铭刻道纹。" />22:21 2021-05-27
+    <Level ID="7" Name="铭道" Brief="在道果上铭刻道纹。" />
   </Content>
   <Skills>
     <Level ID="1" Name="融影术" Brief="入门级身法，融入暗影中，隐匿行踪。" Level="2" Precondition="0" />

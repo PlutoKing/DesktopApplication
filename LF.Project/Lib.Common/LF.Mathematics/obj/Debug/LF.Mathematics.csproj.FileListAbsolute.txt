@@ -9,3 +9,8 @@ I:\DesktopApplication\LF.Project\Lib.Common\LF.Mathematics\bin\Debug\LF.Mathemat
 I:\DesktopApplication\LF.Project\Lib.Common\LF.Mathematics\obj\Debug\LF.Mathematics.csproj.CoreCompileInputs.cache
 I:\DesktopApplication\LF.Project\Lib.Common\LF.Mathematics\obj\Debug\LF.Mathematics.dll
 I:\DesktopApplication\LF.Project\Lib.Common\LF.Mathematics\obj\Debug\LF.Mathematics.pdb
+E:\DesktopApplication\LF.Project\Lib.Common\LF.Mathematics\bin\Debug\LF.Mathematics.dll
+E:\DesktopApplication\LF.Project\Lib.Common\LF.Mathematics\bin\Debug\LF.Mathematics.pdb
+E:\DesktopApplication\LF.Project\Lib.Common\LF.Mathematics\obj\Debug\LF.Mathematics.csproj.CoreCompileInputs.cache
+E:\DesktopApplication\LF.Project\Lib.Common\LF.Mathematics\obj\Debug\LF.Mathematics.dll
+E:\DesktopApplication\LF.Project\Lib.Common\LF.Mathematics\obj\Debug\LF.Mathematics.pdb
