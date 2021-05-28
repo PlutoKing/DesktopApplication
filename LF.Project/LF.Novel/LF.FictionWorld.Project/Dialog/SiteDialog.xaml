@@ -1,0 +1,128 @@
+﻿<Window x:Class="LF.FictionWorld.Project.Dialog.SiteDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LF.FictionWorld.Project.Dialog"
+        xmlns:controls ="clr-namespace:LF.FictionWorld.Project.Controls"
+        mc:Ignorable="d"
+        Title="SiteDialog" Height="500" Width="800"
+        Name="dialog" UseLayoutRounding="True" BorderBrush="Gray" BorderThickness="1"
+        Background="#f0f0f0" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="{StaticResource LineColor}" BorderThickness="0 0 0 1">
+            <Grid x:Name="TopGrid" Background="White" MouseDown="TopGrid_MouseDown">
+                <TextBlock Text="{Binding ElementName=dialog,Path=Title}" VerticalAlignment="Center" Margin="8 0 8 0"
+                            Foreground="{StaticResource MainColor}"></TextBlock>
+            </Grid>
+        </Border>
+        <TabControl Grid.Row="1" BorderThickness="0" Style="{StaticResource LeftTabControl}" ItemContainerStyle="{StaticResource LeftTabItem}">
+            <TabItem Header="信息">
+                <Grid Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid Margin="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="名称" VerticalAlignment="Center" Margin="0 0 10 0"></TextBlock>
+                        <TextBox Grid.Column="1" Text="{Binding Name}" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="28"></TextBox>
+                    </Grid>
+                    <Grid Grid.Row="1" Margin="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="区域" VerticalAlignment="Center"></TextBlock>
+                        <ComboBox Grid.Column="1" Height="28" IsEditable="True" Margin="10 0 0 0" VerticalContentAlignment="Center"
+                                          x:Name="CmbAdd1" DisplayMemberPath="Value" SelectedItem="{Binding Area1}"
+                                          SelectionChanged="CmbAdd1_SelectionChanged"></ComboBox>
+                        <ComboBox Grid.Column="2" Height="28" IsEditable="True" Margin="10 0 0 0" VerticalContentAlignment="Center"
+                                          x:Name="CmbAdd2" DisplayMemberPath="Value" SelectedItem="{Binding Area2}"
+                                          SelectionChanged="CmbAdd2_SelectionChanged"></ComboBox>
+                        <ComboBox Grid.Column="3" Height="28" IsEditable="True" Margin="10 0 0 0" VerticalContentAlignment="Center"
+                                          x:Name="CmbAdd3" DisplayMemberPath="Value" SelectedItem="{Binding Area3}"></ComboBox>
+                    </Grid>
+                    <Grid Grid.Row="2" Margin="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="简介" VerticalAlignment="Top" Margin="0 6.4 10 0"></TextBlock>
+                        <TextBox Grid.Column="1" Text="{Binding Brief}" Padding="0 5.4 0 5.4" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto"></TextBox>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="地理">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Margin="8 8 8 0">
+                        <Button x:Name="BtnAddSub" Content="添加" Width='60' Click="BtnAddSub_Click"></Button>
+                        <Button x:Name="BtnDeleteSub" Content="删除" Width='60' Margin="8 0 0 0" Click="BtnDeleteSub_Click"></Button>
+                    </StackPanel>
+                    <DataGrid x:Name="DtgSubSites" Grid.Row="1" Margin="8" Background="White"
+                                   AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column" SelectionUnit="FullRow">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="序号" Width="60" Binding="{Binding ID}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="名称" Width="100" Binding="{Binding Name}" Foreground="#1D6BFF"></DataGridTextColumn>
+                            <DataGridTextColumn Header="简介" Width="*" Binding="{Binding Brief}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="物产">
+                <Grid Margin="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <ListBox x:Name="ListAllItems"  DisplayMemberPath="Name" BorderThickness="1"></ListBox>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                        <Button x:Name="BtnAddItem" Content="添加" Width="60" Margin="10" Click="BtnAddItem_Click"></Button>
+                        <Button x:Name="BtnRemoveItem" Content="移除" Width="60" Margin="10" Click="BtnRemoveItem_Click"></Button>
+                    </StackPanel>
+                    <ListBox Grid.Column="2" x:Name="ListItems"  DisplayMemberPath="Name" BorderThickness="1"></ListBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="势力">
+                <Grid Margin="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <ListBox x:Name="ListAllSects"  DisplayMemberPath="Name" BorderThickness="1"></ListBox>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                        <Button x:Name="BtnAddSect" Content="添加" Width="60" Margin="10" Click="BtnAddSect_Click"></Button>
+                        <Button x:Name="BtnRemoveSect" Content="移除" Width="60" Margin="10" Click="BtnRemoveSect_Click"></Button>
+                    </StackPanel>
+                    <ListBox Grid.Column="2" x:Name="ListSects"  DisplayMemberPath="Name" BorderThickness="1"></ListBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Border Grid.Row="2" BorderThickness="0 1 0 0" BorderBrush="{StaticResource LineColor}">
+            <Grid Background="White">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="取消" Width="60" Margin="0 0 8 0" Click="BtnClose_Click"></Button>
+                    <Button Content="确定" Width="60" Margin="0 0 8 0" x:Name="BtnOK" Click="BtnOK_Click"></Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

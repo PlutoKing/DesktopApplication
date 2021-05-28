@@ -10,19 +10,20 @@
         Name="dialog" Background="{StaticResource BackColor}"
         WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize"
         Loaded="Dialog_Loaded" BorderBrush="Gray" BorderThickness="1" UseLayoutRounding="True">
-    <Grid UseLayoutRounding="True">
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
             <RowDefinition/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <Border BorderBrush="{StaticResource LineColor}" BorderThickness="0 0 0 1" Margin="0" UseLayoutRounding="True">
-            <Grid x:Name="TopGrid" Background="White" MouseDown="TopGrid_MouseDown" SnapsToDevicePixels="True">
-                <TextBlock Text="{Binding ElementName=dialog,Path=Title}" VerticalAlignment="Center" Margin="8 0 8 0"
-                            Foreground="{StaticResource MainColor}" FontSize="16" FontWeight="Bold"></TextBlock>
-            </Grid>
+        <Border BorderBrush="{StaticResource LineColor}" BorderThickness="0 0 0 1" Background="White"
+                Margin="0"  MouseDown="TopGrid_MouseDown">
+            <StackPanel Orientation="Horizontal" Margin="8 0 8 0" VerticalAlignment="Center">
+                <TextBlock Text="{Binding ElementName=dialog,Path=Title}" Margin="0 0 4 0"></TextBlock>
+                <TextBlock x:Name="TxbSubTitle" Foreground="{StaticResource MainColor}"></TextBlock>
+            </StackPanel>
         </Border>
-        <TabControl Grid.Row="1" Margin="8">
+        <TabControl Grid.Row="1" BorderThickness="0" Style="{StaticResource LeftTabControl}" ItemContainerStyle="{StaticResource LeftTabItem}">
             <TabItem Header="信息">
                 <Grid Margin="4">
                     <Grid.ColumnDefinitions>
@@ -41,12 +42,18 @@
                                 <ColumnDefinition Width="30"/>
                                 <ColumnDefinition Width="auto"/>
                                 <ColumnDefinition/>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Grid.Column="0" Text="名称" VerticalAlignment="Center" Margin="0 0 10 0"></TextBlock>
                             <TextBox Grid.Column="1" Text="{Binding Name}" VerticalAlignment="Center" VerticalContentAlignment="Center"
                                          Height="28"></TextBox>
                             <TextBlock Grid.Column="3" Text="等级" VerticalAlignment="Center" Margin="0 0 10 0"></TextBlock>
                             <ComboBox Name="CmbLevel" Grid.Column="4" SelectedItem="{Binding Level}" DisplayMemberPath="Value" VerticalAlignment="Center" VerticalContentAlignment="Center" IsEditable="True"
+                                          Height="28"></ComboBox>
+                            <TextBlock Grid.Column="6" Text="等级" VerticalAlignment="Center" Margin="0 0 10 0"></TextBlock>
+                            <ComboBox Name="CmbType" Grid.Column="7" SelectedItem="{Binding Type}" DisplayMemberPath="Value" VerticalAlignment="Center" VerticalContentAlignment="Center" IsEditable="True"
                                           Height="28"></ComboBox>
                         </Grid>
                         <Grid Grid.Row="1" Margin="4">
@@ -104,12 +111,11 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Border Grid.Row="2" BorderBrush="{StaticResource LineColor}" BorderThickness="0 1 0 0" Background="White" UseLayoutRounding="True">
+        <Border Grid.Row="2" BorderBrush="{StaticResource LineColor}" BorderThickness="0 1 0 0" Background="White">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Content="取消" Width="60" Margin="0 0 8 0" VerticalAlignment="Center" Click="BtnClose_Click"></Button>
                 <Button Content="确定" Width="60" Margin="0 0 8 0" VerticalAlignment="Center" x:Name="BtnOK" Click="BtnOK_Click"></Button>
             </StackPanel>
         </Border>
     </Grid>
-
 </Window>

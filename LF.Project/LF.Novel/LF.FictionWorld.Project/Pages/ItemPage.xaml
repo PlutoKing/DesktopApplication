@@ -125,7 +125,7 @@
             <DataGrid x:Name="DtgSites" BorderThickness="0" IsReadOnly="True"
                                    AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column" SelectionUnit="FullRow">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="序号" Width="*" Binding="{Binding Index}" MinWidth="60"></DataGridTextColumn>
+                    <DataGridTextColumn Header="序号" Width="*" Binding="{Binding Code}" MinWidth="60"></DataGridTextColumn>
                     <DataGridTextColumn Header="名称" Width="*" Binding="{Binding Name}" MinWidth="80" Foreground="{StaticResource MainColor}"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>

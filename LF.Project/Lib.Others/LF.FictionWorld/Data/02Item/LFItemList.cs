@@ -13,7 +13,7 @@ using System.Xml;
 namespace LF.FictionWorld
 {
     /// <summary>
-    /// 物品列表，表示<see cref="LFItem"/>的列表。
+    /// 物品列表，表示<see cref="LFItem"/>的列表
     /// </summary>
     public class LFItemList : ObservableCollection<LFItem>, ICloneable
     {
@@ -31,9 +31,9 @@ namespace LF.FictionWorld
         }
 
         /// <summary>
-        /// 拷贝构造函数。
+        /// 拷贝构造函数
         /// </summary>
-        /// <param name="rhs">源对象。</param>
+        /// <param name="rhs">源对象</param>
         public LFItemList(LFItemList rhs)
         {
             foreach (LFItem obj in rhs)
@@ -43,17 +43,17 @@ namespace LF.FictionWorld
         }
 
         /// <summary>
-        /// 拷贝函数。
+        /// 拷贝函数
         /// </summary>
-        /// <returns>与该物品列表相同的新实例。</returns>
+        /// <returns>与该物品列表相同的新实例</returns>
         public LFItemList Clone()
         {
             return new LFItemList(this);
         }
         /// <summary>
-        /// 拷贝函数。
+        /// 拷贝函数
         /// </summary>
-        /// <returns>与该物品列表相同的新实例。</returns>
+        /// <returns>与该物品列表相同的新实例</returns>
         object ICloneable.Clone()
         {
             return Clone();
@@ -86,7 +86,7 @@ namespace LF.FictionWorld
         /// 按Name搜索Code
         /// </summary>
         /// <param name="name">名称</param>
-        /// <returns>返回搜索到的Code；如未搜索到，返回0。</returns>
+        /// <returns>返回搜索到的Code；如未搜索到，返回0</returns>
         public long GetCode(string name)
         {
             foreach (LFItem obj in this)
@@ -103,7 +103,7 @@ namespace LF.FictionWorld
         /// 按Code搜索Name
         /// </summary>
         /// <param name="code">编码</param>
-        /// <returns>搜索到的对象的名称；如未搜索到，返回null。</returns>
+        /// <returns>搜索到的对象的名称；如未搜索到，返回null</returns>
         public string GetName(long code)
         {
             foreach (LFItem obj in this)
@@ -120,7 +120,7 @@ namespace LF.FictionWorld
         /// 按Name搜索Item
         /// </summary>
         /// <param name="name">名称</param>
-        /// <returns>搜索到的对象；如未搜索到，返回null。</returns>
+        /// <returns>搜索到的对象；如未搜索到，返回null</returns>
         public LFItem GetItem(string name)
         {
             foreach (LFItem obj in this)
@@ -137,7 +137,7 @@ namespace LF.FictionWorld
         /// 按Code搜索Item
         /// </summary>
         /// <param name="code">编码</param>
-        /// <returns>搜索到的对象；如未搜索到，返回null。</returns>
+        /// <returns>搜索到的对象；如未搜索到，返回null</returns>
         public LFItem GetItem(long code)
         {
             foreach (LFItem obj in this)
@@ -218,11 +218,21 @@ namespace LF.FictionWorld
         /// <param name="obj"></param>
         public void EditItem(int idx, LFItem obj)
         {
+            long oldCode = this[idx].Code;
+            LFItem oldItem = this[idx];
             // 更新Item数据
             this[idx] = obj;
-            Sort();
+            
             // 更新Item相关信息
+            foreach(LFPointer siteP in oldItem.SiteList)
+            {
+                LFSite site = siteP.GetSite();
+                site.ItemList.EditObj(oldCode, new LFPointer(obj));
+                this[idx].SiteList.AddObj(new LFPointer(site));
+            }
 
+            // 排序
+            Sort();
         }
 
         /// <summary>
@@ -236,6 +246,11 @@ namespace LF.FictionWorld
                 Remove(obj);
 
                 // 更新Item相关信息
+                foreach(LFPointer siteP in obj.SiteList)
+                {
+                    LFSite site = siteP.GetSite();
+                    site.ItemList.RemoveObj(obj.Code);
+                }
             }
         }
 
@@ -258,6 +273,37 @@ namespace LF.FictionWorld
                 i++;
             }
         }
+        #endregion
+
+        #region Data Methods
+
+        /// <summary>
+        /// 减去指针所指的对象
+        /// </summary>
+        /// <param name="pointers"></param>
+        /// <returns></returns>
+        public LFItemList Minus(LFPointerList pointers)
+        {
+            LFItemList list = new LFItemList();
+            foreach(LFItem item in this)
+            {
+                bool tmp = false;   // 是否在pointers中
+                foreach (LFPointer p in pointers)
+                {
+                    if(item.Code == p.Code || item .Name == p.Name)
+                    {
+                        tmp = true; ;
+                        break;
+                    }
+                }
+                if (!tmp)
+                {
+                    list.Add(item);
+                }
+            }
+            return list;
+        }
+
         #endregion
 
         #region File Methods
@@ -287,8 +333,6 @@ namespace LF.FictionWorld
                     ele.SetAttribute("Code", obj.Code.ToString());
                     ele.SetAttribute("Name", obj.Name);
                     ele.SetAttribute("Brief", obj.Brief);
-                    ele.SetAttribute("Price", obj.Price.ToString());
-                    ele.SetAttribute("Count", obj.Count.ToString());
                     root.AppendChild(ele);
                 }
             }
@@ -321,8 +365,6 @@ namespace LF.FictionWorld
                 LFItem obj = new LFItem(idx, name)
                 {
                     Brief = ele.GetAttribute("Brief"),
-                    Price = Convert.ToSingle(ele.GetAttribute("Price")),
-                    Count = Convert.ToInt32(ele.GetAttribute("Count"))
                 };
                 Add(obj);
             }

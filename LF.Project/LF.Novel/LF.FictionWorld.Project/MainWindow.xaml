@@ -40,9 +40,6 @@
                 <TabItem Header="物　品">
                     <pages:ItemPage x:Name="itemPage"/>
                 </TabItem>
-                <TabItem Header="文　化">
-
-                </TabItem>
                 <TabItem Header="秘　籍">
                     <pages:BookPage/>
                 </TabItem>

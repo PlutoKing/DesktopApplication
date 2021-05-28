@@ -28,9 +28,13 @@ namespace LF.FictionWorld
 
         private LFItemList _itemList = new LFItemList();    // 物品列表
         private LFBookList _bookList = new LFBookList();    // 秘籍列表
+        private LFSiteList _siteList = new LFSiteList();    // 地点列表
+        private LFSectList _sectList = new LFSectList();    // 势力列表
 
         private LFItem _item = new LFItem();                // 当前物品
         private LFBook _book = new LFBook();                // 当前秘籍
+        private LFSite _site = new LFSite();                // 当前地点
+        private LFSect _sect = new LFSect();                // 当前势力
 
         #endregion
 
@@ -60,6 +64,28 @@ namespace LF.FictionWorld
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BookList"));
             }
         }
+        /// <summary>
+        /// 地点列表
+        /// </summary>
+        public LFSiteList SiteList { get => _siteList;
+            set
+            {
+                _siteList = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SiteList"));
+            }
+        }
+        /// <summary>
+        /// 势力列表
+        /// </summary>
+        public LFSectList SectList
+        {
+            get => _sectList;
+            set
+            {
+                _sectList = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SectList"));
+            }
+        }
 
         /// <summary>
         /// 当前物品
@@ -87,6 +113,28 @@ namespace LF.FictionWorld
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Book"));
             }
         }
+        /// <summary>
+        /// 当前地点
+        /// </summary>
+        public LFSite Site
+        {
+            get => _site;
+            set
+            {
+                _site = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Site"));
+            }
+        }
+        /// <summary>
+        /// 当前势力
+        /// </summary>
+        public LFSect Sect { get => _sect;
+            set
+            {
+                _sect = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sect"));
+            }
+        }
         #endregion
 
         #region Constructors
@@ -104,11 +152,23 @@ namespace LF.FictionWorld
         {
             ItemList.Open(World.Info.Path + @"\Data", "Items");
             BookList.Open(World.Info.Path + @"\Data", "Books");
+            SiteList.Open(World.Info.Path + @"\Data", "Sites");
+            SectList.Open(World.Info.Path + @"\Data", "Sects");
 
+            foreach (LFItem obj in ItemList)
+            {
+                obj.Open(World.Info.Path + @"\Data");
+            }
 
             foreach (LFBook obj in BookList)
             {
                 obj.Open(World.Info.Path + @"\Data");
+            }
+
+            foreach(LFSite obj in SiteList)
+            {
+                obj.Open(World.Info.Path + @"\Data");
+                obj.CheckItems();
             }
         }
 
@@ -119,9 +179,24 @@ namespace LF.FictionWorld
         {
             ItemList.Save(World.Info.Path + @"\Data", "Items");
             BookList.Save(World.Info.Path + @"\Data", "Books");
+            SiteList.Save(World.Info.Path + @"\Data", "Sites");
+            SectList.Save(World.Info.Path + @"\Data", "Sects");
+
+            DeleteFiles(World.Info.Path + @"\Data\Items");
+            foreach (LFItem obj in ItemList)
+            {
+                obj.Save(World.Info.Path + @"\Data");
+            }
+
 
             DeleteFiles(World.Info.Path + @"\Data\Books");
             foreach (LFBook obj in BookList)
+            {
+                obj.Save(World.Info.Path + @"\Data");
+            }
+
+            DeleteFiles(World.Info.Path + @"\Data\Sites");
+            foreach (LFSite obj in SiteList)
             {
                 obj.Save(World.Info.Path + @"\Data");
             }

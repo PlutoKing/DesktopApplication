@@ -63,6 +63,8 @@ namespace LF.FictionWorld.Project.Pages
             {
                 ID = World.Data.ItemList.IndexOf(World.Data.Item);
                 DataGridIndex = DtgItems.SelectedIndex;
+
+                DtgSites.ItemsSource = World.Data.Item.SiteList;
             }
         }
 

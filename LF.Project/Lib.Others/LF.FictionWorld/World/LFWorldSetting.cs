@@ -61,6 +61,12 @@ namespace LF.FictionWorld
         /// 技能
         /// </summary>
         private LFTypeList _skills = new LFTypeList();
+        /// <summary>
+        /// 秘籍
+        /// </summary>
+        private LFTypeList _books = new LFTypeList();
+
+        private LFTypeList _custom = new LFTypeList();
         #endregion
 
         #region Properties
@@ -176,6 +182,30 @@ namespace LF.FictionWorld
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Skills"));
             }
         }
+        /// <summary>
+        /// 秘籍类型
+        /// </summary>
+        public LFTypeList Books
+        {
+            get => _books;
+            set
+            {
+                _books = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Books"));
+            }
+        }
+        /// <summary>
+        /// 文化习俗分类
+        /// </summary>
+        public LFTypeList Custom
+        {
+            get => _custom;
+            set
+            {
+                _books = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Books"));
+            }
+        }
         #endregion
 
         #region Constructors
@@ -198,6 +228,7 @@ namespace LF.FictionWorld
             Ranks.Open(World.Info.Path + @"\Setting", "Rank");
             Actions.Open(World.Info.Path + @"\Setting", "Action");
             Skills.Open(World.Info.Path + @"\Setting", "Skill");
+            Books.Open(World.Info.Path + @"\Setting", "Book");
         }
 
         /// <summary>
@@ -213,7 +244,7 @@ namespace LF.FictionWorld
             Ranks.Save(World.Info.Path + @"\Setting", "Rank");
             Actions.Save(World.Info.Path + @"\Setting", "Action");
             Skills.Save(World.Info.Path + @"\Setting", "Skill");
-
+            Books.Save(World.Info.Path + @"\Setting", "Book");
         }
         #endregion
 

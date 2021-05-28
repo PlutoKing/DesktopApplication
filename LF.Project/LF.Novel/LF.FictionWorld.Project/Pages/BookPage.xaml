@@ -43,6 +43,8 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="40"/>
                         <ColumnDefinition/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>
@@ -50,7 +52,9 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" Text="等级" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
-                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Item.Level.Value}" VerticalAlignment="Center" FontSize="12" Margin="0 0 30 0"></TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Book.Level.Value}" VerticalAlignment="Center" FontSize="12" Margin="0 0 30 0"></TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="类别" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
+                    <TextBlock Grid.Row="0" Grid.Column="3" Text="{Binding Book.Type.Value}" VerticalAlignment="Center" FontSize="12" Margin="0 0 30 0"></TextBlock>
                     <TextBlock Grid.Row="1" Grid.Column="0" Text="属性" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
                     <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Book.Attribute}" VerticalAlignment="Center" FontSize="12"></TextBlock>
                     <TextBlock Grid.Row="2" Grid.Column="0" Text="简介" VerticalAlignment="top" FontSize="12" Foreground="Gray" Margin="0 6.8 0 0"></TextBlock>
@@ -93,6 +97,7 @@
                     <DataGridTextColumn Header="序号" Width="100" Binding="{Binding Code}" ></DataGridTextColumn>
                     <DataGridTextColumn Header="名称" Width="1*" Binding="{Binding Name}"></DataGridTextColumn>
                     <DataGridTextColumn Header="等级" Width="80" Binding="{Binding Level.Value}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="种类" Width="80" Binding="{Binding Type.Value}"></DataGridTextColumn>
                     <DataGridTextColumn Header="属性" Width="*" Binding="{Binding Attribute}"></DataGridTextColumn>
                     <DataGridTextColumn Header="最高等级" Width="80" Binding="{Binding Content.Count}"></DataGridTextColumn>
                     <DataGridTextColumn Header="技能总数" Width="80" Binding="{Binding Skills.Count}"></DataGridTextColumn>

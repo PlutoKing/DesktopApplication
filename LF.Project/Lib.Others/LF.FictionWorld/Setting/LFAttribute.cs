@@ -181,12 +181,12 @@ namespace LF.FictionWorld
             string str = "";
             foreach (LFType type in this)
             {
-                str += type.Value + "-";
+                str += type.Value + " - ";
             }
             if (str == "")
                 return "无";
 
-            return str.Substring(0, str.Length - 1);
+            return str.Substring(0, str.Length - 3);
         }
         #endregion
         #endregion

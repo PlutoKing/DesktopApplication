@@ -32,6 +32,7 @@ namespace LF.FictionWorld
         private string _brief;  // 简介
 
         private LFType _level = new LFType();      // 等级
+        private LFType _type = new LFType();        // 种类
         private LFAttribute _attributes = new LFAttribute();    // 属性
 
         private LFLevelList _content = new LFLevelList();       // 修炼内容
@@ -111,6 +112,16 @@ namespace LF.FictionWorld
             }
         }
 
+        /// <summary>
+        /// 种类
+        /// </summary>
+        public LFType Type { get => _type;
+            set
+            {
+                _type = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Type"));
+            }
+        }
 
         /// <summary>
         /// 属性
@@ -163,6 +174,7 @@ namespace LF.FictionWorld
             }
         }
 
+
         #endregion
 
         #endregion
@@ -196,6 +208,7 @@ namespace LF.FictionWorld
             _brief = rhs._brief;
 
             _level = rhs._level;
+            _type = rhs._type;
             _attributes = rhs._attributes.Clone();
 
             _content = rhs._content.Clone();
@@ -228,20 +241,23 @@ namespace LF.FictionWorld
         /// </summary>
         public void Decode()
         {
-            // 等级1位+属性4位+编号3位=8位
-            int l = (int)(_code / 10000000);
+            // 等级1位+种类1位+属性4位+编号3位=9位
+            int l = (int)(_code / 100000000);
+            int t = (int)(_code % 100000000)/ 10000000;
             int a = (int)(_code % 10000000) / 1000;
             _level = World.Setting.Levels.GetType(l);   // 调用配置信息
+            _type = World.Setting.Books.GetType(t);
             _attributes = new LFAttribute(a);
             _id = (int)(_code % 1000);
         }
 
         /// <summary>
-        /// 编码.
+        /// 编码
         /// </summary>
         public void Encode()
         {
-            int index = _level.Index * 10000;
+            int index = _level.Index * 100000;
+            index += _type.Index * 10000;
             index += _attributes.Code;
 
             /* 重复性检测 */
@@ -272,6 +288,12 @@ namespace LF.FictionWorld
                 {
                     return i + 1;
                 }
+                else
+                {
+                    if (tmp[i].ID == _id)
+                        return tmp[i].ID;
+                }
+
             }
 
             return cnt + 1;
@@ -279,7 +301,8 @@ namespace LF.FictionWorld
 
         public void SetID(int id)
         {
-            int index = _level.Index * 10000;
+            int index = _level.Index * 100000;
+            index += _type.Index * 10000;
             index += _attributes.Code;
 
             /* 重复性检测 */
@@ -392,6 +415,5 @@ namespace LF.FictionWorld
         #endregion
 
         #endregion
-
     }
 }

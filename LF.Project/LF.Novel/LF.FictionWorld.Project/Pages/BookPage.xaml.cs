@@ -77,7 +77,8 @@ namespace LF.FictionWorld.Project.Pages
         {
             BookDialog dialog = new BookDialog
             {
-                Title = "新建功法 - " + (World.Data.BookList.Count + 1).ToString()
+                Title = "新建秘籍",
+                SubTitle = (World.Data.BookList.Count + 1).ToString()
             };
             dialog.ShowDialog();
             if (dialog.DialogResult == true)
@@ -96,12 +97,13 @@ namespace LF.FictionWorld.Project.Pages
             BookDialog dialog = new BookDialog
             {
                 Book = World.Data.Book.Clone(),
-                Title = "编辑功法 - " + World.Data.Book.Name
+                Title = "编辑秘籍",
+                SubTitle = World.Data.Book.Name
             };
             dialog.ShowDialog();
             if (dialog.DialogResult == true)
             {
-                World.Data.BookList[ID] = dialog.Book.Clone();
+                World.Data.BookList.EditBook(ID,dialog.Book);
                 World.Data.Book = dialog.Book.Clone();
                 DtgBooks.SelectedIndex = DataGridIndex;
             }

@@ -30,6 +30,7 @@ namespace LF.FictionWorld.Project.Dialog
 
         public LFBook Book = new LFBook();
 
+        public string SubTitle = "";
         #endregion
 
         #region Constructors
@@ -54,9 +55,12 @@ namespace LF.FictionWorld.Project.Dialog
             this.DataContext = Book;
 
             CmbLevel.ItemsSource = World.Setting.Levels;
+            CmbType.ItemsSource = World.Setting.Books;
 
             DtgContent.ItemsSource = Book.Content;
             DtgSkills.ItemsSource = Book.Skills;
+
+            TxbSubTitle.Text = SubTitle;
         }
 
         /// <summary>

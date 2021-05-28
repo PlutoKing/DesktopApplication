@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Type>
+  <Node Index="1" Value="服饰" Brief="">
+    <Node Index="1" Value="帽子" Brief="" />
+    <Node Index="2" Value="上衣" Brief="" />
+    <Node Index="3" Value="裤裙" Brief="" />
+    <Node Index="4" Value="鞋袜" Brief="" />
+    <Node Index="5" Value="裤裙" Brief="" />
+    <Node Index="6" Value="腰带" Brief="" />
+    <Node Index="7" Value="饰品" Brief="" />
+  </Node>
+  <Node Index="2" Value="饮食" Brief="">
+    <Node Index="1" Value="主食" Brief="" />
+    <Node Index="2" Value="酒酿" Brief="" />
+    <Node Index="3" Value="果汁" Brief="" />
+    <Node Index="4" Value="肉食" Brief="" />
+    <Node Index="5" Value="海鲜" Brief="" />
+  </Node>
+  <Node Index="3" Value="建筑" Brief="">
+    <Node Index="1" Value="饮食" Brief="" />
+
+  </Node>
+  <Node Index="4" Value="交通" Brief="" />
+  <Node Index="5" Value="文学" Brief="" />
+  <Node Index="6" Value="艺术" Brief="" />
+</Type>

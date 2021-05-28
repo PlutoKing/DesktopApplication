@@ -123,7 +123,8 @@ namespace LF.FictionWorld
         /// </summary>
         public string String
         {
-            get { return ToShortString(); }
+            get { return ToString(); }
+            set { ReadString(value); }
         }
 
         /// <summary>
@@ -136,7 +137,10 @@ namespace LF.FictionWorld
         #endregion
 
         #region Constructors
+        public LFDate()
+        {
 
+        }
         /// <summary>
         /// 默认构造函数
         /// </summary>
@@ -228,12 +232,13 @@ namespace LF.FictionWorld
         public void GetEra()
         {
             _eraYear = _year;
+            _era = 1;
 
             for(int i = 0; i < World.Info.Calendar.NumberOfEras; i++)
             {
                 if (_eraYear <= World.Info.Calendar.Eras[i].Count)
                 {
-                    _era = i;
+                    _era = i+1;
                     return;
                 }
                 else
@@ -275,7 +280,7 @@ namespace LF.FictionWorld
         public void Decode()
         {
             _era = (int)(_code / 100000000);
-            _year = (int)(_code % 100000000 / 10000);
+            _eraYear = (int)(_code % 100000000 / 10000);
             _month = (int)(_code % 10000 / 100);
             _day = (int)(_code % 100);
             GetYear();
@@ -497,7 +502,7 @@ namespace LF.FictionWorld
             string str = "";
             try
             {
-                str = World.Info.Calendar.Eras[_era].Name + _year.ToString("0000") + "年" + _month.ToString("00") + "月" + _day.ToString("00") + "日";
+                str = World.Info.Calendar.Eras[_era].Name + _eraYear.ToString("0000") + "年" + _month.ToString("00") + "月" + _day.ToString("00") + "日";
             }
             catch { }
             return str;

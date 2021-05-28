@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Sites>
+  <Site Code="11101" Name="封魔山" Brief="封魔山是封印窥天魔尊的地方。">
+    <SubLocation ID="1" Name="窥天峰" Brief="窥天峰，位于封魔山中北部，高约1800米，是封印窥天魔尊的地方。" />
+    <SubLocation ID="2" Name="齐北河" Brief="齐北河，发源于封魔山，自西南向东北，流经北海原，汇入泫江。" />
+  </Site>
+  <Site Code="11201" Name="幽冥山" Brief="幽冥山位于天星山脉北部，盛产幽冥石和幽冥青金，是幽冥宗的宗门所在。帝国时代，幽冥道人在此建立幽冥宗；混乱时代，幽冥宗被龙岛和海家覆灭。">
+    <SubLocation ID="1" Name="幽冥峰" Brief="幽冥山主峰，高约1900米。" />
+    <SubLocation ID="2" Name="暗影峰" Brief="幽冥山北侧山峰，高约1750米。" />
+  </Site>
+</Sites>

@@ -95,8 +95,10 @@ namespace LF.FictionWorld
         #region Constructors
         public LFWorldInfo()
         {
-            _path = @"E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\bin\Debug\File";
+            _path = @"I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\bin\Debug\File";
             _calendar = new LFCalendar();
+
+            
         }
 
         #endregion
@@ -108,6 +110,7 @@ namespace LF.FictionWorld
         public void Open()
         {
             _calendar.Open(Path + @"\Info");
+            _nowDate = new LFDate(326280316);
         }
 
         /// <summary>

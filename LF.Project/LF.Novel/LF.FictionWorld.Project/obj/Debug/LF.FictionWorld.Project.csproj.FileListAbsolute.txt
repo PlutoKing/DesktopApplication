@@ -102,3 +102,7 @@ E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\LF.F
 E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\LF.FictionWorld.Project.csproj.CopyComplete
 E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\LF.FictionWorld.Project.exe
 E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\LF.FictionWorld.Project.pdb
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SiteDialog.g.cs
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SiteDialog.baml
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SectDialog.g.cs
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SectDialog.baml

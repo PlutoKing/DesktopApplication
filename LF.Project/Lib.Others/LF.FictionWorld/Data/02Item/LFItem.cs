@@ -7,6 +7,7 @@
 
 using System;
 using System.ComponentModel;
+using System.Xml;
 
 namespace LF.FictionWorld
 {
@@ -35,6 +36,8 @@ namespace LF.FictionWorld
 
         private float _price;   // 价格
         private int _count;     // 数量
+
+        private LFPointerList _siteList = new LFPointerList();  // 产地
         #endregion
 
         #region Properties
@@ -153,7 +156,7 @@ namespace LF.FictionWorld
         /// </summary>
         public string Type
         {
-            get { return _type1.Value + "-" + _type2.Value; }
+            get { return _type1.Value + " - " + _type2.Value; }
         }
 
         /// <summary>
@@ -189,6 +192,21 @@ namespace LF.FictionWorld
 
         #endregion
 
+        #region Data Properties
+        /// <summary>
+        /// 产地
+        /// </summary>
+        public LFPointerList SiteList
+        {
+            get => _siteList;
+            set
+            {
+                _siteList = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SiteList"));
+            }
+        }
+        #endregion
+
         #endregion
 
         #region Constructors
@@ -197,7 +215,7 @@ namespace LF.FictionWorld
         }
 
         /// <summary>
-        /// 构造编码为<paramref name="code"/>名称为<paramref name="name"/>的秘籍实例。
+        /// 构造编码为<paramref name="code"/>名称为<paramref name="name"/>的物品实例。
         /// </summary>
         /// <param name="code">编码。</param>
         /// <param name="name">名称。</param>
@@ -339,6 +357,75 @@ namespace LF.FictionWorld
             return cnt + 1;
         }
 
+        #endregion
+
+        #region File Methods
+
+        /// <summary>
+        /// 保存秘籍
+        /// </summary>
+        /// <param name="path">路径</param>
+        public void Save(string path)
+        {
+            /* 基础操作 */
+            XmlDocument xmlDoc = new XmlDocument();                                 // 定义文件
+            XmlDeclaration dec = xmlDoc.CreateXmlDeclaration("1.0", "UTF-8", null); // 定义声明
+            xmlDoc.AppendChild(dec);                                                // 插入声明
+            XmlElement root = xmlDoc.CreateElement("Item");                         // 定义根节点
+            xmlDoc.AppendChild(root);                                               // 插入根节点
+
+            // 存入内容
+            root.SetAttribute("Index", _code.ToString());
+            root.SetAttribute("Name", _name);
+            root.SetAttribute("Price", _price.ToString());
+            root.SetAttribute("Count", _count.ToString());
+
+            XmlElement eleSites = xmlDoc.CreateElement("Sites");
+            foreach (LFPointer obj in _siteList)
+            {
+                XmlElement ele = xmlDoc.CreateElement("Site");
+                ele.SetAttribute("Code", obj.Code.ToString());
+                eleSites.AppendChild(ele);
+            }
+            root.AppendChild(eleSites);
+
+
+            /* 保存文件 */
+            xmlDoc.Save(path + @"\Items\" + _code.ToString() + ".xml");
+        }
+
+
+
+        /// <summary>
+        /// 打开物品
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="file"></param>
+        public void Open(string path)
+        {
+            /* 1. XML基础操作 */
+            XmlDocument xmlDoc = new XmlDocument();                         // 定义文件
+            xmlDoc.Load(path + @"\Items\" + _code.ToString() + ".xml");    // 加载文件
+            XmlElement root = xmlDoc.DocumentElement;                       // 读取根节点
+
+            /* 2. 读取内容 */
+            _price = Convert.ToSingle(root.GetAttribute("Price"));
+            _count = Convert.ToInt32(root.GetAttribute("Count"));
+
+            XmlElement eleSites = (XmlElement)root.GetElementsByTagName("Sites")[0];
+            foreach (XmlNode node in eleSites.ChildNodes)
+            {
+                XmlElement ele = (XmlElement)node;
+                long code = Convert.ToInt64(ele.GetAttribute("Code"));
+
+                LFSite site = World.Data.SiteList.GetSite(code);
+                if (site != null)
+                {
+                    LFPointer p = new LFPointer(site);
+                    _siteList.Add(p);
+                }
+            }
+        }
         #endregion
 
         #endregion

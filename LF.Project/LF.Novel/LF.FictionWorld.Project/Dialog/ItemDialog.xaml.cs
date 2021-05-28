@@ -49,6 +49,7 @@ namespace LF.FictionWorld.Project.Dialog
             CmbLevel.ItemsSource = World.Setting.Levels;
             CmbType1.ItemsSource = World.Setting.Items;
 
+            ListAllItems.ItemsSource = World.Data.ItemList;
         }
 
         /// <summary>
