@@ -326,13 +326,6 @@ namespace LF.FictionWorld
 
         #endregion
 
-
-        #endregion
-
-        #region Serializations
-        #endregion
-
-        #region Defaults
         #endregion
     }
 }

@@ -70,7 +70,8 @@ namespace LF.FictionWorld.Project.Pages
         {
             SectDialog form = new SectDialog
             {
-                Title = "新建势力 - " + (World.Data.SectList.Count + 1).ToString()
+                Title = "新建势力",
+                SubTitle = (World.Data.SectList.Count + 1).ToString()
             };
             form.ShowDialog();
             if (form.DialogResult == true)
@@ -89,7 +90,8 @@ namespace LF.FictionWorld.Project.Pages
             SectDialog form = new SectDialog
             {
                 Sect = World.Data.Sect.Clone(),
-                Title = "编辑势力 - " + World.Data.Sect.Name
+                Title = "编辑势力",
+                SubTitle = World.Data.Sect.Name
             };
             form.ShowDialog();
             if (form.DialogResult == true)
@@ -211,11 +213,12 @@ namespace LF.FictionWorld.Project.Pages
             RefreshDep();  // 重新加载部门
         }
 
-        #endregion
-
         private void DtgSects_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             EditObj();
         }
+        #endregion
+
+
     }
 }

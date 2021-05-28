@@ -205,6 +205,10 @@ namespace LF.FictionWorld
         #region Methods
 
         #region Common Methods
+
+        /// <summary>
+        /// 解码
+        /// </summary>
         public void Decode()
         {
             _createdDate = new LFDate((int)(_code / 10000000));
@@ -218,14 +222,14 @@ namespace LF.FictionWorld
         }
 
         /// <summary>
-        /// 生成索引
+        /// 编码
         /// </summary>
         public void Encode()
         {
             long code = _createdDate.Code * 100000;
             code += _location.Code;
 
-            
+            _id = GetID(code);
 
             _code = code * 100 + _id;
         }
@@ -239,7 +243,6 @@ namespace LF.FictionWorld
             bool res = false;
             long code = _createdDate.Code * 100000;
             code += _location.Code;
-
 
             if (_id != id)
             {

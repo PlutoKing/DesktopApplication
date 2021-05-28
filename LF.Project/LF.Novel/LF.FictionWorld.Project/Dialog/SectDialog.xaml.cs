@@ -28,6 +28,7 @@ namespace LF.FictionWorld.Project.Dialog
     {
         #region Fields
         public LFSect Sect = new LFSect();
+        public string SubTitle = "";
         #endregion
 
         #region Constructors
@@ -45,6 +46,7 @@ namespace LF.FictionWorld.Project.Dialog
         private void Dialog_Loaded(object sender, RoutedEventArgs e)
         {
             this.DataContext = Sect;
+            TxbSubTitle.Text = SubTitle;
             CmbAdd1.ItemsSource = World.Setting.Areas;
         }
 

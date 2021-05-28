@@ -161,7 +161,7 @@ namespace LF.FictionWorld
             LFSiteList list = new LFSiteList();
             foreach (LFSite obj in this)
             {
-                if (obj.Code / 1000 == code)
+                if (obj.Code / 100 == code)
                 {
                     list.Add(obj);
                 }

@@ -106,3 +106,7 @@ I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dial
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SiteDialog.baml
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SectDialog.g.cs
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SectDialog.baml
+E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SectDialog.g.cs
+E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SiteDialog.g.cs
+E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SectDialog.baml
+E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SiteDialog.baml
