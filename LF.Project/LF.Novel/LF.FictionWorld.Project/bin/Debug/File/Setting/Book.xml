@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Type>
-  <Node Index="1" Value="功法" Brief="" />
-  <Node Index="2" Value="武技" Brief="" />
-  <Node Index="3" Value="秘术" Brief="" />
-  <Node Index="4" Value="丹方" Brief="" />
-  <Node Index="5" Value="器方" Brief="" />
-  <Node Index="6" Value="其他" Brief="" />
+  <Node Code="1" Value="功法" Brief="" />
+  <Node Code="2" Value="武技" Brief="" />
+  <Node Code="3" Value="秘术" Brief="" />
+  <Node Code="4" Value="丹方" Brief="" />
+  <Node Code="5" Value="器方" Brief="" />
+  <Node Code="6" Value="其他" Brief="" />
 </Type>

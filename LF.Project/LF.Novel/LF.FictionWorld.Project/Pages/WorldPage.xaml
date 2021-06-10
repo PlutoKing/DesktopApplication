@@ -93,26 +93,36 @@
                            Text="月历" FontSize="30" FontWeight="Bold" Foreground="{StaticResource MainColor}"></TextBlock>
             </Grid>
         </Border>
-        <Border Grid.Column="2" Margin="4" BorderBrush="{StaticResource LineColor}" BorderThickness="1" Background="White">
+        <Border Grid.Column="2" Grid.ColumnSpan="2" Margin="4" BorderBrush="{StaticResource LineColor}" BorderThickness="1" Background="White">
             <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="60" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
                     <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Row="0" Grid.Column="0" 
                            Text="修炼" FontSize="30" FontWeight="Bold" Foreground="{StaticResource MainColor}"></TextBlock>
-            </Grid>
-        </Border>
-        <Border Grid.Column="3" Margin="4" BorderBrush="{StaticResource LineColor}" BorderThickness="1" Background="White">
-            <Grid Margin="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="60" />
-                    <RowDefinition Height="1*" />
-                </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" Grid.Column="0" 
-                           Text="配置" FontSize="30" FontWeight="Bold" Foreground="{StaticResource MainColor}"></TextBlock>
-            </Grid>
-        </Border>
 
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="开始年龄" VerticalAlignment="Center" Foreground="Gray" Margin="0 0 10 0"></TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding XiuLian.StartAge}" VerticalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="2" Text="年限因子" VerticalAlignment="Center" Foreground="Gray" Margin="0 0 10 0"></TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding XiuLian.LimitFactor}" VerticalAlignment="Center"></TextBlock>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="年限" VerticalAlignment="Center" Foreground="Gray" Margin="0 0 10 0"></TextBlock>
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding XiuLian.AgeLimitString}" VerticalAlignment="Center" Grid.ColumnSpan="3"></TextBlock>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="等级" VerticalAlignment="Center" Foreground="Gray" Margin="0 0 10 0"></TextBlock>
+                <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding XiuLian.RanksString}" VerticalAlignment="Center" Grid.ColumnSpan="3"></TextBlock>
+
+
+            </Grid>
+        </Border>
     </Grid>
 </UserControl>

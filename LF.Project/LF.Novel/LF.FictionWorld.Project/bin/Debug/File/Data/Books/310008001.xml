@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Book Index="310008001" Name="朱雀诀">
+<Book Code="310008001" Name="朱雀诀">
   <Content>
     <Level ID="1" Name="明穴" Brief="感应天地之灵，明确穴位。" />
     <Level ID="2" Name="通经" Brief="吸收天地之灵，开通经脉。" />
@@ -10,5 +10,4 @@
     <Level ID="7" Name="铭道" Brief="在道果上铭刻道纹。" />
     <Level ID="8" Name="融道" Brief="将三魂七魄融入道果。" />
   </Content>
-  <Skills />
 </Book>

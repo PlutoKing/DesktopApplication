@@ -272,9 +272,9 @@ namespace LF.FictionWorld
         /// </summary>
         public void Encode()
         {
-            long code = _level.Index * 1000000;
-            code += _type1.Index * 100000;
-            code += _type2.Index * 10000;
+            long code = _level.Code * 1000000;
+            code += _type1.Code * 100000;
+            code += _type2.Code * 10000;
             code += _attributes.Code;
 
             _id = GetID(code);
@@ -308,9 +308,9 @@ namespace LF.FictionWorld
         public bool SetID(int id)
         {
             bool res = false;
-            long code = _level.Index * 1000000;
-            code += _type1.Index * 100000;
-            code += _type2.Index * 10000;
+            long code = _level.Code * 1000000;
+            code += _type1.Code * 100000;
+            code += _type2.Code * 10000;
             code += _attributes.Code;
 
             if (_id != id)
@@ -327,7 +327,7 @@ namespace LF.FictionWorld
         /// <summary>
         /// 计算ID
         /// </summary>
-        /// <param name="idx">尾声为0的code</param>
+        /// <param name="idx">尾数为0的code</param>
         /// <returns></returns>
         public int GetID(long idx)
         {
@@ -375,7 +375,7 @@ namespace LF.FictionWorld
             xmlDoc.AppendChild(root);                                               // 插入根节点
 
             // 存入内容
-            root.SetAttribute("Index", _code.ToString());
+            root.SetAttribute("Code", _code.ToString());
             root.SetAttribute("Name", _name);
             root.SetAttribute("Price", _price.ToString());
             root.SetAttribute("Count", _count.ToString());

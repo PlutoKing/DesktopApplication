@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Book Index="320004001" Name="游龙枪诀">
+<Book Code="320004001" Name="游龙枪诀">
   <Content>
     <Level ID="1" Name="游龙刺" Brief="宛若游龙出海。" />
     <Level ID="2" Name="双龙绞杀" Brief="两枪刺出，犹如两条水龙出击，绞杀敌人。" />
     <Level ID="3" Name="游龙身法" Brief="身法灵动，速度极快，宛若游龙。" />
   </Content>
-  <Skills />
 </Book>

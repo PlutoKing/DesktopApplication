@@ -93,7 +93,7 @@ namespace LF.FictionWorld
         {
             foreach (LFVariable v in this)
             {
-                if (v.Index == idx)
+                if (v.Code == idx)
                 {
                     return v;
                 }
@@ -122,6 +122,15 @@ namespace LF.FictionWorld
             }
         }
 
+        public string GetValue(long code)
+        {
+            foreach(LFVariable obj in this)
+            {
+                if (obj.Code == code)
+                    return obj.Value;
+            }
+            return "无";
+        }
         
         #endregion
 

@@ -83,6 +83,16 @@ namespace LF.FictionWorld
             }
         }
 
+        public string GetName(long code)
+        {
+            foreach(LFPointer obj in this)
+            {
+                if (obj.Code == code)
+                    return obj.Name;
+            }
+            return "无";
+        }
+
         /// <summary>
         /// 判断是否包含编码为<paramref name="code"/>的对象
         /// </summary>
@@ -119,17 +129,6 @@ namespace LF.FictionWorld
         /// <param name="pointer"></param>
         public void EditObj(long code, LFPointer pointer)
         {
-            //int idx = -1;
-            //foreach(LFPointer obj in this)
-            //{
-            //    if (obj.Code == code || obj.Name == name)
-            //        idx = IndexOf(obj);
-            //}
-            //if (idx != -1)
-            //{
-            //    this[idx] = pointer;
-            //}
-
             foreach (LFPointer obj in this)
             {
                 if (obj.Code == code)

@@ -102,17 +102,6 @@
             </TabItem>
             <TabItem Header="势力">
                 <Grid Margin="8">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <ListBox x:Name="ListAllSects"  DisplayMemberPath="Name" BorderThickness="1"></ListBox>
-                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                        <Button x:Name="BtnAddSect" Content="添加" Width="60" Margin="10" Click="BtnAddSect_Click"></Button>
-                        <Button x:Name="BtnRemoveSect" Content="移除" Width="60" Margin="10" Click="BtnRemoveSect_Click"></Button>
-                    </StackPanel>
-                    <ListBox Grid.Column="2" x:Name="ListSects"  DisplayMemberPath="Name" BorderThickness="1"></ListBox>
                 </Grid>
             </TabItem>
         </TabControl>

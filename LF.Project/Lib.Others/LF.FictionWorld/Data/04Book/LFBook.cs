@@ -37,7 +37,6 @@ namespace LF.FictionWorld
 
         private LFLevelList _content = new LFLevelList();       // 修炼内容
 
-        private LFSkillList _skills = new LFSkillList();        // 包含技能
         #endregion
 
         #region Properties
@@ -161,20 +160,6 @@ namespace LF.FictionWorld
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Content"));
             }
         }
-        /// <summary>
-        /// 包含技能
-        /// </summary>
-        public LFSkillList Skills
-        {
-            get => _skills;
-            set
-            {
-                _skills = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Skills"));
-            }
-        }
-
-
         #endregion
 
         #endregion
@@ -212,7 +197,6 @@ namespace LF.FictionWorld
             _attributes = rhs._attributes.Clone();
 
             _content = rhs._content.Clone();
-            _skills = rhs._skills.Clone();
         }
 
         /// <summary>
@@ -256,8 +240,8 @@ namespace LF.FictionWorld
         /// </summary>
         public void Encode()
         {
-            int index = _level.Index * 100000;
-            index += _type.Index * 10000;
+            int index = _level.Code * 100000;
+            index += _type.Code * 10000;
             index += _attributes.Code;
 
             /* 重复性检测 */
@@ -269,7 +253,7 @@ namespace LF.FictionWorld
         /// <summary>
         /// 计算ID
         /// </summary>
-        /// <param name="idx">尾声为0的Index</param>
+        /// <param name="idx">尾数为0的Code</param>
         /// <returns></returns>
         public int GetID(int idx)
         {
@@ -301,8 +285,8 @@ namespace LF.FictionWorld
 
         public void SetID(int id)
         {
-            int index = _level.Index * 100000;
-            index += _type.Index * 10000;
+            int index = _level.Code * 100000;
+            index += _type.Code * 10000;
             index += _attributes.Code;
 
             /* 重复性检测 */
@@ -336,7 +320,7 @@ namespace LF.FictionWorld
             XmlElement root = xmlDoc.CreateElement("Book");                         // 定义根节点
             xmlDoc.AppendChild(root);                                               // 插入根节点
 
-            root.SetAttribute("Index", _code.ToString());
+            root.SetAttribute("Code", _code.ToString());
             root.SetAttribute("Name", _name);
 
             // 存入内容
@@ -350,20 +334,6 @@ namespace LF.FictionWorld
                 eleContent.AppendChild(ele);
             }
             root.AppendChild(eleContent);
-
-            XmlElement eleSkills = xmlDoc.CreateElement("Skills");
-            foreach (LFSkill skill in _skills)
-            {
-                XmlElement ele = xmlDoc.CreateElement("Skill");
-                ele.SetAttribute("ID", skill.ID.ToString());
-                ele.SetAttribute("Name", skill.Name);
-                ele.SetAttribute("Brief", skill.Brief);
-                ele.SetAttribute("Level", skill.Level.ToString());
-                ele.SetAttribute("Precondition", skill.Precondition.ToString());
-                eleSkills.AppendChild(ele);
-            }
-            root.AppendChild(eleSkills);
-
 
             /* 保存文件 */
             xmlDoc.Save(path + @"\Books\" + _code.ToString() + ".xml");
@@ -395,21 +365,6 @@ namespace LF.FictionWorld
                     Brief = ele.GetAttribute("Brief")
                 };
                 _content.Add(lv);
-            }
-
-            XmlElement eleSkills = (XmlElement)root.GetElementsByTagName("Skills")[0];
-            foreach (XmlNode node in eleSkills.ChildNodes)
-            {
-                XmlElement ele = (XmlElement)node;
-                LFSkill skill = new LFSkill()
-                {
-                    ID = Convert.ToByte(ele.GetAttribute("ID")),
-                    Name = ele.GetAttribute("Name"),
-                    Brief = ele.GetAttribute("Brief"),
-                    Level = Convert.ToByte(ele.GetAttribute("Level")),
-                    Precondition = Convert.ToByte(ele.GetAttribute("Precondition"))
-                };
-                _skills.Add(skill);
             }
         }
         #endregion

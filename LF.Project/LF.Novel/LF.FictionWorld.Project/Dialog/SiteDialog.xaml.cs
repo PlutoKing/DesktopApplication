@@ -187,7 +187,11 @@ namespace LF.FictionWorld.Project.Dialog
 
         private void BtnDeleteSub_Click(object sender, RoutedEventArgs e)
         {
-
+            LFSubSite sub = (LFSubSite)DtgSubSites.SelectedItem;
+            if (Site.SubSites.Contains(sub))
+            {
+                Site.SubSites.Remove(sub);
+            }
         }
         #endregion
 

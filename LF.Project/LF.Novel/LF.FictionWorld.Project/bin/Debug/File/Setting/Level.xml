@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Type>
-  <Node Index="0" Value="未知" Brief="" />
-  <Node Index="1" Value="神级" Brief="" />
-  <Node Index="2" Value="帝级" Brief="" />
-  <Node Index="3" Value="圣级" Brief="" />
-  <Node Index="4" Value="灵级" Brief="" />
-  <Node Index="5" Value="凡级" Brief="" />
+  <Node Code="0" Value="未知" Brief="" />
+  <Node Code="1" Value="神级" Brief="" />
+  <Node Code="2" Value="帝级" Brief="" />
+  <Node Code="3" Value="圣级" Brief="" />
+  <Node Code="4" Value="灵级" Brief="" />
+  <Node Code="5" Value="凡级" Brief="" />
 </Type>

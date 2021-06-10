@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Role Code="32592060511201311" Name="冥王逸" Talent="5.5" Attribute="264">
+  <Ranks>
+    <Rank Date="326020605" Code="1" />
+    <Rank Date="326050305" Code="2" />
+    <Rank Date="326080907" Code="3" />
+    <Rank Date="326130226" Code="4" />
+    <Rank Date="326181109" Code="5" />
+    <Rank Date="326260215" Code="6" />
+    <Rank Date="326350521" Code="7" />
+    <Rank Date="326470315" Code="8" />
+    <Rank Date="326620409" Code="9" />
+    <Rank Date="327420605" Code="-1" />
+  </Ranks>
+  <Experiences>
+    <Experience Date="325920605" Code="3034507141120101" />
+  </Experiences>
+</Role>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Item Code="4120004001" Name="真龙石【水】" Price="1000" Count="100">
+  <Sites>
+    <Site Code="11302" />
+  </Sites>
+</Item>

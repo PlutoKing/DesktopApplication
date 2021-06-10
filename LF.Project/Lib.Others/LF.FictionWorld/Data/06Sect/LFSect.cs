@@ -29,10 +29,13 @@ namespace LF.FictionWorld
         private string _name;   // 名称
         private string _brief;  // 简介
 
-        private LFDate _createdDate = new LFDate();    // 创建时间
-        private LFDate _endDate = new LFDate();        // 灭亡时间
-        private LFSite _location = new LFSite();       // 地理位置
-        private double _age;             // 传承年数
+        private LFDate _createdDate = new LFDate();     // 创建时间
+        private LFDate _endDate = new LFDate();         // 灭亡时间
+        private LFSite _location = new LFSite();        // 地理位置
+        private double _age;                            // 传承年数
+        private bool _isMaster = false;                 // 是否统治势力
+
+        private LFVariableList _roleList = new LFVariableList();   // 角色
 
         #endregion
 
@@ -143,6 +146,36 @@ namespace LF.FictionWorld
             }
         }
 
+        #endregion
+
+        #region Data Properties
+
+        /// <summary>
+        /// 创建者
+        /// </summary>
+        public string FirstMan
+        {
+            get
+            {
+                if (_roleList.Count != 0)
+                    return _roleList[0].Value;
+                else
+                    return "无";
+            }
+        }
+
+        /// <summary>
+        /// 角色列表
+        /// </summary>
+        public LFVariableList RoleList
+        {
+            get => _roleList;
+            set
+            {
+                _roleList = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RoleList"));
+            }
+        }
         #endregion
 
         #endregion
@@ -258,7 +291,7 @@ namespace LF.FictionWorld
         /// <summary>
         /// 计算ID
         /// </summary>
-        /// <param name="idx">尾声为0的code</param>
+        /// <param name="idx">尾数为0的code</param>
         /// <returns></returns>
         public int GetID(long idx)
         {
@@ -291,12 +324,76 @@ namespace LF.FictionWorld
 
         #region Data Methods
 
+        /// <summary>
+        /// 检测地点，将该势力添加到地点中
+        /// </summary>
         public void CheckSite()
         {
             Location.SectList.AddObj(new LFPointer(this));
+
+            if (_isMaster)
+            {
+                Location.MasterSect.Add(new LFVariable()
+                {
+                    Date = _createdDate,
+                    Code = _code,
+                    Value = _name
+                });
+
+                Location.MasterSect.GetValue(World.Info.NowDate);
+            }
+            
         }
 
         #endregion
+
+        #region File Methods
+
+        /// <summary>
+        /// 保存地点文件
+        /// </summary>
+        /// <param name="path"></param>
+        public void Save(string path)
+        {
+            /* 1. 基础操作 */
+            XmlDocument xmlDoc = new XmlDocument();                                 // 定义文件
+            XmlDeclaration dec = xmlDoc.CreateXmlDeclaration("1.0", "UTF-8", null); // 定义声明
+            xmlDoc.AppendChild(dec);                                                // 插入声明
+            XmlElement root = xmlDoc.CreateElement("Sect");                         // 定义根节点
+            xmlDoc.AppendChild(root);                                               // 插入根节点
+
+            /* 2. 开始写入 */
+            root.SetAttribute("Code", _code.ToString());
+            root.SetAttribute("Name", _name);
+            if (_isMaster)
+            {
+                root.SetAttribute("IsMaster", "true");
+            }
+            else
+            {
+                root.SetAttribute("IsMaster", "false");
+            }
+
+            /* 3. 保存文件 */
+            xmlDoc.Save(path + @"\Sects\" + _code.ToString() + ".xml");
+        }
+
+        /// <summary>
+        /// 打开地点文件
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="file"></param>
+        public void Open(string path)
+        {
+            /* 1. XML基础操作 */
+            XmlDocument xmlDoc = new XmlDocument();                             // 定义文件
+            xmlDoc.Load(path + @"\Sects\" + _code.ToString() + ".xml");         // 加载文件
+            XmlElement root = xmlDoc.DocumentElement;                           // 读取根节点
+
+            
+        }
+        #endregion
+
 
         #endregion
     }

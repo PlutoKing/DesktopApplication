@@ -52,7 +52,7 @@
                             <TextBlock Grid.Column="3" Text="等级" VerticalAlignment="Center" Margin="0 0 10 0"></TextBlock>
                             <ComboBox Name="CmbLevel" Grid.Column="4" SelectedItem="{Binding Level}" DisplayMemberPath="Value" VerticalAlignment="Center" VerticalContentAlignment="Center" IsEditable="True"
                                           Height="28"></ComboBox>
-                            <TextBlock Grid.Column="6" Text="等级" VerticalAlignment="Center" Margin="0 0 10 0"></TextBlock>
+                            <TextBlock Grid.Column="6" Text="类别" VerticalAlignment="Center" Margin="0 0 10 0"></TextBlock>
                             <ComboBox Name="CmbType" Grid.Column="7" SelectedItem="{Binding Type}" DisplayMemberPath="Value" VerticalAlignment="Center" VerticalContentAlignment="Center" IsEditable="True"
                                           Height="28"></ComboBox>
                         </Grid>

@@ -42,12 +42,17 @@ namespace LF.FictionWorld.Project.Pages
 
             /* 绑定数据 */
             DataContext = World.Data;
-            DtgSects.ItemsSource = World.Data.SectList;
-            DtgSects.SelectedIndex = 0;
+           
         }
         #endregion
 
         #region Methods
+
+        public void LoadObj()
+        {
+            DtgSects.ItemsSource = World.Data.SectList;
+            DtgSects.SelectedIndex = 0;
+        }
 
         /// <summary>
         /// 刷新对象
@@ -59,6 +64,8 @@ namespace LF.FictionWorld.Project.Pages
             {
                 ID = World.Data.SectList.IndexOf(World.Data.Sect);
                 DataGridIndex = DtgSects.SelectedIndex;
+
+                DtgRoles.ItemsSource = World.Data.Sect.RoleList;
             }
         }
 
@@ -76,7 +83,7 @@ namespace LF.FictionWorld.Project.Pages
             form.ShowDialog();
             if (form.DialogResult == true)
             {
-                World.Data.SectList.Add(form.Sect.Clone());
+                World.Data.SectList.AddSect(form.Sect.Clone());
                 World.Data.Sect = form.Sect.Clone();
                 DtgSects.SelectedIndex = World.Data.SectList.Count - 1;
             }
@@ -104,7 +111,17 @@ namespace LF.FictionWorld.Project.Pages
 
         private void DeleteObj()
         {
+            MessageDialog msg = new MessageDialog();
+            msg.Title = "删除提示";
+            msg.TxbMsg.Text = "是否删除【势力：" + World.Data.Sect.Name + "】?";
+            msg.ShowDialog();
 
+            if (msg.DialogResult == true)
+            {
+                World.Data.SectList.DeleteSect(World.Data.Sect);
+                World.Data.Sect = World.Data.SectList.Last();
+                DtgSects.SelectedIndex = World.Data.SectList.Count - 1;
+            }
         }
 
         /// <summary>
@@ -133,6 +150,17 @@ namespace LF.FictionWorld.Project.Pages
         #endregion
 
         #region Events
+
+        /// <summary>
+        /// 空间加载时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadObj();
+        }
+
         /// <summary>
         /// 列表选择项变化是发生
         /// </summary>
@@ -170,7 +198,7 @@ namespace LF.FictionWorld.Project.Pages
         /// <param name="e"></param>
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-            // 删除对象
+            DeleteObj();    // 删除对象
         }
 
         /// <summary>
@@ -180,7 +208,7 @@ namespace LF.FictionWorld.Project.Pages
         /// <param name="e"></param>
         private void BtnAddDep_Click(object sender, RoutedEventArgs e)
         {
-            AddDep();   // 添加部门
+            AddDep();       // 添加部门
         }
 
         /// <summary>
@@ -190,7 +218,7 @@ namespace LF.FictionWorld.Project.Pages
         /// <param name="e"></param>
         private void BtnEditDep_Click(object sender, RoutedEventArgs e)
         {
-            EditDep();  // 编辑部门
+            EditDep();      // 编辑部门
         }
 
         /// <summary>

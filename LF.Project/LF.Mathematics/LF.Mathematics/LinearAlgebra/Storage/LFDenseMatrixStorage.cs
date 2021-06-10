@@ -1,94 +1,80 @@
 ﻿/*──────────────────────────────────────────────────────────────
  * FileName     : LFDenseMatrixStorage.cs
- * Created      : 2021-05-27 10:49:29
+ * Created      : 2021-05-31 10:53:22
  * Author       : Xu Zhe
  * Description  : 
  * ──────────────────────────────────────────────────────────────*/
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Xml;
 
 namespace LF.Mathematics.LinearAlgebra.Storage
 {
     /// <summary>
-    /// 稠密矩阵内存。
+    /// 稠密矩阵内存
     /// </summary>
-    /// <typeparam name="T"></typeparam>
     public class LFDenseMatrixStorage<T> : LFMatrixStorage<T>
-        where T : struct, IEquatable<T>, IFormattable
+            where T : struct, IEquatable<T>, IFormattable
     {
         #region Fields
 
         /// <summary>
-        /// 矩阵数据
+        /// 内存数据
         /// </summary>
-        [DataMember(Order = 1)]
-        public readonly T[] Data;
-
+        public T[] Data;
         #endregion
 
         #region Properties
+        public override bool IsDense => true;
 
         #endregion
 
         #region Constructors
-
         /// <summary>
-        /// 构造<paramref name="rows"/>行<paramref name="columns"/>列的稠密矩阵内存。
+        /// 构造<paramref name="m"/>行<paramref name="n"/>列的稠密矩阵内存
         /// </summary>
-        /// <param name="rows"></param>
-        /// <param name="columns"></param>
-        internal LFDenseMatrixStorage(int rows, int columns)
-            :base(rows,columns)
+        /// <param name="m"></param>
+        /// <param name="n"></param>
+        public LFDenseMatrixStorage(int m,int n)
+            :base(m,n)
         {
-            // 对数据进行初始化。
-            Data = new T[rows * columns];
+            Data = new T[m* n];
         }
 
         /// <summary>
-        /// 构造<paramref name="rows"/>行<paramref name="columns"/>列，数据为<paramref name="data"/>的稠密矩阵内存。
+        /// 构造<paramref name="m"/>行<paramref name="n"/>列的稠密矩阵内存，并赋值
         /// </summary>
-        /// <param name="rows"></param>
-        /// <param name="columns"></param>
+        /// <param name="m">行数</param>
+        /// <param name="n">列数</param>
         /// <param name="data"></param>
-        internal LFDenseMatrixStorage(int rows,int columns, T[] data)
-            : base(rows, columns)
+        public LFDenseMatrixStorage(int m, int n, T[] data)
+            : base(m, n)
         {
-            if (data == null)
-            {
+            if(data == null)
                 throw new ArgumentNullException(nameof(data));
-            }
-
-            if (data.Length != rows * columns)
-            {
-                throw new ArgumentOutOfRangeException(nameof(data), $"所给数组长度不符合要求，其长度应为 {rows * columns}");
-            }
+            if(data.Length != m*n)
+                throw new ArgumentOutOfRangeException(nameof(data), $"给定数组长度错误！其长度应为 {m * n}。");
 
             Data = data;
         }
+
+
+
         #endregion
 
         #region Methods
-        public override T Get(int row, int column)
+        public override T Get(int m, int n)
         {
-            return Data[(column * RowCount) + row];
+            return Data[(n * RowCount) + m];
         }
 
-        public override void Set(int row, int column, T value)
+        public override void Set(int m, int n, T value)
         {
-            Data[(column * RowCount) + row] = value;
+            Data[(n * RowCount) + m] = value;
         }
-
-        #endregion
-
-        #region Serializations
-        #endregion
-
-        #region Defaults
         #endregion
     }
 }

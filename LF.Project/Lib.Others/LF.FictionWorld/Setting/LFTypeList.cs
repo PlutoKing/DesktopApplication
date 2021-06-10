@@ -63,32 +63,32 @@ namespace LF.FictionWorld
 
         #region Search
         /// <summary>
-        /// 按Value搜索Index
+        /// 按Value搜索Code 
         /// </summary>
         /// <param name="val">值</param>
-        /// <returns>返回搜索到的索引，如未搜索到，返回-1</returns>
-        public int GetIndex(string val)
+        /// <returns>返回搜索到的编码，如未搜索到，返回-1</returns>
+        public int GetCode (string val)
         {
             foreach (LFType obj in this)
             {
                 if (obj.Value == val)
                 {
-                    return obj.Index;
+                    return obj.Code ;
                 }
             }
             return -1;
         }
 
         /// <summary>
-        /// 按Index搜索Value
+        /// 按Code 搜索Value
         /// </summary>
-        /// <param name="idx">索引号</param>
+        /// <param name="idx">编码</param>
         /// <returns></returns>
         public string GetValue(long idx)
         {
             foreach (LFType obj in this)
             {
-                if (obj.Index == idx)
+                if (obj.Code  == idx)
                 {
                     return obj.Value;
                 }
@@ -114,15 +114,15 @@ namespace LF.FictionWorld
         }
 
         /// <summary>
-        /// 按Index搜索childs
+        /// 按Code 搜索childs
         /// </summary>
-        /// <param name="idx">索引号</param>
+        /// <param name="idx">编码</param>
         /// <returns></returns>
         public LFTypeList GetChilds(long idx)
         {
             foreach (LFType obj in this)
             {
-                if (obj.Index == idx)
+                if (obj.Code  == idx)
                 {
                     return obj.Childs;
                 }
@@ -148,15 +148,15 @@ namespace LF.FictionWorld
 
 
         /// <summary>
-        /// 按Index搜索Type
+        /// 按Code 搜索Type
         /// </summary>
-        /// <param name="idx">索引号</param>
+        /// <param name="idx">编码</param>
         /// <returns></returns>
         public LFType GetType(int idx)
         {
             foreach (LFType obj in this)
             {
-                if (obj.Index == idx)
+                if (obj.Code  == idx)
                 {
                     return obj;
                 }
@@ -204,7 +204,7 @@ namespace LF.FictionWorld
             foreach (LFType obj in types)
             {
                 XmlElement ele = xmlDoc.CreateElement("Node");
-                ele.SetAttribute("Index", obj.Index.ToString());
+                ele.SetAttribute("Code", obj.Code .ToString());
                 ele.SetAttribute("Value", obj.Value);
                 ele.SetAttribute("Brief", obj.Brief);
 
@@ -235,7 +235,7 @@ namespace LF.FictionWorld
                 XmlElement ele = (XmlElement)node;
                 LFType obj = new LFType
                 {
-                    Index = Convert.ToInt32(ele.GetAttribute("Index")),
+                    Code  = Convert.ToInt32(ele.GetAttribute("Code")),
                     Value = ele.GetAttribute("Value"),
                     Brief = ele.GetAttribute("Brief")
                 };
@@ -264,7 +264,7 @@ namespace LF.FictionWorld
                 XmlElement ele = (XmlElement)node;
                 LFType obj = new LFType
                 {
-                    Index = Convert.ToInt32(ele.GetAttribute("Index")),
+                    Code  = Convert.ToInt32(ele.GetAttribute("Code")),
                     Value = ele.GetAttribute("Value"),
                     Brief = ele.GetAttribute("Brief")
                 };

@@ -16,5 +16,5 @@ DEBUG;TRACE
 13-1505183044
 Styles\Button.xaml;Styles\CheckBox.xaml;Styles\Color.xaml;Styles\ComboBox.xaml;Styles\DataGrid.xaml;Styles\GroupBox.xaml;Styles\ListBox.xaml;Styles\TabControl.xaml;Styles\TextBox.xaml;Styles\TreeView.xaml;Themes\Generic.xaml;
 
-False
+True
 

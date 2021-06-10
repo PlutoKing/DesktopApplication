@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Item Code="4120008002" Name="火灵石" Price="100" Count="100">
+  <Sites>
+    <Site Code="15102" />
+  </Sites>
+</Item>

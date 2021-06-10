@@ -210,6 +210,7 @@ namespace LF.FictionWorld
         public void AddSect(LFSect obj)
         {
             Add(obj);
+            obj.Location.SectList.AddObj(new LFPointer(obj));
             Sort();
         }
 
@@ -226,7 +227,9 @@ namespace LF.FictionWorld
             this[idx] = obj;
 
             // 更新Sect相关信息
-            
+            oldSect.Location.SectList.RemoveObj(oldCode);
+            obj.Location.SectList.AddObj(new LFPointer(obj));
+
 
             // 排序
             Sort();
@@ -243,7 +246,8 @@ namespace LF.FictionWorld
                 Remove(obj);
 
                 // 更新Sect相关信息
-                
+                obj.Location.SectList.RemoveObj(obj.Code);
+
             }
         }
 

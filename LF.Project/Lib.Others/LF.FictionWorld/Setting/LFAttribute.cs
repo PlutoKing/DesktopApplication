@@ -127,7 +127,7 @@ namespace LF.FictionWorld
             _code = 0;
             foreach (LFType t in this)
             {
-                _code += (int)Math.Pow(2, t.Index);
+                _code += (int)Math.Pow(2, t.Code);
             }
         }
 
@@ -162,7 +162,7 @@ namespace LF.FictionWorld
             {
                 list.Add(obj);
             }
-            list.Sort(delegate (LFType O1, LFType O2) { return O1.Index.CompareTo(O2.Index); });
+            list.Sort(delegate (LFType O1, LFType O2) { return O1.Code.CompareTo(O2.Code); });
             Clear();
             foreach (LFType obj in list)
             {

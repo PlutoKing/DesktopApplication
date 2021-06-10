@@ -33,13 +33,11 @@ I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Cont
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\ItemDialog.baml
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\ItemPage.baml
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\BookPage.g.cs
-I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\CustomPage.g.cs
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\PlotPage.g.cs
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\RolePage.g.cs
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\SectPage.g.cs
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\SitePage.g.cs
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\BookPage.baml
-I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\CustomPage.baml
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\PlotPage.baml
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\RolePage.baml
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\SectPage.baml
@@ -48,8 +46,6 @@ I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dial
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\MessageDialog.baml
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\BookDialog.g.cs
 I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\BookDialog.baml
-I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Controls\SkillTree.g.cs
-I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Controls\SkillTree.baml
 E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\bin\Debug\LF.FictionWorld.Project.exe.config
 E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\bin\Debug\LF.FictionWorld.Project.exe
 E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\bin\Debug\LF.FictionWorld.Project.pdb
@@ -110,3 +106,13 @@ E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dial
 E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SiteDialog.g.cs
 E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SectDialog.baml
 E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\SiteDialog.baml
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\RoleDialog.g.cs
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\RoleDialog.baml
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\WorldDialog.g.cs
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\WorldDialog.baml
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\ActionDialog.g.cs
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\PlotDialog.g.cs
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\ActionDialog.baml
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Dialog\PlotDialog.baml
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\XiuLianPage.g.cs
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\Pages\XiuLianPage.baml

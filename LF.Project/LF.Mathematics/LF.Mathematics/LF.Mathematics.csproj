@@ -43,23 +43,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\LFConstants.cs" />
-    <Compile Include="Common\LFTrigonometry.cs" />
-    <Compile Include="Common\Sorting.cs" />
-    <Compile Include="LinearAlgebra\LFMatrixBase.cs" />
-    <Compile Include="LinearAlgebra\LFBuilder.cs" />
+    <Compile Include="LinearAlgebra\LFMatrix.cs" />
+    <Compile Include="LinearAlgebra\LFMatrix.Operator.cs" />
+    <Compile Include="LinearAlgebra\LFVector.cs" />
     <Compile Include="LinearAlgebra\Storage\LFDenseMatrixStorage.cs" />
     <Compile Include="LinearAlgebra\Storage\LFDiagonalMatrixStorage.cs" />
+    <Compile Include="LinearAlgebra\Storage\LFParseMatrixStorage.cs" />
     <Compile Include="LinearAlgebra\Storage\LFMatrixStorage.cs" />
-    <Compile Include="LinearAlgebra\Storage\LFSparseMatrixStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\LF\LF.csproj">
+      <Project>{1af18bd1-6195-4114-834c-56655fe11922}</Project>
+      <Name>LF</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include=".Docs\README.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".Docs\01LinearAlgebra.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

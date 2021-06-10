@@ -100,21 +100,19 @@
                     <DataGridTextColumn Header="种类" Width="80" Binding="{Binding Type.Value}"></DataGridTextColumn>
                     <DataGridTextColumn Header="属性" Width="*" Binding="{Binding Attribute}"></DataGridTextColumn>
                     <DataGridTextColumn Header="最高等级" Width="80" Binding="{Binding Content.Count}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="技能总数" Width="80" Binding="{Binding Skills.Count}"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-        <GroupBox Header="内容" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Margin="4">
+        <GroupBox Header="内容" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="4">
             <DataGrid x:Name="DtgContent" Grid.Row="1" IsReadOnly="True" BorderThickness="0">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="序号" Width="40" Binding="{Binding ID}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="名称" Width="40" Binding="{Binding Name}" Foreground="#1D6BFF"></DataGridTextColumn>
+                    <DataGridTextColumn Header="名称" Width="100" Binding="{Binding Name}" Foreground="#1D6BFF"></DataGridTextColumn>
                     <DataGridTextColumn Header="简介" Width="*" Binding="{Binding Brief}" ></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </GroupBox>
-        <GroupBox Header="技能" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="4">
-            <controls:SkillTree SkillList="{Binding Book.Skills}" BorderThickness="0" Margin="8"></controls:SkillTree>
+        <GroupBox Header="技能" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="4">
         </GroupBox>
     </Grid>
 </UserControl>

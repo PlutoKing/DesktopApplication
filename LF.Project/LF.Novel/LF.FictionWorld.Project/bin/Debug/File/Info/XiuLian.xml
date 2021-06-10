@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<XiuLian StartAge="10" LimitFactor="0.4">
+  <AgeLimits>
+    <AgeLimit Age ="100"></AgeLimit>
+    <AgeLimit Age ="110"></AgeLimit>
+    <AgeLimit Age ="120"></AgeLimit>
+    <AgeLimit Age ="130"></AgeLimit>
+    <AgeLimit Age ="140"></AgeLimit>
+    <AgeLimit Age ="150"></AgeLimit>
+    <AgeLimit Age ="160"></AgeLimit>
+  </AgeLimits>
+  <Ranks>
+    <Rank R="3"></Rank>
+    <Rank R="4"></Rank>
+    <Rank R="5"></Rank>
+    <Rank R="6"></Rank>
+    <Rank R="7"></Rank>
+    <Rank R="8"></Rank>
+    <Rank R="9"></Rank>
+  </Ranks>
+</XiuLian>

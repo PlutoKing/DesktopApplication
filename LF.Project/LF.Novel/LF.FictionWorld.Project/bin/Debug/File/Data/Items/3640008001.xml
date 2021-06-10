@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Item Code="3640008001" Name="炎阳圣火" Price="10000" Count="2">
+  <Sites>
+    <Site Code="14202" />
+  </Sites>
+</Item>

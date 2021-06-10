@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Item Code="4140064001" Name="紫雷晶" Price="1200" Count="500">
+  <Sites>
+    <Site Code="13102" />
+    <Site Code="15101" />
+  </Sites>
+</Item>

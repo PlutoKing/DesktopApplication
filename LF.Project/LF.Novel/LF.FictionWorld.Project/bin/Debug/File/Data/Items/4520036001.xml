@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Item Code="4520036001" Name="镇海宝船" Price="100000" Count="20">
+  <Sites>
+    <Site Code="11501" />
+  </Sites>
+</Item>

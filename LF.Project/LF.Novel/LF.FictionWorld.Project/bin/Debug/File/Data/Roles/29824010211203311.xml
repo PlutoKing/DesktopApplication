@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Role Code="29824010211203311" Name="九辰辉" Talent="4.8" Attribute="128">
+  <Ranks>
+    <Rank Date="298340102" Code="1" />
+    <Rank Date="298361228" Code="2" />
+    <Rank Date="298401116" Code="3" />
+    <Rank Date="298451202" Code="4" />
+    <Rank Date="298520622" Code="5" />
+    <Rank Date="298601227" Code="6" />
+    <Rank Date="298720118" Code="7" />
+    <Rank Date="298860530" Code="8" />
+    <Rank Date="299640102" Code="-1" />
+  </Ranks>
+  <Experiences>
+    <Experience Date="298240102" Code="1567801101120401" />
+    <Experience Date="299930724" Code="2345607081120301" />
+  </Experiences>
+</Role>

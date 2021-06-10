@@ -1,4 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Sects>
+  <Sect Code="1567801101120401" Name="星家" Brief="" />
+  <Sect Code="2345607081120301" Name="九辰山" Brief="九辰大帝建立的宗门，抵御海灵族的西征。" />
+  <Sect Code="2817202091120201" Name="暗星族" Brief="是天星族的一支，传承暗龙噬天术。" />
   <Sect Code="3034507141120101" Name="幽冥宗" Brief="刺客组织。" />
 </Sects>

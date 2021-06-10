@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Type>
-  <Node Index="0" Value="描写" Brief="" />
-  <Node Index="1" Value="说话" Brief="" />
-  <Node Index="2" Value="思考" Brief="" />
-  <Node Index="3" Value="动作" Brief="" />
-  <Node Index="4" Value="流程" Brief="" />
+  <Node Code="0" Value="描写" Brief="" />
+  <Node Code="1" Value="说话" Brief="" />
+  <Node Code="2" Value="思考" Brief="" />
+  <Node Code="3" Value="动作" Brief="" />
+  <Node Code="4" Value="流程" Brief="" />
 </Type>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Calendar DaysInYear="360" MonthsInYear="12">
   <Eras>
-    <Era ID="1" Name="太古纪" Count="9999"></Era>
-    <Era ID="2" Name="上古纪" Count="9999"></Era>
-    <Era ID="3" Name="远古纪" Count="9999"></Era>
-    <Era ID="4" Name="近古纪" Count="9999"></Era>
-    <Era ID="5" Name="新古纪" Count="9999"></Era>
+    <Era ID="1" Name="太古" Count="9999"></Era>
+    <Era ID="2" Name="上古" Count="9999"></Era>
+    <Era ID="3" Name="远古" Count="9999"></Era>
+    <Era ID="4" Name="近古" Count="9999"></Era>
+    <Era ID="5" Name="新古" Count="9999"></Era>
   </Eras>
   <Months>
     <Month ID="1" Name="一月" Count="30"></Month>

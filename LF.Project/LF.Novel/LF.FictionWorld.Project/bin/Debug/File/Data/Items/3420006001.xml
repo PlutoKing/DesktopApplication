@@ -1,4 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Item Index="3420006001" Name="青玄复生丹" Price="10000" Count="10">
-  <Sites />
+<Item Code="3420006001" Name="青玄复生丹" Price="10000" Count="10">
+  <Sites>
+    <Site Code="13303" />
+  </Sites>
 </Item>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Role Code="31786120111201311" Name="幽冥道人" Talent="3.5" Attribute="256">
+  <Ranks>
+    <Rank Date="317961201" Code="1" />
+    <Rank Date="318000702" Code="2" />
+    <Rank Date="318050517" Code="3" />
+    <Rank Date="318120101" Code="4" />
+    <Rank Date="318201230" Code="5" />
+    <Rank Date="318330322" Code="6" />
+    <Rank Date="318491103" Code="7" />
+    <Rank Date="319161201" Code="-1" />
+  </Ranks>
+  <Experiences>
+    <Experience Date="317861201" Code="3034507141120101" />
+  </Experiences>
+</Role>

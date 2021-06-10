@@ -6,12 +6,8 @@
  * ──────────────────────────────────────────────────────────────*/
 
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace LF.FictionWorld
 {
@@ -33,7 +29,6 @@ namespace LF.FictionWorld
         private int _era;       // 纪
         private int _eraYear;   // 纪元中的年
 
-        private long _code;     // 编码
 
         private readonly string[] charaters = new string[]
         {
@@ -108,14 +103,13 @@ namespace LF.FictionWorld
             }
         }
 
+        /// <summary>
+        /// 日期编码
+        /// </summary>
         public long Code
         {
-            get => _code;
-            set
-            {
-                _code = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Code"));
-            }
+            get { return Encode(); }
+            set { Decode(value); }
         }
 
         /// <summary>
@@ -169,7 +163,6 @@ namespace LF.FictionWorld
             _year = year;
             _month = month;
             _day = day;
-            Encode();
         }
 
         /// <summary>
@@ -178,8 +171,7 @@ namespace LF.FictionWorld
         /// <param name="code">编码</param>
         public LFDate(long code)
         {
-            _code = code;
-            Decode();
+            Decode(code);
         }
 
         /// <summary>
@@ -254,11 +246,11 @@ namespace LF.FictionWorld
         public void GetYear()
         {
             _year = _eraYear;
-            if (_era != 0)
+            if (_era != 1)
             {
-                for(int i = 0; i < _era; i++)
+                for(int i = 1; i < _era; i++)
                 {
-                    _year += World.Info.Calendar.Eras[i].Count;
+                    _year += World.Info.Calendar.Eras[i-1].Count;
                 }
             }
         }
@@ -266,9 +258,9 @@ namespace LF.FictionWorld
         /// <summary>
         /// 编码
         /// </summary>
-        public void Encode()
+        public long Encode()
         {
-            _code = _era * 100000000 +
+           return  _era * 100000000 +
                 _eraYear * 10000 +
                 _month * 100 +
                 _day;
@@ -277,12 +269,12 @@ namespace LF.FictionWorld
         /// <summary>
         /// 解码
         /// </summary>
-        public void Decode()
+        public void Decode(long code)
         {
-            _era = (int)(_code / 100000000);
-            _eraYear = (int)(_code % 100000000 / 10000);
-            _month = (int)(_code % 10000 / 100);
-            _day = (int)(_code % 100);
+            _era = (int)(code / 100000000);
+            _eraYear = (int)(code % 100000000 / 10000);
+            _month = (int)(code % 10000 / 100);
+            _day = (int)(code % 100);
             GetYear();
         }
 
@@ -296,16 +288,15 @@ namespace LF.FictionWorld
             {
                 // 从第一个符号处分开
                 string[] arr1 = Regex.Split(str, charaters[0], RegexOptions.IgnoreCase);
-                _era = World.Info.Calendar.Eras.GetID(arr1[0]);
+                _era = World.Info.Calendar.Eras.GetID(arr1[0])-1;
                 string[] arr2 = Regex.Split(arr1[1], charaters[1], RegexOptions.IgnoreCase);
-                _year = Convert.ToInt32(arr2[0]);
+                _eraYear = Convert.ToInt32(arr2[0]);
                 string[] arr3 = Regex.Split(arr2[1], charaters[2], RegexOptions.IgnoreCase);
                 _month = Convert.ToInt32(arr3[0]);
                 string[] arr4 = Regex.Split(arr3[1], charaters[3], RegexOptions.IgnoreCase);
                 _day = Convert.ToInt32(arr4[0]);
 
                 GetYear();
-                Encode();
             }
             catch { }
         }
@@ -350,7 +341,7 @@ namespace LF.FictionWorld
         /// </summary>
         public void NextMonth()
         {
-            if (_month == 12)
+            if (_month == World.Info.Calendar.Months.Count)
             {
                 NextYear();
                 _month = 1;
@@ -369,7 +360,7 @@ namespace LF.FictionWorld
             if (_month == 1)
             {
                 PrevYear();
-                _month = 12;
+                _month = World.Info.Calendar.Months.Count;
             }
             else
             {
@@ -456,9 +447,9 @@ namespace LF.FictionWorld
                 days -= World.Info.Calendar.DaysInYear;
                 rd.NextYear();
             }
-            while (days >= World.Info.Calendar.Months[rd._month].Count)
+            while (days >= World.Info.Calendar.Months[rd._month-1].Count)
             {
-                days -= World.Info.Calendar.Months[rd._month].Count;
+                days -= World.Info.Calendar.Months[rd._month-1].Count;
                 rd.NextMonth();
             }
             while (days >= 1)
@@ -502,7 +493,7 @@ namespace LF.FictionWorld
             string str = "";
             try
             {
-                str = World.Info.Calendar.Eras[_era].Name + _eraYear.ToString("0000") + "年" + _month.ToString("00") + "月" + _day.ToString("00") + "日";
+                str = World.Info.Calendar.Eras[_era].Name +"纪" + _eraYear.ToString("0000") + "年" + _month.ToString("00") + "月" + _day.ToString("00") + "日";
             }
             catch { }
             return str;

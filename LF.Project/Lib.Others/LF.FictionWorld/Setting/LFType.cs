@@ -21,7 +21,7 @@ namespace LF.FictionWorld
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private int _index = 0;         // 索引号
+        private int _code = 0;          // 编码
         private string _value;          // 值
         private string _brief;          // 简介
         private LFType _parent;         // 父节点
@@ -31,15 +31,15 @@ namespace LF.FictionWorld
 
         #region Properties
         /// <summary>
-        /// 索引号
+        /// 编码
         /// </summary>
-        public int Index
+        public int Code
         {
-            get => _index;
+            get => _code;
             set
             {
-                _index = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Index"));
+                _code = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Code"));
             }
         }
 
@@ -103,7 +103,7 @@ namespace LF.FictionWorld
         /// <param name="obj">源对象</param>
         public LFType(LFType obj)
         {
-            _index = obj._index;
+            _code = obj._code;
             _value = obj._value;
             _brief = obj._brief;
             _parent = obj._parent;

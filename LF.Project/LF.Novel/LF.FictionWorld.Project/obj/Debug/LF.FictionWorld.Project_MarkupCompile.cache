@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\obj\Debug\
 LF.FictionWorld.Project
 none
 false
 DEBUG;TRACE
-E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\App.xaml
-171328426304
+I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\App.xaml
+201805744345
 
-21-1654401327
-151342393371
-Controls\AttributeSelector.xaml;Controls\SkillTree.xaml;Dialog\BookDialog.xaml;Dialog\ItemDialog.xaml;Dialog\MessageDialog.xaml;Dialog\SectDialog.xaml;Dialog\SiteDialog.xaml;MainWindow.xaml;Pages\BookPage.xaml;Pages\CustomPage.xaml;Pages\HomePage.xaml;Pages\ItemPage.xaml;Pages\PlotPage.xaml;Pages\RolePage.xaml;Pages\SectPage.xaml;Pages\SitePage.xaml;Pages\WorldPage.xaml;
+24-896035961
+15-1749767227
+Controls\AttributeSelector.xaml;Dialog\ActionDialog.xaml;Dialog\BookDialog.xaml;Dialog\ItemDialog.xaml;Dialog\MessageDialog.xaml;Dialog\PlotDialog.xaml;Dialog\RoleDialog.xaml;Dialog\SectDialog.xaml;Dialog\SiteDialog.xaml;Dialog\WorldDialog.xaml;MainWindow.xaml;Pages\BookPage.xaml;Pages\HomePage.xaml;Pages\ItemPage.xaml;Pages\PlotPage.xaml;Pages\RolePage.xaml;Pages\SectPage.xaml;Pages\SitePage.xaml;Pages\WorldPage.xaml;Pages\XiuLianPage.xaml;
 
 False
 

@@ -58,7 +58,6 @@ namespace LF.FictionWorld.Project.Dialog
             CmbType.ItemsSource = World.Setting.Books;
 
             DtgContent.ItemsSource = Book.Content;
-            DtgSkills.ItemsSource = Book.Skills;
 
             TxbSubTitle.Text = SubTitle;
         }
@@ -99,9 +98,6 @@ namespace LF.FictionWorld.Project.Dialog
             Close();
         }
 
-
-        #endregion
-
         private void BtnAddLevel_Click(object sender, RoutedEventArgs e)
         {
             LFLevel lv = new LFLevel
@@ -118,11 +114,10 @@ namespace LF.FictionWorld.Project.Dialog
 
         private void BtnAddSkill_Click(object sender, RoutedEventArgs e)
         {
-            LFSkill skill = new LFSkill()
-            {
-                ID = (byte)(Book.Skills.Count + 1),
-            };
-            Book.Skills.Add(skill);
+
         }
+        #endregion
+
+        
     }
 }

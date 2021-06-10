@@ -202,7 +202,7 @@ namespace LF.Mathematics
             {
                 for (int j = 0; j < n; j++)
                 {
-                    elements[i, j] = Math.Pow(x[i], j);
+                    elements[i, n-1-j] = Math.Pow(x[i], j);
                 }
             }
             return new LFMatrix(elements);

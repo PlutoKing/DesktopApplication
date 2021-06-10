@@ -208,7 +208,7 @@ namespace LF.FictionWorld
             LFSiteList list = new LFSiteList();
             foreach (LFSite site in this)
             {
-                if (site.Area1.Index == add1)
+                if (site.Area1.Code == add1)
                 {
                     list.Add(site);
                 }
@@ -227,7 +227,7 @@ namespace LF.FictionWorld
             LFSiteList list = new LFSiteList();
             foreach (LFSite site in this)
             {
-                if (site.Area2.Index == add2 && site.Area1.Index == add1)
+                if (site.Area2.Code == add2 && site.Area1.Code == add1)
                 {
                     list.Add(site);
                 }
@@ -247,7 +247,7 @@ namespace LF.FictionWorld
             LFSiteList list = new LFSiteList();
             foreach (LFSite site in this)
             {
-                if (site.Area2.Index == add2 && site.Area1.Index == add1 && site.Area3.Index == add3)
+                if (site.Area2.Code == add2 && site.Area1.Code == add1 && site.Area3.Code == add3)
                 {
                     list.Add(site);
                 }

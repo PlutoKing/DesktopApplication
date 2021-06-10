@@ -32,7 +32,6 @@ namespace LF.FictionWorld
 
         private LFDate _nowDate;        // 当前日期
 
-        private LFXiuLian _xiuLian;     // 修炼模型
 
         #endregion
 
@@ -76,18 +75,7 @@ namespace LF.FictionWorld
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NowDate"));
             }
         }
-        /// <summary>
-        /// 修炼模型
-        /// </summary>
-        public LFXiuLian XiuLian
-        {
-            get => _xiuLian;
-            set
-            {
-                _xiuLian = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("XiuLian"));
-            }
-        }
+
 
 
         #endregion
@@ -95,9 +83,8 @@ namespace LF.FictionWorld
         #region Constructors
         public LFWorldInfo()
         {
-            _path = @"E:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\bin\Debug\File";
+            _path = @"I:\DesktopApplication\LF.Project\LF.Novel\LF.FictionWorld.Project\bin\Debug\File";
             _calendar = new LFCalendar();
-
             
         }
 
@@ -111,6 +98,7 @@ namespace LF.FictionWorld
         {
             _calendar.Open(Path + @"\Info");
             _nowDate = new LFDate(326280316);
+
         }
 
         /// <summary>
@@ -120,12 +108,6 @@ namespace LF.FictionWorld
         {
 
         }
-        #endregion
-
-        #region Serializations
-        #endregion
-
-        #region Defaults
         #endregion
     }
 }

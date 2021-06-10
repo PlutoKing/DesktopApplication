@@ -35,6 +35,8 @@ namespace LF.FictionWorld
 
         private LFPointerList _itemList = new LFPointerList();  // 物产
         private LFPointerList _sectList = new LFPointerList();  // 势力
+
+        private LFVariableList _masterSect = new LFVariableList();
         #endregion
 
         #region Properties
@@ -108,7 +110,7 @@ namespace LF.FictionWorld
         /// </summary>
         public int AreaIndex
         {
-            get { return _area1.Index * 100 + _area2.Index * 10 + _area3.Index; }
+            get { return _area1.Code * 100 + _area2.Code * 10 + _area3.Code; }
         }
 
         /// <summary>
@@ -173,7 +175,6 @@ namespace LF.FictionWorld
         #endregion
 
         #region Data Properties
-
         /// <summary>
         /// 物产指针列表
         /// </summary>
@@ -196,6 +197,19 @@ namespace LF.FictionWorld
             {
                 _sectList = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SectList"));
+            }
+        }
+
+        /// <summary>
+        /// 所属势力
+        /// </summary>
+        public LFVariableList MasterSect
+        {
+            get => _masterSect;
+            set
+            {
+                _masterSect = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MasterSect"));
             }
         }
 
@@ -282,9 +296,9 @@ namespace LF.FictionWorld
         /// </summary>
         public void Encode()
         {
-            int index = _area1.Index * 100;
-            index += _area2.Index * 10;
-            index += _area3.Index;
+            int index = _area1.Code * 100;
+            index += _area2.Code * 10;
+            index += _area3.Code;
 
             _id = GetID(index);
 
@@ -298,9 +312,9 @@ namespace LF.FictionWorld
         public bool SetID(int id)
         {
             bool res = false;
-            int code = _area1.Index * 100;
-            code += _area2.Index * 10;
-            code += _area3.Index;
+            int code = _area1.Code * 100;
+            code += _area2.Code * 10;
+            code += _area3.Code;
 
 
             if (_id != id)
@@ -317,7 +331,7 @@ namespace LF.FictionWorld
         /// <summary>
         /// 计算ID
         /// </summary>
-        /// <param name="idx">尾声为0的code</param>
+        /// <param name="idx">尾数为0的code</param>
         /// <returns></returns>
         public int GetID(long idx)
         {

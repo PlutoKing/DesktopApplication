@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Item Index="4120256001" Name="幽冥石" Price="100" Count="100">
+<Item Code="4120256001" Name="幽冥石" Price="100" Count="100">
   <Sites>
     <Site Code="11201" />
   </Sites>

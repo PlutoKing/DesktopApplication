@@ -25,12 +25,12 @@ namespace LF.FictionWorld
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private LFDate _date;       // 日期
-        private LFDate _endDate;    // 结束日期
+        private LFDate _date = new LFDate();    // 日期
+        private LFDate _endDate = new LFDate(); // 结束日期
 
-        private long _index;                    // 索引
+        private long _code;                    // 索引
         private string _value;                  // 值
-        private float _age;                     // 年龄
+        private double _age;                     // 年龄
 
 
         #endregion
@@ -50,15 +50,15 @@ namespace LF.FictionWorld
             }
         }
         /// <summary>
-        /// 索引
+        /// 编码
         /// </summary>
-        public long Index
+        public long Code
         {
-            get => _index;
+            get => _code;
             set
             {
-                _index = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Index"));
+                _code = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Code"));
 
             }
         }
@@ -76,7 +76,7 @@ namespace LF.FictionWorld
         /// <summary>
         /// 年龄
         /// </summary>
-        public float Age
+        public double Age
         {
             get => _age;
             set
@@ -113,7 +113,7 @@ namespace LF.FictionWorld
         public LFVariable(LFVariable rhs)
         {
             _date = rhs._date;
-            _index = rhs._index;
+            _code = rhs._code;
             _value = rhs._value;
             _age = rhs._age;
             _endDate = rhs._endDate;
@@ -145,7 +145,7 @@ namespace LF.FictionWorld
         /// <returns></returns>
         public bool Equals(LFVariable v)
         {
-            return (_date.Equals(v._date) && _index == v._index);
+            return (_date.Equals(v._date) && _code == v._code);
         }
         #endregion
     }

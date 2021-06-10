@@ -30,9 +30,15 @@ namespace LF.FictionWorld
         public static LFWorldSetting Setting = new LFWorldSetting();
 
         /// <summary>
+        /// 世界配置
+        /// </summary>
+        public static LFWorldConfig Config = new LFWorldConfig();
+
+        /// <summary>
         /// 世界数据
         /// </summary>
         public static LFWorldData Data = new LFWorldData();
+
         #endregion
 
 
@@ -51,6 +57,7 @@ namespace LF.FictionWorld
         {
             Info.Open();
             Setting.Open();
+            Config.Open();
             Data.Open();
         }
 

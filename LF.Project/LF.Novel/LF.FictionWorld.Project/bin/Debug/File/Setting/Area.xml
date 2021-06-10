@@ -1,124 +1,124 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Type>
-  <Node Index="1" Value="东洲" Brief="东洲，位于已知世界的东方，总面积1951.3355万平方千米。下辖地区为临海原、青林、琼林、辽原、天南原、荒原、高天原和圣原。主要气候为热带季风气候、亚热带季风气候、温带大陆性气候。">
-    <Node Index="1" Value="临海原" Brief="临海原位于东洲大陆东北部，西北与琼林接壤，西南与辽原接壤，南部与天南原和青林接壤，其余临海。">
-      <Node Index="1" Value="天齐山脉" Brief="天齐山脉位于临海原中部，西北-东南走向，是齐北河、济江和药河的源头。" />
-      <Node Index="2" Value="天星山脉" Brief="天星山脉位于辽原东部，南北走向，是湦江的发源地。" />
-      <Node Index="3" Value="北海原" Brief="北海原位于临海原北部，天齐山脉和济江以北。北海原是历史上记载最早发现龙墓" />
-      <Node Index="4" Value="忘谷" Brief="忘谷位于天星山脉与天齐山脉之间。忘谷原是心魔族领地，混乱地区。幽朝建立后，" />
-      <Node Index="5" Value="星海原" Brief="星海原位于临海原南部，天齐山脉以南。" />
+  <Node Code="1" Value="东洲" Brief="东洲，位于已知世界的东方，总面积1951.3355万平方千米。下辖地区为临海原、青林、琼林、辽原、天南原、荒原、高天原和圣原。主要气候为热带季风气候、亚热带季风气候、温带大陆性气候。">
+    <Node Code="1" Value="临海原" Brief="临海原位于东洲大陆东北部，西北与琼林接壤，西南与辽原接壤，南部与天南原和青林接壤，其余临海。">
+      <Node Code="1" Value="天齐山脉" Brief="天齐山脉位于临海原中部，西北-东南走向，是齐北河、济江和药河的源头。" />
+      <Node Code="2" Value="天星山脉" Brief="天星山脉位于辽原东部，南北走向，是湦江的发源地。" />
+      <Node Code="3" Value="北海原" Brief="北海原位于临海原北部，天齐山脉和济江以北。北海原是历史上记载最早发现龙墓" />
+      <Node Code="4" Value="忘谷" Brief="忘谷位于天星山脉与天齐山脉之间。忘谷原是心魔族领地，混乱地区。幽朝建立后，" />
+      <Node Code="5" Value="星海原" Brief="星海原位于临海原南部，天齐山脉以南。" />
     </Node>
-    <Node Index="2" Value="青林" Brief="青林位于东洲东南部，北与临海原接壤，西与天南原接壤，其余临海。">
-      <Node Index="1" Value="天凤山脉" Brief="天凤山脉位于天南原东北部，南北走向，是太古仙凰的领地，羽族的领地。" />
-      <Node Index="2" Value="天青山脉" Brief="天青山脉位于青林中部，东北-西南走向，是沐江、沣江、清江，以及牵牛河、香河" />
-      <Node Index="3" Value="神羽谷" Brief="神羽谷位于天南原东北部，在天凤山脉和天青山脉之间，是羽族的领地" />
-      <Node Index="4" Value="青北林" Brief="青北林位于青林东北部，是兽族、虫族的领地。" />
-      <Node Index="5" Value="万木林" Brief="万木林位于青林东部，是人族的领地。" />
-      <Node Index="6" Value="南妖林" Brief="南妖林位于青林南部，是妖族的领地。" />
+    <Node Code="2" Value="青林" Brief="青林位于东洲东南部，北与临海原接壤，西与天南原接壤，其余临海。">
+      <Node Code="1" Value="天凤山脉" Brief="天凤山脉位于天南原东北部，南北走向，是太古仙凰的领地，羽族的领地。" />
+      <Node Code="2" Value="天青山脉" Brief="天青山脉位于青林中部，东北-西南走向，是沐江、沣江、清江，以及牵牛河、香河" />
+      <Node Code="3" Value="神羽谷" Brief="神羽谷位于天南原东北部，在天凤山脉和天青山脉之间，是羽族的领地" />
+      <Node Code="4" Value="青北林" Brief="青北林位于青林东北部，是兽族、虫族的领地。" />
+      <Node Code="5" Value="万木林" Brief="万木林位于青林东部，是人族的领地。" />
+      <Node Code="6" Value="南妖林" Brief="南妖林位于青林南部，是妖族的领地。" />
     </Node>
-    <Node Index="3" Value="琼林" Brief="琼林位于东洲北部，南与辽原接壤，西与青宇大草原接壤，西南与荒原接壤，东与">
-      <Node Index="1" Value="天林山脉" Brief="天林山脉位于琼林东部，东北-西南走向，呈弧形。" />
-      <Node Index="2" Value="百花谷" Brief="百花谷位于琼林东南，是妖族的领地。" />
-      <Node Index="3" Value="风木林" Brief="风木林位于琼林中部，是灵族的领地。" />
-      <Node Index="4" Value="血雾林" Brief="血雾林位于琼林西部，常年弥漫着血红色的雾气。" />
-      <Node Index="5" Value="千湖林" Brief="千湖林位于琼林北部，林间湖泊众多，是海灵族的领地。" />
-      <Node Index="6" Value="暗影林" Brief="暗影林位于琼林西北部，林间常年昏暗如夜，是暗灵族的领地。" />
+    <Node Code="3" Value="琼林" Brief="琼林位于东洲北部，南与辽原接壤，西与青宇大草原接壤，西南与荒原接壤，东与">
+      <Node Code="1" Value="天林山脉" Brief="天林山脉位于琼林东部，东北-西南走向，呈弧形。" />
+      <Node Code="2" Value="百花谷" Brief="百花谷位于琼林东南，是妖族的领地。" />
+      <Node Code="3" Value="风木林" Brief="风木林位于琼林中部，是灵族的领地。" />
+      <Node Code="4" Value="血雾林" Brief="血雾林位于琼林西部，常年弥漫着血红色的雾气。" />
+      <Node Code="5" Value="千湖林" Brief="千湖林位于琼林北部，林间湖泊众多，是海灵族的领地。" />
+      <Node Code="6" Value="暗影林" Brief="暗影林位于琼林西北部，林间常年昏暗如夜，是暗灵族的领地。" />
     </Node>
-    <Node Index="4" Value="燎原" Brief="燎原位于东洲中部，是一大片土地肥沃的平原。其北部是天武山脉，西南是天断山脉，主体部分被中部的天阳山脉分为燎北原、燎东原、燎南原河燎西原四个部分，西南部还有一片名为百草谷的谷地。">
-      <Node Index="1" Value="天武山脉" Brief="天武山脉位于辽原北部，东西走向。" />
-      <Node Index="2" Value="天阳山脉" Brief="天阳山脉位于辽原中西部，东西走向，有赤阳石。" />
-      <Node Index="3" Value="天断山脉" Brief="天断山脉位于辽原西南部，南北走向，向南绵延至天南原，是汶河、断河的发源地。" />
-      <Node Index="4" Value="燎北原" Brief="燎北原位于燎原北部，天武山脉与天阳山脉之间，是魔族的领地。" />
-      <Node Index="5" Value="燎东原" Brief="燎东原位于燎原东部，天阳山脉以东。" />
-      <Node Index="6" Value="燎南原" Brief="燎南原位于燎原西南部，天阳山脉西南，其面积最大。" />
-      <Node Index="7" Value="燎西原" Brief="燎西原位于燎原东部，东北为天武山脉、东部为天阳山脉、南部为天断山脉、西部为天横山脉、西北为天玄山脉。" />
-      <Node Index="8" Value="百草谷" Brief="百草谷位于辽原西南，是位于天横山脉与天断山脉之间的一篇谷地，主要河流为汶江。百草谷生长丰富的药材。" />
+    <Node Code="4" Value="燎原" Brief="燎原位于东洲中部，是一大片土地肥沃的平原。其北部是天武山脉，西南是天断山脉，主体部分被中部的天阳山脉分为燎北原、燎东原、燎南原河燎西原四个部分，西南部还有一片名为百草谷的谷地。">
+      <Node Code="1" Value="天武山脉" Brief="天武山脉位于辽原北部，东西走向。" />
+      <Node Code="2" Value="天阳山脉" Brief="天阳山脉位于辽原中西部，东西走向，有赤阳石。" />
+      <Node Code="3" Value="天断山脉" Brief="天断山脉位于辽原西南部，南北走向，向南绵延至天南原，是汶河、断河的发源地。" />
+      <Node Code="4" Value="燎北原" Brief="燎北原位于燎原北部，天武山脉与天阳山脉之间，是魔族的领地。" />
+      <Node Code="5" Value="燎东原" Brief="燎东原位于燎原东部，天阳山脉以东。" />
+      <Node Code="6" Value="燎南原" Brief="燎南原位于燎原西南部，天阳山脉西南，其面积最大。" />
+      <Node Code="7" Value="燎西原" Brief="燎西原位于燎原东部，东北为天武山脉、东部为天阳山脉、南部为天断山脉、西部为天横山脉、西北为天玄山脉。" />
+      <Node Code="8" Value="百草谷" Brief="百草谷位于辽原西南，是位于天横山脉与天断山脉之间的一篇谷地，主要河流为汶江。百草谷生长丰富的药材。" />
     </Node>
-    <Node Index="5" Value="天南原" Brief="天南原位于东洲南部，北部与燎原接壤，东部与青林接壤，西北与圣原接壤，其西部、南部临南海。">
-      <Node Index="1" Value="天断山脉" Brief="天断山脉位于辽原西南部，南北走向，向南绵延至天南原，是汶河、断河的发源地。" />
-      <Node Index="2" Value="天南山脉" Brief="天南山脉位于天南原北部，南北走向。" />
-      <Node Index="3" Value="天月山脉" Brief="天月山脉位于天南原南部，呈弧形。" />
-      <Node Index="4" Value="圣剑谷" Brief="剑原位于天南原东北部，在天南山脉和天凤山脉之间。" />
-      <Node Index="5" Value="剑南原" Brief="剑南原位于天南原东南部。" />
-      <Node Index="5" Value="火灵谷" Brief="火灵谷位于天南山脉北部，位于天断山脉和天南山脉之间。" />
-      <Node Index="6" Value="山西原" Brief="山西原位于天南原西部，天断山脉以西，西邻迷雾湾，生活着人族的渔民。" />
-      <Node Index="7" Value="弯月半岛" Brief="天月半岛位于天南原南部，是一个弯钩形的半岛。" />
+    <Node Code="5" Value="天南原" Brief="天南原位于东洲南部，北部与燎原接壤，东部与青林接壤，西北与圣原接壤，其西部、南部临南海。">
+      <Node Code="1" Value="天断山脉" Brief="天断山脉位于辽原西南部，南北走向，向南绵延至天南原，是汶河、断河的发源地。" />
+      <Node Code="2" Value="天南山脉" Brief="天南山脉位于天南原北部，南北走向。" />
+      <Node Code="3" Value="天月山脉" Brief="天月山脉位于天南原南部，呈弧形。" />
+      <Node Code="4" Value="圣剑谷" Brief="剑原位于天南原东北部，在天南山脉和天凤山脉之间。" />
+      <Node Code="5" Value="剑南原" Brief="剑南原位于天南原东南部。" />
+      <Node Code="5" Value="火灵谷" Brief="火灵谷位于天南山脉北部，位于天断山脉和天南山脉之间。" />
+      <Node Code="6" Value="山西原" Brief="山西原位于天南原西部，天断山脉以西，西邻迷雾湾，生活着人族的渔民。" />
+      <Node Code="7" Value="弯月半岛" Brief="天月半岛位于天南原南部，是一个弯钩形的半岛。" />
     </Node>
-    <Node Index="6" Value="青宇草原" Brief="青宇草原位于东洲西北，北与中洲冰雪原接壤，西与中洲大荒古漠接壤，南与荒原接壤，东与琼林接壤。">
-      <Node Index="1" Value="天远山脉" Brief="天远山脉位于青宇草原东部，西北-东南走向。" />
-      <Node Index="2" Value="天长山脉" Brief="天长山脉位于青宇草原中部，西北-东南走向。" />
-      <Node Index="3" Value="天宇山脉" Brief="天宇山脉位于青宇草原南部，西北-东南走向。" />
-      <Node Index="4" Value="长宇盆地" Brief="长宇盆地位于青玉草原南部，在天长山脉和天宇山脉之间。" />
-      <Node Index="5" Value="长远盆地" Brief="长远盆地位于青宇草原北部，在天长山脉和天远山脉之间。" />
+    <Node Code="6" Value="青宇草原" Brief="青宇草原位于东洲西北，北与中洲冰雪原接壤，西与中洲大荒古漠接壤，南与荒原接壤，东与琼林接壤。">
+      <Node Code="1" Value="天远山脉" Brief="天远山脉位于青宇草原东部，西北-东南走向。" />
+      <Node Code="2" Value="天长山脉" Brief="天长山脉位于青宇草原中部，西北-东南走向。" />
+      <Node Code="3" Value="天宇山脉" Brief="天宇山脉位于青宇草原南部，西北-东南走向。" />
+      <Node Code="4" Value="长宇盆地" Brief="长宇盆地位于青玉草原南部，在天长山脉和天宇山脉之间。" />
+      <Node Code="5" Value="长远盆地" Brief="长远盆地位于青宇草原北部，在天长山脉和天远山脉之间。" />
     </Node>
-    <Node Index="7" Value="荒原" Brief="荒原位于东洲西部，西部与中洲郁林、牧风草原接壤，西北与中洲大荒古漠接壤，北部与中洲青宇草原接壤，东部与琼林、辽原接壤，南部与圣原接壤，西南部与高天原接壤。">
-      <Node Index="1" Value="天沙山脉" Brief="天沙山脉位于荒原东部，东-西走向，是沙河的源头。" />
-      <Node Index="2" Value="东漠" Brief="东漠位于荒原东部，是一片沙漠，人迹罕至。" />
-      <Node Index="3" Value="流沙河谷" Brief="大荒城位于流沙河谷西部。" />
-      <Node Index="4" Value="西漠" Brief="西漠位于荒原西部，土地荒凉，黄沙遍地，在为数不多的绿洲中矗立着一些城市。" />
+    <Node Code="7" Value="荒原" Brief="荒原位于东洲西部，西部与中洲郁林、牧风草原接壤，西北与中洲大荒古漠接壤，北部与中洲青宇草原接壤，东部与琼林、辽原接壤，南部与圣原接壤，西南部与高天原接壤。">
+      <Node Code="1" Value="天沙山脉" Brief="天沙山脉位于荒原东部，东-西走向，是沙河的源头。" />
+      <Node Code="2" Value="东漠" Brief="东漠位于荒原东部，是一片沙漠，人迹罕至。" />
+      <Node Code="3" Value="流沙河谷" Brief="大荒城位于流沙河谷西部。" />
+      <Node Code="4" Value="西漠" Brief="西漠位于荒原西部，土地荒凉，黄沙遍地，在为数不多的绿洲中矗立着一些城市。" />
     </Node>
-    <Node Index="8" Value="高天原" Brief="高天原位于东洲西部，西北与中洲郁林接壤，西与中洲风雷原接壤，东北及东与荒原接壤，南与圣原接壤，西南临断天海。">
-      <Node Index="1" Value="天横山脉" Brief="天横山脉位于高天原东部，西北-东南走向，绵延至圣原东北，是虎啸河的发源地。" />
-      <Node Index="2" Value="天玄山脉" Brief="天玄山脉，位于高天原北部，西北-东南走向。" />
-      <Node Index="3" Value="天麟山脉" Brief="天麟山脉位于高天原中部，东-西走向，转西北-东南走向，是沧江的发源地。" />
-      <Node Index="4" Value="天封山脉" Brief="天封山脉位于高天原西北，东西走向。" />
-      <Node Index="5" Value="天妖山脉" Brief="天妖山脉位于高天原东部，南北走向。" />
-      <Node Index="6" Value="万兽谷" Brief="万兽谷位于高天原东部，天玄山脉、天麟山脉和天横山脉之间。" />
-      <Node Index="7" Value="仙药谷" Brief="仙妖谷位于高天原南部，是仙妖族的领地。" />
-      <Node Index="8" Value="东陵原" Brief="" />
+    <Node Code="8" Value="高天原" Brief="高天原位于东洲西部，西北与中洲郁林接壤，西与中洲风雷原接壤，东北及东与荒原接壤，南与圣原接壤，西南临断天海。">
+      <Node Code="1" Value="天横山脉" Brief="天横山脉位于高天原东部，西北-东南走向，绵延至圣原东北，是虎啸河的发源地。" />
+      <Node Code="2" Value="天玄山脉" Brief="天玄山脉，位于高天原北部，西北-东南走向。" />
+      <Node Code="3" Value="天麟山脉" Brief="天麟山脉位于高天原中部，东-西走向，转西北-东南走向，是沧江的发源地。" />
+      <Node Code="4" Value="天封山脉" Brief="天封山脉位于高天原西北，东西走向。" />
+      <Node Code="5" Value="天妖山脉" Brief="天妖山脉位于高天原东部，南北走向。" />
+      <Node Code="6" Value="万兽谷" Brief="万兽谷位于高天原东部，天玄山脉、天麟山脉和天横山脉之间。" />
+      <Node Code="7" Value="仙药谷" Brief="仙妖谷位于高天原南部，是仙妖族的领地。" />
+      <Node Code="8" Value="东陵原" Brief="" />
     </Node>
-    <Node Index="9" Value="圣原" Brief="圣原位于东洲西南，北方与高天原、荒原相邻，东部与辽原相邻，东南与天南原相邻，其余临海，东部为迷雾湾。">
-      <Node Index="1" Value="天辉山脉" Brief="天辉山脉位于圣原西部，西北东南走向，矿产丰富。" />
-      <Node Index="2" Value="天寂山脉" Brief="天寂山脉位于圣原东南，南北走向，向南延伸至海里。" />
-      <Node Index="3" Value="毒雾沼泽" Brief="毒雾沼泽位于圣原东部，是一片沼泽地，常年毒雾缭绕，原是毒魔族的领地，现是毒虫的领地。" />
-      <Node Index="4" Value="圣北谷" Brief="圣北谷位于圣原北部，在天辉山脉、天横山脉、天妖山脉和天寂山脉之间，远古时期在此发现龙墓，是一片混沌区域。" />
-      <Node Index="5" Value="圣南原" Brief="圣南原位于圣原南部。" />
-      <Node Index="6" Value="西海原" Brief="西海原位于圣院西部，西临大海。" />
-      <Node Index="7" Value="虚空半岛" Brief="虚空半岛位于圣原东南部，是延伸进南海的半岛，东侧为南海迷雾湾，西侧为风暴海。虚空半岛主要生活虚灵族，还有少部分人族。" />
+    <Node Code="9" Value="圣原" Brief="圣原位于东洲西南，北方与高天原、荒原相邻，东部与辽原相邻，东南与天南原相邻，其余临海，东部为迷雾湾。">
+      <Node Code="1" Value="天辉山脉" Brief="天辉山脉位于圣原西部，西北东南走向，矿产丰富。" />
+      <Node Code="2" Value="天寂山脉" Brief="天寂山脉位于圣原东南，南北走向，向南延伸至海里。" />
+      <Node Code="3" Value="毒雾沼泽" Brief="毒雾沼泽位于圣原东部，是一片沼泽地，常年毒雾缭绕，原是毒魔族的领地，现是毒虫的领地。" />
+      <Node Code="4" Value="圣北谷" Brief="圣北谷位于圣原北部，在天辉山脉、天横山脉、天妖山脉和天寂山脉之间，远古时期在此发现龙墓，是一片混沌区域。" />
+      <Node Code="5" Value="圣南原" Brief="圣南原位于圣原南部。" />
+      <Node Code="6" Value="西海原" Brief="西海原位于圣院西部，西临大海。" />
+      <Node Code="7" Value="虚空半岛" Brief="虚空半岛位于圣原东南部，是延伸进南海的半岛，东侧为南海迷雾湾，西侧为风暴海。虚空半岛主要生活虚灵族，还有少部分人族。" />
     </Node>
   </Node>
-  <Node Index="2" Value="中洲" Brief="中州位于已知世界的中北部，北方大陆的中部。">
-    <Node Index="1" Value="冰原" Brief="冰原位于中州东北部，南与大荒古漠接壤，东南与东洲青宇草原接壤。">
-      <Node Index="1" Value="天冰山脉" Brief="天冰山脉位于冰雪原南部，东西走向。" />
-      <Node Index="2" Value="北雪原" Brief="北雪原位于雪原北部，常年覆盖冰雪，人迹罕至。" />
+  <Node Code="2" Value="中洲" Brief="中州位于已知世界的中北部，北方大陆的中部。">
+    <Node Code="1" Value="冰原" Brief="冰原位于中州东北部，南与大荒古漠接壤，东南与东洲青宇草原接壤。">
+      <Node Code="1" Value="天冰山脉" Brief="天冰山脉位于冰雪原南部，东西走向。" />
+      <Node Code="2" Value="北雪原" Brief="北雪原位于雪原北部，常年覆盖冰雪，人迹罕至。" />
     </Node>
-    <Node Index="2" Value="大荒古漠" Brief="大荒古漠位于中洲中东部，北与冰雪原接壤，西与牧风草原接壤，南与东洲荒原接壤，西与青宇草原接壤。大荒古漠是一片大沙漠，人迹罕至。">
-      <Node Index="1" Value="沙窟凶地" Brief="沙窟凶地位于大荒古漠北部，是一片沙漠，是凶兽的领地。" />
-      <Node Index="2" Value="荒沙领地" Brief="荒沙领地位于大荒古漠南部。" />
+    <Node Code="2" Value="大荒古漠" Brief="大荒古漠位于中洲中东部，北与冰雪原接壤，西与牧风草原接壤，南与东洲荒原接壤，西与青宇草原接壤。大荒古漠是一片大沙漠，人迹罕至。">
+      <Node Code="1" Value="沙窟凶地" Brief="沙窟凶地位于大荒古漠北部，是一片沙漠，是凶兽的领地。" />
+      <Node Code="2" Value="荒沙领地" Brief="荒沙领地位于大荒古漠南部。" />
     </Node>
-    <Node Index="3" Value="牧风草原" Brief="">
-      <Node Index="1" Value="天风山脉" Brief="" />
-      <Node Index="2" Value="天狼山脉" Brief="" />
-      <Node Index="3" Value="天鹰山脉" Brief="" />
-      <Node Index="4" Value="牧风盆地" Brief="" />
+    <Node Code="3" Value="牧风草原" Brief="">
+      <Node Code="1" Value="天风山脉" Brief="" />
+      <Node Code="2" Value="天狼山脉" Brief="" />
+      <Node Code="3" Value="天鹰山脉" Brief="" />
+      <Node Code="4" Value="牧风盆地" Brief="" />
     </Node>
-    <Node Index="4" Value="郁林" Brief="郁林位于中原东南部，北部与牧风草原接壤、东北部与东洲荒原接壤、东部与东洲高天原接壤、西部与丰原接壤">
-      <Node Index="1" Value="天虫山脉" Brief="" />
-      <Node Index="2" Value="万花园" Brief="" />
-      <Node Index="3" Value="御虫谷" Brief="" />
+    <Node Code="4" Value="郁林" Brief="郁林位于中原东南部，北部与牧风草原接壤、东北部与东洲荒原接壤、东部与东洲高天原接壤、西部与丰原接壤">
+      <Node Code="1" Value="天虫山脉" Brief="" />
+      <Node Code="2" Value="万花园" Brief="" />
+      <Node Code="3" Value="御虫谷" Brief="" />
     </Node>
-    <Node Index="5" Value="山原" Brief="山原位于中州北部，东北与冰原接壤，东部与大荒古漠接壤，南部与牧风草原接壤，西部与星谷接壤，北部临海。山原是山灵族的领地。">
-      <Node Index="1" Value="青铜山脉" Brief="青铜山脉位于山原东部，南北走向。" />
-      <Node Index="2" Value="黄金山脉" Brief="黄金山脉位于山原中部，南北走向。" />
-      <Node Index="3" Value="黑铁山脉" Brief="黑铁山脉位于山原西部，南北走向。" />
+    <Node Code="5" Value="山原" Brief="山原位于中州北部，东北与冰原接壤，东部与大荒古漠接壤，南部与牧风草原接壤，西部与星谷接壤，北部临海。山原是山灵族的领地。">
+      <Node Code="1" Value="青铜山脉" Brief="青铜山脉位于山原东部，南北走向。" />
+      <Node Code="2" Value="黄金山脉" Brief="黄金山脉位于山原中部，南北走向。" />
+      <Node Code="3" Value="黑铁山脉" Brief="黑铁山脉位于山原西部，南北走向。" />
     </Node>
-    <Node Index="6" Value="丰原" Brief="丰原位于中州南部，北部与牧风草药园接壤，东部与郁林接壤，西部与星谷接壤，西南与风雷原接壤，南部临海。" />
-    <Node Index="7" Value="星谷" Brief="星谷位于中州西部、西北部，西北与西洲千岭森林接壤，东北与山原接壤，东部与牧风草原、丰原接壤，南部与风雷原接壤，西部与西洲血色湾地接壤。" />
-    <Node Index="8" Value="风雷原" Brief="风雷原位于中州西南部，西北与西洲血色湾地接壤，北部与星谷接壤，东北部与丰原接壤，西部、东部、南部临海。" />
+    <Node Code="6" Value="丰原" Brief="丰原位于中州南部，北部与牧风草药园接壤，东部与郁林接壤，西部与星谷接壤，西南与风雷原接壤，南部临海。" />
+    <Node Code="7" Value="星谷" Brief="星谷位于中州西部、西北部，西北与西洲千岭森林接壤，东北与山原接壤，东部与牧风草原、丰原接壤，南部与风雷原接壤，西部与西洲血色湾地接壤。" />
+    <Node Code="8" Value="风雷原" Brief="风雷原位于中州西南部，西北与西洲血色湾地接壤，北部与星谷接壤，东北部与丰原接壤，西部、东部、南部临海。" />
   </Node>
-  <Node Index="3" Value="西洲" Brief="位于北方大陆的西部。">
-    <Node Index="1" Value="千岭之森" Brief="" />
-    <Node Index="2" Value="血色湾地" Brief="" />
-    <Node Index="3" Value="白雪之地" Brief="" />
-    <Node Index="4" Value="中央草原" Brief="" />
-    <Node Index="5" Value="望海平原" Brief="" />
-    <Node Index="6" Value="沃土平原" Brief="" />
-    <Node Index="7" Value="落日之森" Brief="" />
-    <Node Index="8" Value="蓝海半岛" Brief="" />
-    <Node Index="9" Value="西风岛" Brief="" />
+  <Node Code="3" Value="西洲" Brief="位于北方大陆的西部。">
+    <Node Code="1" Value="千岭之森" Brief="" />
+    <Node Code="2" Value="血色湾地" Brief="" />
+    <Node Code="3" Value="白雪之地" Brief="" />
+    <Node Code="4" Value="中央草原" Brief="" />
+    <Node Code="5" Value="望海平原" Brief="" />
+    <Node Code="6" Value="沃土平原" Brief="" />
+    <Node Code="7" Value="落日之森" Brief="" />
+    <Node Code="8" Value="蓝海半岛" Brief="" />
+    <Node Code="9" Value="西风岛" Brief="" />
   </Node>
-  <Node Index="4" Value="南洲" Brief="位于世界中南方，是一块独立的大陆。" />
-  <Node Index="5" Value="新洲" Brief="位于世界西方，是一块独立的大陆。" />
-  <Node Index="6" Value="远洲" Brief="位于世界西南方，是一块独立的大陆。" />
-  <Node Index="7" Value="海洋" Brief="星球上的海洋部分" />
+  <Node Code="4" Value="南洲" Brief="位于世界中南方，是一块独立的大陆。" />
+  <Node Code="5" Value="新洲" Brief="位于世界西方，是一块独立的大陆。" />
+  <Node Code="6" Value="远洲" Brief="位于世界西南方，是一块独立的大陆。" />
+  <Node Code="7" Value="海洋" Brief="星球上的海洋部分" />
 </Type>

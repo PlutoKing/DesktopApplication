@@ -102,9 +102,9 @@
                       SelectionChanged="DtgItems_SelectionChanged" MouseDoubleClick="DtgItems_MouseDoubleClick">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="序号" Width="100" Binding="{Binding Code}" ></DataGridTextColumn>
-                    <DataGridTextColumn Header="名称" Width="90" Binding="{Binding Name}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="名称" Width="100" Binding="{Binding Name}"></DataGridTextColumn>
                     <DataGridTextColumn Header="等级" Width="60" Binding="{Binding Level.Value}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="类别" Width="100" Binding="{Binding Type}" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="类别" Width="120" Binding="{Binding Type}" ></DataGridTextColumn>
                     <DataGridTextColumn Header="属性" Width="*" Binding="{Binding Attribute}"></DataGridTextColumn>
                     <DataGridTextColumn Header="价格" Width="60" Binding="{Binding Price}"></DataGridTextColumn>
                     <DataGridTextColumn Header="数量" Width="60" Binding="{Binding Count}"></DataGridTextColumn>

@@ -35,6 +35,8 @@ namespace LF.FictionWorld.Project.Dialog
         public SectDialog()
         {
             InitializeComponent();
+
+
         }
         #endregion
 
@@ -45,9 +47,11 @@ namespace LF.FictionWorld.Project.Dialog
         #region Events
         private void Dialog_Loaded(object sender, RoutedEventArgs e)
         {
-            this.DataContext = Sect;
+            DataContext = Sect;
+
             TxbSubTitle.Text = SubTitle;
             CmbAdd1.ItemsSource = World.Setting.Areas;
+
         }
 
         /// <summary>
@@ -92,9 +96,9 @@ namespace LF.FictionWorld.Project.Dialog
         {
             if (CmbAdd3.SelectedItem != null)
             {
-                int add1 = ((LFType)CmbAdd1.SelectedItem).Index;
-                int add2 = ((LFType)CmbAdd2.SelectedItem).Index;
-                int add3 = ((LFType)CmbAdd3.SelectedItem).Index;
+                int add1 = ((LFType)CmbAdd1.SelectedItem).Code;
+                int add2 = ((LFType)CmbAdd2.SelectedItem).Code;
+                int add3 = ((LFType)CmbAdd3.SelectedItem).Code;
 
                 int add = add1 * 100 + add2 * 10 + add3;
                 CmbAdd4.ItemsSource = World.Data.SiteList.GetSiteGroup(add);

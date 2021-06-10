@@ -30,11 +30,15 @@ namespace LF.FictionWorld
         private LFBookList _bookList = new LFBookList();    // 秘籍列表
         private LFSiteList _siteList = new LFSiteList();    // 地点列表
         private LFSectList _sectList = new LFSectList();    // 势力列表
+        private LFRoleList _roleList = new LFRoleList();    // 角色列表
+        private LFPlotList _plotList = new LFPlotList();    // 情节列表
 
         private LFItem _item = new LFItem();                // 当前物品
         private LFBook _book = new LFBook();                // 当前秘籍
         private LFSite _site = new LFSite();                // 当前地点
         private LFSect _sect = new LFSect();                // 当前势力
+        private LFRole _role = new LFRole();                // 当前角色
+        private LFPlot _plot = new LFPlot();                // 当前情节
 
         #endregion
 
@@ -51,7 +55,6 @@ namespace LF.FictionWorld
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ItemList"));
             }
         }
-
         /// <summary>
         /// 秘籍列表
         /// </summary>
@@ -86,6 +89,30 @@ namespace LF.FictionWorld
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SectList"));
             }
         }
+        /// <summary>
+        /// 角色列表
+        /// </summary>
+        public LFRoleList RoleList
+        {
+            get => _roleList;
+            set
+            {
+                _roleList = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RoleList"));
+            }
+        }
+        /// <summary>
+        /// 情节列表
+        /// </summary>
+        public LFPlotList PlotList
+        {
+            get => _plotList;
+            set
+            {
+                _plotList = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("PlotList"));
+            }
+        }
 
         /// <summary>
         /// 当前物品
@@ -99,8 +126,6 @@ namespace LF.FictionWorld
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Item"));
             }
         }
-
-
         /// <summary>
         /// 当前秘籍
         /// </summary>
@@ -135,6 +160,30 @@ namespace LF.FictionWorld
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sect"));
             }
         }
+        /// <summary>
+        /// 当前角色
+        /// </summary>
+        public LFRole Role
+        {
+            get => _role;
+            set
+            {
+                _role = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Role"));
+            }
+        }
+        /// <summary>
+        /// 当前情节
+        /// </summary>
+        public LFPlot Plot
+        {
+            get => _plot;
+            set
+            {
+                _plot = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Plot"));
+            }
+        }
         #endregion
 
         #region Constructors
@@ -154,6 +203,8 @@ namespace LF.FictionWorld
             BookList.Open(World.Info.Path + @"\Data", "Books");
             SiteList.Open(World.Info.Path + @"\Data", "Sites");
             SectList.Open(World.Info.Path + @"\Data", "Sects");
+            RoleList.Open(World.Info.Path + @"\Data", "Roles");
+            PlotList.Open(World.Info.Path + @"\Data", "Plots");
 
             foreach (LFItem obj in ItemList)
             {
@@ -170,6 +221,13 @@ namespace LF.FictionWorld
                 obj.Open(World.Info.Path + @"\Data");
                 obj.CheckItems();
             }
+            foreach(LFRole obj in RoleList)
+            {
+                obj.Open(World.Info.Path + @"\Data");
+                obj.Ranks.GetValue(World.Info.NowDate);
+                obj.Experiences.GetValue(World.Info.NowDate);
+                obj.ExpToSect();
+            }
         }
 
         /// <summary>
@@ -181,6 +239,8 @@ namespace LF.FictionWorld
             BookList.Save(World.Info.Path + @"\Data", "Books");
             SiteList.Save(World.Info.Path + @"\Data", "Sites");
             SectList.Save(World.Info.Path + @"\Data", "Sects");
+            RoleList.Save(World.Info.Path + @"\Data", "Roles");
+            PlotList.Save(World.Info.Path + @"\Data", "Plots");
 
             DeleteFiles(World.Info.Path + @"\Data\Items");
             foreach (LFItem obj in ItemList)
@@ -197,6 +257,18 @@ namespace LF.FictionWorld
 
             DeleteFiles(World.Info.Path + @"\Data\Sites");
             foreach (LFSite obj in SiteList)
+            {
+                obj.Save(World.Info.Path + @"\Data");
+            }
+
+            DeleteFiles(World.Info.Path + @"\Data\Roles");
+            foreach (LFRole obj in RoleList)
+            {
+                obj.Save(World.Info.Path + @"\Data");
+            }
+
+            DeleteFiles(World.Info.Path + @"\Data\Sects");
+            foreach (LFSect obj in SectList)
             {
                 obj.Save(World.Info.Path + @"\Data");
             }

@@ -155,6 +155,24 @@ namespace LF.FictionWorld
             _code = obj.Code;
             _name = obj.Name;
         }
+        /// <summary>
+        /// 构建指向<paramref name="obj"/>的指针实例
+        /// </summary>
+        /// <param name="obj">角色对象</param>
+        public LFPointer(LFRole obj)
+        {
+            _code = obj.Code;
+            _name = obj.Name;
+        }
+        /// <summary>
+        /// 构建指向<paramref name="obj"/>的指针实例
+        /// </summary>
+        /// <param name="obj">情节对象</param>
+        public LFPointer(LFPlot obj)
+        {
+            _code = obj.Code;
+            _name = obj.Name;
+        }
         #endregion
 
         #endregion

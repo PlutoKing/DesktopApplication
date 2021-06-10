@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Item Code="4250006001" Name="清江稻" Price="80" Count="10000">
+  <Sites>
+    <Site Code="12402" />
+  </Sites>
+</Item>

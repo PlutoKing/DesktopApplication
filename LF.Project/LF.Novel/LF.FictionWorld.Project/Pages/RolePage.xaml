@@ -5,8 +5,186 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LF.FictionWorld.Project.Pages"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             d:DesignHeight="700" d:DesignWidth="1200"
+             Loaded="UserControl_Loaded">
+    <Grid Margin="4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Border Grid.Row="0" Grid.Column="0" Margin="4" BorderBrush="{StaticResource LineColor}" BorderThickness="1">
+            <Grid Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="1" Width="70" Margin="10 10 20 10" CornerRadius="35"
+                            ClipToBounds="True" Background="{StaticResource BackColor}"
+                            BorderThickness="0" BorderBrush="{StaticResource MainColor}" >
+                    </Border>
+                    <StackPanel Grid.Column="0" VerticalAlignment="Bottom" Margin="0 0 0 10">
+                        <TextBlock Text="{Binding Role.Name}" Foreground="{StaticResource MainColor}" VerticalAlignment="Center" Margin="20 0 0 0"
+                                                           FontSize="30" FontWeight="ExtraBlack"></TextBlock>
+                        <TextBlock Text="{Binding Role.Code}" VerticalAlignment="Bottom" Foreground="Gray" Margin="20 5 0 0" FontSize="12"></TextBlock>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1" Margin="20 0 20 10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="30" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="种族" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Role.Race.Value}" VerticalAlignment="Center" FontSize="12" Margin="0 0 0 0"></TextBlock>
+                            <TextBlock Grid.Row="0" Grid.Column="2" Text="性别" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
+                            <TextBlock Grid.Row="0" Grid.Column="3" Text="{Binding Role.Gender.Value}" VerticalAlignment="Center" FontSize="12" Margin="0 0 0 0"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="年龄" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Role.Age,StringFormat={}{0:F0}}" VerticalAlignment="Center" FontSize="12" Margin="0 0 0 0"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="2" Text="等级" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding Role.Ranks.Value}" VerticalAlignment="Center" FontSize="12" Margin="0 0 0 0"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="生日" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Role.Birthday.String}" VerticalAlignment="Center" FontSize="12"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="籍贯" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Role.Home.FullAddress}" VerticalAlignment="Center" FontSize="12"></TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="0" Text="属性" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Role.Attribute}" VerticalAlignment="Center" FontSize="12"></TextBlock>
+                            <TextBlock Grid.Row="3" Grid.Column="0" Text="势力" VerticalAlignment="Center" FontSize="12" Foreground="Gray"></TextBlock>
+                            <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Role.Experiences.Value}" VerticalAlignment="Center" FontSize="12"></TextBlock>
+                            <TextBlock Grid.Row="4" Grid.Column="0" Text="简介" VerticalAlignment="top" FontSize="12" Foreground="Gray" Margin="0 6.8 0 0"></TextBlock>
+                            <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Role.Brief}" VerticalAlignment="Stretch" FontSize="12"  Margin="0 6.8 0 6.8" TextWrapping='Wrap'></TextBlock>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" BorderBrush="{StaticResource LineColor}" BorderThickness="1 1 1 0" Background="White">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal" Margin="3" VerticalAlignment="Center">
+                        <TextBlock Text="物品列表" VerticalAlignment="Center" Foreground="{StaticResource MainColor}" Margin="5 0 10 0"></TextBlock>
+                        <Button x:Name="BtnAdd" Content="新建" Margin="0 0 5 0"
+                                Click="BtnAdd_Click"></Button>
+                        <Button x:Name="BtnEdit" Content="编辑" Margin="0 0 5 0"
+                                Click="BtnEdit_Click"></Button>
+                        <Button x:Name="BtnDelete" Content="删除" Margin="0 0 5 0"
+                                Click="BtnDelete_Click"></Button>
+                        <TextBox Width="100" Margin="0 0 2 0" VerticalContentAlignment="Center"></TextBox>
+                        <Button Content="查找" Margin="0 0 0 0" Style="{StaticResource FlatButton}"></Button>
+                        <Rectangle Width="1" Fill="{StaticResource LineColor}" Margin="3"></Rectangle>
+                        <CheckBox x:Name="CkbShowNow" Content="显示当前" VerticalAlignment="Center" Checked="CkbShowNow_Checked" Unchecked="CkbShowNow_Unchecked"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="5" VerticalAlignment="Center">
+                        <TextBlock Text="总计："></TextBlock>
+                        <TextBlock x:Name="TxbNowCount" Foreground="{StaticResource MainColor}" Margin="0 0 3 0"></TextBlock>
+                        <TextBlock x:Name="TxbCount" Text="{Binding RoleList.Count}" Foreground="{StaticResource MainColor}" Margin="0 0 3 0"></TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <DataGrid x:Name="DtgRoles"   IsReadOnly="True" Grid.Row="1"
+                      AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column" SelectionUnit="FullRow"
+                      SelectionChanged="DtgRoles_SelectionChanged" MouseDoubleClick="DtgRoles_MouseDoubleClick">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="序号" Width="140" Binding="{Binding Code}" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="姓名" Width="80" Binding="{Binding Name}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="种族" Width="60" Binding="{Binding Race.Value}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="性别" Width="60" Binding="{Binding Gender.Value}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="籍贯" Width="80" Binding="{Binding Home.Name}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="年龄" Width="60" Binding="{Binding Age,StringFormat={}{0:F0}}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="天赋" Width="60" Binding="{Binding Talent}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="等级" Width="60" Binding="{Binding Ranks.Value}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="属性" Width="*" Binding="{Binding Attribute}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <GroupBox Grid.Row="0" Grid.Column="3" Margin="4" Header="关系图谱"></GroupBox>
+        <TabControl Grid.Row="1" Grid.Column="0" Margin="4" Style="{StaticResource TopTabControl}" ItemContainerStyle="{StaticResource TopTabItem}">
+            <TabItem Header="升级">
+                <DataGrid x:Name="DtgRanks" Background="White" BorderThickness="0" IsReadOnly="True"
+                                          AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column" SelectionUnit="FullRow"
+                                  ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="日期" Width="2*" Binding="{Binding Date.String}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="年龄" Width="1*" Binding="{Binding Age,StringFormat={}{0:F0}}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="等级" Width="1*" Binding="{Binding Value}"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </TabItem>
+            <TabItem Header="经历">
+                <DataGrid x:Name="DtgExps" Background="White" BorderThickness="0" IsReadOnly="True"
+                                          AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column" SelectionUnit="FullRow"
+                                  ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="日期" Width="2*" Binding="{Binding Date.String}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="年龄" Width="1*" Binding="{Binding Age,StringFormat={}{0:F0}}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="势力" Width="1*" Binding="{Binding Value}"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </TabItem>
+            <TabItem Header="情节">
+                <DataGrid x:Name="DtgPlots" Background="White" BorderThickness="0" IsReadOnly="True"
+                                          AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column" SelectionUnit="FullRow"
+                                  ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="日期" Width="2*" Binding="{Binding Value}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="名称" Width="1*" Binding="{Binding Name}"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </TabItem>
+        </TabControl>
+        <GroupBox Grid.Row="1" Grid.Column="1" Margin="4"
+                  Header="物品技能"></GroupBox>
+        <TabControl Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="4"
+                    Style="{StaticResource TopTabControl}" ItemContainerStyle="{StaticResource TopTabItem}">
+            <TabItem Header="性格"></TabItem>
+            <TabItem Header="衣着"></TabItem>
+            <TabItem Header="语言"></TabItem>
+        </TabControl>
+
     </Grid>
 </UserControl>

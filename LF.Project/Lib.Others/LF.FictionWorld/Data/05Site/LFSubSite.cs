@@ -76,9 +76,9 @@ namespace LF.FictionWorld
         /// <param name="obj"></param>
         public LFSubSite(LFSubSite obj)
         {
-            ID = obj.ID;
-            Name = obj.Name;
-            Brief = obj.Brief;
+            _id = obj._id;
+            _name = obj._name;
+            _brief = obj._brief;
         }
 
         /// <summary>

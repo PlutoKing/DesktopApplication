@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Xiulian StartAge="10" LimitFactor="0.4" Shift="2">
+  <Rank ID="0" Level="0" Name="3" AgeLimit="100"></Rank>
+  <Rank ID="1" Level="1" Name="4" AgeLimit="110"></Rank>
+  <Rank ID="2" Level="2" Name="5" AgeLimit="120"></Rank>
+  <Rank ID="3" Level="3" Name="6" AgeLimit="130"></Rank>
+  <Rank ID="4" Level="4" Name="7" AgeLimit="140"></Rank>
+  <Rank ID="5" Level="5" Name="8" AgeLimit="150"></Rank>
+  <Rank ID="6" Level="6" Name="9" AgeLimit="160"></Rank>
+</Xiulian>

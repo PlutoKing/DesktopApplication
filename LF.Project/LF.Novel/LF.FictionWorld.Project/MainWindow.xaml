@@ -36,6 +36,9 @@
                 <TabItem Header="世　界">
                     <pages:WorldPage/>
                 </TabItem>
+                <TabItem Header="修　炼">
+                    <pages:XiuLianPage/>
+                </TabItem>
                 <TabItem Header="历　史"></TabItem>
                 <TabItem Header="物　品">
                     <pages:ItemPage x:Name="itemPage"/>

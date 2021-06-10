@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Book Index="310000001" Name="天乾造化诀">
+<Book Code="310000001" Name="天乾造化诀">
   <Content>
     <Level ID="1" Name="淬体" Brief="感应天地之灵，淬炼肉体。" />
     <Level ID="2" Name="锻骨" Brief="吸收天地之灵，锻炼骨骼。" />
@@ -10,14 +10,4 @@
     <Level ID="7" Name="铭道" Brief="在道果上铭刻道纹。" />
     <Level ID="8" Name="融道" Brief="将三魂七魄融入道果。" />
   </Content>
-  <Skills>
-    <Skill ID="1" Name="游龙刺" Brief="宛若游龙出海。" Level="1" Precondition="0" />
-    <Skill ID="2" Name="双龙绞杀" Brief="两枪刺出，犹如两条水龙出击，绞杀敌人。" Level="2" Precondition="1" />
-    <Skill ID="3" Name="游龙身法" Brief="身法灵动，速度极快，宛若游龙。" Level="3" Precondition="2" />
-    <Skill ID="4" Name="水龙漫天" Brief="" Level="4" Precondition="3" />
-    <Skill ID="5" Name="陨炎劈" Brief="劈枪式，犹如陨石降落，当头一劈" Level="1" Precondition="0" />
-    <Skill ID="6" Name="烈炎杀" Brief="数道火焰围杀敌人。" Level="2" Precondition="5" />
-    <Skill ID="7" Name="破炎闪" Brief="火遁身法，凭空出现一团火焰，遁入其中，在远处出现。" Level="3" Precondition="6" />
-    <Skill ID="8" Name="烈焰焚城" Brief="召唤出火焰巨枪，焚烧万物。" Level="4" Precondition="7" />
-  </Skills>
 </Book>

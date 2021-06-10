@@ -76,6 +76,7 @@
                         <TextBox Grid.Column="1" Text="{Binding Brief}" Padding="0 5.4 0 5.4" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto"></TextBox>
                     </Grid>
                 </Grid>
+
             </TabItem>
             <TabItem Header="财产"></TabItem>
             <TabItem Header="关系"></TabItem>

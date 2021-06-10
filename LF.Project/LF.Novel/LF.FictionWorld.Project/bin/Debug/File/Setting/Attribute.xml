@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Type>
-  <Node Index="0" Value="金" Brief="" />
-  <Node Index="1" Value="木" Brief="" />
-  <Node Index="2" Value="水" Brief="" />
-  <Node Index="3" Value="火" Brief="" />
-  <Node Index="4" Value="土" Brief="" />
-  <Node Index="5" Value="风" Brief="" />
-  <Node Index="6" Value="雷" Brief="" />
-  <Node Index="7" Value="光" Brief="" />
-  <Node Index="8" Value="暗" Brief="" />
-  <Node Index="9" Value="虚" Brief="" />
+  <Node Code="0" Value="金" Brief="" />
+  <Node Code="1" Value="木" Brief="" />
+  <Node Code="2" Value="水" Brief="" />
+  <Node Code="3" Value="火" Brief="" />
+  <Node Code="4" Value="土" Brief="" />
+  <Node Code="5" Value="风" Brief="" />
+  <Node Code="6" Value="雷" Brief="" />
+  <Node Code="7" Value="光" Brief="" />
+  <Node Code="8" Value="暗" Brief="" />
+  <Node Code="9" Value="虚" Brief="" />
 </Type>

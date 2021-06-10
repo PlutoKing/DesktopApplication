@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Item Code="4640004001" Name="灵龟甲" Price="100" Count="100">
+  <Sites>
+    <Site Code="14101" />
+  </Sites>
+</Item>

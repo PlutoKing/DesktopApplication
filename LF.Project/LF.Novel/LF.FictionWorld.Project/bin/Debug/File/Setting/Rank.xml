@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Type>
-  <Node Index="-1" Value="死亡" Brief="" />
-  <Node Index="0" Value="未修炼" Brief="" />
-  <Node Index="1" Value="武童" Brief="" />
-  <Node Index="2" Value="武者" Brief="" />
-  <Node Index="3" Value="武士" Brief="" />
-  <Node Index="4" Value="武师" Brief="" />
-  <Node Index="5" Value="武王" Brief="" />
-  <Node Index="6" Value="武宗" Brief="" />
-  <Node Index="7" Value="武尊" Brief="" />
-  <Node Index="8" Value="武圣" Brief="" />
-  <Node Index="9" Value="武帝" Brief="" />
-  <Node Index="10" Value="武神" Brief="" />
+  <Node Code="-1" Value="死亡" Brief="" />
+  <Node Code="0" Value="未修炼" Brief="" />
+  <Node Code="1" Value="武童" Brief="" />
+  <Node Code="2" Value="武者" Brief="" />
+  <Node Code="3" Value="武士" Brief="" />
+  <Node Code="4" Value="武师" Brief="" />
+  <Node Code="5" Value="武王" Brief="" />
+  <Node Code="6" Value="武宗" Brief="" />
+  <Node Code="7" Value="武尊" Brief="" />
+  <Node Code="8" Value="武圣" Brief="" />
+  <Node Code="9" Value="武帝" Brief="" />
+  <Node Code="10" Value="武神" Brief="" />
 </Type>
