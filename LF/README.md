@@ -4,7 +4,7 @@
 
 ### 仿真 LF.Simulation
 
-1.  [无人机飞行控制仿真](Projects\LF.Simulation\LF.FlightControl.Project\README.md) `LF.FlightControl.Project`
+1.  [无人机飞行控制仿真](Projects/LF.Simulation/LF.FlightControl.Project/README.md) `LF.FlightControl.Project`
 2.  无人机集群系统仿真 `LF.SwarmSystem.Project`
 
 ###  航空 LF.Aeronautics
@@ -29,7 +29,7 @@
 ### 基础库 Common
 
 1.   LF系统库 `LF`
-2.   数学库 `LF.Mathematics`
+2.   [数学库](Libraries/Common/LF.Mathematics/README.md) `LF.Mathematics`
 3.   物理库 `LF.Physics`
 4.   算法库 `LF.Algorithm`
 
