@@ -153,6 +153,7 @@ namespace LF.Mathematics.LinearAlgebra.Storage
         }
 
         #endregion
+
         #endregion
     }
 }

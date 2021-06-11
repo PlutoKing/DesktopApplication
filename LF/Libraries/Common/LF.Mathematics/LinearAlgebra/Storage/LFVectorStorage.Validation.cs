@@ -31,8 +31,7 @@ namespace LF.Mathematics.LinearAlgebra.Storage
             }
         }
 
-        void ValidateSubVectorRange(LFVectorStorage<T> target,
-    int sourceIndex, int targetIndex, int count)
+        private void ValidateSubVectorRange(LFVectorStorage<T> target,int sourceIndex, int targetIndex, int count)
         {
             if (count < 1)
             {

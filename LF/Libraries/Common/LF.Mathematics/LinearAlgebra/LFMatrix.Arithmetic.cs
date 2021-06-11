@@ -270,7 +270,7 @@ namespace LF.Mathematics.LinearAlgebra
         protected abstract void DoPointwiseAbsoluteMaximum(LFMatrix<T> other, LFMatrix<T> result);
 
         /// <summary>
-        /// Adds a scalar to each element of the matrix.
+        /// 矩阵的每个元素加上一个标量
         /// </summary>
         /// <param name="scalar">The scalar to add.</param>
         /// <returns>The result of the addition.</returns>

@@ -49,9 +49,9 @@ namespace LF.Mathematics.LinearAlgebra.Storage
         /// <summary>
         /// 索引器
         /// </summary>
-        /// <param name="row"></param>
-        /// <param name="column"></param>
-        /// <returns></returns>
+        /// <param name="row">行数</param>
+        /// <param name="column">列数</param>
+        /// <returns>第<paramref name="row"/>行，第<paramref name="column"/>列的矩阵元素</returns>
         public T this[int row,int column]
         {
             get
@@ -161,8 +161,11 @@ namespace LF.Mathematics.LinearAlgebra.Storage
         #endregion
 
         #region Clearing
-        // CLEARING
-
+        
+        /// <summary>
+        /// 将矩阵元素全部清零
+        /// </summary>
+        /// <remarks>该过程无需检测</remarks>
         public virtual void Clear()
         {
             for (var i = 0; i < RowCount; i++)
@@ -174,6 +177,14 @@ namespace LF.Mathematics.LinearAlgebra.Storage
             }
         }
 
+        /// <summary>
+        /// 将子矩阵元素清零
+        /// </summary>
+        /// <remarks>该过程需要检测</remarks>
+        /// <param name="rowIndex"></param>
+        /// <param name="rowCount"></param>
+        /// <param name="columnIndex"></param>
+        /// <param name="columnCount"></param>
         public void Clear(int rowIndex, int rowCount, int columnIndex, int columnCount)
         {
             if (rowCount < 1 || columnCount < 1)
@@ -194,6 +205,13 @@ namespace LF.Mathematics.LinearAlgebra.Storage
             ClearUnchecked(rowIndex, rowCount, columnIndex, columnCount);
         }
 
+        /// <summary>
+        /// 将子矩阵元素清零，但并未进行检测
+        /// </summary>
+        /// <param name="rowIndex"></param>
+        /// <param name="rowCount"></param>
+        /// <param name="columnIndex"></param>
+        /// <param name="columnCount"></param>
         internal virtual void ClearUnchecked(int rowIndex, int rowCount, int columnIndex, int columnCount)
         {
             for (var i = rowIndex; i < rowIndex + rowCount; i++)
@@ -205,6 +223,10 @@ namespace LF.Mathematics.LinearAlgebra.Storage
             }
         }
 
+        /// <summary>
+        /// 将某几列元素清零
+        /// </summary>
+        /// <param name="rowIndices"></param>
         public void ClearRows(int[] rowIndices)
         {
             if (rowIndices.Length == 0)
@@ -267,8 +289,12 @@ namespace LF.Mathematics.LinearAlgebra.Storage
         #endregion
 
         #region Matrix Copy
-        // MATRIX COPY
 
+        /// <summary>
+        /// 拷贝
+        /// </summary>
+        /// <param name="target"></param>
+        /// <param name="existingData"></param>
         public void CopyTo(LFMatrixStorage<T> target, DataClearOption existingData = DataClearOption.Clear)
         {
             if (target == null)
@@ -290,6 +316,11 @@ namespace LF.Mathematics.LinearAlgebra.Storage
             CopyToUnchecked(target, existingData);
         }
 
+        /// <summary>
+        /// 拷贝
+        /// </summary>
+        /// <param name="target"></param>
+        /// <param name="existingData"></param>
         internal virtual void CopyToUnchecked(LFMatrixStorage<T> target, DataClearOption existingData)
         {
             for (int j = 0; j < ColumnCount; j++)

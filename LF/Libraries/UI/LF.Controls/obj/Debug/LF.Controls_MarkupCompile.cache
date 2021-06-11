@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-1-731644535
+4-199152124
 
-51863315842
+3-630027162
 13-1505183044
-Themes\Generic.xaml;
+Styles\Button.xaml;Styles\Color.xaml;Styles\ComboBox.xaml;Themes\Generic.xaml;
 
-True
+False
 

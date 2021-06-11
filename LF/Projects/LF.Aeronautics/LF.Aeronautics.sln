@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LF.AircraftDesign.Project", "LF.AircraftDesign.Project\LF.AircraftDesign.Project.csproj", "{19ED008F-F5EA-480A-85D2-336EBCD2EB0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LF.AircraftDesign", "..\..\Libraries\Academics\LF.AircraftDesign\LF.AircraftDesign.csproj", "{F6210760-5757-41EF-A85F-C0BA3B63C5D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{08B7EBFB-BB2B-4361-9AEF-A70C4B3C6FD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19ED008F-F5EA-480A-85D2-336EBCD2EB0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19ED008F-F5EA-480A-85D2-336EBCD2EB0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19ED008F-F5EA-480A-85D2-336EBCD2EB0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19ED008F-F5EA-480A-85D2-336EBCD2EB0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6210760-5757-41EF-A85F-C0BA3B63C5D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6210760-5757-41EF-A85F-C0BA3B63C5D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6210760-5757-41EF-A85F-C0BA3B63C5D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6210760-5757-41EF-A85F-C0BA3B63C5D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6210760-5757-41EF-A85F-C0BA3B63C5D7} = {08B7EBFB-BB2B-4361-9AEF-A70C4B3C6FD8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C5B0A1E-FD1B-4CB0-952C-D7014F98CFDA}
+	EndGlobalSection
+EndGlobal

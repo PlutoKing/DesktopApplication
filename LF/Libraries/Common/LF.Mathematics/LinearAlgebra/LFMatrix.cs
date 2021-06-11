@@ -44,11 +44,23 @@ namespace LF.Mathematics.LinearAlgebra
         #region Methods
 
         #region Common Methods
-
+        /// <summary>
+        /// 获取第<paramref name="row"/>行，第<paramref name="column"/>列的元素
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="column"></param>
+        /// <returns></returns>
         public T Get(int row, int column)
         {
             return Storage.Get(row, column);
         }
+
+        /// <summary>
+        /// 给第<paramref name="row"/>行，第<paramref name="column"/>列的元素赋值
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="column"></param>
+        /// <param name="value"></param>
         public void Set(int row, int column, T value)
         {
             Storage.Set(row, column, value);
@@ -65,7 +77,7 @@ namespace LF.Mathematics.LinearAlgebra
         }
 
         /// <summary>
-        /// Sets all values of a row to zero.
+        /// 将矩阵的某一行清零
         /// </summary>
         public void ClearRow(int rowIndex)
         {
@@ -78,7 +90,7 @@ namespace LF.Mathematics.LinearAlgebra
         }
 
         /// <summary>
-        /// Sets all values of a column to zero.
+        /// 将矩阵的某一列清零
         /// </summary>
         public void ClearColumn(int columnIndex)
         {
@@ -91,7 +103,7 @@ namespace LF.Mathematics.LinearAlgebra
         }
 
         /// <summary>
-        /// Sets all values for all of the chosen rows to zero.
+        /// 将矩阵的某几行清零
         /// </summary>
         public void ClearRows(params int[] rowIndices)
         {
@@ -99,7 +111,7 @@ namespace LF.Mathematics.LinearAlgebra
         }
 
         /// <summary>
-        /// Sets all values for all of the chosen columns to zero.
+        /// 将矩阵的某几列清零
         /// </summary>
         public void ClearColumns(params int[] columnIndices)
         {
@@ -107,8 +119,12 @@ namespace LF.Mathematics.LinearAlgebra
         }
 
         /// <summary>
-        /// Sets all values of a sub-matrix to zero.
+        /// 将子矩阵的元素清零
         /// </summary>
+        /// <param name="rowIndex">子矩阵开始行</param>
+        /// <param name="rowCount">子矩阵行数</param>
+        /// <param name="columnIndex">子矩阵开始列</param>
+        /// <param name="columnCount">子矩阵列数</param>
         public void ClearSubMatrix(int rowIndex, int rowCount, int columnIndex, int columnCount)
         {
             Storage.Clear(rowIndex, rowCount, columnIndex, columnCount);
@@ -134,11 +150,9 @@ namespace LF.Mathematics.LinearAlgebra
         #region Copy and Struct
 
         /// <summary>
-        /// Creates a clone of this instance.
+        /// 拷贝
         /// </summary>
-        /// <returns>
-        /// A clone of the instance.
-        /// </returns>
+        /// <returns></returns>
         public LFMatrix<T> Clone()
         {
             var result = Build.SameAs(this);

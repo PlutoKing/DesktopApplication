@@ -79,15 +79,18 @@ namespace LF.Mathematics.LinearAlgebra
             _singleton = new Lazy<Tuple<LFMatrixBuilder<T>, LFVectorBuilder<T>>>(() => new Tuple<LFMatrixBuilder<T>, LFVectorBuilder<T>>(matrixBuilder, vectorBuilder));
         }
 
-        public static LFMatrixBuilder<T> LFMatrix => _singleton.Value.Item1;
+        public static LFMatrixBuilder<T> Matrix => _singleton.Value.Item1;
 
-        public static LFVectorBuilder<T> LFVector => _singleton.Value.Item2;
+        public static LFVectorBuilder<T> Vector => _singleton.Value.Item2;
 
         #endregion
     }
 
     #region Mat Builers
 
+    /// <summary>
+    /// 整型矩阵构造器
+    /// </summary>
     internal class LFiMatBuilder : LFMatrixBuilder<int>
     {
         public override int Zero => 0;
@@ -100,6 +103,9 @@ namespace LF.Mathematics.LinearAlgebra
         }
     }
 
+    /// <summary>
+    /// 双精度浮点型矩阵构造器
+    /// </summary>
     internal class LFdMatBuilder : LFMatrixBuilder<double>
     {
         public override double Zero => 0d;
@@ -112,6 +118,9 @@ namespace LF.Mathematics.LinearAlgebra
         }
     }
 
+    /// <summary>
+    /// 单精度浮点型矩阵构造器
+    /// </summary>
     internal class LFfMatBuilder : LFMatrixBuilder<float>
     {
         public override float Zero => 0f;
@@ -124,6 +133,9 @@ namespace LF.Mathematics.LinearAlgebra
         }
     }
 
+    /// <summary>
+    /// 复数型矩阵构造器
+    /// </summary>
     internal class LFcMatBuilder : LFMatrixBuilder<Complex>
     {
         public override Complex Zero => Complex.Zero;
@@ -1128,8 +1140,12 @@ namespace LF.Mathematics.LinearAlgebra
         #endregion
     }
 
+    /// <summary>
+    /// 向量构造器
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class LFVectorBuilder<T>
-                where T : struct, IEquatable<T>, IFormattable
+        where T : struct, IEquatable<T>, IFormattable
     {
         public abstract T Zero { get; }
 
