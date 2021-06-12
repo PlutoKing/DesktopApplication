@@ -14,11 +14,11 @@
 
 添加引用`CATIA V5 GSMInterfaces Object Library`，只需添加这一个，其余需要的引用会自动添加。
 
-![添加引用](fig\refrence.png)
+![添加引用](fig/refrence.png)
 
 添加引用之后，引用列表里面就会多出这几个库。 
 
-![引用](fig\refrences.png)
+![引用](fig/refrences.png)
 
 #### 2.1.2 导入命名空间
 
