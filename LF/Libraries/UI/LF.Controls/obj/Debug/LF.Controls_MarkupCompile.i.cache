@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-4-199152124
+6187335505
 
 4-1472386529
 13-1505183044
-Styles\Button.xaml;Styles\Color.xaml;Styles\ComboBox.xaml;Themes\Generic.xaml;
+Styles\Button.xaml;Styles\Color.xaml;Styles\ComboBox.xaml;Styles\GroupBox.xaml;Styles\TabControl.xaml;Themes\Generic.xaml;
 
 False
 

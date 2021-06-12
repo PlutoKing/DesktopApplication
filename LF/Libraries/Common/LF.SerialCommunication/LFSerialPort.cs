@@ -32,6 +32,7 @@ namespace LF.SerialCommunication
         private int _sendCount;     // 发送量
 
         private bool _isShowTime;
+        private bool _isSendHex;
         #endregion
 
         #region Properties
@@ -99,6 +100,7 @@ namespace LF.SerialCommunication
         /// </summary>
         public List<string> PortNames { get => _portNames; set => _portNames = value; }
         public bool IsShowTime { get => _isShowTime; set => _isShowTime = value; }
+        public bool IsSendHex { get => _isSendHex; set => _isSendHex = value; }
 
 
         #endregion

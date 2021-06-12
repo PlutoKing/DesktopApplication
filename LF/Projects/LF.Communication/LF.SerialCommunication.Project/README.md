@@ -1,4 +1,4 @@
-﻿# 串口通信助手
+# 串口通信助手
 
 ## 一、基本信息
 
@@ -52,4 +52,7 @@ public event SerialDataReceivedEventHandler DataReceived;
 [MonitoringDescription("SerialPinChanged")]
 public event SerialPinChangedEventHandler PinChanged;
 ```
+## 四、软件界面
+
+![界面](Projects/LF.Communication/LF.SerialCommunication.Project/demo.png)
 
