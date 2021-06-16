@@ -1,5 +1,5 @@
 ﻿/*──────────────────────────────────────────────────────────────
- * FileName     : Sorting.cs
+ * FileName     : LFSort.cs
  * Created      : 2021-06-10 19:59:28
  * Author       : Xu Zhe
  * Description  : 
@@ -16,7 +16,7 @@ namespace LF
     /// <summary>
     /// 排序算法
     /// </summary>
-    public static class Sorting
+    public static class LFSort
     {
         /// <summary>
         /// Sort a list of keys, in place using the quick sort algorithm using the quick sort algorithm.

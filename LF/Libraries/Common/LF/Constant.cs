@@ -13,7 +13,7 @@ using System.Xml;
 
 namespace LF
 {
-    public static class Constant
+    public static partial class LF
     {
         #region Mathematical Constants
 

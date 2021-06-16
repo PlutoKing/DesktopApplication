@@ -13,7 +13,7 @@ using System.Xml;
 
 namespace LF
 {
-    public static class LF
+    public static partial class LF
     {
         public static void Swap<T>(IList<T> keys, int a, int b)
         {

@@ -14,7 +14,7 @@
 
 ###  03. 航空 LF.Aeronautics
 
-1.   飞行器设计工具 `LF.AircraftDesign.Project`
+1.   [飞行器设计工具](Projects/LF.Aeronautics/LF.AircraftDesign.Project) `LF.AircraftDesign.Project`
 2.   [Catia二次开发工具](Projects/LF.Aeronautics/LF.CatiaCSharp.Project) `LF.CatiaCSharp.Project`
 
 ### 04. 学术 LF.Academics
@@ -57,7 +57,7 @@
 
 ### 03. 学术库 Academics
 
-1.   飞行器设计库 `LF.AircraftDesign`
+1.   [飞行器设计库](Libraries/Academics/LF.AircraftDesign) `LF.AircraftDesign`
 2.   [基于CSharp的Catia二次开发库](Libraries/Academics/LF.CatiaCSharp) `LF.CatiaCSharp.Project`
 3.   飞行控制库 `LF.FlightControl`
 4.   图像处理库 `LF.ImageProcessing`
