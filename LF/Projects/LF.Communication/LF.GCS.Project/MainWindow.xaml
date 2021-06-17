@@ -4,10 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LF.GCS.Project"
+        xmlns:controls="clr-namespace:LF.GCS.Project.Controls"
         mc:Ignorable="d"
         Title="无人机地面控制系统" Height="450" Width="800"
         WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
-        
+        <TabControl Style="{StaticResource LeftTabControl}" ItemContainerStyle="{StaticResource LeftTabItem}">
+            <TabItem Header="飞行界面">
+                <Grid>
+                    <controls:HUD VerticalAlignment="Center" HorizontalAlignment="Center" Height="300" Width="400"></controls:HUD>
+                </Grid>
+            </TabItem>
+            <TabItem Header="飞行计划"></TabItem>
+            <TabItem Header="飞控配置"></TabItem>
+        </TabControl>
     </Grid>
 </Window>

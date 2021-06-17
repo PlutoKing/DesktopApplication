@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:LF.GCS.Project"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/LF.Controls;component/Styles/Color.xaml" />
+                <ResourceDictionary Source="/LF.Controls;component/Styles/Button.xaml" />
+                <ResourceDictionary Source="/LF.Controls;component/Styles/ComboBox.xaml" />
+                <ResourceDictionary Source="/LF.Controls;component/Styles/TabControl.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
