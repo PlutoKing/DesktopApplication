@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 I:\DesktopApplication\LF\Projects\LF.Communication\LF.GCS.Project\App.xaml
-21088791523
+62126390062
 
-71545678763
+111554788170
 14-2126364195
-Controls\HUD.xaml;MainWindow.xaml;
+Controls\HUD.xaml;Controls\ScaleBarH.xaml;Controls\ScaleBarV.xaml;MainWindow.xaml;Pages\ConfigPage.xaml;Pages\PlanPage.xaml;
 
 True
 

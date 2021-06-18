@@ -12,7 +12,7 @@
                                 <RowDefinition Height="1*" />
                             </Grid.RowDefinitions>
                             <Border BorderThickness="0 0 0 1" BorderBrush="{StaticResource LineColor}">
-                                <TextBlock Text="{TemplateBinding Header}" Foreground="{StaticResource MainColor}" Margin="10 0 0 0" VerticalAlignment="Center"/>
+                                <TextBlock Text="{TemplateBinding Header}" Foreground="{StaticResource MainColor}" Margin="8 0 8 0" VerticalAlignment="Center"/>
                             </Border>
                             <ContentPresenter Grid.Row="1"></ContentPresenter>
                         </Grid>

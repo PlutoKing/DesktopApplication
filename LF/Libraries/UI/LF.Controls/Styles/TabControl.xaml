@@ -69,7 +69,7 @@
                     <Border BorderBrush="{StaticResource LineColor}" BorderThickness="{TemplateBinding BorderThickness}">
                         <Grid Background="{TemplateBinding Background}">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="auto" MinWidth="80"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Border  BorderThickness="0 0 1 0" BorderBrush="{StaticResource LineColor}">

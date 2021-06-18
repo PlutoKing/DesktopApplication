@@ -40,13 +40,13 @@ namespace LF.SerialCommunication
 
         private SerialPort _port;   // 串口
         private List<string> _portNames;    // 所有可用串口名称
+        private double _time;       // 串口时间
+
 
         private int _receiveCount;  // 接收量
         private int _sendCount;     // 发送量
 
         private ObservableCollection<LFMessage> _messages = new ObservableCollection<LFMessage>();  // 接收消息
-
-
         private string _sendContent;        // 发送内容
 
         private bool _isShowTime = true;    // 是否显示时间
@@ -148,6 +148,12 @@ namespace LF.SerialCommunication
         public bool IsShowHex { get => _isShowHex; set => _isShowHex = value; }
         public bool IsShowSend { get => _isShowSend; set => _isShowSend = value; }
         public ObservableCollection<LFMessage> Messages { get => _messages; set => _messages = value; }
+        public double Time { get => _time; set
+            {
+                _time = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Time"));
+            }
+        }
 
 
         #endregion

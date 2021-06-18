@@ -54,6 +54,9 @@ namespace LF.SerialCommunication.Project
         /// 定时器
         /// </summary>
         private Timer Timer = new Timer();
+
+        private DateTime startTime;
+        private Timer PortTimer = new Timer();
         /// <summary>
         /// 字符串构造器
         /// </summary>
@@ -75,15 +78,20 @@ namespace LF.SerialCommunication.Project
 
             paragraph = (Paragraph)RtbRece.Document.Blocks.FirstBlock;
             Timer.Elapsed += Timer_Elapsed;
+            PortTimer.Interval = 50;
+            PortTimer.Elapsed += PortTimer_Elapsed;
 
             SerialPort.OnReceiveData += SerialPort_OnReceiveData;
-
             this.DataContext = SerialPort;
-
             this.Loaded += MainWindow_Loaded;
         }
 
-        
+        private void PortTimer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            SerialPort.Time = (DateTime.Now - startTime).TotalSeconds;
+        }
+
+
         #endregion
 
         #region Methods
@@ -97,6 +105,9 @@ namespace LF.SerialCommunication.Project
             CmbDatabits.IsEnabled = false;
             CmbParity.IsEnabled = false;
             CmbStopbits.IsEnabled = false;
+            SerialPort.Time = 0.0d;
+            startTime = DateTime.Now;
+            PortTimer.Start();
             BtnOpenClose.Content = "关闭串口";
         }
 
@@ -110,6 +121,7 @@ namespace LF.SerialCommunication.Project
             CmbDatabits.IsEnabled = true;
             CmbParity.IsEnabled = true;
             CmbStopbits.IsEnabled = true;
+            PortTimer.Stop();
             BtnOpenClose.Content = "打开串口";
         }
 
@@ -625,5 +637,14 @@ namespace LF.SerialCommunication.Project
 
         #endregion
 
+        private void CkbSet_Checked(object sender, RoutedEventArgs e)
+        {
+            ColRight.Width = new GridLength(180);
+        }
+
+        private void CkbSet_Unchecked(object sender, RoutedEventArgs e)
+        {
+            ColRight.Width = new GridLength(0);
+        }
     }
 }

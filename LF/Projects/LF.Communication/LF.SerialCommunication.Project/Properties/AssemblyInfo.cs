@@ -7,12 +7,12 @@ using System.Windows;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("LF.SerialCommunication.Project")]
+[assembly: AssemblyTitle("LF.SerialCommunication.Project V1.0")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LF.SerialCommunication.Project")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyCompany("蓝风实验室")]
+[assembly: AssemblyProduct("串口通信助手")]
+[assembly: AssemblyCopyright("Copyright © 蓝风实验室 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
