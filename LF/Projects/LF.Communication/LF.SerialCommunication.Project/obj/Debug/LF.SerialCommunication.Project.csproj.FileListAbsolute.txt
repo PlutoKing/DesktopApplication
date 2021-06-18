@@ -19,3 +19,8 @@ I:\DesktopApplication\LF\Projects\LF.Communication\LF.SerialCommunication.Projec
 I:\DesktopApplication\LF\Projects\LF.Communication\LF.SerialCommunication.Project\obj\Debug\LF.SerialCommunication.Project.csproj.CopyComplete
 I:\DesktopApplication\LF\Projects\LF.Communication\LF.SerialCommunication.Project\obj\Debug\串口通信助手.exe
 I:\DesktopApplication\LF\Projects\LF.Communication\LF.SerialCommunication.Project\obj\Debug\串口通信助手.pdb
+I:\DesktopApplication\LF\Projects\LF.Communication\LF.SerialCommunication.Project\bin\Debug\串口通信助手.exe.manifest
+I:\DesktopApplication\LF\Projects\LF.Communication\LF.SerialCommunication.Project\bin\Debug\串口通信助手.application
+I:\DesktopApplication\LF\Projects\LF.Communication\LF.SerialCommunication.Project\obj\Debug\串口通信助手.TrustInfo.xml
+I:\DesktopApplication\LF\Projects\LF.Communication\LF.SerialCommunication.Project\obj\Debug\串口通信助手.exe.manifest
+I:\DesktopApplication\LF\Projects\LF.Communication\LF.SerialCommunication.Project\obj\Debug\串口通信助手.application
